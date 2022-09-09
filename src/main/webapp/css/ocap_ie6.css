@@ -1,0 +1,2134 @@
+#n001 {
+	margin-top: -31px;
+}
+
+.encuadre {
+	width: 89em;
+}
+
+body {
+	margin-top: 0;
+}
+
+.contenido {
+	margin: 1.5em;
+}
+
+.midCabecera {
+	/*background-image: url("../imagenes/imagenes_ocap/degradadoCabIE6.gif");*/
+	background-image: url("../imagenes/imagenes_ocap/degradadoCab.gif");
+}
+
+.cuadroFieldset {
+	width: 98%;
+	padding: 20px;
+	padding-right: 0;
+}
+
+.cuadroFieldsetLOPD {
+	width: 100%;
+	padding: 5px 0 0 0;
+}
+
+.margenBackTexto {
+	margin-left: 14em;
+	width: 49.5em;
+}
+
+.flotaDerBotones {
+	margin-right: 0.8em;
+}
+
+.menuAccesible .menuNivel_2 a {
+	width: 100%;
+}
+
+.lineaBajaM {
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #004B98;
+}
+
+.fechaGrado {
+	display: inline;
+	margin: 0 0 0 140px;
+}
+
+.titulosRadio {
+	line-height: 1.8em;
+	margin-left: 5px;
+}
+
+.botoneraCS {
+	margin: 0em 1.5em 0em 0em;
+	padding: 0em 0em 0em 0em;
+}
+
+.conexion {
+	padding: 0em 0em 0em 210px;
+}
+
+.radiosMC {
+	margin-left: 0;
+}
+
+div.contenidoModificacionMC .tituloEnCuadro span, div.contenidoAltaMC .tituloEnCuadro span
+	{
+	line-height: 2em;
+}
+
+div.ContenidoAltaMC select.textoTituloGris {
+	font-size: 0.7em;
+}
+
+div.contenidoAltaMC .tabula {
+	margin-left: 5.2em;
+}
+
+div.contenidoAltaMC .radioEnCuadro .flotaIzq {
+	margin-left: 0.4em;
+}
+
+div.contenidoDCP2B .ultimo {
+	margin-top: -5px;
+}
+
+.colocaTamGrado {
+	margin-right: 0;
+}
+
+.titulocajaformulario {
+	margin: 5px 0px 0px 0px;
+}
+
+.cajaformulario {
+	margin: 0 0 0 0;
+}
+
+.midCabecera h1 {
+	padding-top: 0;
+}
+
+.menuAccesible {
+	margin: 15px 0px 0px 2px;
+	padding: 0px 0px 0px 0px;
+}
+
+.contenidoAccesible {
+	width: 77%;
+}
+
+.cuadroContenedorConsultas {
+	padding: 1.1em 0em 0em 0em;
+}
+
+span.colocaTitRadio {
+	margin-left: 431px;
+}
+
+span.colocaTitRadio2 {
+	margin-left: 434px;
+}
+
+div.contenidoDCP3A .colocaTitRadio {
+	margin-left: 468px;
+}
+
+div.contenidoDCP3A .ajusteMargenTabla .tablaFaseEvaluacion {
+	margin-right: 15px;
+}
+
+div.contenidoDCP3A .ajustarRespuestaRadio .colocaTitRadio {
+	margin-left: 479px;
+}
+
+.listCuestEscaneados * {
+	font-size: 1em;
+}
+
+.listCuestEscaneados .tablaFondoBlanco .listado td a:hover {
+	text-decoration: underline;
+}
+
+/*  Contenido DCP3A  */
+
+/*  Contenido DCP2A  */
+.GestionCTE .textoTabla {
+	font-size: 0.7em;
+}
+/*  /Contenido DCP2A  */
+
+/*	Sugerencias	*/
+.sugerencias .botonera {
+	margin-bottom: 0;
+}
+
+.sugerencias .cajaformulario {
+	width: 100%;
+}
+
+.sugerencias .titulocajaformulario {
+	width: 100%;
+}
+
+/*	/Sugerencias	*/
+.pestanaPagina .pestanaAccion {
+	margin-bottom: 0;
+	border-bottom: none;
+}
+
+/*  Historial de carrera profesional  */
+.listadoCuestionariosEscaneados .colocaDescripcionEscaneado {
+	width: 25em;
+}
+
+.listadoCuestionariosEscaneados .colocaArchivoEscaneado {
+	margin-left: 29px;
+	width: 50em;
+}
+
+.listadoCuestionariosEscaneados .colocaAreaEscaneado {
+	width: 50em;
+}
+
+.listadoCuestionariosEscaneados .colocaCuestionarioEscaneado {
+	width: 50em;
+}
+
+.listadoCuestionariosEscaneados .tablaDocumentosEscaneados td a:hover {
+	text-decoration: underline;
+}
+/*  /Historial de carreara profesional  */
+
+/*  /Contenido DCP3A  */
+.modificarInteralineado {
+	line-height: 1.2em;
+}
+
+;
+.ajusteLOPD {
+	padding-right: 20px;
+}
+
+/*  Colocacion de Cuadros en las Solicitudes  */
+.colocaApellidos {
+	width: 265px;
+	margin-left: 60px;
+}
+
+.colocaApellidosDes {
+	width: 260px;
+	margin-left: 60px;
+	color: #ACA899;
+	border-color: #C9C7BA;
+}
+
+.colocaNombre {
+	width: 190px;
+	margin-left: 5px;
+}
+
+.colocaNombreDes {
+	width: 188px;
+	margin-left: 18px;
+	color: #ACA899;
+	border-color: #C9C7BA;
+}
+
+.colocaTelefono {
+	width: 95px;
+	margin-left: 6px;
+}
+
+.colocaDNI {
+	width: 170px;
+	margin-left: 77px;
+	margin-right: 33px;
+}
+
+.colocaCorreo {
+	width: 260px;
+	margin-left: 2px;
+}
+
+.colocaCorreoAsterisco {
+	width: 260px;
+	margin-left: 2px;
+}
+
+.colocaGerencia {
+	width: 528px;
+	margin-left: 4px;
+}
+
+.colocaTelefonoDt {
+	width: 95px;
+	margin-left: 13px;
+}
+
+.fechaGradoAlta {
+	display: inline;
+	margin: 0 0 0 25px;
+}
+
+.margenIzdaAlta {
+	margin-left: 23px;
+}
+
+.fechaGradoAlta2 {
+	display: inline;
+	margin: 0 0 0 296px;
+}
+
+.fechaGradoAlta3 {
+	margin: 0 0 0 225px;
+}
+
+.fechaGradoAltaConf {
+	margin: 0 0 0 232px;
+}
+
+.cuadroDonde {
+	margin-left: 133px;
+}
+
+.colocaFechaMf {
+	margin-left: 30px;
+}
+
+.radioGradoMf {
+	width: 15%;
+	margin-left: 72px;
+}
+
+.colocaAntAlta {
+	width: 70px;
+	margin-left: 88px;
+}
+
+.colocaCategoriaCB {
+	width: 524px;
+	margin-left: 59px;
+}
+
+.colocaEspecialidadCB {
+	width: 524px;
+	margin-left: 44px;
+}
+
+.colocaGradoBuscCB {
+	width: 98px;
+	margin-left: 79px;
+}
+
+.colocaConvocatoriaCB {
+	width: 332px;
+	margin-left: 3px;
+}
+
+select.colocaGerenciaBuscCB {
+	width: 524px;
+}
+
+.colocaEstadoBuscCB {
+	width: 265px;
+}
+
+.colocaFaseProcesoCB {
+	width: 20em;
+	margin-left: 17px;
+}
+
+.colocaEstadoCB {
+	width: 11em;
+}
+
+.colocaEstadoCBMC2 {
+	width: 15.2em;
+}
+
+.colocaConvocatoriaLF1 {
+	margin-right: 35px;
+}
+
+.colocaPersonalAlta {
+	width: 523px;
+}
+
+.imagencalendarioAlta {
+	vertical-align: bottom;
+	padding-top: 0;
+}
+
+.colocaSituacionCB {
+	width: 530px;
+	margin-left: 56px;
+}
+
+.colocaCategoriaCBAlta {
+	width: 530px;
+	margin-left: 52px;
+}
+
+.colocaEspecialidadCBAlta {
+	width: 530px;
+	margin-left: 37px;
+}
+
+.colocaProvinciaCBAlta {
+	width: 141px;
+	margin-left: 62px;
+	color: #ACA899;
+	border-color: #C9C7BA;
+}
+
+.colocaTipoGerenciaCBAlta {
+	width: 290px;
+	margin-left: 1px;
+	color: #ACA899;
+	border-color: #C9C7BA;
+}
+
+.colocaGerenciaCBAlta {
+	width: 530px;
+	margin-left: 63px;
+	color: #ACA899;
+	border-color: #C9C7BA;
+}
+
+.colocaGerenciaCBDt {
+	width: 530px;
+	margin-left: 63px;
+}
+
+.colocaCentroCBAlta {
+	margin-left: 6px;
+	width: 530px;
+}
+
+.colocaServicioCBAlta {
+	margin-left: 11px;
+	width: 530px;
+}
+
+.colocaPuestoCBAlta {
+	margin-left: 66px;
+	width: 530px;
+}
+
+/* Alta del PGP */
+.colocaNombreAlta {
+	width: 159px;
+	margin-left: 32px;
+}
+
+.colocaSexoAlta {
+	margin-left: 47px;
+	width: 90px;
+}
+
+.colocaTelefono2Alta {
+	margin-left: 27px;
+}
+
+.colocaDireccionAlta {
+	width: 489px;
+}
+
+.altaPGP .colocaLocAlta {
+	margin-left: 60px;
+	margin-right: 112px;
+}
+
+.colocaCPAlta {
+	width: 89px;
+	margin-left: 9px;
+}
+
+.cuadroDondeAlta {
+	margin-left: 141px;
+}
+
+.colocaSituacionCBAlta {
+	width: 522px;
+}
+
+.colocaCategoriaAlta {
+	width: 522px;
+	margin-left: 58px;
+}
+
+.colocaEspecialidadAlta {
+	width: 522px;
+	margin-left: 43px;
+}
+
+.colocaServiciosAlta {
+	width: 522px;
+	margin-left: 68px;
+}
+
+.colocaProvinciaAlta {
+	width: 134px;
+	margin-left: 68px;
+	color: #ACA899;
+	border-color: #C9C7BA;
+}
+
+.colocaProvinciaAlta3 {
+	margin-right: 106px;
+}
+
+.colocaGerenciaAlta {
+	width: 522px;
+	margin-left: 70px;
+	color: #ACA899;
+	border-color: #C9C7BA;
+}
+
+.colocaCentroAlta {
+	margin-left: 13px;
+	width: 522px;
+}
+
+.colocaSituacionAlta {
+	width: 389px;
+}
+
+.margenIzdaFechaAlta {
+	margin-left: 23px;
+}
+
+.altaUsuario .colocaAniosAlta {
+	width: 70px;
+	margin-left: 75px;
+	margin-bottom: 0;
+	margin-right: 17px;
+}
+
+.altaUsuario .colocaMesesAlta {
+	width: 70px;
+	margin-left: 75px;
+	margin-bottom: 0;
+	margin-right: 17px;
+}
+
+.altaUsuario .colocaDiasAlta {
+	width: 70px;
+	margin-left: 75px;
+	margin-bottom: 0;
+}
+
+.colocaCentroAlta2 {
+	margin-left: 19px;
+	width: 522px;
+}
+
+.colocaCategoriaEspecialidadAlta {
+	width: 451px;
+}
+
+.colocaEstadoAlta {
+	margin-right: 106px;
+}
+
+.colocaVinculoAlta {
+	margin-left: 46px;
+}
+
+.fechaFinAlta {
+	padding-left: 128px;
+}
+
+select.textoTituloGrisAlta {
+	width: 97%;
+}
+
+.altaPGP .colocaCategoriaEspecialidadAlta {
+	width: 450px;
+}
+
+.altaPGP .colocaTelefono1Alta {
+	margin-right: 171px;
+}
+
+.altaPGP .colocaTelefono1AltaAsterisco {
+	margin-right: 165px;
+}
+
+.altaPGP .colocaDNIAlta {
+	margin-right: 168px;
+}
+
+.altaPGP .colocaSexoAlta {
+	margin-left: 49px;
+}
+
+.altaPGP .colocaTelefono2Alta {
+	margin-left: 25px;
+	width: 90px;
+}
+
+.altaPGP .colocaCPAlta {
+	width: 89px;
+	margin-left: 7px;
+}
+
+.altaPGP .radioGradoAlta2 {
+	margin-right: 27px;
+}
+
+.altaPGP .regJuridic {
+	margin-right: 196px;
+	width: 137px;
+}
+
+.altaPGP .colocaCategoriaAlta {
+	width: 522px;
+}
+
+.altaPGP .colocaEspecialidadAlta {
+	width: 522px;
+}
+
+.altaPGP .colocaServicioAlta {
+	width: 522px;
+}
+
+.altaPGP .colocaAreaUnidadAlta {
+	margin-left: -1px;
+	width: 522px;
+}
+
+.altaPGP .colocaAniosAlta {
+	margin-right: 17px !important;
+}
+
+.altaPGP .colocaMesesAlta {
+	margin-right: 17px !important;
+}
+
+.altaPGP .labelReg {
+	height: 20px;
+}
+
+.altaPGP .cuadroDondeAl {
+	margin-left: 17px;
+}
+
+.altaPGP .situAdmin {
+	width: 280px;
+	margin-right: 25px;
+}
+
+.altaPGP .colocaProvinciaAlta3 {
+	margin-right: 87px;
+}
+
+.altaPGP .fechaFinAlta {
+	padding-left: 103px;
+}
+
+.altaPGP .colocaTipoRegJuric {
+	width: 112px !important;
+}
+
+.altaPGP .margenIzdaFechaAlta2 {
+	margin-left: 28px;
+}
+
+.altaPGP .listadoRespuesta .colocaTitRadio {
+	margin-left: 541px;
+}
+
+.altaPGP .tablaUsuarios {
+	margin-bottom: 0;
+	margin-top: 1em;
+}
+
+.altaPGP .tablaUsuarios .datosTitulo td {
+	font-size: 0.7em;
+}
+
+.altaPGP fieldset .cuadroFieldset .ajustaMargen {
+	margin-left: 40px;
+}
+
+.altaPGP fieldset div.textoMotivoAlegacion {
+	margin-bottom: 10px;
+}
+
+/* Fin del Alta del PGP */
+
+/*	Resultado devuelto por el buscador de Informes motivados de Meritos Curriculares	*/
+.tableInformesMotivados {
+	font-size: 100%;
+}
+
+.tableInformesMotivados tr.cabeceraTabla th {
+	color: #004B98;
+}
+
+.tableInformesMotivados tr.cuerpoTabla .check {
+	padding-top: 0;
+}
+
+.botonAccion .bloqueDato {
+	height: 1em;
+}
+
+/*	fin de Resultado devuelto por el buscador de Informes motivados de Meritos Curriculares	*/
+
+/* Modificacion de una solicitud */
+.colocaDNIDes {
+	margin-right: 162px;
+}
+
+.colocaNombreMf {
+	width: 173px;
+}
+
+.colocaLocMf {
+	margin-right: 105px;
+}
+
+.cuadroDondeMf {
+	margin-left: 148px;
+}
+
+.colocaGerenciaCBMf {
+	width: 523px;
+}
+
+.colocaCentroMf {
+	width: 523px;
+}
+/* Fin de la Modificacion de una solicitud */
+
+/*	Nueva Pantalla de Modificaci�n de una Solicitud de acceso	*/
+.modificarSolicitudAcceso .colocaNombreAlta {
+	margin-left: 38px;
+	width: 154px !important;
+}
+
+.modificarSolicitudAcceso .colocaSexoAlta {
+	margin-left: 52px;
+}
+
+.modificarSolicitudAcceso .colocaTelefono2Alta {
+	margin-left: 32px;
+	width: 90px;
+}
+
+.modificarSolicitudAcceso .regJuridic {
+	margin-right: 120px;
+}
+
+.modificarSolicitudAcceso .colocaGradoOpta {
+	margin-left: 16px;
+	width: 148px;
+	margin-right: 48px;
+}
+
+.modificarSolicitudAcceso .colocaSituacionAlta {
+	width: 388px;
+}
+
+.modificarSolicitudAcceso .colocaTipoRegJuric {
+	margin-left: 18px !important;
+}
+
+.modificarSolicitudAcceso .cuadroDondeAl {
+	margin-left: 12px;
+	width: 187px;
+}
+
+.modificarSolicitudAcceso .situAdmin {
+	margin-right: 52px;
+}
+
+.modificarSolicitudAcceso .colocaCategoriaAlta {
+	margin-left: 56px;
+	width: 521px;
+}
+
+.modificarSolicitudAcceso .colocaEspecialidadAlta {
+	margin-left: 41px;
+	width: 521px;
+}
+
+.modificarSolicitudAcceso .colocaProvinciaAlta {
+	margin-left: 69px;
+}
+
+.modificarSolicitudAcceso .colocaArea {
+	width: 522px;
+}
+
+.modificarSolicitudAcceso .colocaAniosAlta {
+	margin-left: 76px !important;
+	margin-bottom: 0;
+	margin-right: 20px;
+}
+
+.modificarSolicitudAcceso .colocaMesesAlta {
+	margin-left: 73px !important;
+	margin-bottom: 0;
+	margin-right: 20px;
+}
+
+.modificarSolicitudAcceso .colocaDiasAlta {
+	margin-left: 72px !important;
+	margin-bottom: 0;
+}
+
+.modificarSolicitudAcceso .colocaCtrAlta {
+	width: 521px;
+}
+
+.modificarSolicitudAcceso .colocaProvinciaServicios {
+	margin-right: 111px;
+}
+
+.modificarSolicitudAcceso .colocaVinculoServicios {
+	margin-left: 55px;
+	width: 145px;
+}
+
+.modificarSolicitudAcceso .altoReg {
+	height: 22px;
+}
+
+.modificarSolicitudAcceso .cuadroDondeTipo {
+	margin-left: 13px !important;
+	width: 188px;
+}
+
+.modificarSolicitudAcceso .colocaCategoriaAlta {
+	width: 521px;
+	margin-left: 56px;
+}
+
+.modificarSolicitudAcceso .colocaGerenciaMf {
+	width: 522px;
+}
+/*	/Nueva Pantalla de Modificaci�n de una Solicitud de acceso	*/
+.colocaAnt {
+	width: 70px;
+	margin-left: 69px;
+	margin-bottom: 2px;
+}
+
+.colocaTipoGerenciaCB {
+	width: 320px;
+	margin-left: 1px;
+}
+
+.colocaGerenciaCB {
+	width: 565px;
+	margin-left: 26px;
+}
+
+.colocaCentroCB {
+	width: 534px;
+}
+
+.colocaServicioCB {
+	width: 534px;
+	margin-left: 5px;
+}
+
+.colocaAreaCB {
+	width: 534px;
+	margin-left: 73px;
+}
+
+.colocaUnidadCB {
+	width: 534px;
+	margin-left: 62px;
+}
+
+.colocaCentro {
+	width: 482px;
+}
+
+.colocaSituacionDen {
+	width: 507px;
+}
+
+.colocaCategoriaDen {
+	width: 250px;
+}
+
+.colocaEspecialidadDen {
+	width: 240px;
+	margin-left: 8px;
+}
+
+.colocaProvinciaDen {
+	width: 250px;
+	margin-left: 3px;
+}
+
+.colocaTipoGerenciaDen {
+	width: 240px;
+}
+
+.colocaGerenciaDen {
+	width: 585px;
+	margin-left: 4px;
+}
+
+.colocaCentroDen {
+	width: 538px;
+}
+
+.colocaPuestoDen {
+	margin-left: 14px;
+	width: 584px;
+}
+
+.colocaServicioDen {
+	margin-left: 9px;
+	width: 584px;
+}
+
+.colocaAreaDen {
+	margin-left: 27px;
+	width: 584px;
+}
+
+.colocaUnidadDen {
+	margin-left: 16px;
+	width: 584px;
+}
+
+.colocaFechaRegistroDen {
+	width: 8em;
+	margin-bottom: 0;
+}
+
+.colocaCarTADen {
+	margin-left: 48px;
+}
+
+.colocaTADen {
+	margin-left: 30px;
+}
+
+.colocaProfServiciosDet {
+	margin-left: 20px;
+	width: 33.4em;
+}
+
+.colocaCorreoInc {
+	width: 476px;
+}
+
+.colocaPuestoInc {
+	width: 528px;
+	margin-left: 13px;
+}
+
+.colocaServicioInc {
+	width: 528px;
+	margin-left: 8px;
+}
+
+.colocaAreaInc {
+	width: 528px;
+	margin-left: 26px;
+}
+
+.colocaUnidadInc {
+	width: 528px;
+	margin-left: 15px;
+}
+
+.colocaTelefonoInc {
+	width: 180px;
+	margin-left: 53px;
+}
+
+.colocaCentroInc {
+	width: 483px;
+}
+
+.colocaApellidosEvaluadores {
+	width: 250px;
+	margin-left: 53px;
+}
+
+.colocaNombreEvaluadores {
+	width: 160px;
+	margin-left: 5px;
+}
+
+.colocaDNIEvaluadores {
+	width: 100px;
+	margin-left: 70px;
+	margin-right: 150px;
+}
+
+.colocaCorreoEvaluadores {
+	width: 250px;
+	margin-left: 2px;
+}
+
+.colocaTelefonoEvaluadores {
+	width: 160px;
+	margin-left: 0px;
+}
+
+.colocaCategoriaCBEvaluadores {
+	width: 500px;
+	margin-left: 25px;
+}
+
+.colocaEspecialidadCBEvaluadores {
+	width: 500px;
+	margin-left: 10px;
+}
+
+.colocaConvocatoriaCBEvaluadores {
+	width: 500px;
+	margin-left: 10px;
+}
+
+.colocaConvocatoriaCBEvaluadoresLs {
+	width: 479px;
+	margin-left: 33px;
+}
+
+.colocaTitulacionBuscadorEvaluadores {
+	width: 42.8em;
+	margin-left: 52px;
+}
+
+.colocaAnioBuscadorEvaluadores {
+	margin-left: 83px;
+}
+
+.colocaComiteCBEvaluadoresLs {
+	width: 42.8em;
+	margin-left: 65px;
+}
+
+.colocaConvocatoriaCBCTESDet {
+	width: 450px;
+	margin-left: 10px;
+}
+
+.colocaProvinciaCBCtes {
+	width: 279px;
+	margin-left: 5px;
+}
+
+.colocaCategoriaCBCtes {
+	width: 212px;
+}
+
+.colocaCategoriaCBECtes {
+	width: 410px;
+	margin-left: 22px;
+}
+
+.colocaEspecialidadCBCtes {
+	width: 410px;
+	margin-left: 7px;
+}
+
+.colocaComunidadConvoCtes {
+	margin-left: 35px;
+	width: 178px;
+}
+
+.margenCuadroTextoAlegaciones {
+	margin-left: 26px;
+}
+
+.textoCaracteresAl {
+	padding-left: 16px;
+}
+/*  /Colocacion de Cuadros en las Solicitudes  */
+
+/*  Colocacion de Cuadros en las Tablas de Administracion  */
+.colocaEspecEspec {
+	width: 33.5em;
+}
+
+.colocaDescEspec {
+	width: 40em;
+	margin-left: 1px;
+}
+
+.colocaEspeConEspe {
+	width: 33.5em;
+}
+
+.colocaDescConEspe {
+	margin-left: 3px;
+	width: 39.2em;
+}
+/*  /Colocacion de Cuadros en las Tablas de Administracion  */
+.ajusteGradoMC {
+	margin-right: 0;
+}
+
+.colocaTipoMC {
+	margin-right: 60px
+}
+
+div.contenidoMC .tituloMC {
+	width: 82%;
+}
+
+div.contenidoMC .anchoLinea {
+	line-height: 1.3em;
+}
+
+.botonAccion span.cenBoton input.textoBotonInput {
+	padding: 5px 5px 0 0px;
+}
+
+.botonAccion span.cenBoton input.textoBotonInputAncho {
+	font-size: 1em;
+	font-weight: bold;
+	font-family: sans-serif;
+	letter-spacing: 1px;
+	color: #000;
+	padding: 4px 8px 0px 8px;
+	float: left;
+}
+
+.contenidoMC .cuadroListadoCuestionario {
+	margin-bottom: 0;
+}
+
+.contenidoMC .cuadroTACuestionario {
+	width: 50em;
+}
+
+div.contenidoMC .listadoMeritos .cuadroMeritos {
+	height: 3em;
+}
+
+.contenidoMC .textoRadioCuestionario {
+	line-height: 1.7em;
+	vertical-align: top;
+	width: 10em;
+}
+
+.contenidoMC .stTitulo .nivel0 {
+	margin: 10px 0 -20px 0;
+}
+
+.contenidoMC .stTitulo .nivel1 {
+	width: 95%;
+	margin: 0 0 -20px 20px;
+}
+
+.contenidoMC .stPregunta .nivel0 {
+	margin: 0 10px -5px 0;
+}
+
+.contenidoMC .stPregunta .nivel1 {
+	margin: 0 0 0 0;
+}
+
+.botonAccion span.cenBoton input, .botonAccion span.cenBoton .botonNoLink
+	{
+	padding: 5px 10px 0px 10px;
+}
+
+.colocarBotonLogout {
+	margin-left: 10px;
+}
+
+div.contenidoMC td .botonAccion {
+	width: 7em;
+}
+
+fieldset.normalesLogin {
+	width: 400px;
+}
+
+.botonLogin {
+	margin-top: 20px;
+	padding-left: 332px;
+}
+
+.radioTitulos {
+	line-height: 1em;
+}
+
+.altoLinea {
+	line-height: 1.5em;
+}
+
+.opcionRadioSeparados, .radioTitulos div .opcionRadio {
+	margin-right: 0;
+}
+
+div.contenidoTextoAutoevaluacion .numTotal {
+	padding: 2px 3px 2px 5px;
+	width: 4em;
+}
+
+div.contenidoTextoAutoevaluacion .informeConformidad ul li ul li textarea
+	{
+	width: 607px;
+}
+
+div.contenidoTextoAlgoritmo .itinerarios .primero {
+	margin-left: 50px;
+}
+
+.contenidoDCP2A span.colocaTitRadio {
+	margin-left: 477px;
+}
+
+.textosCertif {
+	margin-left: 31px;
+}
+
+.fechaCuadro label {
+	font-weight: bold;
+	float: right;
+	margin-right: 65px;
+}
+
+/*  Colocacion de Cuadros en los Meritos Curriculares */
+.colocaFechasMC {
+	width: 9.15em;
+}
+
+.colocaTitTallerMC {
+	margin-left: 53px;
+	width: 47.95em;
+}
+
+.colocaFechaTallerMC {
+	width: 10em;
+}
+
+.TallerMC .colocaFechaTallerMC {
+	width: 9.1em;
+}
+
+.colocaNHorasTAllerMC {
+	margin-left: 45px;
+	margin-right: 7px;
+	width: 6em;
+}
+
+.colocaNumTallerMC {
+	width: 6em;
+	margin-left: 20px;
+}
+
+.colocaOrganizaTallerMC {
+	width: 47.95em;
+}
+
+.colocaTitCongresoMC {
+	margin-left: 53px;
+	width: 47.95em;
+}
+
+.colocaOrganCongresoMC {
+	width: 47.95em;
+}
+
+.colocaDescEstanciaMC {
+	margin-left: 15px;
+	width: 40.7em;
+}
+
+.colocaLugarEstanciaMC {
+	margin-left: 47px;
+	width: 40.7em;
+}
+
+.colocaExpertoMasterMC {
+	margin-right: 18px;
+}
+
+.colocaTitMasterMC {
+	margin-left: 127px;
+	width: 41.4em;
+}
+
+.colocaOrganMasterMC {
+	margin-left: 12px;
+	width: 41.3em;
+}
+
+.colocaTitCursoDocMC {
+	margin-left: 53px;
+	width: 47.9em;
+}
+
+.colocaNumHCursoDocMC {
+	margin-left: 38px;
+	width: 5em;
+}
+
+.colocaOrganCursoDocMC {
+	width: 47.9em;
+}
+
+.colocaTitBibliograficaMC {
+	margin-left: 5px;
+	width: 51em;
+}
+
+.colocaTitLibISBN {
+	width: 45.5em;
+}
+
+.colocaTitCapISBN {
+	width: 49em;
+}
+
+.colocaEditorialISBN {
+	width: 45.5em;
+}
+
+.colocaLugarISBN {
+	width: 45.5em;
+}
+
+.colocaTitProtocoloGuia {
+	width: 38.7em;
+}
+
+.colocaEntidadBecaMC {
+	margin-left: 14px;
+	width: 40.6em;
+}
+
+.colocaLugarBecaMC {
+	margin-left: 2px;
+	width: 30.6em;
+}
+
+.colocaInveBecaMC {
+	margin-left: 19px;
+	width: 40.6em;
+}
+
+.colocaServicioJefeSMC {
+	width: 30.4em;
+}
+
+.colocaCentroCoordinaMC {
+	width: 40.5em;
+}
+
+.colocaCentroResponsableComiMC {
+	margin-left: 5px;
+	width: 46.1em;
+}
+
+.colocaUnidadResponsableUniMC {
+	margin-left: 5px;
+	width: 46.1em;
+}
+
+.colocaUnidadResponsableDoceMC {
+	margin-left: 20px;
+	width: 40.5em;
+}
+
+.colocaZonaMiembroConsejoMC {
+	margin-left: 5px;
+	width: 31.3em;
+}
+
+.colocaActiBResponsable {
+	margin-left: 39px;
+	width: 40.5em;
+}
+
+.colocaUnidadUnidadTutor {
+	margin-left: 5px;
+	width: 46.5em;
+}
+
+.colocaComiMiembroComisionMC {
+	margin-left: 5px;
+	width: 49.4em;
+}
+
+.colocaGrupoMiembroGrupoMC {
+	width: 46.4em;
+}
+
+.colocaCargoMiembroGrupoMC {
+	margin-left: 59px;
+	width: 46.4em;
+}
+
+.colocaObjetivoMiembroGrupoMC {
+	margin-left: 47px;
+	width: 46.4em;
+}
+
+.colocaTitOrganizadorMC {
+	width: 44.7em;
+}
+
+.colocaTribunalMiembroTribunalMC {
+	margin-left: 5px;
+	width: 53em;
+}
+
+.colocaTitCasosSesMC {
+	margin-left: 5px;
+	width: 45em;
+}
+
+.colocaServicioMaterialServMC {
+	margin-left: 5px;
+	width: 50.3em;
+}
+
+.colocaActividadActEspecificaMC {
+	margin-left: 5px;
+	width: 49.7em;
+}
+
+.colocaTitRevisaProtoProcedMC {
+	margin-left: 5px;
+	width: 46.6em;
+}
+
+.colocaTitTesisMC {
+	margin-left: 37px;
+	width: 50em;
+}
+
+.colocaUniversidadTesisMC {
+	width: 50em;
+}
+
+.colocaTitEvaluadorMC {
+	margin-left: 76px;
+	width: 40em;
+}
+
+.colocaAgenciaEvaluadorMC {
+	margin-left: 0;
+	width: 40em;
+}
+
+.colocaCentroResponsableCartMC {
+	margin-left: 18px;
+	width: 52em;
+}
+
+.colocaProgramaAsistencialCartMC {
+	width: 45.3em;
+}
+
+.colocaCargoCartMC {
+	width: 39.9em;
+}
+
+.colocaActBResponsableMC {
+	width: 49.7em;
+	margin-left: 5px;
+}
+
+.colocaActPreparaImpMC {
+	width: 50.3em;
+	margin-left: 5px;
+}
+
+.margenTexto {
+	padding-bottom: 0;
+}
+
+div.contenidoMC .cuadroMC {
+	margin-left: 60px;
+}
+
+.radiosAcreditacionesMC .radioHorizontal {
+	display: inline;
+}
+
+.radiosAcreditacionesMC .radioHorizontal span {
+	display: inline-block;
+	margin-top: 3px;
+}
+
+.contenidoAltaMC .ajustarSeminarios {
+	margin-left: 1.5em !important;
+}
+
+.contenidoAltaMC .botonesBibliograficas {
+	margin-bottom: 4em;
+	margin-left: 0;
+	padding-left: 12em;
+}
+
+.contenidoAltaMC .botonesDocencia {
+	margin-bottom: 3em;
+	margin-left: 0;
+	padding-left: 12em;
+	margin-top: 5em;
+}
+/*  /Colocacion de Cuadros en los Meritos Curriculares  */
+
+/*  Arreglo de Tama�o en Fuentes  */
+div.contenidoListadoAspirantesGCP .cuadroListadoAspirantesFase tr td {
+	font-size: 0.8em;
+}
+
+div.contenidoListadoAspirantesGCP .cuadroListadoAspirantesBis .tituloAsp,
+	div.contenidoListadoAspirantesGCP .cuadroListadoAspirantes .tituloAsp,
+	div.contenidoListadoAspirantesGCP .cuadroListadoAspirantesFase .tituloAsp,
+	.datosAsp, div.contenidoDCP2A .tablaCertif tr td, .paginacionConsultas .botonPaginacion,
+	.paginacionConsultas .parteCen, .tituloCertificados, div.contenidoMC tr.tablaMC td span,
+	.tablaFaseEvaluacion tr td {
+	font-size: 0.7em;
+}
+
+.contenidoListadoAspirantesGCP .noDatos {
+	font-size: 0.7em;
+}
+
+div.contenidoMC td .botonAccion span a span, div.contenidoMC .cuadroMC {
+	font-size: 1em;
+}
+
+.reducirTexto {
+	font-size: 1em;
+}
+
+.reducirTexto2 {
+	font-size: 0.8em;
+}
+
+div.contenidoListadoAspirantesGCP .tablaSolicitudes {
+	font-size: 1em;
+}
+/*  /Arreglo de Tama�o en Fuentes  */
+.opcionRadioAlta {
+	height: 15px;
+}
+
+/* Clases de Solicitud acceso a Grado  */
+.solicitudAltaGrado span {
+	line-height: 10px;
+}
+
+.radioGradoAlta2 {
+	margin-right: 83px;
+}
+
+.modDesdeOpta {
+	margin-left: 25px;
+}
+
+.regJuridic {
+	margin-right: 27px;
+	margin-right: 121px;
+}
+
+.colocaTipoRegJuric {
+	margin-left: 16px;
+}
+
+.situAdmin {
+	margin-left: 7px;
+	margin-right: 51px;
+}
+
+.mostrarCampoOculto {
+	margin-left: 329px;
+}
+
+.cuadroOcultoAlta {
+	width: 220px;
+}
+
+.colocaApellidos1Sol {
+	width: 180px;
+	margin-left: 20px;
+	margin-right: 25px;
+}
+
+.colocaApellidos2Sol {
+	width: 180px;
+	margin-left: 21px;
+	margin-right: 14px;
+}
+
+.colocaNombreSol {
+	width: 180px;
+}
+
+.colocaDNISol {
+	margin-right: 117px;
+}
+
+.colocaSexoSol {
+	width: 90px;
+}
+
+.colocaTelefono1Sol {
+	margin-right: 117px;
+}
+
+.colocaCorreoSol {
+	width: 185px;
+}
+
+.colocaDireccionSol {
+	width: 490px;
+	margin-left: 5px;
+}
+
+.colocaProvinciaSol {
+	width: 185px;
+	margin-right: 23px;
+}
+
+.colocaLocalidadSol {
+	width: 185px;
+	margin-right: 23px;
+}
+
+.colocaSituacionCBSol {
+	width: 529px;
+	margin-left: 56px;
+}
+
+.colocaCategoriaCBSol {
+	width: 529px;
+	margin-left: 52px;
+}
+
+.colocaEspecialidadCBSol {
+	width: 529px;
+	margin-left: 37px;
+}
+
+.colocaProvinciaCBSol {
+	margin-right: 60px;
+}
+
+.cuadroOtras {
+	margin-left: 57px;
+	width: 271px;
+}
+
+.colocaTipoGerenciaCBSol {
+	width: 148px;
+	margin-left: 29px;
+}
+
+.colocaGerenciaCBSol {
+	width: 528px;
+	margin-left: 56px;
+}
+
+.colocaGerenciaAdm {
+	width: 523px;
+	margin-left: 62px;
+}
+
+.colocaCentroCBSol {
+	margin-left: 6px;
+	width: 528px;
+}
+
+.colocaServiciosCentroCBSol {
+	width: 528px;
+}
+
+.colocaCategoriaSol {
+	width: 459px;
+}
+
+.colocaSituacionSol {
+	margin-right: 113px;
+}
+
+.fechaFinSol {
+	padding-left: 124px;
+}
+
+.capaPieSol {
+	margin-bottom: 0;
+	height: 2px;
+	width: 400px;
+}
+
+.solicitudAlta input {
+	margin-top: 0px;
+}
+/* Fin Clases de Solicitud acceso a Grado  */
+
+/* Denegacion */
+.denegacion .ajustaProcedimiento {
+	padding-top: 5px;
+}
+
+.denegacion .ajustaSitAdmin {
+	margin-top: 18px;
+}
+
+.denegacion .ajustaPersonal {
+	margin-top: 18px;
+}
+
+.denegacion .ajustaCategoria {
+	padding-top: 8px;
+}
+
+.denegacion .ajustaEspecialidad {
+	padding-top: 8px;
+}
+
+.denegacion .ajustaProvincia {
+	padding-top: 9px;
+}
+
+.denegacion .ajustaGerencia {
+	padding-top: 5px;
+}
+
+.denegacion .ajustaTrabajo {
+	padding-top: 3px;
+}
+
+.ajustarCampos .ajustaEspecialidad {
+	padding-top: 0;
+	margin-top: -3px;
+}
+
+/* Listado de Evaluadores */
+.tablaEvaluadores {
+	font-size: 11px;
+}
+
+.tablaEvaluadores .campoIcono .imagenIzda {
+	margin-right: 15px;
+}
+
+.tablaEvaluadores .campoIcono .imagenDcha {
+	margin-left: 15px;
+}
+
+/*  Contenido Evaluadores  */
+.solicitudesFaseIII {
+	font-size: 14px;
+}
+
+.solicitudesFaseIII td.tituloAsp {
+	font-weight: bold;
+	font-size: 12px !important;
+}
+
+.tabla10 td {
+	padding-top: 0.3em;
+	padding-bottom: 0.3em;
+}
+/*  Contenido Listado AspirantesGCP  */
+.colocaConvocatoriaGPC {
+	width: 330px;
+}
+
+div.contenidoListadoAspirantesGCP .tablaSolicitudes .cabeceraTablaSolicitudes td.cabeceraNIF *
+	{
+	width: 5em;
+	display: block;
+}
+
+div.contenidoListadoAspirantesGCP .colocaVerMeritos {
+	margin-left: 4em;
+	width: 76.9%;
+}
+
+div.contenidoListadoAspirantesGCP .colocaApellidosLE {
+	width: 23.7em;
+}
+/* Pantalla Especialidades Quirurgicas */
+.espQuirurgicas {
+	width: 95%;
+	margin-left: 0;
+}
+/*	/Pantalla Especialidades Quirurjicas	*/
+
+/*	Finalizar MC */
+div.contenidoListadoSolicitudesGerencia .colocaConvocatoriaCB {
+	width: 282px;
+}
+/*	/Finalizar MC */
+
+/*	Listado Dinamico	*/
+div.contenidoListadoDinamico .colocaGerenciaCSV {
+	margin-left: 36px;
+	width: 517px;
+}
+
+div.contenidoListadoDinamico .colocaConvocatoriaCB {
+	width: 282px;
+}
+
+div.contenidoListadoDinamico .colocaFaseProcesoCB {
+	margin-right: 45px;
+}
+
+div.contenidoListadoDinamico .checkEstadoCSV {
+	margin-left: 38px;
+}
+
+div.contenidoListadoDinamico .colocaEstadoCBMC {
+	margin-left: 26px;
+	width: 332px;
+}
+
+div.contenidoListadoDinamico .colocaNifCSVDinamico {
+	margin-right: 5em;
+}
+
+div.contenidoListadoDinamico .colocaApellidosCSVDinamico {
+	margin-right: 5em;
+}
+
+div.contenidoListadoDinamico .colocaNombreCSVDinamico {
+	margin-right: 5em;
+}
+
+div.contenidoListadoDinamico .colocaSexoCB {
+	margin-left: 30px;
+}
+
+div.contenidoListadoDinamico .colocaCategoriaCB {
+	width: 517px;
+	margin-left: 32px;
+}
+
+div.contenidoListadoDinamico .colocaEspecialidadCSV {
+	width: 517px;
+	margin-left: 17px;
+}
+
+div.contenidoListadoDinamico .colocaProcEvaluaCSV {
+	width: 332px;
+}
+
+div.contenidoListadoDinamico .colocaGerencia {
+	width: 517px;
+}
+
+div.contenidoListadoDinamico .colocaRegimenJuridicoCSV {
+	margin-right: 22px;
+}
+
+div.contenidoListadoDinamico .colocaProcEvaluaCSV2 {
+	margin-left: 25px;
+}
+
+div.contenidoListadoDinamico .colocaSitAdminCSV {
+	margin-right: 73px;
+}
+
+div.contenidoListadoDinamico .colocaModalidadCSV {
+	margin-right: 111px;
+}
+
+div.contenidoListadoDinamico .colocaProcEvalCSV {
+	margin-right: 202px;
+}
+/*	/Listado Dinamico	*/
+
+/*	Generacion de Actas	*/
+div.generarActas {
+	font-size: 1em;
+}
+
+div.generarActas .tituloVocales {
+	float: left;
+	padding-top: 6px;
+}
+
+div.generarActas .vocales {
+	float: left;
+	font-size: 1em;
+	margin-left: 27px;
+}
+
+div.generarActas .colocaMiembrosAusentes {
+	width: 653px;
+}
+
+div.generarActas .colocaCategoriaGenActas {
+	width: 535px;
+}
+
+div.generarActas .colocaConvocatoriaGenActas {
+	width: 535px;
+}
+
+div.generarActas .horarioActas {
+	margin-top: 1.3em;
+}
+
+div.generarActas .colocaFechaAlta {
+	width: 65px;
+}
+
+div.generarActas .colocaHoras {
+	width: 28px;
+}
+
+div.generarActas .bloqueEnvolturaDatos div {
+	height: 2em;
+}
+
+div.generarActas .colocaConvocatoriaGenActas {
+	width: 47.1em;
+}
+
+div.generarActas .colocaCategoriaGenActas {
+	width: 47.1em;
+}
+
+div.generarActas .tablaProfesionales {
+	font-size: 1em;
+	color: #004B98;
+}
+
+div.generarActas .asistentes * {
+	font-size: 1em;
+}
+
+div.generarActas .asistentes span {
+	margin-top: 4px;
+}
+
+div.generarActas .asistentes table td input {
+	position: static;
+	vertical-align: top;
+	margin-bottom: 3px;
+}
+
+/*	/Generacion de Actas	*/
+
+/*	Dossier	*/
+.dossier {
+	margin-left: 0;
+}
+
+.dossier * {
+	font-size: 1em;
+}
+
+.colocaCategoriaDossier {
+	width: 490px;
+}
+
+.colocaCentroDossier {
+	width: 490px;
+}
+/*	/Dossier	*/
+
+/*	Informe de Evaluacion	*/
+.informeDt * {
+	font-size: 1em;
+}
+
+.informeDt .informeTabla td {
+	border-bottom: 1px solid #004B98;
+	border-left: 1px solid #004B98;
+}
+
+.informe2Dt .bordeCuadro2 {
+	width: 94%;
+}
+
+/*	Gestion CTE Reuniones	*/
+.reuniones .taMedianoEvaluadores {
+	width: 59.5em;
+	margin-right: 2.5em;
+}
+
+.reuniones .separaComite {
+	margin-left: 5px;
+}
+
+.reuniones .evaluadoresAsociados2 {
+	width: 59.3em;
+}
+/*	/Gestion CTE Reuniones	*/
+.evaluacionIEC ul.listadoResumen .cajaTexto {
+	width: 660px;
+}
+
+.evaluacionIEC .propuestaAuditoria .tipoRegistro {
+	width: 525px;
+}
+
+.evaluacionIEC .propuestaAuditoria .textoDocumento {
+	vertical-align: middle;
+}
+
+.evaluacionIEC .propuestaAuditoria .documento {
+	width: 525px;
+	margin-top: 7px;
+	margin-bottom: 7px;
+}
+
+.evaluacionIEC .propuestaAuditoria .historialClinic1 {
+	margin-left: 8px;
+}
+
+/*	Informe CC	*/
+.informeCC .ajusteBorde1 {
+	width: 600px;
+}
+
+.informeCC .ajusteBorde2 {
+	width: 657px;
+}
+
+.listadoEvaluadoresEvaluados .tablaEvaluadores table {
+	font-size: 1em;
+}
+
+.separaIzqTit {
+	margin-left: 23px !important;
+	font-weight: normal !important;
+}
+
+/*	Estadisticas de Evaluados	*/
+.estadisticasEvaluados .separador {
+	height: 0;
+}
+/*	/Estadisticas de Evaluados	*/
+
+/* Buscador Solicitudes */
+.solicitudesLs .datosTitulo td {
+	font-size: 1em;
+}
+
+.buscadorSolicitudes .colocaDNI {
+	width: 98px;
+}
+
+.ListadoAsp {
+	line-height: 3em !important;
+	color: #004B98
+}
+
+.buscadorSolicitudes .colocaConvocatoria {
+	width: 264px;
+}
+
+.buscadorSolicitudes table .datosTitulo td {
+	font-size: 0.7em;
+}
+
+.buscadorSolicitudes .listadoSolicitudes {
+	width: 99%;
+}
+
+.buscadorSolicitudes table .datosTitulo td.tituloNombre {
+	width: 150px;
+}
+
+.buscadorSolicitudes table .datosTitulo td.tituloApellidos {
+	width: 200px;
+}
+/*	/Buscador de Solicitudes	*/
+
+/*	Gestion de Solicitudes	*/
+.gestionSolicitudes table.tablaListado .cabeceraTabla td {
+	font-size: 0.7em;
+	line-height: 0.8em !important;
+	vertical-align: middle;
+}
+
+.gestionSolicitudes .tablaListado .cuerpoTabla td {
+	font-size: 0.7em;
+}
+/*	/Gestion de Solicitudes	*/
+
+/*	Monitorizaci�n de la Base de Datos	*/
+.monitorizacionBD fieldset table .datosTitulo td {
+	font-size: 0.7em;
+}
+
+.monitorizacionBD fieldset table {
+	margin-left: 85px !important;
+	display: block;
+}
+/*	/Monitorizaci�n de la Base de Datos	*/
+div.contenidoMC tr.tablaMC td.primero span {
+	margin-top: 0;
+}
+
+div.contenidoMC tr.tablaMC td.icono {
+	width: 6em !important;
+}
+
+div.contenidoMC tr.tablaMC td.icono * {
+	margin: 0;
+}
+
+div.contenidoMC tr.tablaMC td.icono .creditos {
+	width: 6em;
+	margin-top: 0;
+}
+
+ddiv.contenidoMC tr.tablaMC td.primero span {
+	width: 20em !important;
+}
+
+div.contenidoMC tr.tablaMC td.icono .botonAccion span {
+	margin: 0 !important;
+}
+
+.colocaFechasMC2 {
+	margin-left: 2.95em;
+}
+
+/*	GRS Administracion de Fechas	*/
+.admFechas .colocaGerenciaAdmF {
+	width: 523px;
+}
+/*	Fin de GRS Administracion de Fechas	*/
+
+/*	Carga de Miembros de las Actas	*/
+.cargaMiembros .cajaTexto {
+	width: 99%;
+}
+
+.cargaMiembros .tablaCarga th {
+	font-size: 70%;
+}
+
+.cargaMiembros .colocaConvocatoriaCB {
+	width: 524px;
+}
+/*	Carga de Miembros de las Actas	*/
+
+/*	Estilos temporales para Componentes de CTE > Alta 	(Fase II luego se pondran los de Fase III) TEMPORAL	*/
+.contenidoDCP1A .colocaProfesionCBCtes {
+	width: 89%;
+}
+/*	Fin de Estilos temporales para Componentes de CTE > Alta 	(Fase II luego se pondran los de Fase III) TEMPORAL	*/
+.colocaAccionBuscCB {
+	width: 98px;
+	margin-left: 75px;
+}
+
+.colocaConvocatoriaBuscCB {
+	width: 330px;
+	margin-left: 5px;
+}

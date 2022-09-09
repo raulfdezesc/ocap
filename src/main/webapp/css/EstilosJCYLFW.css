@@ -1,0 +1,1684 @@
+.encuadre { /* Marco que agrupa el total de la ventana */
+	background-color: #ffffff;
+	xxwidth: 91em; /* Para hacerla mas ancho solo tocar este valor */
+	width: 89.2em;
+	padding-top: 0px;
+	padding-right: 0px;
+	padding-bottom: 0px;
+	padding-left: 0px;
+	margin-top: 0px;
+	margin-left: auto;
+	margin-right: auto;
+	margin-bottom: 0px;
+}
+
+.cuadroContenedor {
+	padding: 0.7em 0em 0em 0em;
+	text-align: center;
+}
+
+.cuadroContenedorConsultas {
+	padding: 0.7em 0em 0em 0em;
+	text-align: center;
+	height: 100%;
+}
+/* Estilos para la cabecera*/
+.midCabecera {
+	margin: 0em 0em 0em 0em;
+	padding: 0em 0em 0em 0em;
+	width: 100%;
+	height: 88px;
+	background-color: #FFFFFF;
+	/*background-image: url("../imagenes/imagenes_ocap/degradadoCab.gif");*/
+	background-image: url("../imagenes/imagenes_ocap/degradadoCab.gif");
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+
+.midCabecera img {
+	float: left;
+}
+
+.midCabecera h1 {
+	font-family: Georgia, "Times New Roman", Times, serif;
+	color: #3C5E81;
+	font-size: 1.8em;
+	font-weight: bold;
+	margin: 1.5em 5em 1em 1em;
+	padding-top: 1.5em;
+	text-align: center;
+}
+
+.miCabecera {
+	margin: 0em 0em 0em 0em;
+	padding: 0em 0em 0em 0em;
+	width: 100%;
+	height: 88px;
+	background-color: #FFFFFF;
+	/*background-image: url("../imagenes/imagenes_ocap/degradadoCab.gif");*/
+	background-image: url("../imagenes/imagenes_ocap/degradadoCab.gif");
+	background-repeat: no-repeat;
+	background-position: right top;
+}
+
+.miCabecera img {
+	float: left;
+}
+
+.miCabecera h1 {
+	color: #004B98;
+	font-size: 1.6em;
+	font-weight: bold;
+	margin: 2em 5em 1em 1em;
+	padding-top: 2em;
+	text-align: center;
+}
+
+/* Estilos para la botonera de usuario conectado y botonera de conexión*/
+.cuadroInfo { /* Marco que agrupa el usuario conectado y botonera */
+	background-color: #E2BF90;
+	background-color: #FFFFFF;
+	margin: 0px 0px 2px 0px;
+	padding: 8px 0px 8px 0px;
+	width: 100%;
+	float: left;
+	border-bottom: 1px #004B98 solid;
+}
+
+.conexion { /* Marco con el usuario conectado */
+	margin: 0em 0em 0em 0.8em;
+	padding: 0em 0em 0em 220px;
+	background-color: #E2BF90;
+	background-color: #FFFFFF;
+	color: #000000;
+	font-weight: bold;
+	width: 50%;
+	float: left;
+	text-align: left;
+}
+
+.botoneraCS, .botonera { /* Marco con la botonera estandar */
+	margin: 0em 1.5em 0em 0em;
+	padding: 0em 0em 0em 0em;
+	float: right;
+	text-align: right;
+	z-index: 2;
+}
+
+.botonera a {
+	font-size: 1em;
+	font-weight: bold;
+	padding: 0px 0px 2px 0px;
+	margin-top: 0.2em;
+	margin-right: 0em;
+	margin-bottom: 0.2em;
+	margin-left: 0em;
+	text-decoration: none;
+	color: #004B98;
+	float: none;
+}
+
+.botonera a:hover {
+	color: #004B98;
+	text-decoration: none;
+}
+
+.botoneraCS a {
+	font-size: 1em;
+	font-weight: bold;
+	padding: 0px 10px 2px 10px;
+	margin-top: 0.2em;
+	margin-right: 0em;
+	margin-bottom: 0.2em;
+	margin-left: 0em;
+	text-decoration: underline;
+	color: #000000;
+	float: none;
+}
+
+.colocarMensajeExito {
+	margin-left: 10px;
+}
+
+/* Marco contenido para version no Accesible : Menu Javascript */
+.contenidoNoAccesible {
+	background-color: #ffffff;
+	width: auto;
+	margin: 0px 0px 10px 0px;
+	padding: 10px 0px 0px 0px;
+	color: #ffffff;
+	/* Solución para que funciona el min-height en Explorer */
+	min-height: 400px;
+	height: auto !important;
+	height: 400px;
+}
+
+.marcoContenidoAccesible {
+	background-color: #ffffff;
+	width: auto;
+	top: 0px;
+	left: 0px;
+	margin: 0px 0px 0px 0px;
+	padding: 0px 0px 0px 0px;
+}
+/* Marco de contenido accesible . Agrupado a la derecha */
+.contenidoAccesible {
+	background-color: #ffffff;
+	width: 80%;
+	margin: 0px 0px 0px 0px;
+	padding: 10px 0px 0px 0px;
+	float: left;
+	/* Solución para que funciona el min-height en Explorer */
+	min-height: 400px;
+	height: auto !important;
+	height: 100%;
+}
+/* Marco y subestilos del menu accesible */
+.menuAccesible { /* Marco con el menu a la izquierda accesible */
+	background-color: #ffffff;
+	width: 20%;
+	padding: 10px 0px 0px 0px;
+	float: left;
+	/* Solución para que funciona el min-height en Explorer */
+	min-height: 400px;
+	height: auto !important;
+	height: 400px;
+}
+
+.menuAccesible a {
+	color: #4A4A4A;
+	background-color: transparent;
+	text-decoration: none;
+	margin: 0;
+}
+
+.menuAccesible UL {
+	list-style-type: none;
+	margin: 0px 0px 0px 10px;
+	padding: 5px 0px 5px 0px;
+}
+
+.menuAccesible LI {
+	list-style-type: none;
+	text-align: left;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.menuAccesible .menuNivel_0 {
+	margin: 0px 3px 0px 0px;
+	padding: 5px 2px 5px 10px;
+	background-image: url("../imagenes/imagenes_ocap/degradadoMenu.gif");
+	background-position: top;
+	background-repeat: repeat-x;
+	color: #ffffff;
+	font-weight: bold;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 0.9em;
+}
+
+.menuAccesible .menuNivel_0 a {
+	color: #ffffff;
+	font-weight: bold;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	text-decoration: none;
+	font-size: 0.9em;
+}
+
+.menuAccesible .menuNivel_1 {
+	margin: 0px 3px 0px 0px;
+	padding: 0px 0px 0px 0px;
+	background-image: url("../imagenes/imagenes_ocap/degradadoMenu2.gif");
+}
+
+.menuAccesible .menuNivel_1 a {
+	display: inline-block;
+	color: #000000;
+	font-size: 1em;
+	font-weight: bold;
+	margin: 0px 0px 0px 0px;
+	padding: 2px 0px 2px 15px;
+	/* width: 92%;  */
+}
+
+.menuAccesible .menuNivel_1 a:hover {
+	background-color: #F9EFE3;
+	text-decoration: none;
+	width: 92%;;
+}
+
+/* Caracteristicas del iframe */
+#marcoContenido {
+	position: relative;
+	height: 380px;
+	width: 100%;
+}
+/* Estilos Para los formularios de Login y Cambio Contraseña */
+.ocultar {
+	display: none;
+}
+
+.ajustarCajaLogin {
+	margin-left: 0px;
+}
+
+.titulocajaformulario {
+	background-color: #004B98;
+	background-image: url("../imagenes/imagenes_ocap/degradadoMenu.gif");
+	width: 92%;
+	padding: 3px 10px 6px 12px;
+	margin: 5px 0px 0px 30px;
+	text-align: justify;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 1.1em;
+	color: #FFFFFF;
+	border: 1px solid #004B98;
+	font-weight: bold;
+}
+
+.cajaformulario {
+	background-color: #FBFAF8;
+	width: 92%;
+	padding: 3px 10px 1px 12px;
+	margin: 0% 0% 0% 30px;
+	text-align: left;
+	border: 1px solid #004B98;
+}
+
+fieldset.normalesLogin {
+	background-color: #FBFAF8;
+	border-color: #004B98;
+	padding: 2em;
+	width: 350px;
+	margin-left: 270px;
+}
+
+fieldset.normalesLoginPerfil {
+	background-color: #FBFAF8;
+	border-color: #004B98;
+	padding: 2em;
+	padding-top: 1em;
+	width: 440px;
+	margin-left: 230px;
+}
+
+.normalesLegendPerfil {
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #004B98;
+	line-height: 1.1em;
+}
+
+fieldset.normalesLoginPerfil p {
+	margin-left: 20px;
+}
+
+.normalesLoginPerfil div.contenedorPerfiles {
+	line-height: 1.3em;
+	padding-left: 40px;
+}
+
+.normalesLoginPerfil div.contenedorPerfiles .envuelto {
+	width: 75%;
+	height: 2em;
+}
+
+.normalesLoginPerfil div.contenedorPerfiles .radio {
+	float: left;
+}
+
+.normalesLoginPerfil div.contenedorPerfiles .perfil {
+	float: left;
+	margin-left: 0.3em;
+}
+
+.botonLogin {
+	margin-top: 20px;
+	padding-left: 328px;
+}
+
+ 
+
+.listadoLogin {
+	margin: 10px 0 10px 0;
+	text-align: justify;
+	margin-right: 10px;
+}
+
+.listadoLogin ul li {
+	color: #004B98;
+	font-weight: bold;
+	list-style-type: circle;
+	margin: 2px 0 2px 5em;
+}
+
+.normalesLegend {
+	font-size: 1.2em;
+	font-weight: bold;
+	color: #004B98;
+	line-height: 1.1em;
+}
+/* estilo para los textos que son obligatorias cumplimentarles en los formularios */
+.obligado {
+	color: #7A7D81;
+	font-weight: bold;
+}
+
+.obligadoTexto {
+	color: #004B98;
+	font-weight: bold;
+	margin-left: 2.5em;
+}
+
+.inputColor {
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 1em;
+	color: #4a4a4a;
+	text-align: left;
+	background-color: #ffffff;
+	border: 1px solid #A59F9F;
+	margin-top: 2px;
+	margin-bottom: 2px;
+}
+
+.botonAccion span.izqBoton {
+	margin-left: 10px;
+}
+/* Estilo para el pie de pagina y sus elementos */
+#footer {
+	color: #000000;
+	font-size: 90%;
+	text-align: center;
+	padding: 1px 10px 5px;
+	clear: left;
+	background-color: #EBEBEB;
+}
+
+#footer p {
+	padding-top: 0.5em;
+	margin-top: 0em;
+}
+
+#footer a {
+	color: #000000;
+	background-color: transparent;
+	text-decoration: none;
+	margin: 0 3px 0 3px;
+	vertical-align: middle;
+}
+
+#footer a:hover {
+	text-decoration: underline;
+}
+
+#footer img {
+	margin: 0 3px 0 3px;
+	vertical-align: middle;
+}
+
+/* Estilos de los cuadros de mensajes, avisos ... (logout, mensajes, error, sinsesion)*/
+.mensajeAviso {
+	padding: 1.2em 0em 1.2em 1.7em;
+}
+
+/*  LISTADOS DE TABLAS DE ADMINISTRACION  */
+.tablaConsultas {
+	margin-top: 20px;
+	margin-left: 40px;
+	font-size: 1em;
+	/*width: 68em;*/
+}
+
+.tablaConsultas tr td a {
+	color: #000;
+	padding: 1px 0 1px 0;
+	overflow: hidden;
+}
+
+.tablaConsultas th {
+	border-bottom: 1px #004B98 solid;
+	padding: 3px;
+	color: #004B98;
+	font-weight: bold;
+}
+
+.tablaConsultas .campoIcono {
+	/*  Colocacion de los icono "editar" y "modificar" en las Tablas de Administracion (siempre igual)  */
+	width: 3em;
+}
+
+/*  Colocacion del Listado en las Tablas de Administracion para el modelo de 4 campos  */
+.tabla4 td a {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+.tabla4 .col1 a, .tabla4 .col1 {
+	width: 20em;
+}
+
+.tabla4 .col2 a, .tabla4 .col2 {
+	width: 25em;
+}
+
+.tabla4 .col3 a, .tabla4 .col3, .tabla4 .col4 a, .tabla4 .col4 {
+	width: 7.5em;
+	text-align: center;
+}
+
+/*  Colocacion del Listado en las Tablas de Administracion para el modelo de 5 campos  */
+.tabla5 td a {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+.tabla5 .col1 a, .tabla5 .col1 {
+	width: 15em;
+}
+
+.tabla5 .col2 a, .tabla5 .col2 {
+	width: 17em;
+}
+
+.tabla5 .col3 a, .tabla5 .col3 {
+	width: 17em;
+}
+
+.tabla5 .col4 a, .tabla5 .col4, .tabla5 .col5 a, .tabla5 .col5 {
+	width: 7.5em;
+	text-align: center;
+}
+
+/*  Colocacion del Listado en las Tablas de Administracion para el modelo de 6 campos  */
+.tabla6 td a {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+.tabla6 .col1 a, .tabla6 .col1 {
+	width: 15em;
+}
+
+.tabla6 .col2 a, .tabla6 .col2 {
+	width: 15em;
+}
+
+.tabla6 .col3 a, .tabla6 .col3 {
+	width: 10em;
+}
+
+.tabla6 .col4 a, .tabla6 .col4 {
+	width: 5em;
+}
+
+.tabla6 .col5 a, .tabla6 .col5, .tabla6 .col6 a, .tabla6 .col6 {
+	width: 7.5em;
+	text-align: center;
+}
+
+/*  Colocacion del Listado en las Tablas de Administracion para el modelo de 7 campos  */
+.tabla7 td a {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+.tabla7 .col1 a, .tabla7 .col1 {
+	width: 10em;
+}
+
+.tabla7 .col2 a, .tabla7 .col2 {
+	width: 5em;
+}
+
+.tabla7 .col3 a, .tabla7 .col3 {
+	width: 20em;
+}
+
+.tabla7 .col4 a, .tabla7 .col4 {
+	width: 10em;
+}
+
+.tabla7 .col5 a, .tabla7 .col5 {
+	width: 5em;
+}
+
+.tabla7 .col6 a, .tabla7 .col6, .tabla7 .col7 a, .tabla7 .col7 {
+	width: 7.5em;
+	text-align: center;
+}
+
+/*  Colocacion del Listado en las Tablas de Administracion para el modelo de 8 campos  */
+.tabla8 td a {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+.tabla8 .col1 a, .tabla8 .col1 {
+	width: 5em;
+}
+
+.tabla8 .col2 a, .tabla8 .col2 {
+	width: 10em;
+}
+
+.tabla8 .col3 a, .tabla8 .col3 {
+	width: 9em;
+}
+
+.tabla8 .col4 a, .tabla8 .col4 {
+	width: 9em;
+}
+
+.tabla8 .col5 a, .tabla8 .col5 {
+	width: 10em;
+}
+
+.tabla8 .col6 a, .tabla8 .col6 {
+	width: 3em;
+}
+
+.tabla8 .col7 a, .tabla8 .col7 {
+	width: 7em;
+}
+
+.tabla8 .col8 a, .tabla8 .col8 {
+	width: 4em;
+}
+
+/*  Colocacion del Listado en las Tablas de Administracion para el modelo de 17 campos  */
+.tabla17 td a {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+.tabla17 .col1 a, .tabla17 .col1 {
+	width: 5em;
+	background-color: Aqua;
+}
+
+.tabla17 .col2 a, .tabla17 .col2 {
+	width: 20em;
+	background-color: Blue;
+}
+
+.tabla17 .col3 a, .tabla17 .col3 {
+	width: 20em;
+	background-color: Fuchsia;
+}
+
+.tabla17 .col4 a, .tabla17 .col4 {
+	width: 20em;
+	background-color: Green;
+}
+
+/*  Colocacion de la paginacion  */
+.paginacionConsultas {
+	border-top: 1px #004B98 solid;
+	width: 100%;
+}
+
+.paginacionConsultas .textoTituloGris {
+	text-align: center;
+	color: #004B98;
+}
+
+.paginacionConsultas .parteIzq {
+	text-align: left;
+	padding-top: 5px;
+	padding-right: 5px;
+}
+
+.paginacionConsultas .parteCen {
+	width: 100%;
+	text-align: center;
+	vertical-align: middle;
+}
+
+.paginacionConsultas .parteDer {
+	text-align: right;
+	padding-top: 5px;
+	padding-left: 5px;
+}
+
+.paginacionConsultas .botonPaginacion {
+	border: 1px #7A7D81 solid;
+	color: #7A7D81;
+	font-weight: bold;
+}
+
+/*  /LISTADOS DE TABLAS DE ADMINISTRACION  */
+.paginacionJSP {
+	text-align: right;
+	margin: 20px 0 10px 0;
+}
+
+.paginacionJSP .primeraLinea, .paginacionJSP .segundaLinea,
+	.paginacionJSP .primeraLinea b, .paginacionJSP .segundaLinea b {
+	font-weight: bold;
+	margin: 5px 0 5px 0;
+}
+
+.paginacionJSP .terceraLinea {
+	margin: 20px 0 20px 0;
+	display: block;
+	width: 100%;
+}
+
+.paginacionJSP .terceraLinea a {
+	color: #7A7D81;
+	font-weight: bold;
+}
+
+.paginacionJSP .terceraLinea .anteriores {
+	width: 48%;
+	display: inline-block;
+	text-align: left;
+}
+
+.paginacionJSP .terceraLinea .anteriores a {
+	margin-right: 10px;
+}
+
+.paginacionJSP .terceraLinea .posteriores {
+	width: 48%;
+	display: inline-block;
+}
+
+.paginacionJSP .terceraLinea .posteriores a {
+	margin-left: 10px;
+}
+
+/* Colocacion de cuadros en las Tablas de Administracion  */
+.colocaNombreArea {
+	margin-left: 21px;
+}
+
+.colocaNombreAreaDet {
+	margin-left: 21px;
+	width: 250px;
+}
+
+.colocaFechaArea {
+	margin-left: 23px;
+}
+
+.colocaNombreGrado {
+	margin-left: 45px;
+	width: 30em;
+}
+
+.colocaNombreGradoCon {
+	margin-left: 52px;
+	width: 30em;
+}
+
+.colocaNombreGradoDet {
+	margin-left: 52px;
+	width: 30em;
+}
+
+.colocaDescGrado {
+	margin-left: 24px;
+	width: 30em;
+}
+
+.colocaDescGradoCon {
+	margin-left: 31px;
+	width: 30em;
+}
+
+.colocaDescGradoDet {
+	margin-left: 31px;
+	width: 30em;
+}
+
+.colocaNombreServicios {
+	margin-left: 32px;
+}
+
+.colocaDescServicios {
+	margin-left: 11px;
+}
+
+.colocaNombreServiciosCon {
+	margin-left: 39px;
+}
+
+.colocaDescServiciosCon {
+	margin-left: 18px;
+}
+
+.colocaNombreServiciosDet {
+	margin-left: 39px;
+}
+
+.colocaDescServiciosDet {
+	margin-left: 18px;
+}
+
+.colocaNombreTipoG {
+	margin-left: 13px;
+	width: 5em;
+}
+
+.colocaNombreTipoGCon {
+	margin-left: 21px;
+	width: 100px;
+}
+
+.colocaDescTipoG {
+	width: 30em;
+}
+
+.tituloLogin {
+	color: #7A7D81;
+	font-weight: bold;
+	margin-left: 50px;
+}
+/*.tituloLogin { color: #004B98; font-weight: bold; margin-left: 50px; text-align: right; width: 80px;}*/
+.colocaUsuario {
+	margin-left: 26px;
+	margin-top: 15px;
+	width: 12em;
+	font-weight: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.colocaUsuario {
+		margin-left: 24px !important;
+		margin-top: 15px;
+		width: 12em;
+		font-weight: normal;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.colocaUsuario {
+		margin-left: 24px !important;
+		margin-top: 15px;
+		width: 12em;
+		font-weight: normal;
+	}
+}
+
+.colocaPassword {
+	width: 12em;
+	margin-left: 4px;
+	font-weight: normal;
+}
+
+.colocaGerenciaCT {
+	margin-left: 28px;
+	width: 33.4em;
+}
+
+.colocaGerenciaEV {
+    margin-left: 58px;
+    width: 80%;
+}
+
+.colocaGerenciaCTCon {
+	margin-left: 34px;
+	width: 33.4em;
+}
+
+.colocaCentroCT {
+	margin-left: 38px;
+	margin-top: 5px;
+	width: 33.4em;
+}
+
+.colocaCentroCTCon {
+	margin-left: 45px;
+	margin-top: 5px;
+	width: 33.4em;
+}
+
+.colocaDescCT {
+	margin-left: 18px;
+	width: 33.4em;
+}
+
+.colocaDireccionCT {
+	margin-left: 32px;
+	width: 33.4em;
+}
+
+.colocaObservacionesCT {
+	width: 33.4em;
+}
+
+.colocaCodPostalCT {
+	margin-left: 7px;
+	width: 7em;
+}
+
+.colocaTelefonoCT {
+	margin-left: 34px;
+	width: 7em;
+}
+
+.colocaCiudadCT {
+	margin-left: 45px;
+	width: 33.4em;
+}
+
+.colocaNombreMerito {
+	margin-left: 14px;
+}
+
+.colocaNombreMeritoCon {
+	margin-left: 21px;
+}
+
+.colocaNombreMeritoDet {
+	margin-left: 21px;
+}
+
+.colocaNombreAreaTrabajo {
+	margin-left: 21px;
+}
+
+.colocaDescArea {
+	margin-left: 18px;
+}
+
+.colocaNombreArea {
+	margin-left: 39px;
+}
+
+.colocaNombreAreaAlta {
+	margin-left: 32px;
+}
+
+.colocaEstatutoCateg {
+	margin-left: 13px;
+	margin-top: 20px;
+	width: 33.4em;
+}
+
+.colocaEstatutoCategCon {
+	margin-left: 20px;
+	margin-top: 20px;
+	width: 33.4em;
+}
+
+.colocaEstatutoCategDet {
+	margin-left: 20px;
+	width: 33.4em;
+}
+
+.colocaNombreCateg {
+	margin-left: 14px;
+	margin-top: 5px;
+}
+
+.colocaNombreCategCon {
+	margin-left: 21px;
+	margin-top: 5px;
+}
+
+.colocaEstatCreditCB {
+	margin-top: 20px;
+	width: 33.5em;
+}
+
+.colocaGradoCreditCB {
+	margin-left: 12px;
+	margin-top: 6px;
+	width: 10.5em;
+}
+
+.colocaMeritoCreditCB {
+	margin-left: 9px;
+	margin-top: 6px;
+	width: 10.5em;
+}
+
+.colocaCreditoCredit {
+	margin-left: 11px;
+	margin-top: 4px;
+	width: 10.5em;
+}
+
+.colocaCredtoConCredit {
+	margin-left: 4px;
+	margin-top: 4px;
+	width: 10.5em;
+}
+
+.colocaCreditoCreditDet {
+	margin-left: 5px;
+	margin-top: 4px;
+}
+
+.colocaGradoConvo {
+	margin-left: 39px;
+}
+
+.colocaGradoDetConvo {
+	margin-left: 39px;
+}
+
+.colocaConvocaConvo {
+	margin-top: 5px;
+}
+
+.colocaFechaConvo {
+	margin-left: 1px;
+}
+
+.colocaFechaConConvo {
+	margin-left: 3px;
+}
+
+.colocaPSolConvo {
+	margin-left: 15px;
+}
+
+.colocaPRevConvo {
+	margin-left: 17px;
+}
+
+.colocaPValDetConvo {
+	margin-left: 31px;
+}
+
+.colocaPValConvo {
+	margin-left: 26px;
+}
+
+.colocaPIncConvo {
+	margin-left: 2px;
+}
+
+.colocaPAutConvo {
+	margin-left: 2px;
+}
+
+.colocaPValCAConvo {
+	margin-left: 28px;
+}
+
+.colocaPIncCAConvo {
+	margin-left: 4px;
+}
+
+.colocaPValCCConvo {
+	margin-left: 28px;
+}
+
+.colocaPResCAConvo {
+	margin-left: 2px;
+}
+
+.colocaPResCCConvo {
+	margin-left: 2px;
+}
+
+.colocaNombreDetEspe {
+	width: 28em;
+	margin-left: 5px;
+}
+
+.colocaNombreEspe {
+	width: 33.5em;
+	margin-left: 5px;
+}
+
+.colocaDescEspec {
+	width: 39.8em;
+	margin-left: 1px;
+}
+
+.colocaDescConEspe {
+	margin-left: 3px;
+	width: 39em;
+}
+
+.colocaEspeConEspe {
+	width: 33.3em;
+}
+
+.colocaDescEspecCon {
+	width: 22.1em;
+}
+
+.colocaDescEspecVis {
+	margin-left: 5px;
+	width: 33.6em;
+}
+
+.colocaEspecEspec {
+	width: 33.3em;
+}
+
+.colocaEspecEspecDet {
+	width: 28em;
+}
+
+.colocaNombrePerEstat {
+	width: 33.5em;
+}
+
+.colocaNombrePerEstatDet {
+	width: 33.5em;
+}
+
+.colocaNombreEstEstat {
+	margin-left: 4px;
+	width: 33.4em;
+}
+
+.colocaDescEstat {
+	margin-left: 55px;
+	width: 33.4em;
+}
+
+.colocaDescEstat2 {
+	margin-left: 48px;
+	width: 226px;
+}
+
+.colocaDescEstatDet {
+	margin-left: 48px;
+	width: 33.4em;
+}
+
+.colocaNombreFactoresDet {
+	margin-left: 39px;
+}
+
+.colocaNombreFactores {
+	margin-left: 32px;
+}
+
+.colocaNombreFactorsCon {
+	margin-left: 39px;
+}
+
+.colocaGerenciaProvinciaCB {
+	margin-top: 2em;
+	margin-left: 63px;
+	width: 150px;
+}
+
+.colocaGerenciaTipo {
+	margin-left: 20px;
+	width: 150px;
+	margin-top: 6px;
+}
+
+.colocaTipoGerenciaDet {
+	margin-left: 20px;
+	width: 150px;
+}
+
+.colocaNomGerenciaDet {
+	margin-left: 63px;
+	width: 150px;
+}
+
+.colocaNombreGerencia {
+	margin-top: 4px;
+}
+
+.colocaNomCortoGerencia {
+	margin-left: 35px;
+}
+
+.colocaLdapGerencia {
+	margin-left: 44px;
+}
+
+.colocaEstatMensajes {
+	margin-left: 20px;
+	margin-top: 10px;
+	width: 37.5em;
+}
+
+.colocaGradoMensajes {
+	margin: 6px 0 0 32px;
+}
+
+.colocaGradoMensajesDet {
+	width: 6em;
+	margin: 6px 0 0 32px;
+}
+
+.colocaDescMensajes {
+	margin-top: 4px;
+}
+
+.colocaNomMensajesMC {
+	margin-left: 9px;
+}
+
+.colocaEstatMensajesMC {
+	width: 37.4em;
+	margin-top: 6px;
+}
+
+.colocaDescMensajesMC {
+	margin-left: 44px;
+	margin-top: 4px;
+}
+
+.colocaNomActividad {
+	margin-left: 32px;
+}
+
+.colocaNomConActividad {
+	margin-left: 39px;
+}
+
+.colocaMeritosMeritCBCon {
+	margin-left: 55px;
+}
+
+.colocaMeritosMeritCBDet {
+	margin-left: 55px;
+	width: 33.5em;
+}
+
+.colocaMeritosEstatCBCon {
+	margin-left: 46px;
+	margin-top: 6px;
+	width: 33.5em;
+}
+
+.colocaMeritosActivCBCon {
+	margin-left: 41px;
+	margin-top: 6px;
+	width: 33.5em;
+}
+
+.colocaMeritosModalCBCon {
+	margin-left: 35px;
+	width: 25.2em;
+	margin-top: 6px;
+	width: 33.5em;
+}
+
+.colocaMeritosFactorCBCon {
+	margin-left: 57px;
+	margin-top: 6px;
+	width: 15.3em;
+}
+
+.colocaMeritosTipoFCBCon {
+	width: 15.3em;
+	margin-top: 6px;
+}
+
+.colocaMeritosTipoMCBCon {
+	margin-left: 10px;
+	width: 13.6em;
+	margin-top: 4px;
+}
+
+.colocaMeritosTipoMCBCon2 {
+	margin-left: 10px;
+	width: 15.3em;
+	margin-top: 4px;
+}
+
+.colocaMeritosNomCCBCon {
+	margin-left: 15px;
+	width: 13.6em;
+}
+
+.colocaMeritosNomCCBCon2 {
+	margin-left: 15px;
+	width: 15.3em;
+}
+
+.colocaMeritosNombreCBCon {
+	margin-left: 47px;
+}
+
+.colocaMeritosDescCBCon {
+	margin-left: 26px;
+}
+
+.colocaMeritosObserCBCon {
+	margin-left: 8px;
+}
+
+.colocaMeritosCreditCBCon {
+	margin-left: 50px;
+}
+
+.colocaMeritosMeritCBEdit {
+	margin-left: 48px;
+}
+
+.colocaMeritosEstatCBEdit {
+	margin-left: 39px;
+	width: 33.5em;
+	margin-top: 6px;
+}
+
+.colocaMeritosActivCBEdit {
+	margin-left: 41px;
+	width: 33.5em;
+	margin-top: 6px;
+}
+
+.colocaMeritosModalCBEdit {
+	margin-left: 35px;
+	width: 33.5em;
+	margin-top: 6px;
+}
+
+.colocaMeritosModalCBDEdit {
+	margin-left: 35px;
+	width: 25.2em;
+	margin-top: 6px;
+}
+
+.colocaMeritosFactorCBEdit {
+	margin-left: 57px;
+	margin-top: 6px;
+	width: 17.3em;
+}
+
+.colocaMeritosTipoFCBEdit {
+	width: 17.3em;
+	margin-top: 6px;
+}
+
+.colocaMeritosNomCCBEdit {
+	margin-left: 8px;
+	width: 15.3em;
+}
+
+.colocaMeritosNombreCBEdit {
+	margin-left: 40px;
+}
+
+.colocaMeritosDescCBEdit {
+	margin-left: 26px;
+}
+
+.colocaMeritosObserCBEdit {
+	margin-left: 8px;
+}
+
+.colocaMeritosCreditCBEdit {
+	margin-left: 50px;
+}
+
+.colocaNombreModalidad {
+	margin-left: 14px;
+}
+
+.colocaNombreDetModalidad {
+	margin-left: 21px;
+}
+
+.colocaNombreModalidadCon {
+	margin-left: 21px;
+}
+
+.colocaPerfilesCB {
+	margin-left: 78px;
+	margin-top: 2em;
+}
+
+.colocaPerfilesCBcon {
+	margin-left: 67px;
+}
+
+.colocaNombrePerfil {
+	margin-left: 11px;
+	margin-top: 4px;
+}
+
+.colocaNombreConPerfil {
+	margin-top: 4px;
+}
+
+.colocaDescPerfil {
+	margin-left: 46px;
+}
+
+.colocaDescPerfilDet {
+	margin-left: 39px;
+}
+
+.colocaDescPerfilcon {
+	margin-left: 28px;
+}
+
+.colocaAreaPerfilesDet {
+	margin-left: 78px;
+}
+
+.colocaNombrePerfilDet {
+	margin-left: 11px;
+}
+
+.colocaNombrePersEst {
+	margin-left: 14px;
+	width: 33.5em;
+}
+
+.colocaNombrePersEstCon {
+	margin-left: 21px;
+	width: 33.5em;
+}
+
+.colocaDescPers {
+	width: 33.5em;
+}
+
+.colocaItinerarioPuestos {
+	width: 33.5em;
+	margin-top: 4px;
+	margin-left: 77px;
+}
+
+.colocaItinerarioPuestosEdit {
+	width: 33.5em;
+	margin-top: 4px;
+	margin-left: 70px;
+}
+
+.colocaItinerarioPuestosDet {
+	width: 33.5em;
+	margin-top: 4px;
+	margin-left: 77px;
+}
+
+.colocaItinerarioPuestosCon {
+	width: 35em;
+	margin-top: 4px;
+	margin-left: 33px;
+}
+
+.colocaNombreCPuestos {
+	width: 33.4em;
+	margin-top: 4px;
+	margin-left: 49px;
+}
+
+.colocaNombreCPuestosCon {
+	width: 34.8em;
+	margin-top: 4px;
+	margin-left: 7px;
+}
+
+.colocaNombreCPuestosDet {
+	width: 31.3em;
+	margin-top: 4px;
+	margin-left: 7px;
+}
+
+.colocaProfPuestos {
+	width: 33.5em;
+}
+
+.colocaProfDetPuestos {
+	width: 33.5em;
+}
+
+.colocaProfConPuestos {
+	width: 35em;
+	margin-left: 20px;
+}
+
+.colocaPuestoPuestos {
+	width: 33.4em;
+	margin-left: 24px;
+	margin-top: 4px;
+}
+
+.colocaPuestoConPuestos {
+	width: 34.8em;
+	margin-left: 24px;
+	margin-top: 4px;
+	margin-left: 44px;
+}
+
+.colocaObsPuestos {
+	width: 33.4em;
+	margin-left: 51px;
+}
+
+.colocaObsPuestosDet {
+	width: 33.4em;
+	margin-left: 44px;
+}
+
+.colocaObsPuestosCon {
+	width: 34.8em;
+}
+
+.colocaObsPuestosEdit {
+	width: 33.4em;
+	margin-left: 44px;
+}
+
+.colocaProfServicios {
+	margin-left: 13px;
+	width: 33.5em;
+}
+
+.colocaProfServiciosDet {
+	margin-left: 20px;
+	width: 33.2em;
+}
+
+.colocaProfeServiciosCon {
+	margin-left: 20px;
+	width: 30em;
+	width: 33.5em;
+}
+
+.colocaEspecServicios {
+	margin-left: 15px;
+	margin-top: 7px;
+	width: 33.5em;
+}
+
+.colocaEspecServiciosDet {
+	margin-left: 15px;
+}
+
+.colocaEspecServiciosCon {
+	margin-left: 15px;
+	width: 33.5em;
+	margin-top: 4px;
+}
+
+.colocaItinerarioServicios {
+	margin-left: 26px;
+	width: 10em;
+	margin-top: 5px;
+}
+
+.colocaItinerarioServiciosDet {
+	margin-left: 33px;
+	width: 3.5em;
+}
+
+.colocaItineServiciosCon {
+	margin-left: 33px;
+	width: 10em;
+	margin-top: 4px;
+}
+
+.colocaNomCServicios {
+	margin-top: 4px;
+	width: 9.8em;
+}
+
+.colocaNomCServiciosDet {
+	margin-left: 7px;
+	margin-top: 4px;
+	width: 9.8em;
+}
+
+.colocaNomCServiciosCon {
+	margin-top: 4px;
+	width: 9.8em;
+	margin-left: 7px;
+}
+
+.colocaNomLServicios {
+	margin-left: 1px;
+	width: 33.5em;
+}
+
+.colocaNomLServiciosDet {
+	margin-left: 8px;
+	width: 33.5em;
+}
+
+.colocaNomLServiciosCon {
+	margin-left: 8px;
+	width: 33.5em;
+}
+
+.colocaObsServicios {
+	width: 33.5em;
+}
+
+.colocaObsServiciosCon {
+	width: 33.5em;
+}
+
+.colocaNomTipoFirm {
+	margin-left: 32px;
+}
+
+.colocaNomConTipoFirm {
+	margin-left: 39px;
+}
+
+.colocaAreaUnidad {
+	margin-left: 75px;
+	width: 33.5em;
+}
+
+.colocaAreaUnidadEdit {
+	margin-left: 68px;
+	width: 28.1em;
+}
+
+.colocaAreaUnidadCon {
+	margin-left: 75px;
+	width: 33.5em;
+}
+
+.colocaProfUnidad {
+	margin-top: 4px;
+	width: 33.5em;
+	margin-left: 38px;
+}
+
+.colocaProfUnidadEdit {
+	margin-top: 4px;
+	width: 33.5em;
+	margin-left: 45px;
+}
+
+.colocaProfUnidadCon {
+	margin-top: 4px;
+	margin-left: 38px;
+	width: 33.5em;
+}
+
+.colocaItineUnidad {
+	margin-left: 51px;
+	margin-top: 4px;
+	width: 10em;
+}
+
+.colocaItineUnidadEdit {
+	margin-left: 44px;
+	margin-top: 4px;
+	width: 28.1em;
+}
+
+.colocaItineUnidadCon {
+	margin-left: 51px;
+	margin-top: 4px;
+	width: 10em;
+}
+
+.colocaUnidadUnidadCon {
+	margin-left: 64px;
+}
+
+.colocaNomCortoUnidad {
+	margin-left: 23px;
+	width: 10em;
+}
+
+.colocaNomCortoUnidadEdit {
+	margin-left: 30px;
+	width: 10em;
+}
+
+.colocaNomCortoUnidadCon {
+	margin-left: 25px;
+	width: 10em;
+}
+
+.colocaNomUnidad {
+	width: 33.5em;
+}
+
+.colocaNomUnidadEdit {
+	margin-left: 7px;
+	margin-top: 4px;
+}
+
+.colocaNomUnidadDet {
+	width: 33.5em;
+}
+
+.colocaDescUnidad {
+	margin-left: 43px;
+}
+
+.colocaDescUnidadDet {
+	margin-left: 36px;
+	width: 33.5em;
+}
+
+.colocaDescUnidadCon {
+	margin-left: 36px;
+	width: 33.5em;
+}
+
+.colocaObsUnidad {
+	margin-left: 25px;
+}
+
+.colocaObsUnidadDet {
+	margin-left: 18px;
+	width: 33.5em;
+}
+
+.colocaObsUnidadcon {
+	margin-left: 18px;
+	width: 33.5em;
+}
+
+/* /Colocacion de cuadros en las Tablas de Administracion  */
+.cuadroTextoNotas {
+	text-align: justify;
+	margin: 10px 30px 10px 30px;
+	width: auto;
+	font-size: 1em;
+}

@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<import value="es.jcyl.fqs.ocap.ot.cuestionarios.OCAPCuestionariosOT"/>
+	<parameter name="datosDocu" class="es.jcyl.fqs.ocap.ot.cuestionarios.OCAPCuestionariosOT"/>
+	<parameter name="ruta" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="53">
+			<image scaleImage="RetainShape" hAlign="Left" isUsingCache="true" hyperlinkType="None">
+				<reportElement x="20" y="0" width="515" height="53" isPrintWhenDetailOverflows="true"/>
+				<imageExpression class="java.lang.String"><![CDATA[$P{ruta}+"/imagenes/imagenes_ocap/logo-FQS.gif"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band/>
+	</pageHeader>
+	<columnHeader>
+		<band/>
+	</columnHeader>
+	<detail>
+		<band height="658">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="false" hyperlinkType="None">
+				<reportElement x="20" y="0" width="515" height="19"/>
+				<textElement textAlignment="Justified">
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Don / Doña " + $P{datosDocu}.getDNombreEvaluador()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="21" width="515" height="42"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Como Evaluador acreditado por la FQS en el proceso de Evaluación del Desempeño de la Competencia (EDC) para el reconocimiento de grado de Carrera Profesional de la Consejería de Sanidad - SACYL de la Junta de Castilla y León INFORMO:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Opaque" x="25" y="71" width="3" height="3" backcolor="#000000"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="false" hyperlinkType="None">
+				<reportElement x="34" y="65" width="501" height="46"/>
+				<textElement textAlignment="Justified" markup="styled">
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Que el Profesional Evaluado con código <style pdfFontName=\"Helvetica-Bold\">" + $P{datosDocu}.getDCodigoId() + "</style> ha realizado la Auto-evaluación del Desempeño de la Competencia según el Itinerario de Evaluación Competencial que le corresponde para el reconocimiento de grado de Carrera Profesional."]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Opaque" x="25" y="118" width="3" height="3" backcolor="#000000"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="34" y="113" width="501" height="36"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Que se ha realizado el análisis de Evaluación conforme a los criterios y metodología establecida por la FQS (Fundación Centro Regional de Calidad y Acreditación Sanitaria), obteniendo los siguientes resultados globales:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="34" y="162" width="426" height="20"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0" lineColor="#000000"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="styled"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["<style pdfFontName=\"Helvetica-Bold\" size=\"12\">Créditos obtenidos en la auto-evaluación</style> "]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="460" y="162" width="44" height="20"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[new Float($P{datosDocu}.getNCreditos()).toString()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="34" y="182" width="426" height="20"/>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0" lineColor="#000000"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement verticalAlignment="Middle" markup="styled"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["<style pdfFontName=\"Helvetica-Bold\" size=\"12\">Créditos obtenidos en el análisis de la auto-evaluación</style> "]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="460" y="182" width="44" height="20"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[new Float($P{datosDocu}.getNCreditosEvaluados()).toString()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="34" y="226" width="501" height="20"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Finalmente realizo las siguientes especificaciones:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Opaque" x="25" y="232" width="3" height="3" backcolor="#000000"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="34" y="259" width="501" height="109"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getAEspecificaciones()]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band/>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

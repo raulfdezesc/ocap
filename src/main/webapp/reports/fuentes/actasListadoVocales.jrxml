@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="506" pageHeight="36" columnWidth="506" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<queryString>
+		<![CDATA[]]>
+	</queryString>
+	<field name="dNombreApellidos" class="java.lang.String"/>
+	<field name="dNombreApellidos2" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="17">
+			<staticText>
+				<reportElement x="0" y="0" width="158" height="16" backcolor="#969696"/>
+				<textElement textAlignment="Left">
+					<font pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Vocales:]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="15">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="10" y="0" width="246" height="15" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{dNombreApellidos}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="260" y="0" width="246" height="15" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{dNombreApellidos2}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

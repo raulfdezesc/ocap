@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="iso-8859-1" standalone="yes"?>
+<xsd:schema xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	elementFormDefault="qualified">
+
+	<!-- Nodo raíz -->
+	<xsd:element name="configurations">
+		<xsd:complexType>
+			<xsd:sequence>
+				<!-- propiedades globales -->
+				<xsd:element ref="globals" />
+				<xsd:element ref="contexts" />
+			</xsd:sequence>
+			<xsd:attribute name="version" use="required" type="xsd:string" />
+		</xsd:complexType>
+	</xsd:element>
+
+	<!-- Propiedades Globales -->
+	<xsd:element name="globals">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element name="initialPath">
+					<xsd:complexType>
+						<xsd:complexContent>
+							<xsd:restriction base="xsd:anyType">
+								<xsd:attribute name="value" use="required" type="xsd:string" />
+							</xsd:restriction>
+						</xsd:complexContent>
+					</xsd:complexType>
+				</xsd:element>
+				<xsd:element ref="properties" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<!-- Lista de Propiedades -->
+	<xsd:element name="properties">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="property" maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<!-- Una Propiedad -->
+	<xsd:element name="property">
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:restriction base="xsd:anyType">
+					<xsd:attribute name="name" use="required" type="xsd:string" />
+					<xsd:attribute name="value" use="required" type="xsd:int" />
+					<xsd:attribute name="comment" use="required" type="xsd:string" />
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+
+	<!-- Lista de Contextos -->
+	<xsd:element name="contexts">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="context" maxOccurs="unbounded" />
+			</xsd:sequence>
+		</xsd:complexType>
+	</xsd:element>
+
+	<!-- Un Contexto -->
+	<xsd:element name="context">
+		<xsd:complexType>
+			<xsd:sequence>
+				<xsd:element ref="configurationFile" maxOccurs="unbounded" />
+			</xsd:sequence>
+			<xsd:attribute name="id" use="required" type="xsd:string" />
+			<xsd:attribute name="name" use="required" type="xsd:string" />
+			<xsd:attribute name="minimumCheckDelay" type="xsd:int" />
+			<xsd:attribute name="contextTimeOut" type="xsd:int" />
+		</xsd:complexType>
+	</xsd:element>
+
+	<!-- Un Fichero de Configuración -->
+	<xsd:element name="configurationFile">
+		<xsd:complexType>
+			<xsd:complexContent>
+				<xsd:restriction base="xsd:anyType">
+					<xsd:attribute name="id" use="required" type="xsd:string" />
+					<xsd:attribute name="name" use="required" type="xsd:string" />
+					<xsd:attribute name="location" use="required" type="xsd:string" />
+					<xsd:attribute name="minimumCheckDelay" use="optional"
+						type="xsd:int" />
+					<xsd:attribute name="comment" use="optional" type="xsd:string" />
+				</xsd:restriction>
+			</xsd:complexContent>
+		</xsd:complexType>
+	</xsd:element>
+</xsd:schema>

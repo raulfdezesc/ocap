@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="1000" columnWidth="575" leftMargin="10" rightMargin="10" topMargin="15" bottomMargin="10">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<import value="es.jcyl.fqs.ocap.ot.solicitudes.OCAPSolicitudesOT"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="datosReport" class="es.jcyl.fqs.ocap.ot.solicitudes.OCAPSolicitudesOT" isForPrompting="false"/>
+	<background>
+		<band/>
+	</background>
+	<detail>
+		<band height="825">
+			<rectangle>
+				<reportElement mode="Transparent" x="8" y="20" width="535" height="670" forecolor="#000000"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="8" y="20" width="535" height="19"/>
+				<textElement textAlignment="Center" markup="styled">
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[<style isBold='true'>CLÁUSULA DE PROTECCIÓN DE DATOS DE CARÁCTER PERSONAL</style>]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="8" y="39" width="535" height="20"/>
+				<textElement textAlignment="Center" markup="styled">
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[<style isBold='true'>INFORMACIÓN BÁSICA SOBRE PROTECCIÓN DE DATOS DE CARÁCTER PERSONAL</style>]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="59" width="520" height="452"/>
+				<textElement textAlignment="Justified" markup="styled">
+					<font fontName="Arial" size="10" isBold="false"/>
+				</textElement>
+				<text><![CDATA[De conformidad con lo establecido tanto en el Reglamento General de Protección de Datos (RGPD), [Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo de 27 de abril de 2016, relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos y por el que se deroga la Directiva 95/46/CE], como en la Ley Orgánica 3/2018, de 5 de diciembre, de Protección de Datos Personales y garantía de los derechos digitales, se informa a los interesados que:
+
+1-	<style isItalic='true'><style isUnderline='true'>El responsable del tratamiento de sus datos personales:</style></style> es la Dirección General de Profesionales de la Gerencia Regional de Salud, ubicada en Paseo de Zorrilla, nº 1, 47007 Valladolid.
+
+2-	<style isItalic='true'><style isUnderline='true'>Finalidad del tratamiento:</style></style> Gestión administrativa. Alta o posterior utilización en la aplicación de Carrera Profesional del Servicio de Salud de Castilla y León para la gestión de datos.
+
+1-	<style isItalic='true'><style isUnderline='true'>Legitimación:</style></style> además de la autorización del interesado para recabar datos, de conformidad con el art. 6.1.a del RGPD y 6.1 de la L.O. 3/2018 de 5 de diciembre,  la legitimación viene dada por el cumplimiento de una misión de interés público o realizada en el ejercicio de poderes públicos, con base en el artículo 6.1.e) del RGPD y disposición adicional duodécima de la L.O. 3/2018, puesto en relación con el Decreto 43/2009, de 2 de julio, por el que se regula la Carrera Profesional del personal estatutario de los centros e instituciones sanitarias del Servicio de Salud de Castilla 
+
+2-	<style isItalic='true'><style isUnderline='true'>Destinatarios de los datos:</style></style> Gerencia Regional de Salud de Castilla y León ( Gerencias de Asistencia Sanitaria, de Atención Especializada, Atención Primaria, Gerencias de Salud de Área, Gerencia de Emergencias Sanitarias y la Dirección General de Profesionales).
+
+3-	<style isItalic='true'><style isUnderline='true'>Cesión:</style></style> los datos facilitados no van a ser cedidos.
+
+4-	<style isItalic='true'><style isUnderline='true'>Conservación de datos:</style></style> los datos van a ser objeto de conservación por el tiempo necesario atendida su finalidad.
+
+5-	<style isItalic='true'><style isUnderline='true'>Derechos:</style></style> pueden ejercer sus derechos de acceso, rectificación, cancelación y oposición, derecho al olvido y portabilidad de sus datos, ante la Dirección General de Profesionales de la Gerencia Regional de Salud, en la dirección electrónica dgp@saludcastillayleon.es
+
+6-	<style isItalic='true'><style isUnderline='true'>Información adicional:</style></style> la información adicional detallada, así como el formulario para la reclamación y/o ejercicio de derechos se encuentra disponible según modelos normalizados por Orden PAT/175/2003, de 20 de febrero. Asimismo, para cualquier consulta relacionada con la materia o sugerencia para mejorar este formulario, puede dirigirse al teléfono de información administrativa 012.
+
+
+Igualmente, podrán contactar con el Delegado de Protección de Datos en la dirección electrónica dpd@saludcastillayleon.es
+
+]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="15" y="521" width="520" height="44"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA["En virtud de todo ello, D./Dª.: "+$P{datosReport}.getDNombre()+" "+$P{datosReport}.getDApellido1()+", con DNI/NIF: "+$P{datosReport}.getCDni()+", se da por informado/a de los derechos que le asisten en relación con la protección de datos de carácter personal y su tratamiento, prevenidos en el RGPD y contenidos en este Anexo."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="15" y="575" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Fecha y firma]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="41">
+			<textField hyperlinkType="None">
+				<reportElement x="390" y="10" width="166" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["Nº Solicitud: "+$P{datosReport}.getCodigoSolicitud()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

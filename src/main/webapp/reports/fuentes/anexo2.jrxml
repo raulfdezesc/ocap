@@ -1,0 +1,335 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="1000" columnWidth="575" leftMargin="10" rightMargin="10" topMargin="15" bottomMargin="10">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<import value="es.jcyl.fqs.ocap.ot.solicitudes.OCAPSolicitudesOT"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="datosReport" class="es.jcyl.fqs.ocap.ot.solicitudes.OCAPSolicitudesOT" isForPrompting="false"/>
+	<background>
+		<band/>
+	</background>
+	<detail>
+		<band height="825">
+			<staticText>
+				<reportElement x="26" y="16" width="517" height="15"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[De conformidad con lo dispuesto en la presente convocatoria y demás disposiciones legales de aplicación, 
+
+
+]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="20" y="10" width="535" height="679" forecolor="#000000"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="218" y="41" width="199" height="19"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DECLARO RESPONSABLEMENTE:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="42" y="60" width="483" height="54"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[ - Reunir los requisitos para optar al Grado de Carrera solicitado
+ - Que los datos consignados en la presente solicitud y documentos que se acompañan son ciertos
+ - El compromiso de facilitar cuantos documentos y colaboración me sea requerida por el Comité Específico de 
+   Instituciones Sanitarias a lo largo del proceso de evaluación.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="257" y="114" width="75" height="15"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Y SOLICITO:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="129" width="130" height="15"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[El reconocimiento del:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="28" y="159" width="10" height="10"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="30" y="157" width="11" height="11"/>
+				<textElement>
+					<font size="10" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getBGradoI()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="44" y="158" width="317" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Grado I de carrera profesional por el procedimiento ordinario.]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="28" y="174" width="10" height="10"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="30" y="172" width="11" height="11"/>
+				<textElement>
+					<font size="10" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getBGradoII()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="44" y="174" width="317" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Grado II de carrera profesional por el procedimiento ordinario.]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="28" y="190" width="10" height="10"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="30" y="188" width="11" height="11"/>
+				<textElement>
+					<font size="10" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getBGradoIII()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="44" y="190" width="317" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Grado III de carrera profesional por el procedimiento ordinario.]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="28" y="206" width="10" height="10"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="30" y="204" width="11" height="11"/>
+				<textElement>
+					<font size="10" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getBGradoIV()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="44" y="206" width="317" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Grado IV de carrera profesional por el procedimiento ordinario.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="27" y="234" width="130" height="15"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[En la modalidad de:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="28" y="261" width="10" height="10"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="30" y="259" width="11" height="11"/>
+				<textElement>
+					<font size="10" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getBModPESFU()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="45" y="263" width="303" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Personal estatutario sanitario de Formación Universitaria.]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="28" y="277" width="10" height="10"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="30" y="275" width="11" height="11"/>
+				<textElement>
+					<font size="10" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getBModPESFP()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="45" y="279" width="303" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Personal estatutario sanitario de Formación Profesional.]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="28" y="293" width="10" height="10"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="30" y="291" width="11" height="11"/>
+				<textElement>
+					<font size="10" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getBModPEGSFU()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="45" y="295" width="331" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Personal estatutario de gestión y servicios de Formación Universitaria.]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="28" y="309" width="10" height="10"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="30" y="307" width="11" height="11"/>
+				<textElement>
+					<font size="10" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getBModPEGSFP()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="45" y="311" width="395" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Personal estatutario de gestión y servicios de Formación Profesional y Otro Personal.]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="28" y="325" width="10" height="10"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="30" y="323" width="11" height="11"/>
+				<textElement>
+					<font size="10" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getBModPFSFU()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="45" y="327" width="331" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Personal funcionario sanitario de Formación Universitaria.]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="28" y="341" width="10" height="10"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="30" y="339" width="11" height="11"/>
+				<textElement>
+					<font size="10" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getBModPFSFP()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="45" y="343" width="395" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="false"/>
+				</textElement>
+				<text><![CDATA[Personal funcionario sanitario de Formación Profesional.]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="27" y="367" width="498" height="13"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["En la categoría profesional de "+$P{datosReport}.getDProfesional_nombre()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="28" y="384" width="497" height="13"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["y en la especialidad de "+($P{datosReport}.getDEspec_nombre()==null?"-":$P{datosReport}.getDEspec_nombre())]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="218" y="480" width="100" height="15"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[(Firma del solicitante)]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="28" y="509" width="10" height="10"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="45" y="509" width="52" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true" isItalic="false" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[AUTORIZA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="509" width="518" height="30"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[                       a la Gerencia Regional de Salud de Castilla y León para obtener directamente y/o por medios telemáticos la certificación de los servicios prestados necesarios para el pronunciamiento de la correspondiente resolución.      ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="539" width="518" height="26"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[En caso de no prestar la autorización, será necesario aportar el certificado de servicios prestados conforme a los modelos previstos en los Anexos III y IV.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="587" width="121" height="12"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="9" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[Doy mi CONSENTIMIENTO ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="26" y="587" width="518" height="63"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<text><![CDATA[                                             para que los datos e informaciones aportados en el  presente  procedimiento, sean almacenados  y codificados con la finalidad de su posterior utilización en los procedimientos administrativos para Carrera Profesional en el que fueran requeridos, de conformidad con lo establecido en el artículo 6 y siguientes del Reglamento (UE) 2016/679 del Parlamento Europeo y del Consejo, de 27 de abril de 2016, relativo a la protección de las personas físicas en lo que respecta al tratamiento de datos personales y a la libre circulación de estos datos (RGPD).]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="FixRelativeToBottom" x="0" y="805" width="575" height="20"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[ILMO. SR. DIRECTOR GERENTE DE LA GERENCIA REGIONAL DE SALUD]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="30" y="506" width="7" height="15"/>
+				<textElement/>
+				<text><![CDATA[x]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="20" y="419" width="535" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["En ...................................................., a "+$P{datosReport}.getDiaActual()+" de "+$P{datosReport}.getMesActual()+" de "+$P{datosReport}.getAnyoActual()]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="113" y="702" width="431" height="20"/>
+				<textElement markup="styled">
+					<font fontName="Arial" size="10" isBold="true" isItalic="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getDGerenciaActual()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="702" width="93" height="20"/>
+				<textElement>
+					<font isBold="true"/>
+				</textElement>
+				<text><![CDATA[C.E.I.S GERENCIA:]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="41">
+			<textField hyperlinkType="None">
+				<reportElement x="390" y="10" width="166" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["Nº Solicitud: "+$P{datosReport}.getCodigoSolicitud()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

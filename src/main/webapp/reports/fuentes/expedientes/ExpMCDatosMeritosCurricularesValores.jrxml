@@ -1,0 +1,173 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport name="ExpMCDatosMeritosCurricularesValores" pageWidth="555" pageHeight="17" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+   <import value="es.jcyl.fqs.ocap.util.Constantes"/>
+   
+   <!-- Fuentes -->
+   <style name="normal" isDefault="true" fontName="Helvetica" fontSize="11" isBold="false" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica-Oblique" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+   <style name="negrita" isDefault="false" fontName="Helvetica" fontSize="11" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica-BoldOblique" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+   <style name="normalMarron" forecolor="#775225" isDefault="true" fontName="Helvetica" fontSize="11" isBold="false" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica-Oblique" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+   <style name="negritaMarron" forecolor="#775225" isDefault="false" fontName="Helvetica" fontSize="11" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica-BoldOblique" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+   
+   <parameter name="rutaImagen" class="java.lang.String" isForPrompting="false"/>
+   
+   <field name="titulo"	class="java.lang.String"/>
+   <field name="etiqueta1"	class="java.lang.String"/>
+   <field name="valor1"	class="java.lang.String"/>
+   <field name="etiqueta2"	class="java.lang.String"/>
+   <field name="valor2" class="java.lang.String"/>
+   <field name="invalidado" class="java.lang.String"/>
+   <field name="creditosObtenidos" class="java.lang.String"/>
+   <field name="tipoValor" class="java.lang.String"/>
+   <field name="valorMod" class="java.lang.String"/>   
+<field name="valorTipoMod" class="java.lang.String"/> 
+   <detail>
+      <band height="17" isSplitAllowed="true" >
+         
+         <frame> 
+				<reportElement x="35" y="0" width="520" height="17" key="frame-Titulo"> 
+               <printWhenExpression><![CDATA[new Boolean($F{tipoValor}.equals(Constantes.EXP_MC_TIPO_VALORES_TITULO))]]></printWhenExpression> 
+				</reportElement>
+				
+				<image hyperlinkType="None">
+					<reportElement x="5" y="5" width="22" height="12" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true"/>
+					<imageExpression class="java.lang.String"><![CDATA[$P{rutaImagen}+"/imagenes/imagenes_ocap/puntitolista.gif"]]></imageExpression>
+				</image>
+            
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" >
+               <reportElement style="negrita" x="32" y="0" width="488" height="17" key="staticText-titulo"/>
+					<box padding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Top"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{titulo}]]></textFieldExpression>
+				</textField>
+			</frame>
+         
+			<frame> 
+            <reportElement x="35" y="0" width="520" height="17" key="frame-Titulo"> 
+               <printWhenExpression><![CDATA[new Boolean($F{tipoValor}.equals(Constantes.EXP_MC_TIPO_VALORES_PARAMETROS_UNO))]]></printWhenExpression> 
+				</reportElement>
+            
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true" >
+               <reportElement style="negrita" x="0" y="0" width="104" height="17" key="textField-Etiqueta1"/>
+					<box padding="2" />
+					<textElement textAlignment="Right" verticalAlignment="Top"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{etiqueta1}+":"]]></textFieldExpression>
+				</textField>
+            
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" >
+               <reportElement style="normal" x="104" y="0" width="416" height="17" mode="Transparent" key="textField-Valor1"/>
+					<box padding="2" />
+					<textElement textAlignment="Left" verticalAlignment="Top" />
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{valor1}]]></textFieldExpression>
+				</textField>
+			</frame>
+         
+			<frame> 
+            <reportElement x="35" y="0" width="520" height="17" key="frame-Titulo"> 
+					<printWhenExpression><![CDATA[new Boolean($F{tipoValor}.equals(Constantes.EXP_MC_TIPO_VALORES_PARAMETROS_DOS))]]></printWhenExpression> 
+				</reportElement>
+            
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" >
+               <reportElement style="negrita" x="0" y="0" width="104" height="17" key="textField-Etiqueta1"/>
+					<box padding="2" />
+					<textElement textAlignment="Right" verticalAlignment="Top"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{etiqueta1}+":"]]></textFieldExpression>
+				</textField>
+            
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true" >
+               <reportElement style="normal" x="104" y="0" width="156" height="17" mode="Transparent" key="textField-Valor1"/>
+					<box padding="2" />
+					<textElement textAlignment="Left" verticalAlignment="Top" />
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{valor1}]]></textFieldExpression>
+				</textField>
+            
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true" >
+               <reportElement style="negrita" x="260" y="0" width="104" height="17" mode="Transparent" key="textField-Etiqueta2"/>
+					<box padding="2" />
+					<textElement textAlignment="Right" verticalAlignment="Top" />
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{etiqueta2}+":"]]></textFieldExpression>
+				</textField>
+            
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true" >
+               <reportElement style="normal" x="364" y="0" width="156" height="17"  mode="Transparent" key="textField-Valor2"/>
+					<box padding="2" />
+					<textElement textAlignment="Left" verticalAlignment="Top" />
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{valor2}]]></textFieldExpression>
+				</textField>
+			</frame>
+         
+			<frame> 
+            <reportElement x="35" y="0" width="520" height="17" key="frame-Titulo"> 
+               <printWhenExpression><![CDATA[new Boolean($F{tipoValor}.equals(Constantes.EXP_MC_TIPO_VALORES_SIN_LABEL))]]></printWhenExpression> 
+				</reportElement>
+				
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true" >
+               <reportElement style="negrita" x="0" y="0" width="520" height="17" mode="Transparent" key="textField-DatosPersonales"/>
+					<box padding="2" />
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{valor1}]]></textFieldExpression>
+				</textField>
+			</frame>
+         
+         <frame> 
+            <reportElement x="35" y="0" width="520" height="17" key="frame-Titulo" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($F{tipoValor}.equals(Constantes.EXP_MC_TIPO_VALORES_CREDITOS))]]></printWhenExpression> 
+				</reportElement>
+				
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true" >
+               <reportElement style="negrita" x="0" y="0" width="520" height="17" mode="Transparent" key="textField-DatosPersonales"/>
+               <box padding="2">
+                  <topPen lineWidth="1" lineStyle="Dashed" lineColor="#AAAAAA" />
+					</box>   
+					<textElement textAlignment="Right" verticalAlignment="Bottom"/>
+					<textFieldExpression class="java.lang.String"><![CDATA["Créditos Obtenidos: " + $F{creditosObtenidos} ]]></textFieldExpression>
+				</textField>
+         </frame>
+         
+         <frame> 
+            <reportElement x="35" y="0" width="520" height="17" key="frame-Titulo" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[(($F{tipoValor}.equals(Constantes.EXP_MC_TIPO_VALORES_INVALIDADO_CEIS) || $F{tipoValor}.equals(Constantes.EXP_MC_TIPO_VALORES_INVALIDADO_CC))?Boolean.TRUE : Boolean.FALSE)]]></printWhenExpression> 
+				</reportElement>
+            
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" >
+               <reportElement style="negrita" x="0" y="0" width="520" height="17" mode="Transparent" key="textField-DatosPersonales"/>
+               <box padding="2" />
+               <textElement textAlignment="Right" verticalAlignment="Bottom"/>
+               <textFieldExpression class="java.lang.String"><![CDATA[$F{invalidado}]]></textFieldExpression>
+            </textField>
+         </frame>
+
+
+
+
+<frame> 
+            <reportElement x="35" y="0" width="520" height="17" key="frame-Titulo"> 
+               
+				</reportElement>
+				
+			   <textField isStretchWithOverflow="true" isBlankWhenNull="true" >
+               <reportElement style="negrita" x="0" y="0" width="104" height="17" mode="Transparent" key="textField-DatosPersonales"/>
+					<box padding="2" />
+					<textElement textAlignment="Right" verticalAlignment="Top" />
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{valorTipoMod}]]></textFieldExpression>
+				</textField>
+				
+            <textField isStretchWithOverflow="true" isBlankWhenNull="true" >
+               <reportElement style="normal" x="104" y="0" width="416" height="17" mode="Transparent" key="textField-DatosPersonales"/>
+					<box padding="2" />
+					<textElement textAlignment="Left" verticalAlignment="Top" markup="styled"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{valorMod}]]></textFieldExpression>
+				</textField>
+			</frame>
+
+
+         
+         <line>
+            <reportElement x="35" y="0" width="520" height="1" forecolor="#916547">
+               <printWhenExpression><![CDATA[new Boolean($F{tipoValor}.equals(Constantes.EXP_MC_TIPO_VALORES_SEPARADOR_MERITOS))]]></printWhenExpression> 
+				</reportElement>
+         </line>
+         
+      </band>
+   </detail>
+</jasperReport>

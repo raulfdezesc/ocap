@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="515" pageHeight="40" columnWidth="515" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<field name="dNombreApellidos" class="java.lang.String"/>
+	<field name="dDNI" class="java.lang.String"/>
+	<field name="dAccion" class="java.lang.String"/>
+	<field name="dGrado" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="20">
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="0" width="276" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="0" y="0" width="276" height="20" backcolor="#969696"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[NOMBRE Y APELLIDOS ]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="276" y="0" width="66" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="276" y="0" width="66" height="20" backcolor="#FFFFFF"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[NIF]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="342" y="0" width="58" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="342" y="0" width="58" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[GRADO]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="400" y="0" width="115" height="20"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="400" y="0" width="115" height="20"/>
+				<textElement textAlignment="Center"/>
+				<text><![CDATA[ACCIONES]]></text>
+			</staticText>
+		</band>
+	</title>
+	<detail>
+		<band height="20">
+			<rectangle>
+				<reportElement mode="Transparent" x="0" y="0" width="276" height="20"/>
+			</rectangle>
+			<textField hyperlinkType="None">
+				<reportElement x="5" y="0" width="271" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{dNombreApellidos}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="276" y="0" width="66" height="20"/>
+			</rectangle>
+			<textField hyperlinkType="None">
+				<reportElement x="281" y="0" width="61" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{dDNI}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="342" y="0" width="58" height="20"/>
+			</rectangle>
+			<textField hyperlinkType="None">
+				<reportElement x="342" y="0" width="58" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{dGrado}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="400" y="0" width="115" height="20"/>
+			</rectangle>
+			<textField hyperlinkType="None">
+				<reportElement x="405" y="0" width="110" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{dAccion}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

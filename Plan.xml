@@ -1,0 +1,42 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<deployment-plan xmlns="http://xmlns.oracle.com/weblogic/deployment-plan" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.oracle.com/weblogic/deployment-plan http://xmlns.oracle.com/weblogic/deployment-plan/1.0/deployment-plan.xsd">
+    <!--weblogic-version:12.1.3-->
+  <application-name>ocap.war</application-name>
+  <variable-definition>
+    <variable>
+      <name>ServletDescriptor_action_ServletName_ocap</name>
+      <value>action</value>
+    </variable>
+    <variable>
+      <name>ServletDescriptor_jcaptcha_ServletName_ocap</name>
+      <value>jcaptcha</value>
+    </variable>
+  </variable-definition>
+  <module-override>
+    <module-name>ocap.war</module-name>
+    <module-type>war</module-type>
+    <module-descriptor external="false">
+      <root-element>weblogic-web-app</root-element>
+      <uri>WEB-INF/weblogic.xml</uri>
+      <variable-assignment>
+        <name>ServletDescriptor_action_ServletName_ocap</name>
+        <xpath>/weblogic-web-app/servlet-descriptor/[servlet-name="action"]/servlet-name</xpath>
+        <origin>planbased</origin>
+      </variable-assignment>
+      <variable-assignment>
+        <name>ServletDescriptor_jcaptcha_ServletName_ocap</name>
+        <xpath>/weblogic-web-app/servlet-descriptor/[servlet-name="jcaptcha"]/servlet-name</xpath>
+        <origin>planbased</origin>
+      </variable-assignment>
+    </module-descriptor>
+    <module-descriptor external="false">
+      <root-element>web-app</root-element>
+      <uri>WEB-INF/web.xml</uri>
+    </module-descriptor>
+    <module-descriptor external="true">
+      <root-element>wldf-resource</root-element>
+      <uri>META-INF/weblogic-diagnostics.xml</uri>
+    </module-descriptor>
+  </module-override>
+  <config-root>C:\RAUL\Proyectos\E_SALUD\Fuentes\XAMP\OCAP\rc\target\plan</config-root>
+</deployment-plan>

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wls:weblogic-web-app
+	xmlns:wls="http://xmlns.oracle.com/weblogic/weblogic-web-app"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd http://xmlns.oracle.com/weblogic/weblogic-web-app http://xmlns.oracle.com/weblogic/weblogic-web-app/1.9/weblogic-web-app.xsd">
+	<wls:resource-description>
+		<!--lookup-method:JNDI -->
+		<wls:res-ref-name>OCAP</wls:res-ref-name>
+		<wls:jndi-name>OCAP</wls:jndi-name>
+	</wls:resource-description>
+	<wls:context-root>ocap</wls:context-root>
+	<wls:container-descriptor>
+		<wls:show-archived-real-path-enabled>true</wls:show-archived-real-path-enabled>
+	</wls:container-descriptor>
+	<wls:jsp-descriptor>
+		<wls:keepgenerated>true</wls:keepgenerated>
+        <wls:page-check-seconds>-1</wls:page-check-seconds>
+		<wls:precompile>false</wls:precompile>
+		<wls:precompile-continue>false</wls:precompile-continue>        
+        <wls:exact-mapping>true</wls:exact-mapping>
+        <wls:debug>false</wls:debug>       
+		<wls:compress-html-template>true</wls:compress-html-template>
+		<wls:optimize-java-expression>true</wls:optimize-java-expression>
+	</wls:jsp-descriptor>
+    <wls:session-descriptor>
+        <wls:cookie-name>OCAP_SESSION</wls:cookie-name>
+        <wls:cookie-http-only>true</wls:cookie-http-only>
+    </wls:session-descriptor>
+   
+	
+	
+</wls:weblogic-web-app>

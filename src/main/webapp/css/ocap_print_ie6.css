@@ -1,0 +1,83 @@
+body {
+	font-size: 0.5em;
+}
+
+.contenido {
+	width: 80em;
+	margin-right: 10em;
+	margin-left: 0;
+}
+
+.tituloContenido {
+	margin-top: 0;
+}
+
+/*  Colocación de Solicitudes  */
+.colocaDatosVis {
+	width: 275px;
+}
+
+.colocaDatosVisGrande {
+	width: 560px;
+}
+
+div.contenidoDCP1A .tituloTablaCertif {
+	margin: 0 0 20px 170px;
+}
+
+div.contenidoDCP1A .tablaCertif {
+	margin-left: 50px;
+}
+
+.contenidoDCP2A span.colocaTitRadio {
+	margin-left: 420px;
+}
+
+/*  /Colocación de Solicitudes  */
+
+/* Impresion en los Itinerarios */
+fieldset .sttextarea .cuadroTACuestionario {
+	height: 110px;
+}
+
+.colocaApellidosDossier {
+	width: 230px;
+	margin-left: 5px;
+}
+
+.colocaCategoriaDossier {
+	width: 361px;
+	margin-left: 43px;
+}
+
+.colocaCentroDossier {
+	width: 361px;
+	margin-left: 54px;
+}
+
+.colocaFechaDossier {
+	width: 75px;
+	margin-left: 57px;
+}
+
+/*	Itinerarios	*/
+.contenidoTextoProcedimiento .textoRadioCuestionarioLargo {
+	width: 66em;
+	padding-top: 5px;
+}
+/*	/Itinerarios	*/
+.informeCC .ajusteBorde1 {
+	width: 500px;
+}
+
+.informeCC .ajusteBorde2 {
+	width: 557px;
+}
+
+.noImprimir * {
+	color: #FFFFFF;
+	background-color: #FFFFFF;
+	border: none;
+	display: none;
+	visibility: hidden;
+}

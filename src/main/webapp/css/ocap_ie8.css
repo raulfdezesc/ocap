@@ -1,0 +1,189 @@
+/*	CSS para IE8	*/
+
+/*	LOGIN	*/
+.ajustarCajaLogin .cajaformulario .normalesLogin {
+	padding-top: 0;
+}
+
+.ajustarCajaLogin .cajaformulario .normalesLogin .colocaUsuario,
+	.ajustarCajaLogin .cajaformulario .normalesLogin .colocaPassword {
+	vertical-align: bottom;
+}
+
+.ajustarCajaLogin .cajaformulario .botonLogin .botonNoLink {
+	padding-top: 5px;
+}
+
+/*	/LOGIN	*/
+.recuadroM {
+	padding-top: 3px;
+}
+
+.altaPGP .tablaUsuarios {
+	margin-bottom: 0;
+	margin-top: 1em;
+}
+
+ocap_ie8 .
+altaPGP .opcionRadioAlta {
+	background-color: #FF0000;
+}
+
+.altaPGP .tablaUsuarios .datosAsp td .campoNombre {
+	padding-bottom: 2px;
+}
+
+.altaPGP .tablaUsuarios .datosAsp td .campoApellidos {
+	padding-bottom: 2px;
+}
+
+.ajusteGradoMC {
+	margin-right: 85px;
+}
+
+.colocaTipoMC {
+	margin-right: 88px
+}
+
+.colocaDNIAlta {
+	width: 89px;
+	margin-left: 70px !important;
+	margin-right: 171px;
+}
+
+.colocaNumHCursoDocMC {
+	margin-left: 36px !important;
+	width: 5em;
+	font-weight: normal;
+}
+
+.colocaTitTesisMC {
+	margin-left: 37px !important;
+	width: 50em;
+	font-weight: normal;
+}
+
+.colocaTitOtraPMC {
+	margin-left: 30px !important;
+	width: 45em;
+	font-weight: normal;
+}
+
+.colocaTitLibISBN {
+	margin-left: 45px !important;
+	width: 46.5em;
+	font-weight: normal;
+}
+
+.colocaEditorialISBN {
+	width: 46.5em;
+	margin-left: 77px !important;
+	font-weight: normal;
+}
+
+.colocaLugarISBN {
+	margin-left: 10px !important;
+	width: 46.5em;
+	font-weight: normal;
+}
+
+.colocaEstadoCBMC2 {
+	width: 14em;
+	margin-left: 73px !important;
+}
+
+.buscadorSolicitudes .colocaConvocatoria {
+	margin-left: 39px !important;
+	width: 261px;
+}
+
+.buscadorSolicitudes .colocaGradoBusc {
+	margin-left: 15px !important;
+}
+
+.contenidoListadoDinamico .colocaRegimenJuridicoCSV {
+	margin-left: 18px !important;
+	width: 180px;
+	margin-right: 40px;
+}
+
+.contenidoListadoDinamico .colocaSituacionAdministrativaCSV {
+	margin-left: 16px !important;
+	width: 148px;
+}
+
+.contenidoListadoDinamico .colocaProcEvaluaCSV2 {
+	width: 356px;
+	margin-left: 46px !important;
+}
+
+.contenidoListadoDinamico .colocaProcEvalCSV {
+	margin-right: 197px !important;
+}
+
+.contenidoListadoDinamico .colocaConvocatoriaCSV {
+	margin-right: 133px !important;
+}
+
+.contenidoListadoDinamico .colocaFechaSolicitudCSV {
+	margin-right: 107px !important;
+}
+
+.contenidoListadoDinamico .colocaAniosEjercicioCSV {
+	margin-right: 111px !important;
+}
+
+.contenidoListadoDinamico .colocaCentroCSV {
+	margin-right: 168px !important;
+}
+
+.contenidoListadoDinamico .colocaCategoriaCB {
+	width: 534px;
+	margin-left: 41px !important;
+}
+
+.contenidoListadoDinamico .colocaGradoBuscCB {
+	margin-left: 76px !important;
+}
+
+.contenidoListadoDinamico .colocaSexoCB {
+	width: 95px;
+	margin-left: 25px !important;
+}
+
+.contenidoListadoDinamico .colocaGerencia {
+	width: 533px !important;
+	margin-left: 61px !important;
+}
+
+.colocaGradoBuscGPC {
+	width: 100px;
+	margin-left: 74px !important;
+}
+
+.colocaConvocatoriaGPC {
+	width: 358px;
+	margin-left: 5px !important;
+}
+
+.colocaAccionBuscCB {
+	width: 100px;
+	margin-left: 73px !important;
+}
+
+.colocaConvocatoriaBuscCB {
+	width: 356px;
+	margin-left: 7px !important;
+}
+
+.colocaConvocatoriaCB {
+	width: 278px;
+	!
+	important;
+}
+
+.colocaEPR {
+	width: 255px;
+	margin-left: 46px !important;
+	font-weight: normal;
+}

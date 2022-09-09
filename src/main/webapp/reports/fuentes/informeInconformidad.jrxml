@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<import value="es.jcyl.fqs.ocap.ot.solicitudes.OCAPSolicitudesOT"/>
+	<import value="java.text.SimpleDateFormat"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="datosDocu" class="es.jcyl.fqs.ocap.ot.solicitudes.OCAPSolicitudesOT" isForPrompting="false"/>
+	<parameter name="ruta" class="java.lang.String"/>
+	<parameter name="fecha" class="java.lang.String"/>
+	<parameter name="texto" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="68">
+			<image scaleImage="FillFrame" hAlign="Center" isUsingCache="true" hyperlinkType="None">
+				<reportElement x="10" y="0" width="535" height="53"/>
+				<imageExpression class="java.lang.String"><![CDATA[$P{ruta}+"/imagenes/imagenes_ocap/degradadoCab.gif"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<detail>
+		<band height="709">
+			<rectangle>
+				<reportElement mode="Transparent" x="31" y="339" width="484" height="28" backcolor="#FFFFFF"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#916547"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="31" y="147" width="484" height="182" backcolor="#FFFFFF"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#916547"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="31" y="378" width="484" height="17"/>
+				<textElement/>
+				<text><![CDATA[ALEGACIONES:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="42" y="240" width="110" height="20"/>
+				<textElement/>
+				<text><![CDATA[Provincia:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="42" y="150" width="220" height="20"/>
+				<textElement/>
+				<text><![CDATA[Procedimiento de evaluación por el que opta:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="154" y="218" width="353" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getDEspec_nombre()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="154" y="196" width="353" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getDProfesional_nombre()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="262" y="150" width="245" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getDSitAdministrativa_nombre()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="154" y="240" width="353" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getDProvincia()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="154" y="262" width="353" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getDTipogerencia_desc()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="42" y="218" width="110" height="20"/>
+				<textElement/>
+				<text><![CDATA[Especialidad:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="42" y="262" width="110" height="20"/>
+				<textElement/>
+				<text><![CDATA[Tipo Gerencia:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="42" y="196" width="110" height="20"/>
+				<textElement/>
+				<text><![CDATA[Categoría Profesional:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="96" y="343" width="411" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getDGrado_des()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="44" y="343" width="52" height="20"/>
+				<textElement/>
+				<text><![CDATA[Grado:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="10" y="6" width="535" height="1"/>
+			</line>
+			<line>
+				<reportElement x="10" y="62" width="535" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="507" y="66" width="38" height="15" forecolor="#916547"/>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[DCP5B]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="42" y="284" width="110" height="20"/>
+				<textElement/>
+				<text><![CDATA[Gerencia:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="154" y="284" width="353" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getDGerencia_nombre()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="42" y="306" width="110" height="20"/>
+				<textElement/>
+				<text><![CDATA[Centro de Trabajo:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="154" y="306" width="353" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getDCentrotrabajo_nombre()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="375" y="114" width="130" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getCDniReal()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="126" y="90" width="379" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getDApellido1()]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement positionType="FixRelativeToBottom" stretchType="RelativeToTallestObject" mode="Transparent" x="31" y="85" width="484" height="55" forecolor="#916547" backcolor="#FFFFFF"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#916547"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="42" y="90" width="84" height="20"/>
+				<textElement/>
+				<text><![CDATA[Apellidos:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="42" y="114" width="84" height="20"/>
+				<textElement/>
+				<text><![CDATA[Nombre:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="327" y="114" width="48" height="20"/>
+				<textElement/>
+				<text><![CDATA[NIF/NIE:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="126" y="114" width="190" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getDNombre()]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="31" y="405" width="484" height="75" backcolor="#FFFFFF"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#916547"/>
+				</graphicElement>
+			</rectangle>
+			<staticText>
+				<reportElement x="31" y="510" width="458" height="20"/>
+				<textElement/>
+				<text><![CDATA[En ..................................... a ................ de ...................................... de 2009]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="15" y="39" width="530" height="20" forecolor="#916547"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="15" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[DE ACCESO A GRADO DE CARRERA PROFESIONAL]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="15" y="14" width="530" height="20" forecolor="#916547"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="15" isBold="true" isUnderline="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{texto}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="42" y="172" width="110" height="20"/>
+				<textElement/>
+				<text><![CDATA[Personal:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="154" y="172" width="353" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getDEstatut_nombre()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="178" y="552" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Firmado:]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="20">
+			<staticText>
+				<reportElement x="31" y="0" width="431" height="20"/>
+				<textElement/>
+				<text><![CDATA[ILMO. SR. DIRECTOR GERENTE DE LA GERENCIA REGIONAL DE SALUD]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+</jasperReport>

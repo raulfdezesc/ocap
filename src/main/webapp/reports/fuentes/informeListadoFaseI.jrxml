@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="822" leftMargin="10" rightMargin="10" topMargin="3" bottomMargin="8">
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["E:\\Desarrollo\\OCAP\\Fuentes\\OCAP\\web\\reports\\fuentes\\"]]></defaultValueExpression>
+	</parameter>
+	<parameter name="ruta" class="java.lang.String"/>
+	<parameter name="datosReport" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="SUB_REPORT" class="net.sf.jasperreports.engine.JasperReport" isForPrompting="false"/>
+	<parameter name="excluidos" class="java.lang.Boolean"/>
+	<parameter name="listaCausasExc" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band/>
+	</title>
+	<pageHeader>
+		<band/>
+	</pageHeader>
+	<columnHeader>
+		<band/>
+	</columnHeader>
+	<detail>
+		<band height="125">
+			<subreport>
+				<reportElement x="0" y="0" width="822" height="125" isPrintInFirstWholeBand="true"/>
+				<subreportParameter name="ruta">
+					<subreportParameterExpression><![CDATA[$P{ruta}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[$P{datosReport}]]></dataSourceExpression>
+				<subreportExpression class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{SUB_REPORT}]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band/>
+	</pageFooter>
+	<summary>
+		<band height="500">
+			<printWhenExpression><![CDATA[$P{excluidos}]]></printWhenExpression>
+			<staticText>
+				<reportElement x="11" y="5" width="333" height="17" isPrintWhenDetailOverflows="true"/>
+				<box>
+					<pen lineWidth="0.5"/>
+					<topPen lineWidth="0.5"/>
+					<leftPen lineWidth="0.5"/>
+					<bottomPen lineWidth="0.5"/>
+					<rightPen lineWidth="0.5"/>
+				</box>
+				<textElement>
+					<font size="11" isBold="true" isItalic="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[CÓDIGOS Y DESCRIPCIÓN DE CAUSAS DE EXCLUSIÓN]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="11" y="24" width="801" height="464" isRemoveLineWhenBlank="true" isPrintWhenDetailOverflows="true"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{listaCausasExc}.toUpperCase()]]></textFieldExpression>
+			</textField>
+		</band>
+	</summary>
+</jasperReport>

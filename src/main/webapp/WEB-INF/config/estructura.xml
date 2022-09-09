@@ -1,0 +1,1735 @@
+<aplicacion c_aplicacion_id="OCAP" d_aplicacion="Descripcion OCAP">
+
+
+	<roles>
+		<!-- ************************************************************* -->
+		<!-- ROLES o perfiles definidos: Organizar según fases y objetivos -->
+		<!-- ************************************************************* -->
+
+		<rol c_grupo_id="OCAP_USUARIO" d_grupo="Usuarios" />
+		<rol c_grupo_id="OCAP_USUARIO_FASE_III" d_grupo="Usuarios - Fase III" />
+		<rol c_grupo_id="OCAP_PGP" d_grupo="Punto de Gestion Periferica" />
+		<rol c_grupo_id="OCAP_CEIS" d_grupo="Comite Especifico Institucion Sanitaria" />
+
+		<rol c_grupo_id="OCAP_CC" d_grupo="Comision Central" />
+		<rol c_grupo_id="OCAP_GRS" d_grupo="Gerencia Regional de Salud" />
+
+		<rol c_grupo_id="OCAP_CTE" d_grupo="Comite Tecnico de Evaluacion" />
+		<rol c_grupo_id="OCAP_CE" d_grupo="Comision Evaluadora" />
+		<rol c_grupo_id="OCAP_EVAL" d_grupo="Evaluadores" />
+		<rol c_grupo_id="OCAP_FQS_GEST" d_grupo="Gestion de la Fundacion de Calidad Sanitaria" />
+		<rol c_grupo_id="OCAP_FQS_ADTVO"
+			d_grupo="Administrativo de la Fundacion de Calidad Sanitaria" />
+		<rol c_grupo_id="OCAP_DIRECCION" d_grupo="Direccion" />
+
+		<rol c_grupo_id="OCAP_ADM" d_grupo="Administradores" />
+		<rol c_grupo_id="OCAP_INFORMATICA" d_grupo="Servicio de Informatica" />
+		<rol c_grupo_id="OCAP_DIRECTORIO" d_grupo="Directorio Corporativo" />
+
+		<rol c_grupo_id="OCAP_PRUEBA_ITINERARIO" d_grupo="Usuario de pruebas de itinerarios" />
+
+	</roles>
+
+
+	<usuarios>
+		<!-- **************************************************** -->
+		<!-- USUARIOS definidos: Organizar según ROLES o PERFILES -->
+		<!-- **************************************************** -->
+	</usuarios>
+
+
+	<usuariosRoles>
+		<!-- ************************************************************************** -->
+		<!-- ASIGNACION de USUARIOS a ROLES definidos: Organizar según ROLES o 
+			PERFILES -->
+		<!-- ************************************************************************** -->
+	</usuariosRoles>
+
+
+	<funciones>
+		<!-- ***************************************************** -->
+		<!-- FUNCIONES definidos: Organizar según ROLES o PERFILES -->
+		<!-- ***************************************************** -->
+
+		<!-- FUNCIONES COMUNES A TODOS LOS PERFILES: Deberían asignarse estas funciones 
+			a todos los perfiles -->
+			
+		
+<funcion c_funcion_id="OCAP_ACCESO_ALTA" d_descripcion="Alta de Acceso"
+			d_proceso="OCAPAcceso.do" d_nombre="#" />		
+			
+			
+		<funcion c_funcion_id="OCAP_AVISO_LEGAL" d_descripcion="Aviso Legal"
+			d_proceso="AvisoLegal.do" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_INFORMACION_LEGAL" d_descripcion="Informacion Legal"
+			d_proceso="InformacionLegal.do" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_SOLICITUDES" d_descripcion="Solicitudes de Grado"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_SOLICITUDES_BUSCA" d_descripcion="Alta de Solicitudes"
+			d_proceso="OCAPNuevaSolicitud.do?accion=irBuscarSolic" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_SOLICITUDES_ALTA" d_descripcion="Alta de Solicitudes"
+			d_proceso="OCAPNuevaSolicitud.do?accion=irInsertar" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_SOLICITUDES_CONSULTA"
+			d_descripcion="Gestión de Solicitudes" d_proceso="OCAPNuevaSolicitud.do?accion=irBuscar"
+			d_nombre="#" />
+			
+		<funcion c_funcion_id="OCAP_SOLICITUDES_GESTION_GRS"
+			d_descripcion="Gestión de Solicitudes" d_proceso="OCAPNuevaSolicitud.do?accion=irBuscarGrs"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_SOLICITUDES_CONSULTA_GRS"
+			d_descripcion="Reasignación de expediente" d_proceso="OCAPNuevaSolicitud.do?accion=irReasociar"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_SOLICITUDES_DETALLE"
+			d_descripcion="Detalle" d_proceso="OCAPSolicitudes.do?accion=irDetalleAlta"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_SOLICITUDES_HISTORIAL"
+			d_descripcion="Historial" d_proceso="OCAPSolicitudes.do?accion=irDetalle"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_SOLICITUDES_PDF" d_descripcion="Solicitud"
+			d_proceso="OCAPSolicitudes.do?accion=irSolicitud" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_SOLICITUDES_LISTADO"
+			d_descripcion="Listado Fase III" d_proceso="OCAPSolicitudes.do?accion=irListar&amp;fase=FASE_CA"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_SOLICITUDES_LISTADO_EVAL2"
+			d_descripcion="Solicitar Nueva Evaluación" d_proceso="OCAPSolicitudes.do?accion=irListar&amp;fase=FASE_CA"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_REACTIVACION_CA" d_descripcion="Reactivación Desempeño"
+			d_proceso="OCAPSolicitudes.do?accion=irReactivarCa" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_SOLICITUDES_FQS" d_descripcion="Detalles evaluados"
+			d_proceso="OCAPNuevaSolicitud.do?accion=irDetalleFqs" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_CUADRO_MANDO" d_descripcion="Cuadro de mando"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_CSV_DINAMICO_LDAP" d_descripcion="Listado Directorio Corp."
+			d_proceso="OCAPSolicitudes.do?accion=irCSVDinamico&amp;opcion=listadoLDAP"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_CSV_COPIA_DNI" d_descripcion="Permitir Acceso a MC"
+			d_proceso="OCAPNuevaSolicitud.do?accion=irCopiarDNI" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_CSV_DINAMICO_GRS" d_descripcion="Cuadro de Mando"
+			d_proceso="OCAPSolicitudes.do?accion=irCSVDinamico&amp;opcion=listadoGRS"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_CSV_DINAMICO_FQS" d_descripcion="Generación Excel"
+			d_proceso="OCAPSolicitudes.do?accion=irCSVDinamico&amp;opcion=listadoFQS"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_INFORMES" d_descripcion="Reconocimiento de grado "
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_INFORME_INDIVI_ACCESO_GRADO"
+			d_descripcion="Individualizado de acceso a grado" d_proceso="OCAPSolicitudes.do?accion=generarPDFIndiviAccesoGrado"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_USU_EXPEDIENTEMC" d_descripcion="Méritos Curriculares"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_USU_EXPEDIENTEMC_GRS"
+			d_descripcion="Expedientes procesados por el CEIS"
+			d_proceso="OCAPSolicitudes.do?accion=irBuscarGrs&amp;opcion=merit"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_USU_EXPEDIENTECC_GRS"
+			d_descripcion="Expedientes procesados por el CC"
+			d_proceso="OCAPSolicitudes.do?accion=irBuscarGrs&amp;opcion=procc"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_GEST_GRS_CD" d_descripcion="Desempeño de la Competencia"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_SOLICITUDES_LISTADO_GRS"
+			d_descripcion="Aportación de Evidencias"
+			d_proceso="OCAPSolicitudes.do?accion=irListar&amp;fase=FASE_CA_TERMINADA"
+			d_nombre="#" />
+
+
+
+		<funcion c_funcion_id="OCAP_USU_ACEPTADOS_CC" d_descripcion="Informe"
+			d_proceso="OCAPSolicitudes.do?accion=irBuscarGrs&amp;opcion=recon"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_USU_AUTOEVALUARMC" d_descripcion="Evaluación"
+			d_proceso="OCAPUsuarios.do?accion=irProteccionDatos" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_GEST_PGP_MC" d_descripcion="Méritos Curriculares"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_GEST_PGP_MC_ALEGA" d_descripcion="Gestión de alegaciones"
+			d_proceso="OCAPSolicitudes.do?accion=irBuscar&amp;opcion=alega"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_GEST_PGP_CD" d_descripcion="Desempeño de la Competencia"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_GEST_PGP_CC" d_descripcion="Informe Individualizado"
+			d_proceso="OCAPSolicitudes.do?accion=irBuscar&amp;opcion=competencia"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANTENIMIENTO" d_descripcion="Mantenimiento Tablas"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_AREASTRABAJO" d_descripcion="Areas de Trabajo"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_AREASTRAB_ALTA"
+			d_descripcion="Alta" d_proceso="OCAPAreasTrabajo.do?accion=irInsertar"
+			d_nombre="#" />
+		<funcion c_funcion_id="OCAP_MANT_AREASTRAB_CONS"
+			d_descripcion="Consulta" d_proceso="OCAPAreasTrabajo.do?accion=irBuscar"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_CATEGORIAS" d_descripcion="Categorías Profesionales"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_CATEGORIAS_ALTA"
+			d_descripcion="Alta" d_proceso="OCAPCategProfesionales.do?accion=irInsertar"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_CATEGORIAS_CONS"
+			d_descripcion="Consulta" d_proceso="OCAPCategProfesionales.do?accion=irBuscar"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_CENTROS" d_descripcion="Centros"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_CENTROS_ALTA" d_descripcion="Alta"
+			d_proceso="OCAPCentroTrabajo.do?accion=irInsertar" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_CENTROS_CONS" d_descripcion="Consulta"
+			d_proceso="OCAPCentroTrabajo.do?accion=irBuscar" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_CREDITOS" d_descripcion="Créditos"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_CREDITOS_ALTA" d_descripcion="Alta"
+			d_proceso="OCAPCreditos.do?accion=irInsertar" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_CREDITOS_CONS" d_descripcion="Consulta"
+			d_proceso="OCAPCreditos.do?accion=irBuscar" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_DEF_MERIT_CURR"
+			d_descripcion="Def. Méritos Curriculares" d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_D_MERI_CUR_ALTA"
+			d_descripcion="Alta" d_proceso="OCAPDefMeritoscurriculares.do?accion=irInsertar"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_D_MERI_CUR_CONS"
+			d_descripcion="Consulta" d_proceso="OCAPDefMeritoscurriculares.do?accion=irBuscar"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_ESPECIALIDADES"
+			d_descripcion="Especialidades" d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_ESPECIAL_ALTA" d_descripcion="Alta"
+			d_proceso="OCAPEspecialidades.do?accion=irInsertar" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_ESPECIAL_CONS" d_descripcion="Consulta"
+			d_proceso="OCAPEspecialidades.do?accion=irBuscar" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_ESTATUTARIO" d_descripcion="Estatutario"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_ESTATUT_ALTA" d_descripcion="Alta"
+			d_proceso="OCAPEstatutario.do?accion=irInsertar" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_ESTATUT_CONS" d_descripcion="Consulta"
+			d_proceso="OCAPEstatutario.do?accion=irBuscar" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_FACTORES" d_descripcion="Factores de Impacto"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_FACTORES_ALTA" d_descripcion="Alta"
+			d_proceso="OCAPFactoresImpacto.do?accion=irInsertar" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_FACTORES_CONS" d_descripcion="Consulta"
+			d_proceso="OCAPFactoresImpacto.do?accion=irBuscar" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_GERENCIAS" d_descripcion="Gerencias"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_GEREN_ALTA" d_descripcion="Alta"
+			d_proceso="OCAPGerencias.do?accion=irInsertar" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_GEREN_CONS" d_descripcion="Consulta"
+			d_proceso="OCAPGerencias.do?accion=irBuscar" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_GRADOS" d_descripcion="Grados"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_GRADOS_ALTA" d_descripcion="Alta"
+			d_proceso="OCAPGrado.do?accion=irInsertar" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_GRADOS_CONS" d_descripcion="Consulta"
+			d_proceso="OCAPGrado.do?accion=irBuscar" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_MENSAJESMC" d_descripcion="MensajesMC"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_MENSAJESMC_ALTA"
+			d_descripcion="Alta" d_proceso="OCAPMensajesMc.do?accion=irInsertar"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_MENSAJESMC_CONS"
+			d_descripcion="Consulta" d_proceso="OCAPMensajesMc.do?accion=irBuscar"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_MENSAJES" d_descripcion="Mensajes"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_MENSAJES_ALTA" d_descripcion="Alta"
+			d_proceso="OCAPMensajes.do?accion=irInsertar" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_MENSAJES_CONS" d_descripcion="Consulta"
+			d_proceso="OCAPMensajes.do?accion=irBuscar" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_MERITOS_ACTIV" d_descripcion="Méritos de Actividad"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_MERI_ACTIV_ALTA"
+			d_descripcion="Alta" d_proceso="OCAPMeractividad.do?accion=irInsertar"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_MERI_ACTIV_CONS"
+			d_descripcion="Consulta" d_proceso="OCAPMeractividad.do?accion=irBuscar"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_MERITOS_CURR" d_descripcion="Méritos Curriculares"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_MERI_CURR_CONS"
+			d_descripcion="Consulta" d_proceso="OCAPMeritoscurriculares.do?accion=irBuscar"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_MERITOS_MODA" d_descripcion="Méritos Modalidad"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_MERI_MOD_ALTA" d_descripcion="Alta"
+			d_proceso="OCAPMerModalidad.do?accion=irInsertar" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_MERI_MOD_CONS" d_descripcion="Consulta"
+			d_proceso="OCAPMerModalidad.do?accion=irBuscar" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_PERFILES" d_descripcion="Perfiles"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_PERFILES_ALTA" d_descripcion="Alta"
+			d_proceso="OCAPPerfiles.do?accion=irInsertar" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_PERFILES_CONS" d_descripcion="Consulta"
+			d_proceso="OCAPPerfiles.do?accion=irBuscar" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_PERSONAL" d_descripcion="Personal Estatutario"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_PERSONAL_ALTA" d_descripcion="Alta"
+			d_proceso="OCAPPersEstatutario.do?accion=irInsertar" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_PERSONAL_CONS" d_descripcion="Consulta"
+			d_proceso="OCAPPersEstatutario.do?accion=irBuscar" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_TIPOSFIRMANTE" d_descripcion="Tipos de Firmante"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_TIPO_FIRM_ALTA"
+			d_descripcion="Alta" d_proceso="OCAPTiposFirmante.do?accion=irInsertar"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_TIPO_FIRM_CONS"
+			d_descripcion="Consulta" d_proceso="OCAPTiposFirmante.do?accion=irBuscar"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_TIPOGERENCIAS" d_descripcion="Tipo de Gerencias"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_TIP_GEREN_ALTA"
+			d_descripcion="Alta" d_proceso="OCAPTipoGerencias.do?accion=irInsertar"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_TIP_GEREN_CONS"
+			d_descripcion="Consulta" d_proceso="OCAPTipoGerencias.do?accion=irBuscar"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_CONVOCATORIAS" d_descripcion="Convocatorias"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_CONVOCATORIAS_ALTA"
+			d_descripcion="Alta" d_proceso="OCAPConvocatorias.do?accion=irInsertar"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MANT_CONVOCATORIAS_CONS"
+			d_descripcion="Consulta" d_proceso="OCAPConvocatorias.do?accion=irBuscar"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_SOLICITUDES_FECHAS" d_descripcion="Administración de fechas"
+			d_proceso="#" d_nombre="#" />
+			
+		<funcion c_funcion_id="OCAP_NO_APORTA_MERITOS" d_descripcion="Procedimientos &quot;No aporta méritos&quot;"
+			d_proceso="#" d_nombre="#" />
+			
+			
+		<funcion c_funcion_id="OCAP_NO_APORTA_MERITOS_MC"
+			d_descripcion="Proced. Méritos curriculares"
+			d_proceso="OCAPNoAportaMeritos.do?accion=irMeritosMc"
+			d_nombre="#" />
+		<funcion c_funcion_id="OCAP_NO_APORTA_MERITOS_MA"
+			d_descripcion="Proced. Méritos asistenciales"
+			d_proceso="OCAPNoAportaMeritos.do?accion=irMeritosMa"
+			d_nombre="#" />
+			
+		<funcion c_funcion_id="OCAP_MERITOS_ANTERIORES"
+			d_descripcion="Ver méritos anteriores"
+			d_proceso="OCAPMeritosAnteriores.do?accion=verMeritosAnteriores"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_SOLICITUDES_FECHAS_GRS"
+			d_descripcion="Fase curricular"
+			d_proceso="OCAPNuevaSolicitud.do?accion=irBuscarAdmGrs&amp;opcion=fechas"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_EXPEDIENTES_FECHAS_GRS"
+			d_descripcion="Modificar Fechas Expediente"
+			d_proceso="OCAPNuevaSolicitud.do?accion=irBuscarAdmGrs&amp;opcion=fechasExpediente"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_EDC" d_descripcion="Fase de EDC"
+			d_proceso="OCAPNuevaSolicitud.do?accion=irBuscarAdmGrs&amp;opcion=edc"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MERITOS" d_descripcion="Méritos"
+			d_proceso="OCAPMeritos.do" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_SOLICITUDES_CEIS" d_descripcion="Solicitudes"
+			d_proceso="OCAPNuevaSolicitud.do" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_USU_EXPEDIENTECA" d_descripcion="Méritos Asistenciales"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_USU_RENUNCIAR" d_descripcion="Renunciar Carrera Profesional"
+			d_proceso="#" d_nombre="#" />
+			
+		<funcion c_funcion_id="OCAP_USU_ASISTENCIALES" d_descripcion="Méritos Asistenciales"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_USU_INFORMARCA" d_descripcion="Información"
+			d_proceso="OCAPCuestionarios.do?accion=irExplicacionAreas" d_nombre="#" />
+
+		<!-- <funcion c_funcion_id="OCAP_USU_AUTOEVALUARCA" d_descripcion="Áreas 
+			de Evaluación" d_proceso="OCAPCuestionarios.do?accion=irProteccionDatos" 
+			d_nombre="#" /> -->
+
+		<funcion c_funcion_id="OCAP_USU_AUTOEVALUARCA" d_descripcion="Áreas de Evaluación"
+			d_proceso="OCAPCuestionarios.do?accion=irAlertaProteccionDatos"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_USU_AUTOEVALUARCA_PRO"
+			d_descripcion="Protección de Datos" d_proceso="OCAPCuestionarios.do?accion=irProteccionDatos"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_PRUEBA_INFORMARCA" d_descripcion="Información"
+			d_proceso="OCAPCuestionarios.do?accion=irExplicacionAreasPruebas"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_PRUEBA_AUTOEVALUARCA"
+			d_descripcion="Áreas de Evaluación" d_proceso="OCAPCuestionarios.do?accion=irListarPruebas"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_PROBAR_ITINERARIO" d_descripcion="Prueba de Manuales"
+			d_proceso="#" d_nombre="#" />
+		<funcion c_funcion_id="OCAP_PRUEBA_ELIGE_ITINERARIO"
+			d_descripcion="Selección de Manual" d_proceso="OCAPNuevaSolicitud.do?accion=irInsertarUsuarioPruebas"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_EVAL_ITINERARIO" d_descripcion="Itinerario"
+			d_proceso="OCAPCuestionarios.do" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_EVALUADOR_BOLSA" d_descripcion="Gestión del registro de evaluadores"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_EVALUADOR_CP" d_descripcion="Gestión de Evaluadores en CP"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_EVALUADOR_SEGUNDA" d_descripcion="Segundas Evaluaciones"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_EVALUADOR_ALTA" d_descripcion="Alta Evaluador"
+			d_proceso="OCAPEvaluadores.do?accion=irInsertar" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_EVALUADOR_LIS_REG" d_descripcion="Buscador Evaluadores"
+			d_proceso="OCAPEvaluadores.do?accion=irBuscar&amp;opcion=registro"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_EVALUADOR_LIS_CP" d_descripcion="Buscador Evaluadores"
+			d_proceso="OCAPEvaluadores.do?accion=irBuscar&amp;opcion=cp"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_EVALUADOR_SEGUNDA_ADM"
+			d_descripcion="Evaluadores" d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_EVALUADOR_LIS_CP_ADM"
+			d_descripcion="Segunda Evaluación" d_proceso="OCAPEvaluadores.do?accion=irBuscar&amp;opcion=cp"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_CTE" d_descripcion="Gestión de CTE"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_CTE_ALTA" d_descripcion="Alta"
+			d_proceso="OCAPGestionCtes.do?accion=irInsertar" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_CTE_LIS" d_descripcion="Listado"
+			d_proceso="OCAPGestionCtes.do?accion=buscar" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_CE" d_descripcion="Gestión de CE"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_COMPCTE" d_descripcion="Componentes de CTE"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_COMPCTE_ALTA" d_descripcion="Alta"
+			d_proceso="OCAPComponentesCtes.do?accion=irInsertar&amp;opcion=CTE"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_COMPCE" d_descripcion="Componentes de CE"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_COMPCE_ALTA" d_descripcion="Alta"
+			d_proceso="OCAPComponentesCtes.do?accion=irInsertar&amp;opcion=CE"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_EVALUADOS" d_descripcion="Gestión de Evaluados"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_EVALUADOS_LIS" d_descripcion="Listado"
+			d_proceso="OCAPEvaluadores.do?accion=irListar" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_ACEPTACION_EXPEDIENTES_LIS"
+			d_descripcion="Listado Expedientes"
+			d_proceso="OCAPExpedientes.do?accion=irBuscadorExpedientes&amp;modo=aceptacion"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_CARGA_MIEMBROS_COMITES"
+			d_descripcion="Carga Miembros" d_proceso="OCAPMiembrosComites.do?accion=irCargar"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_EVALUADOS_LIS_EVAL1"
+			d_descripcion="Listado de evaluados" d_proceso="OCAPEvaluadores.do?accion=irListar&amp;eval=1"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_EVALUADOS_LIS_EVAL2"
+			d_descripcion="Listado Segunda Evaluación" d_proceso="OCAPEvaluadores.do?accion=irListar&amp;eval=2"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_EVALUADOS_LISCE" d_descripcion="Listado"
+			d_proceso="OCAPEvaluadores.do?accion=listarEvaluados" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_EVALUADORES" d_descripcion="Gestión de Evaluadores"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_EVALUADORES_LIS" d_descripcion="Listado"
+			d_proceso="OCAPComponentesCtes.do?accion=irListarEval" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_EVALUADORES_LIS_CTE"
+			d_descripcion="Listado" d_proceso="OCAPEvaluadores.do?accion=irBuscarEvaluadosGrenciaCTE"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_EVALUADOR_LIS_CE" d_descripcion="Informes de Conformidad CTE"
+			d_proceso="OCAPGestionCtes.do?accion=buscar" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_DOCUMENTOS_ALTA" d_descripcion="Alta"
+			d_proceso="OCAPDocumentos.do?accion=irAltaDocumento" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_DOCUMENTOS_LEER" d_descripcion="Leer"
+			d_proceso="OCAPDocumentos.do?accion=abrirDocumento" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_SOLICITUDES_LISTADO_PGP"
+			d_descripcion="Aportación de Evidencias"
+			d_proceso="OCAPSolicitudes.do?accion=irListar&amp;fase=FASE_CA_TERMINADA"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_XML_ALTA" d_descripcion="Cargar XML de Evidencias"
+			d_proceso="OCAPDocumentos.do?accion=irCargarXML" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_CONSULTA_MC" d_descripcion="Consulta de profesionales"
+			d_proceso="OCAPSolicitudes.do?accion=irBuscar&amp;opcion=FASE_VALIDACION"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_INF_MOTIVADO_MASIVO"
+			d_descripcion="Informes motivados"
+			d_proceso="OCAPExpedientes.do?accion=irBuscadorExpedientes&amp;modo=infMotivado"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_GEN_ACTAS_MC_CONSTITUCION"
+			d_descripcion="Generar Acta Constitución " d_proceso="OCAPActas.do?accion=irGenerarActas&amp;tipoActa=C"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_GEN_ACTAS_MC_REUNION"
+			d_descripcion="Generar Acta Reunión " d_proceso="OCAPActas.do?accion=irGenerarActas&amp;tipoActa=R"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_GEN_ACTAS_MC_SOLI_ACLARACION"
+			d_descripcion="Generar Acta Solicitud Aclaraciones " d_proceso="OCAPActas.do?accion=irGenerarActas&amp;tipoActa=A"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_GEN_ACTAS" d_descripcion="Consulta Actas "
+			d_proceso="OCAPActas.do?accion=irConsultarActas" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_VER_LISTA_MC" d_descripcion="Pantalla General"
+			d_proceso="OCAPUsuarios.do?accion=irInsertar" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_USU_GLOSARIO" d_descripcion="Glosario"
+			d_proceso="OCAPGlosario.do?accion=irGlosario" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_ADMIN_FIN_MC" d_descripcion="Finalizar MC"
+			d_proceso="OCAPSolicitudes.do?accion=irFinalizarEvaluacionFinPlazo"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_ADMIN_ELIMINAR_ITINERARIOASIGNADO"
+			d_descripcion="Quitar Itinerario Asignado"
+			d_proceso="OCAPSolicitudes.do?accion=irEliminarItinerarioAsignadoUsuario"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_EVALUANET" d_descripcion="Inicio méritos asistenciales"
+			d_proceso="OCAPCuestionarios.do?accion=confirmarDatos" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_RENUNCIAR" d_descripcion="Renunciar"
+			d_proceso="OCAPRenuncia.do?accion=irRenunciar" d_nombre="#" />
+			
+		<funcion c_funcion_id="OCAP_DESBLOQUEAR_ASISTENCIALES" d_descripcion="Desbloquear méritos asistenciales"
+			d_proceso="OCAPAsistenciales.do?accion=irDesbloqueoAsistenciales" d_nombre="#" />
+			
+		<funcion c_funcion_id="OCAP_DESBLOQUEAR_CURRICULARES" d_descripcion="Desbloquear méritos curriculares"
+			d_proceso="OCAPMeritoscurriculares.do?accion=irDesbloqueoCurriculares" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_ENCUESTA" d_descripcion="Encuesta de Satisfacción"
+			d_proceso="OCAPEncuestaCalidad.do" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_ENCUESTA_RESULTADOS"
+			d_descripcion="Resultados Encuestas" d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_ENCUESTA_RESULTADOS_PARTICULARES"
+			d_descripcion="Resultados Particulares" d_proceso="OCAPEvaluadores.do?accion=irListarEncuesta"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_INDICADORES" d_descripcion="Indicadores"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_INDICADORES_EVALUADOR"
+			d_descripcion="Evaluados por Evaluador"
+			d_proceso="OCAPEvaluadores.do?accion=buscarIndicador&amp;opcion=eval"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_INDICADORES_ITINERARIO"
+			d_descripcion="Evaluados por Itinerario"
+			d_proceso="OCAPEvaluadores.do?accion=buscarIndicador&amp;opcion=itin"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_INDICADORES_GERENCIA"
+			d_descripcion="Evaluados por Gerencia"
+			d_proceso="OCAPEvaluadores.do?accion=buscarIndicador&amp;opcion=gere"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_INDICADORES_EVALFQS"
+			d_descripcion="Analisis y Revisión"
+			d_proceso="OCAPIndicadores.do?accion=buscarIndicador&amp;opcion=evalfqs"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_INDICADORES_CTE" d_descripcion="Conformidad CTE"
+			d_proceso="OCAPIndicadores.do?accion=buscarIndicador&amp;opcion=cte"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_INDICADORES_CE" d_descripcion="Propuesta Certificación CE"
+			d_proceso="OCAPIndicadores.do?accion=buscarIndicador&amp;opcion=ce"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_INDICADORES_PROF" d_descripcion="Indicadores de Profesionales"
+			d_proceso="OCAPIndicadores.do?accion=buscarIndicadorProf" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_INDICADORES_EVAL" d_descripcion="Indicadores de Evaluadores"
+			d_proceso="OCAPIndicadores.do?accion=buscarIndicadorEvaluador"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_INDICADORES_CTE_NUEVO"
+			d_descripcion="Indicadores de CTE" d_proceso="OCAPIndicadores.do?accion=buscarIndicadorCTE"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_INDICADORES_CE_NUEVO"
+			d_descripcion="Indicadores de CE" d_proceso="OCAPIndicadores.do?accion=buscarIndicadorCE"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_INDICADORES_FQS" d_descripcion="Indicadores Secretaría Técnica"
+			d_proceso="OCAPIndicadores.do?accion=buscarIndicadorSecretaria"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_ENCUESTA_RESULTADOS_GENERALES"
+			d_descripcion="Resultados Generales" d_proceso="OCAPEncuestaCalidad.do?accion=irListar"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_ENCUESTA_PREGUNTA_7"
+			d_descripcion="Tratamiento pregunta 7"
+			d_proceso="OCAPEncuestaCalidad.do?accion=irPreguntas&amp;pregId=10"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_ENCUESTA_PREGUNTA_8"
+			d_descripcion="Tratamiento pregunta 8"
+			d_proceso="OCAPEncuestaCalidad.do?accion=irPreguntas&amp;pregId=11"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_ENCUESTA_PREGUNTA_11"
+			d_descripcion="Tratamiento pregunta 11"
+			d_proceso="OCAPEncuestaCalidad.do?accion=irPreguntas&amp;pregId=14"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_ENCUESTA_PREGUNTA_15"
+			d_descripcion="Tratamiento pregunta 15"
+			d_proceso="OCAPEncuestaCalidad.do?accion=irPreguntas&amp;pregId=18"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_ENCUESTA_PREGUNTA_18"
+			d_descripcion="Tratamiento pregunta 18"
+			d_proceso="OCAPEncuestaCalidad.do?accion=irPreguntas&amp;pregId=24"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_ENCUESTA_PREGUNTA_20"
+			d_descripcion="Tratamiento pregunta 20"
+			d_proceso="OCAPEncuestaCalidad.do?accion=irPreguntas&amp;pregId=26"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_LISTADOS" d_descripcion="Profesionales"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_LISTADOS_PROV" d_descripcion="Listado Provisional"
+			d_proceso="OCAPNuevaSolicitud.do?accion=irListado&amp;tipo=P"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_LISTADOS_DEF" d_descripcion="Listado Definitivo"
+			d_proceso="OCAPNuevaSolicitud.do?accion=irListado&amp;tipo=D"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_MONITOR_ACCESO_BD" d_descripcion="Monitorización de la BD"
+			d_proceso="OCAPMonitorizacion.do?accion=irMonitorizarBD" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_USUARIOS_DNI" d_descripcion="Cambio UID"
+			d_proceso="OCAPUsuarios.do?accion=irBuscadorUsuariosDNI" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_BUSCADOR_EXPEDIENTES_MC"
+			d_descripcion="Imprimir C.V."
+			d_proceso="OCAPExpedientes.do?accion=irBuscadorExpedientes&amp;modo=CV"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_ETIQUETAS" d_descripcion="Generación de etiquetas"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_BUSCADOR_ETIQUETAS" d_descripcion="Para gestión"
+			d_proceso="OCAPExpedientes.do?accion=irBuscadorExpedientes&amp;modo=etiqueta"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_BUSCADOR_ETIQUETAS_FASEIII"
+			d_descripcion="Para la EDC"
+			d_proceso="OCAPExpedientes.do?accion=irBuscadorExpedientes&amp;modo=faseIII"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_ACEPTACION_EXPEDIENTES_MC"
+			d_descripcion="Aceptación Expedientes MC" d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_ACTAS" d_descripcion="Actas"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_TUTORES" d_descripcion="Tutores"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_ALTA_TUTOR" d_descripcion="Alta Tutor"
+			d_proceso="OCAPDudasTutores.do?accion=irInsertarTutor" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_DUDAS_CSV" d_descripcion="Cuadro de mando"
+			d_proceso="OCAPDudasTutores.do?accion=irCSVDudas" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_LISTADO_TUTOR" d_descripcion="Gestión Tutores"
+			d_proceso="OCAPDudasTutores.do?accion=irBuscarTutores" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_DUDAS" d_descripcion="evalu@netFQS (tutor-guía)"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_ALTA_DUDAS" d_descripcion="Enviar duda"
+			d_proceso="OCAPDudasTutores.do?accion=irInsertarDuda" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_CONSULTA_DUDAS_USUARIO"
+			d_descripcion="Consultar dudas" d_proceso="OCAPDudasTutores.do?accion=irBuscarDudas"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_DUDAS_TUTOR" d_descripcion="Correos de dudas"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_CONSULTA_DUDAS_TUTOR_PENDIENTES"
+			d_descripcion="Pendientes"
+			d_proceso="OCAPDudasTutores.do?accion=irBuscarDudas&amp;contestadas=N"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_CONSULTA_DUDAS_TUTOR_CONTESTADAS"
+			d_descripcion="Resueltos"
+			d_proceso="OCAPDudasTutores.do?accion=irBuscarDudas&amp;contestadas=Y"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_BUSCADOR_DUDAS" d_descripcion="Buscador"
+			d_proceso="OCAPDudasTutores.do?accion=irBuscadorDudas" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_LOGS" d_descripcion="Lectura de Logs"
+			d_proceso="#" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_LOGS_VER" d_descripcion="Ver logs"
+			d_proceso="Log.do" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_LOGS_DESCARGAR" d_descripcion="Descargar Logs"
+			d_proceso="DescargaLog.do" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_LOGS_NIVELES" d_descripcion="Nivel de logs"
+			d_proceso="ListaNivelLog.do" d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_LOGS_CAMBIAR_NIVEL" d_descripcion="Cambiar Nivel de Logs"
+			d_proceso="CambiaNivelLog.do" d_nombre="#" />
+
+
+		<funcion c_funcion_id="OCAP_DOCUMENTOS_ALTA_EVIDENCIAS"
+			d_descripcion="Alta Evidencia" d_proceso="OCAPDocumentos.do?accion=irAltaDocumentoEvidencia"
+			d_nombre="#" />
+
+		<funcion c_funcion_id="OCAP_DOCUMENTOS_LEER_EVIDENCIA"
+			d_descripcion="Leer Evidencia" d_proceso="OCAPDocumentos.do?accion=abrirDocumentoEvidencia"
+			d_nombre="#" />
+
+	</funciones>
+
+
+
+	<tipoMenus>
+		<!-- ******************************************************** -->
+		<!-- TIPO DE MENU definidos: Organizar según ROLES o PERFILES -->
+		<!-- ******************************************************** -->
+
+		<tipo c_menu_id="S" d_menu="Menu textual superior por defecto" />
+		<tipo c_menu_id="N" d_menu="Opciones de pantalla, sin botonera" />
+	</tipoMenus>
+
+
+
+	<rolesFunciones>
+		<!-- ************************************************************************************************************ -->
+		<!-- ASIGNACION de ROLES y TIPOS DE MENU a FUNCIONES definidas: Organizar 
+			según ROLES o PERFILES y TIPOS DE MENU -->
+		<!-- ************************************************************************************************************ -->
+
+		<!-- FUNCIONES COMUNES A TODOS LOS PERFILES: Deberían asignarse estas funciones 
+			a todos los perfiles -->
+		<asignacion c_grupo_id="OCAP_USUARIO" c_funcion_id="OCAP_AVISO_LEGAL"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_USUARIO_FASE_III"
+			c_funcion_id="OCAP_AVISO_LEGAL" c_funcion_padre="0" n_orden="0"
+			n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_PGP" c_funcion_id="OCAP_AVISO_LEGAL"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+			
+			<asignacion c_grupo_id="OCAP_USUARIO" c_funcion_id="OCAP_ACCESO_ALTA"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+			
+			 
+		<asignacion c_grupo_id="OCAP_CEIS" c_funcion_id="OCAP_AVISO_LEGAL"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_CC" c_funcion_id="OCAP_AVISO_LEGAL"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_AVISO_LEGAL"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_CTE" c_funcion_id="OCAP_AVISO_LEGAL"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_CE" c_funcion_id="OCAP_AVISO_LEGAL"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_EVAL" c_funcion_id="OCAP_AVISO_LEGAL"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_FQS_GEST" c_funcion_id="OCAP_AVISO_LEGAL"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_FQS_ADTVO" c_funcion_id="OCAP_AVISO_LEGAL"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_DIRECCION" c_funcion_id="OCAP_AVISO_LEGAL"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_AVISO_LEGAL"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_INFORMATICA" c_funcion_id="OCAP_AVISO_LEGAL"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_DIRECTORIO" c_funcion_id="OCAP_AVISO_LEGAL"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+
+		<asignacion c_grupo_id="OCAP_USUARIO" c_funcion_id="OCAP_INFORMACION_LEGAL"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_USUARIO_FASE_III"
+			c_funcion_id="OCAP_INFORMACION_LEGAL" c_funcion_padre="0" n_orden="0"
+			n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_PGP" c_funcion_id="OCAP_INFORMACION_LEGAL"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_CEIS" c_funcion_id="OCAP_INFORMACION_LEGAL"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_CC" c_funcion_id="OCAP_INFORMACION_LEGAL"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_INFORMACION_LEGAL"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_CTE" c_funcion_id="OCAP_INFORMACION_LEGAL"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_CE" c_funcion_id="OCAP_INFORMACION_LEGAL"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_EVAL" c_funcion_id="OCAP_INFORMACION_LEGAL"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_FQS_GEST" c_funcion_id="OCAP_INFORMACION_LEGAL"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_FQS_ADTVO" c_funcion_id="OCAP_INFORMACION_LEGAL"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_DIRECCION" c_funcion_id="OCAP_INFORMACION_LEGAL"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_INFORMACION_LEGAL"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_INFORMATICA" c_funcion_id="OCAP_INFORMACION_LEGAL"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_DIRECTORIO" c_funcion_id="OCAP_INFORMACION_LEGAL"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+
+
+		<!-- Menu y Funciones del ROL: OCAP_USUARIO -->
+		<!-- <asignacion c_grupo_id="OCAP_USUARIO" c_funcion_id="OCAP_SOLICITUDES"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_USUARIO" c_funcion_id="OCAP_SOLICITUDES_ALTA"
+			c_funcion_padre="OCAP_SOLICITUDES" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />-->
+
+		<asignacion c_grupo_id="OCAP_USUARIO" c_funcion_id="OCAP_USU_EXPEDIENTEMC"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_USUARIO" c_funcion_id="OCAP_USU_AUTOEVALUARMC"
+			c_funcion_padre="OCAP_USU_EXPEDIENTEMC" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_USUARIO" c_funcion_id="OCAP_DESBLOQUEAR_CURRICULARES"
+			c_funcion_padre="OCAP_USU_EXPEDIENTEMC" n_orden="2" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_USUARIO" c_funcion_id="OCAP_USU_EXPEDIENTECA"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_USUARIO" c_funcion_id="OCAP_EVALUANET"
+			c_funcion_padre="OCAP_USU_EXPEDIENTECA" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_USUARIO" c_funcion_id="OCAP_DESBLOQUEAR_ASISTENCIALES"
+			c_funcion_padre="OCAP_USU_EXPEDIENTECA" n_orden="2" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_USUARIO" c_funcion_id="OCAP_MERITOS"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+
+		<asignacion c_grupo_id="OCAP_USUARIO" c_funcion_id="OCAP_USU_RENUNCIAR"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_USUARIO" c_funcion_id="OCAP_RENUNCIAR"
+			c_funcion_padre="OCAP_USU_RENUNCIAR" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		
+
+
+
+		<!-- Menu y Funciones del ROL: OCAP_USUARIO_FASE_III -->
+		<asignacion c_grupo_id="OCAP_USUARIO_FASE_III"
+			c_funcion_id="OCAP_USU_EXPEDIENTECA" c_funcion_padre="0" n_orden="1"
+			n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_USUARIO_FASE_III"
+			c_funcion_id="OCAP_USU_INFORMARCA" c_funcion_padre="OCAP_USU_EXPEDIENTECA"
+			n_orden="1" n_profundidad="1" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_USUARIO_FASE_III"
+			c_funcion_id="OCAP_USU_AUTOEVALUARCA" c_funcion_padre="OCAP_USU_EXPEDIENTECA"
+			n_orden="2" n_profundidad="1" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_USUARIO_FASE_III"
+			c_funcion_id="OCAP_USU_GLOSARIO" c_funcion_padre="OCAP_USU_EXPEDIENTECA"
+			n_orden="5" n_profundidad="1" c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_USUARIO_FASE_III"
+			c_funcion_id="OCAP_DOCUMENTOS_ALTA_EVIDENCIAS" c_funcion_padre="0"
+			n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_USUARIO_FASE_III"
+			c_funcion_id="OCAP_USU_AUTOEVALUARCA_PROC" c_funcion_padre="0"
+			n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<!-- <asignacion c_grupo_id="OCAP_USUARIO_FASE_III" c_funcion_id="OCAP_DUDAS" 
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S"/> <asignacion 
+			c_grupo_id="OCAP_USUARIO_FASE_III" c_funcion_id="OCAP_ALTA_DUDAS" c_funcion_padre="OCAP_DUDAS" 
+			n_orden="1" n_profundidad="1" c_menu_id="S"/> <asignacion c_grupo_id="OCAP_USUARIO_FASE_III" 
+			c_funcion_id="OCAP_CONSULTA_DUDAS_USUARIO" c_funcion_padre="OCAP_DUDAS" n_orden="1" 
+			n_profundidad="1" c_menu_id="S"/> -->
+
+		<asignacion c_grupo_id="OCAP_USUARIO_FASE_III"
+			c_funcion_id="OCAP_ENCUESTA" c_funcion_padre="0" n_orden="0"
+			n_profundidad="0" c_menu_id="N" />
+
+
+		<!-- Menu y Funciones del ROL: OCAP_PRUEBA_ITINERARIO -->
+		<asignacion c_grupo_id="OCAP_PRUEBA_ITINERARIO"
+			c_funcion_id="OCAP_PROBAR_ITINERARIO" c_funcion_padre="0" n_orden="1"
+			n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_PRUEBA_ITINERARIO"
+			c_funcion_id="OCAP_PRUEBA_ELIGE_ITINERARIO" c_funcion_padre="OCAP_PROBAR_ITINERARIO"
+			n_orden="1" n_profundidad="1" c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_PRUEBA_ITINERARIO"
+			c_funcion_id="OCAP_USU_EXPEDIENTECA" c_funcion_padre="0" n_orden="1"
+			n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_PRUEBA_ITINERARIO"
+			c_funcion_id="OCAP_PRUEBA_INFORMARCA" c_funcion_padre="OCAP_USU_EXPEDIENTECA"
+			n_orden="1" n_profundidad="1" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_PRUEBA_ITINERARIO"
+			c_funcion_id="OCAP_PRUEBA_AUTOEVALUARCA" c_funcion_padre="OCAP_USU_EXPEDIENTECA"
+			n_orden="2" n_profundidad="1" c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_PRUEBA_ITINERARIO"
+			c_funcion_id="OCAP_SOLICITUDES_CEIS" c_funcion_padre="0" n_orden="0"
+			n_profundidad="0" c_menu_id="N" />
+
+
+		<!-- Menu y Funciones del ROL: OCAP_PGP -->
+		<asignacion c_grupo_id="OCAP_PGP" c_funcion_id="OCAP_SOLICITUDES"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_PGP" c_funcion_id="OCAP_SOLICITUDES_BUSCA"
+			c_funcion_padre="OCAP_SOLICITUDES" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_PGP" c_funcion_id="OCAP_SOLICITUDES_CONSULTA"
+			c_funcion_padre="OCAP_SOLICITUDES" n_orden="2" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_PGP" c_funcion_id="OCAP_LISTADOS"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_PGP" c_funcion_id="OCAP_LISTADOS_PROV"
+			c_funcion_padre="OCAP_LISTADOS" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_PGP" c_funcion_id="OCAP_LISTADOS_DEF"
+			c_funcion_padre="OCAP_LISTADOS" n_orden="2" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_PGP" c_funcion_id="OCAP_CSV_DINAMICO_GRS"
+			c_funcion_padre="OCAP_LISTADOS" n_orden="3" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_PGP" c_funcion_id="OCAP_GEST_PGP_MC"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_PGP" c_funcion_id="OCAP_GEST_PGP_MC_ALEGA"
+			c_funcion_padre="OCAP_GEST_PGP_MC" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+
+
+		<asignacion c_grupo_id="OCAP_PGP" c_funcion_id="OCAP_INF_MOTIVADO_MASIVO"
+			c_funcion_padre="OCAP_GEST_PGP_MC" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+
+
+		
+		<asignacion c_grupo_id="OCAP_PGP" c_funcion_id="OCAP_INFORMES"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_PGP" c_funcion_id="OCAP_USU_ACEPTADOS_CC"
+			c_funcion_padre="OCAP_INFORMES" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+
+		<!-- Listado Fase III con enlace a adjuntar documentos escaneados -->
+		<asignacion c_grupo_id="OCAP_PGP" c_funcion_id="OCAP_GEST_PGP_CD"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_PGP" c_funcion_id="OCAP_GEST_PGP_CC"
+			c_funcion_padre="OCAP_GEST_PGP_CD" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_PGP" c_funcion_id="OCAP_SOLICITUDES_LISTADO_PGP"
+			c_funcion_padre="OCAP_GEST_PGP_CD" n_orden="2" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_PGP" c_funcion_id="OCAP_XML_ALTA"
+			c_funcion_padre="OCAP_GEST_PGP_CD" n_orden="3" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_PGP" c_funcion_id="OCAP_DOCUMENTOS_ALTA"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_PGP" c_funcion_id="OCAP_DOCUMENTOS_LEER"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+
+		<asignacion c_grupo_id="OCAP_PGP" c_funcion_id="OCAP_ETIQUETAS"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_PGP" c_funcion_id="OCAP_BUSCADOR_ETIQUETAS"
+			c_funcion_padre="OCAP_ETIQUETAS" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_PGP" c_funcion_id="OCAP_BUSCADOR_ETIQUETAS_FASEIII"
+			c_funcion_padre="OCAP_ETIQUETAS" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+
+
+		<!-- Menu y Funciones del ROL: OCAP_CEIS -->
+		<asignacion c_grupo_id="OCAP_CEIS" c_funcion_id="OCAP_GEST_PGP_MC"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_CEIS" c_funcion_id="OCAP_CONSULTA_MC"
+			c_funcion_padre="OCAP_GEST_PGP_MC" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_CEIS" c_funcion_id="OCAP_BUSCADOR_EXPEDIENTES_MC"
+			c_funcion_padre="OCAP_GEST_PGP_MC" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_CEIS" c_funcion_id="OCAP_INF_MOTIVADO_MASIVO"
+			c_funcion_padre="OCAP_GEST_PGP_MC" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_CEIS" c_funcion_id="OCAP_VER_LISTA_MC"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_CEIS" c_funcion_id="OCAP_MERITOS"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_CEIS" c_funcion_id="OCAP_SOLICITUDES_CEIS"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+
+		<asignacion c_grupo_id="OCAP_CEIS" c_funcion_id="OCAP_ACTAS"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_CEIS" c_funcion_id="OCAP_CARGA_MIEMBROS_COMITES"
+			c_funcion_padre="OCAP_ACTAS" n_orden="1" n_profundidad="1" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_CEIS" c_funcion_id="OCAP_GEN_ACTAS_MC_CONSTITUCION"
+			c_funcion_padre="OCAP_ACTAS" n_orden="2" n_profundidad="1" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_CEIS" c_funcion_id="OCAP_GEN_ACTAS_MC_REUNION"
+			c_funcion_padre="OCAP_ACTAS" n_orden="2" n_profundidad="1" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_CEIS" c_funcion_id="OCAP_GEN_ACTAS_MC_SOLI_ACLARACION"
+			c_funcion_padre="OCAP_ACTAS" n_orden="2" n_profundidad="1" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_CEIS" c_funcion_id="OCAP_GEN_ACTAS"
+			c_funcion_padre="OCAP_ACTAS" n_orden="2" n_profundidad="1" c_menu_id="S" />
+			
+		<asignacion c_grupo_id="OCAP_CEIS" c_funcion_id="OCAP_MERITOS_ANTERIORES"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+
+
+		<!-- Menu y Funciones del ROL: OCAP_CC -->
+		<asignacion c_grupo_id="OCAP_CC" c_funcion_id="OCAP_GEST_PGP_MC"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_CC" c_funcion_id="OCAP_CONSULTA_MC"
+			c_funcion_padre="OCAP_GEST_PGP_MC" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_CC" c_funcion_id="OCAP_BUSCADOR_EXPEDIENTES_MC"
+			c_funcion_padre="OCAP_GEST_PGP_MC" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_CC" c_funcion_id="OCAP_INF_MOTIVADO_MASIVO"
+			c_funcion_padre="OCAP_GEST_PGP_MC" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_CC" c_funcion_id="OCAP_ACTAS"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_CC" c_funcion_id="OCAP_CARGA_MIEMBROS_COMITES"
+			c_funcion_padre="OCAP_ACTAS" n_orden="1" n_profundidad="1" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_CC" c_funcion_id="OCAP_GEN_ACTAS_MC_CONSTITUCION"
+			c_funcion_padre="OCAP_ACTAS" n_orden="2" n_profundidad="1" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_CC" c_funcion_id="OCAP_GEN_ACTAS_MC_REUNION"
+			c_funcion_padre="OCAP_ACTAS" n_orden="2" n_profundidad="1" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_CC" c_funcion_id="OCAP_GEN_ACTAS_MC_SOLI_ACLARACION"
+			c_funcion_padre="OCAP_ACTAS" n_orden="2" n_profundidad="1" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_CC" c_funcion_id="OCAP_GEN_ACTAS"
+			c_funcion_padre="OCAP_ACTAS" n_orden="2" n_profundidad="1" c_menu_id="S" />
+
+
+		<asignacion c_grupo_id="OCAP_CC" c_funcion_id="OCAP_EVALUADOS"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_CC" c_funcion_id="OCAP_EVALUADOS_LIS"
+			c_funcion_padre="OCAP_EVALUADOS" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_CC" c_funcion_id="OCAP_SOLICITUDES"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_CC" c_funcion_id="OCAP_SOLICITUDES_FQS"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_CC" c_funcion_id="OCAP_EVAL_ITINERARIO"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_CC" c_funcion_id="OCAP_DOCUMENTOS_LEER"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+
+		<asignacion c_grupo_id="OCAP_CC" c_funcion_id="OCAP_VER_LISTA_MC"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_CC" c_funcion_id="OCAP_MERITOS"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_CC" c_funcion_id="OCAP_MERITOS_ANTERIORES"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+
+
+		<!-- Menu y Funciones del ROL: OCAP_GRS -->
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_SOLICITUDES"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_SOLICITUDES_CONSULTA_GRS"
+			c_funcion_padre="OCAP_SOLICITUDES" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_SOLICITUDES_GESTION_GRS"
+			c_funcion_padre="OCAP_SOLICITUDES" n_orden="2" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_SOLICITUDES_BUSCA"
+			c_funcion_padre="OCAP_SOLICITUDES" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+			
+			
+
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_LISTADOS"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_LISTADOS_PROV"
+			c_funcion_padre="OCAP_LISTADOS" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_LISTADOS_DEF"
+			c_funcion_padre="OCAP_LISTADOS" n_orden="2" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_CSV_DINAMICO_GRS"
+			c_funcion_padre="OCAP_LISTADOS" n_orden="3" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_CSV_DINAMICO_LDAP"
+			c_funcion_padre="OCAP_LISTADOS" n_orden="4" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_GEST_PGP_MC"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_CONSULTA_MC"
+			c_funcion_padre="OCAP_GEST_PGP_MC" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_BUSCADOR_EXPEDIENTES_MC"
+			c_funcion_padre="OCAP_GEST_PGP_MC" n_orden="2" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_INF_MOTIVADO_MASIVO"
+			c_funcion_padre="OCAP_GEST_PGP_MC" n_orden="3" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_CSV_COPIA_DNI"
+			c_funcion_padre="OCAP_GEST_PGP_MC" n_orden="4" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_INFORMES"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_USU_ACEPTADOS_CC"
+			c_funcion_padre="OCAP_INFORMES" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_MANT_CONVOCATORIAS"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_MANT_CONVOCATORIAS_ALTA"
+			c_funcion_padre="OCAP_MANT_CONVOCATORIAS" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_MANT_CONVOCATORIAS_CONS"
+			c_funcion_padre="OCAP_MANT_CONVOCATORIAS" n_orden="2" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_SOLICITUDES_FECHAS"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_SOLICITUDES_FECHAS_GRS"
+			c_funcion_padre="OCAP_SOLICITUDES_FECHAS" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_EDC"
+			c_funcion_padre="OCAP_SOLICITUDES_FECHAS" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_REACTIVACION_CA"
+			c_funcion_padre="OCAP_SOLICITUDES_FECHAS" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_EXPEDIENTES_FECHAS_GRS"
+			c_funcion_padre="OCAP_SOLICITUDES_FECHAS" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />			
+
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_VER_LISTA_MC"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_MERITOS"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_ETIQUETAS"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_BUSCADOR_ETIQUETAS"
+			c_funcion_padre="OCAP_ETIQUETAS" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_GEST_GRS_CD"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_SOLICITUDES_LISTADO_GRS"
+			c_funcion_padre="OCAP_GEST_GRS_CD" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_DOCUMENTOS_ALTA"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_DOCUMENTOS_LEER"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+			
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_NO_APORTA_MERITOS"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_NO_APORTA_MERITOS_MC"
+			c_funcion_padre="OCAP_NO_APORTA_MERITOS" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_GRS" c_funcion_id="OCAP_NO_APORTA_MERITOS_MA"
+			c_funcion_padre="OCAP_NO_APORTA_MERITOS" n_orden="2" n_profundidad="1"
+			c_menu_id="S" />
+
+		<!-- Menu y Funciones del ROL: OCAP_CTE -->
+		<asignacion c_grupo_id="OCAP_CTE" c_funcion_id="OCAP_EVALUADORES"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_CTE" c_funcion_id="OCAP_EVALUADORES_LIS_CTE"
+			c_funcion_padre="OCAP_EVALUADORES" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+			
+		<asignacion c_grupo_id="OCAP_CTE" c_funcion_id="OCAP_ACTAS"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_CTE" c_funcion_id="OCAP_GEN_ACTAS_MC_CONSTITUCION"
+			c_funcion_padre="OCAP_ACTAS" n_orden="2" n_profundidad="1" c_menu_id="S" />
+
+
+		<asignacion c_grupo_id="OCAP_CTE" c_funcion_id="OCAP_EVALUADOR_LIS_CP"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_CTE" c_funcion_id="OCAP_USU_INFORMARCA"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_CTE" c_funcion_id="OCAP_DOCUMENTOS_LEER"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+
+
+		<!-- Menu y Funciones del ROL: OCAP_CE -->
+		<asignacion c_grupo_id="OCAP_CE" c_funcion_id="OCAP_EVALUADOS"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_CE" c_funcion_id="OCAP_EVALUADOR_LIS_CE"
+			c_funcion_padre="OCAP_EVALUADOS" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_CE" c_funcion_id="OCAP_USU_INFORMARCA"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_CE" c_funcion_id="OCAP_EVALUADORES_LIS"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_CE" c_funcion_id="OCAP_EVALUADOS_LISCE"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_CE" c_funcion_id="OCAP_DOCUMENTOS_LEER"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+
+
+		<!-- Menu y Funciones del ROL: OCAP_EVAL -->
+		<asignacion c_grupo_id="OCAP_EVAL" c_funcion_id="OCAP_EVALUADOS"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_EVAL" c_funcion_id="OCAP_EVALUADOS_LIS_EVAL1"
+			c_funcion_padre="OCAP_EVALUADOS" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_EVAL" c_funcion_id="OCAP_SOLICITUDES"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_EVAL" c_funcion_id="OCAP_SOLICITUDES_FQS"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_EVAL" c_funcion_id="OCAP_EVAL_ITINERARIO"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_EVAL" c_funcion_id="OCAP_DOCUMENTOS_LEER"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+
+		<asignacion c_grupo_id="OCAP_EVAL" c_funcion_id="OCAP_DOCUMENTOS_LEER_EVIDENCIA"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+
+
+
+		<!-- Menu y Funciones del ROL: OCAP_FQS_GEST -->
+		<asignacion c_grupo_id="OCAP_FQS_GEST" c_funcion_id="OCAP_SOLICITUDES"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_FQS_GEST" c_funcion_id="OCAP_SOLICITUDES_LISTADO"
+			c_funcion_padre="OCAP_SOLICITUDES" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_FQS_GEST" c_funcion_id="OCAP_EVALUADOR_BOLSA"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_FQS_GEST" c_funcion_id="OCAP_EVALUADOR_ALTA"
+			c_funcion_padre="OCAP_EVALUADOR_BOLSA" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_FQS_GEST" c_funcion_id="OCAP_EVALUADOR_LIS_REG"
+			c_funcion_padre="OCAP_EVALUADOR_BOLSA" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_FQS_GEST" c_funcion_id="OCAP_EVALUADOR_CP"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_FQS_GEST" c_funcion_id="OCAP_EVALUADOR_LIS_CP"
+			c_funcion_padre="OCAP_EVALUADOR_CP" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_FQS_GEST" c_funcion_id="OCAP_CTE"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_FQS_GEST" c_funcion_id="OCAP_CTE_ALTA"
+			c_funcion_padre="OCAP_CTE" n_orden="1" n_profundidad="1" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_FQS_GEST" c_funcion_id="OCAP_CTE_LIS"
+			c_funcion_padre="OCAP_CTE" n_orden="1" n_profundidad="1" c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_FQS_GEST" c_funcion_id="OCAP_COMPCTE"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_FQS_GEST" c_funcion_id="OCAP_COMPCTE_ALTA"
+			c_funcion_padre="OCAP_COMPCTE" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_FQS_GEST" c_funcion_id="OCAP_COMPCE"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_FQS_GEST" c_funcion_id="OCAP_COMPCE_ALTA"
+			c_funcion_padre="OCAP_COMPCE" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_FQS_GEST" c_funcion_id="OCAP_DUDAS_TUTOR"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_FQS_GEST"
+			c_funcion_id="OCAP_CONSULTA_DUDAS_TUTOR_PENDIENTES" c_funcion_padre="OCAP_DUDAS_TUTOR"
+			n_orden="1" n_profundidad="1" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_FQS_GEST"
+			c_funcion_id="OCAP_CONSULTA_DUDAS_TUTOR_CONTESTADAS" c_funcion_padre="OCAP_DUDAS_TUTOR"
+			n_orden="1" n_profundidad="1" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_FQS_GEST" c_funcion_id="OCAP_BUSCADOR_DUDAS"
+			c_funcion_padre="OCAP_DUDAS_TUTOR" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_FQS_GEST" c_funcion_id="OCAP_EVAL_ITINERARIO"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_FQS_GEST" c_funcion_id="OCAP_SOLICITUDES_FQS"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+
+
+		<!-- Menu y Funciones del ROL: OCAP_FQS_ADTVO -->
+		<asignacion c_grupo_id="OCAP_FQS_ADTVO" c_funcion_id="OCAP_SOLICITUDES"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_FQS_ADTVO" c_funcion_id="OCAP_SOLICITUDES_LISTADO"
+			c_funcion_padre="OCAP_SOLICITUDES" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_FQS_ADTVO" c_funcion_id="OCAP_EVALUADOR_BOLSA"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_FQS_ADTVO" c_funcion_id="OCAP_EVALUADOR_ALTA"
+			c_funcion_padre="OCAP_EVALUADOR_BOLSA" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_FQS_ADTVO" c_funcion_id="OCAP_EVALUADOR_LIS_REG"
+			c_funcion_padre="OCAP_EVALUADOR_BOLSA" n_orden="2" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_FQS_ADTVO" c_funcion_id="OCAP_EVALUADOR_CP"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_FQS_ADTVO" c_funcion_id="OCAP_EVALUADOR_LIS_CP"
+			c_funcion_padre="OCAP_EVALUADOR_CP" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_FQS_ADTVO" c_funcion_id="OCAP_CTE"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_FQS_ADTVO" c_funcion_id="OCAP_CTE_ALTA"
+			c_funcion_padre="OCAP_CTE" n_orden="1" n_profundidad="1" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_FQS_ADTVO" c_funcion_id="OCAP_CTE_LIS"
+			c_funcion_padre="OCAP_CTE" n_orden="2" n_profundidad="1" c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_FQS_ADTVO" c_funcion_id="OCAP_COMPCTE"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_FQS_ADTVO" c_funcion_id="OCAP_COMPCTE_ALTA"
+			c_funcion_padre="OCAP_COMPCTE" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_FQS_ADTVO" c_funcion_id="OCAP_COMPCE"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_FQS_ADTVO" c_funcion_id="OCAP_COMPCE_ALTA"
+			c_funcion_padre="OCAP_COMPCE" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_FQS_ADTVO" c_funcion_id="OCAP_DOCUMENTOS_LEER"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_FQS_ADTVO" c_funcion_id="OCAP_USU_AUTOEVALUARCA"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_FQS_ADTVO" c_funcion_id="OCAP_USU_AUTOEVALUARCA_PROC"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_FQS_ADTVO" c_funcion_id="OCAP_SOLICITUDES_FQS"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+
+
+		<!-- Menu y Funciones del ROL: OCAP_DIRECCION -->
+		<asignacion c_grupo_id="OCAP_DIRECCION" c_funcion_id="OCAP_CUADRO_MANDO"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_DIRECCION" c_funcion_id="OCAP_CSV_DINAMICO_FQS"
+			c_funcion_padre="OCAP_CUADRO_MANDO" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_DIRECCION" c_funcion_id="OCAP_EVALUADOS"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_DIRECCION" c_funcion_id="OCAP_EVALUADOS_LIS"
+			c_funcion_padre="OCAP_EVALUADOS" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_DIRECCION" c_funcion_id="OCAP_SOLICITUDES_LISTADO_EVAL2"
+			c_funcion_padre="OCAP_EVALUADOS" n_orden="2" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_DIRECCION" c_funcion_id="OCAP_SOLICITUDES"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_DIRECCION" c_funcion_id="OCAP_SOLICITUDES_FQS"
+			c_funcion_padre="OCAP_SOLICITUDES" n_orden="1" n_profundidad="1"
+			c_menu_id="N" />
+
+		<asignacion c_grupo_id="OCAP_DIRECCION" c_funcion_id="OCAP_EVALUADOR_BOLSA"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_DIRECCION" c_funcion_id="OCAP_EVALUADOR_ALTA"
+			c_funcion_padre="OCAP_EVALUADOR_BOLSA" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_DIRECCION" c_funcion_id="OCAP_EVALUADOR_LIS_REG"
+			c_funcion_padre="OCAP_EVALUADOR_BOLSA" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_DIRECCION" c_funcion_id="OCAP_EVALUADOR_CP"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_DIRECCION" c_funcion_id="OCAP_EVALUADOR_LIS_CP"
+			c_funcion_padre="OCAP_EVALUADOR_CP" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_DIRECCION" c_funcion_id="OCAP_CTE"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_DIRECCION" c_funcion_id="OCAP_CTE_ALTA"
+			c_funcion_padre="OCAP_CTE" n_orden="1" n_profundidad="1" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_DIRECCION" c_funcion_id="OCAP_CTE_LIS"
+			c_funcion_padre="OCAP_CTE" n_orden="1" n_profundidad="1" c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_DIRECCION" c_funcion_id="OCAP_COMPCTE"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_DIRECCION" c_funcion_id="OCAP_COMPCTE_ALTA"
+			c_funcion_padre="OCAP_COMPCTE" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_DIRECCION" c_funcion_id="OCAP_COMPCE"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_DIRECCION" c_funcion_id="OCAP_COMPCE_ALTA"
+			c_funcion_padre="OCAP_COMPCE" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_DIRECCION" c_funcion_id="OCAP_TUTORES"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_DIRECCION" c_funcion_id="OCAP_ALTA_TUTOR"
+			c_funcion_padre="OCAP_TUTORES" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_DIRECCION" c_funcion_id="OCAP_LISTADO_TUTOR"
+			c_funcion_padre="OCAP_TUTORES" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_DIRECCION" c_funcion_id="OCAP_DUDAS_CSV"
+			c_funcion_padre="OCAP_TUTORES" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_DIRECCION" c_funcion_id="OCAP_EVAL_ITINERARIO"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_DIRECCION" c_funcion_id="OCAP_ENCUESTA"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_DIRECCION" c_funcion_id="OCAP_DOCUMENTOS_LEER"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+
+
+		<!-- Menu y Funciones del ROL: OCAP_ADM -->
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANTENIMIENTO"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+
+		<!-- <asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_AREASTRABAJO" 
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S"/> <asignacion 
+			c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_AREASTRAB_ALTA" c_funcion_padre="OCAP_MANT_AREASTRABAJO" 
+			n_orden="1" n_profundidad="1" c_menu_id="S"/> <asignacion c_grupo_id="OCAP_ADM" 
+			c_funcion_id="OCAP_MANT_AREASTRAB_CONS" c_funcion_padre="OCAP_MANT_AREASTRABAJO" 
+			n_orden="2" n_profundidad="1" c_menu_id="S"/> -->
+
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_CATEGORIAS"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_CATEGORIAS_ALTA"
+			c_funcion_padre="OCAP_MANT_CATEGORIAS" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_CATEGORIAS_CONS"
+			c_funcion_padre="OCAP_MANT_CATEGORIAS" n_orden="2" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_CENTROS"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_CENTROS_ALTA"
+			c_funcion_padre="OCAP_MANT_CENTROS" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_CENTROS_CONS"
+			c_funcion_padre="OCAP_MANT_CENTROS" n_orden="2" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_CONVOCATORIAS"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_CONVOCATORIAS_ALTA"
+			c_funcion_padre="OCAP_MANT_CONVOCATORIAS" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_CONVOCATORIAS_CONS"
+			c_funcion_padre="OCAP_MANT_CONVOCATORIAS" n_orden="2" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_CREDITOS"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_CREDITOS_ALTA"
+			c_funcion_padre="OCAP_MANT_CREDITOS" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_CREDITOS_CONS"
+			c_funcion_padre="OCAP_MANT_CREDITOS" n_orden="2" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_DEF_MERIT_CURR"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_D_MERI_CUR_ALTA"
+			c_funcion_padre="OCAP_MANT_DEF_MERIT_CURR" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_D_MERI_CUR_CONS"
+			c_funcion_padre="OCAP_MANT_DEF_MERIT_CURR" n_orden="2" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_ESPECIALIDADES"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_ESPECIAL_ALTA"
+			c_funcion_padre="OCAP_MANT_ESPECIALIDADES" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_ESPECIAL_CONS"
+			c_funcion_padre="OCAP_MANT_ESPECIALIDADES" n_orden="2" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_ESTATUTARIO"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_ESTATUT_ALTA"
+			c_funcion_padre="OCAP_MANT_ESTATUTARIO" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_ESTATUT_CONS"
+			c_funcion_padre="OCAP_MANT_ESTATUTARIO" n_orden="2" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_FACTORES"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_FACTORES_ALTA"
+			c_funcion_padre="OCAP_MANT_FACTORES" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_FACTORES_CONS"
+			c_funcion_padre="OCAP_MANT_FACTORES" n_orden="2" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_GERENCIAS"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_GEREN_ALTA"
+			c_funcion_padre="OCAP_MANT_GERENCIAS" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_GEREN_CONS"
+			c_funcion_padre="OCAP_MANT_GERENCIAS" n_orden="2" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_GRADOS"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_GRADOS_ALTA"
+			c_funcion_padre="OCAP_MANT_GRADOS" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_GRADOS_CONS"
+			c_funcion_padre="OCAP_MANT_GRADOS" n_orden="2" n_profundidad="1"
+			c_menu_id="S" />
+
+		<!-- <asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_MENSAJES" 
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S"/> <asignacion 
+			c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_MENSAJES_ALTA" c_funcion_padre="OCAP_MANT_MENSAJES" 
+			n_orden="1" n_profundidad="1" c_menu_id="S"/> <asignacion c_grupo_id="OCAP_ADM" 
+			c_funcion_id="OCAP_MANT_MENSAJES_CONS" c_funcion_padre="OCAP_MANT_MENSAJES" 
+			n_orden="2" n_profundidad="1" c_menu_id="S"/> <asignacion c_grupo_id="OCAP_ADM" 
+			c_funcion_id="OCAP_MANT_MENSAJESMC" c_funcion_padre="0" n_orden="1" n_profundidad="0" 
+			c_menu_id="S"/> <asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_MENSAJESMC_ALTA" 
+			c_funcion_padre="OCAP_MANT_MENSAJESMC" n_orden="1" n_profundidad="1" c_menu_id="S"/> 
+			<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_MENSAJESMC_CONS" 
+			c_funcion_padre="OCAP_MANT_MENSAJESMC" n_orden="2" n_profundidad="1" c_menu_id="S"/> -->
+
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_MERITOS_ACTIV"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_MERI_ACTIV_ALTA"
+			c_funcion_padre="OCAP_MANT_MERITOS_ACTIV" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_MERI_ACTIV_CONS"
+			c_funcion_padre="OCAP_MANT_MERITOS_ACTIV" n_orden="2" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_MERITOS_CURR"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_MERI_CURR_CONS"
+			c_funcion_padre="OCAP_MANT_MERITOS_CURR" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_MERITOS_MODA"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_MERI_MOD_ALTA"
+			c_funcion_padre="OCAP_MANT_MERITOS_MODA" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_MERI_MOD_CONS"
+			c_funcion_padre="OCAP_MANT_MERITOS_MODA" n_orden="2" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_PERFILES"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_PERFILES_ALTA"
+			c_funcion_padre="OCAP_MANT_PERFILES" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_PERFILES_CONS"
+			c_funcion_padre="OCAP_MANT_PERFILES" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_PERSONAL"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_PERSONAL_ALTA"
+			c_funcion_padre="OCAP_MANT_PERSONAL" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_PERSONAL_CONS"
+			c_funcion_padre="OCAP_MANT_PERSONAL" n_orden="2" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_TIPOGERENCIAS"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_TIP_GEREN_ALTA"
+			c_funcion_padre="OCAP_MANT_TIPOGERENCIAS" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_TIP_GEREN_CONS"
+			c_funcion_padre="OCAP_MANT_TIPOGERENCIAS" n_orden="2" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_TIPOSFIRMANTE"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_TIPO_FIRM_ALTA"
+			c_funcion_padre="OCAP_MANT_TIPOSFIRMANTE" n_orden="1" n_profundidad="1"
+			c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_MANT_TIPO_FIRM_CONS"
+			c_funcion_padre="OCAP_MANT_TIPOSFIRMANTE" n_orden="2" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_SOLICITUDES"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM"
+			c_funcion_id="OCAP_ADMIN_ELIMINAR_ITINERARIOASIGNADO"
+			c_funcion_padre="OCAP_SOLICITUDES" n_orden="3" n_profundidad="1"
+			c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_EVALUADOR_SEGUNDA_ADM"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_EVALUADOR_LIS_CP_ADM"
+			c_funcion_padre="OCAP_EVALUADOR_SEGUNDA_ADM" n_orden="1"
+			n_profundidad="1" c_menu_id="S" />
+
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_EVAL_ITINERARIO"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_DOCUMENTOS_LEER"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_LOGS"
+			c_funcion_padre="0" n_orden="4" n_profundidad="0" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_LOGS_VER"
+			c_funcion_padre="OCAP_LOGS" n_orden="1" n_profundidad="1" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_LOGS_DESCARGAR"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_LOGS_NIVELES"
+			c_funcion_padre="OCAP_LOGS" n_orden="2" n_profundidad="1" c_menu_id="S" />
+		<asignacion c_grupo_id="OCAP_ADM" c_funcion_id="OCAP_LOGS_CAMBIAR_NIVEL"
+			c_funcion_padre="0" n_orden="0" n_profundidad="0" c_menu_id="N" />
+
+
+		<!-- Menu y Funciones del ROL: OCAP_INFORMATICA -->
+		<asignacion c_grupo_id="OCAP_INFORMATICA" c_funcion_id="OCAP_MONITOR_ACCESO_BD"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+
+
+		<!-- Menu y Funciones del ROL: OCAP_DIRECTORIO -->
+		<asignacion c_grupo_id="OCAP_DIRECTORIO" c_funcion_id="OCAP_USUARIOS_DNI"
+			c_funcion_padre="0" n_orden="1" n_profundidad="0" c_menu_id="S" />
+
+	</rolesFunciones>
+
+
+	<paramAplicacion>
+		<!-- ******************************************************************** -->
+		<!-- PARAMETROS DE APLICACION definidas: Organizar según ROLES o PERFILES -->
+		<!-- ******************************************************************** -->
+	</paramAplicacion>
+
+	<paramUsuarios>
+		<!-- ******************************************************************************************************************** -->
+		<!-- PARAMETROS DE APLICACION definidas para un usuario en particular : 
+			Organizar según ROLES o PERFILES y TIPOS DE MENU -->
+		<!-- ******************************************************************************************************************** -->
+	</paramUsuarios>
+
+</aplicacion>

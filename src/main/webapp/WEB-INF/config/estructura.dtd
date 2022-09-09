@@ -1,0 +1,75 @@
+<!ELEMENT aplicacion ( roles?, usuarios?, usuariosRoles?, funciones?, tipoMenus?, rolesFunciones?, extensionFunciones?, paramAps?, paramUsu?, paramAplicacion?, paramGrupos?, paramUsuarios? ) >
+<!ATTLIST aplicacion c_aplicacion_id NMTOKEN #REQUIRED >
+<!ATTLIST aplicacion d_aplicacion CDATA #REQUIRED >
+
+<!ELEMENT asignacion EMPTY >
+<!ATTLIST asignacion c_funcion_id ID #IMPLIED >
+<!ATTLIST asignacion c_funcion_padre NMTOKEN #IMPLIED >
+<!ATTLIST asignacion c_grupo_id NMTOKEN #REQUIRED >
+<!ATTLIST asignacion c_menu_id CDATA #IMPLIED >
+<!ATTLIST asignacion c_usr_id NMTOKEN #IMPLIED >
+<!ATTLIST asignacion n_orden NMTOKEN #IMPLIED >
+<!ATTLIST asignacion n_profundidad NMTOKEN #IMPLIED >
+
+<!ELEMENT extension EMPTY >
+<!ATTLIST extension c_campo NMTOKEN #REQUIRED >
+<!ATTLIST extension c_funcion_id NMTOKEN #REQUIRED >
+<!ATTLIST extension d_descripcion NMTOKEN #IMPLIED >
+<!ATTLIST extension d_valor CDATA #REQUIRED >
+
+<!ELEMENT extensionFunciones ( extension? ) >
+
+<!ELEMENT funcion EMPTY >
+<!ATTLIST funcion c_funcion_id ID #REQUIRED >
+<!ATTLIST funcion d_descripcion CDATA #IMPLIED >
+<!ATTLIST funcion d_nombre CDATA #IMPLIED >
+<!ATTLIST funcion d_proceso CDATA #IMPLIED >
+
+<!ELEMENT funciones ( funcion? ) >
+
+<!ELEMENT paramAplicacion ( parametro? ) >
+
+<!ELEMENT paramAps ( parametro? ) >
+
+<!ELEMENT paramGrupos ( parametro? ) >
+
+<!ELEMENT paramUsu ( parametro? ) >
+
+<!ELEMENT paramUsuarios ( parametro? ) >
+
+<!ELEMENT parametro EMPTY >
+<!ATTLIST parametro c_grupo_id NMTOKEN #IMPLIED >
+<!ATTLIST parametro c_parametro NMTOKEN #IMPLIED >
+<!ATTLIST parametro c_usr_id NMTOKEN #IMPLIED >
+<!ATTLIST parametro d_comentario CDATA #IMPLIED >
+<!ATTLIST parametro d_parametro CDATA #IMPLIED >
+<!ATTLIST parametro d_valor NMTOKEN #REQUIRED >
+
+<!ELEMENT rol EMPTY >
+<!ATTLIST rol c_grupo_id NMTOKEN #REQUIRED >
+<!ATTLIST rol d_grupo CDATA #IMPLIED >
+
+<!ELEMENT roles ( rol? ) >
+
+<!ELEMENT rolesFunciones ( asignacion? ) >
+
+<!ELEMENT tipo EMPTY >
+<!ATTLIST tipo c_menu_id NMTOKEN #REQUIRED >
+<!ATTLIST tipo d_menu CDATA #REQUIRED >
+
+<!ELEMENT tipoMenus ( tipo? ) >
+
+<!ELEMENT usuario EMPTY >
+<!ATTLIST usuario a_password NMTOKEN #IMPLIED >
+<!ATTLIST usuario c_dni NMTOKEN #IMPLIED >
+<!ATTLIST usuario c_nif NMTOKEN #IMPLIED >
+<!ATTLIST usuario c_usr_id ID #IMPLIED >
+<!ATTLIST usuario d_apell NMTOKEN #IMPLIED >
+<!ATTLIST usuario d_nom NMTOKEN #IMPLIED >
+<!ATTLIST usuario d_seguridad CDATA #IMPLIED >
+
+<!ELEMENT usuarios ( usuario? ) >
+
+<!ELEMENT usuariosRoles ( asignacion? ) >
+
+

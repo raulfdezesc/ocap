@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<!-- Variable log.directory se crea en JCYLConfiguracion y se almancena en 
+	el contexto de Aplicacion -->
+<log4j:configuration debug="false"
+	xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<!-- DEFINICION DE APPENDERS -->
+	<appender name="LogAplicacion" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="${log.directory}aplicacion.log" />
+		<param name="MaxFileSize" value="2048KB" />
+		<param name="MaxBackupIndex" value="5" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{dd-MM-yyyy HH:mm:ss} %-5p %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="LogAplicacionBD" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="${log.directory}aplicacion_bd.log" />
+		<param name="MaxFileSize" value="2048KB" />
+		<param name="MaxBackupIndex" value="5" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{dd-MM-yyyy HH:mm:ss} %-5p %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+
+
+	<appender name="LogAplicacionXML" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="${log.directory}aplicacion_xml.log" />
+		<param name="MaxFileSize" value="2048KB" />
+		<param name="MaxBackupIndex" value="5" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{dd-MM-yyyy HH:mm:ss} %-5p %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+
+	<appender name="LogAuditoria" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="${log.directory}auditoria.log" />
+		<param name="MaxFileSize" value="2048KB" />
+		<param name="MaxBackupIndex" value="5" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{dd-MM-yyyy HH:mm:ss} %-5p %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+	
+	<appender name="LogDirectorioActivo" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="${log.directory}DirectorioActivo.log" />
+		<param name="MaxFileSize" value="4096KB" />
+		<param name="MaxBackupIndex" value="5" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d{dd-MM-yyyy HH:mm:ss} %-5p %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+	
+	
+	<appender name="LogTrazas" class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="${log.directory}Trazas.log" />
+		<param name="MaxFileSize" value="16384KB" />
+		<param name="MaxBackupIndex" value="5" />
+		<layout class="org.apache.log4j.PatternLayout">
+		<param name="ConversionPattern" value="%d{dd-MM-yyyy HH:mm:ss} %-5p %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+	
+	
+
+	<appender name="STDOUT" class="org.apache.log4j.ConsoleAppender">
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern"
+				value="[OCAP]:%d{dd-MM-yyyy HH:mm:ss} %-5p %c{1}:%L - %m%n" />
+		</layout>
+	</appender>
+
+	<!-- DEFINICION DE CATEGORIAS -->
+	<category name="Aplicacion" additivity="false">
+		<priority value="ERROR" />
+		<appender-ref ref="LogAplicacion" />
+		<appender-ref ref="STDOUT" />
+	</category>
+
+	<category name="AplicacionBD" additivity="false">
+		<priority value="ERROR" />
+		<appender-ref ref="LogAplicacionBD" />
+		<appender-ref ref="STDOUT" />
+	</category>
+
+	<category name="AplicacionXML" additivity="false">
+		<priority value="ERROR" />
+		<appender-ref ref="LogAplicacionXML" />
+	</category>
+
+	<category name="Auditoria" additivity="false">
+		<priority value="ERROR" />
+		<appender-ref ref="LogAuditoria" />
+	</category>
+	
+	<category name="DirectorioActivo" additivity="false">
+		<priority value="INFO" />
+		<appender-ref ref="LogDirectorioActivo" />
+	</category>
+	
+	
+	<category name="loggerTrazas" additivity="false">
+		<priority value="WARN" />		
+		<appender-ref ref="LogTrazas" />
+	</category>
+	
+
+</log4j:configuration>

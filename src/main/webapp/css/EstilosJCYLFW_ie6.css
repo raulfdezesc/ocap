@@ -1,0 +1,45 @@
+/* Modificaciones para ie6 */
+fieldset.normalesLogin {
+	margin-left: 270px;
+}
+
+.titulocajaformulario, .cajaformulario {
+	width: 98%;
+}
+
+.colocarMensajeExito {
+	margin-left: 0;
+}
+
+.ajustarCajaLogin {
+	margin-left: 0;
+}
+
+fieldset.normalesLoginPerfil {
+	width: 500px;
+	margin-left: 225px;
+}
+
+fieldset.normalesLoginPerfil p {
+	padding-top: 2em;
+}
+
+.normalesLoginPerfil div {
+	line-height: 1em;
+}
+
+.menuAccesible .menuNivel_1 a:hover {
+	width: 100%;
+}
+
+.miCabecera {
+	background-image: url("../imagenes/imagenes_ocap/degradadoCabIE6.gif");
+}
+
+.miCabecera h1 {
+	padding-top: 0;
+}
+
+.normalesLoginPerfil div.contenedorPerfiles .perfil {
+	padding-top: 0.4em;
+}

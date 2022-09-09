@@ -1,0 +1,1189 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<!DOCTYPE struts-config PUBLIC
+          "-//Apache Software Foundation//DTD Struts Configuration 1.1//EN"
+          "http://jakarta.apache.org/struts/dtds/struts-config_1_1.dtd">
+
+
+<struts-config>
+
+
+	<!-- ========== Form Bean Definitions =================================== -->
+	<form-beans type="org.apache.struts.action.ActionFormBean">
+
+		<!-- Login de usuario -->
+		<form-bean name="OCAPLoginForm" type="es.jcyl.fqs.ocap.actionforms.OCAPLoginForm" />
+		
+		<!-- Acceso-->
+		<form-bean name="OCAPAccesoForm" type="es.jcyl.fqs.ocap.actionforms.acceso.OCAPAccesoForm" />
+		
+		<!-- Cambio de password -->
+		<form-bean name="OCAPCambioPasswordForm"
+			type="es.jcyl.fqs.ocap.actionforms.OCAPCambioPasswordForm" />
+
+		<!-- Formulario Solicitudes -->
+		<form-bean name="OCAPSolicitudesForm"
+			type="es.jcyl.fqs.ocap.actionforms.solicitudes.OCAPSolicitudesForm" />
+
+		<form-bean name="OCAPNuevaSolicitudForm"
+			type="es.jcyl.fqs.ocap.actionforms.solicitudes.OCAPNuevaSolicitudForm" />
+
+		<form-bean name="OCAPGerenciasCriterioForm"
+			type="es.jcyl.fqs.ocap.actionforms.gerencias.OCAPGerenciasCriterioForm" />
+
+		<form-bean name="OCAPGerenciasForm"
+			type="es.jcyl.fqs.ocap.actionforms.gerencias.OCAPGerenciasForm" />
+
+		<form-bean name="OCAPGradoForm"
+			type="es.jcyl.fqs.ocap.actionforms.grado.OCAPGradoForm" />
+
+		<form-bean name="OCAPAreasTrabajoForm"
+			type="es.jcyl.fqs.ocap.actionforms.areasTrabajo.OCAPAreasTrabajoForm" />
+
+		<form-bean name="OCAPEncuestaCalidadForm"
+			type="es.jcyl.fqs.ocap.actionforms.encuestaCalidad.OCAPEncuestaCalidadForm" />
+
+		<form-bean name="OCAPServiciosForm"
+			type="es.jcyl.fqs.ocap.actionforms.servicios.OCAPServiciosForm" />
+
+		<form-bean name="OCAPTipoGerenciasForm"
+			type="es.jcyl.fqs.ocap.actionforms.tipoGerencias.OCAPTipoGerenciasForm" />
+
+		<form-bean name="OCAPPersEstatutarioForm"
+			type="es.jcyl.fqs.ocap.actionforms.personalEstatutario.OCAPPersEstatutarioForm" />
+
+		<form-bean name="OCAPEstatutarioForm"
+			type="es.jcyl.fqs.ocap.actionforms.estatutario.OCAPEstatutarioForm" />
+
+		<form-bean name="OCAPPerfilesForm"
+			type="es.jcyl.fqs.ocap.actionforms.perfiles.OCAPPerfilesForm" />
+
+		<form-bean name="OCAPEspecialidadesForm"
+			type="es.jcyl.fqs.ocap.actionforms.especialidades.OCAPEspecialidadesForm" />
+
+		<form-bean name="OCAPCentroTrabajoForm"
+			type="es.jcyl.fqs.ocap.actionforms.centroTrabajo.OCAPCentroTrabajoForm" />
+
+		<form-bean name="OCAPDefMeritoscurricularesForm"
+			type="es.jcyl.fqs.ocap.actionforms.defMeritosCurriculares.OCAPDefMeritoscurricularesForm" />
+
+		<form-bean name="OCAPCreditosForm"
+			type="es.jcyl.fqs.ocap.actionforms.creditos.OCAPCreditosForm" />
+
+		<form-bean name="OCAPMiembrosComitesForm"
+			type="es.jcyl.fqs.ocap.actionforms.actas.OCAPMiembrosComitesForm" />
+
+		<form-bean name="OCAPCategProfesionalesForm"
+			type="es.jcyl.fqs.ocap.actionforms.categProfesionales.OCAPCategProfesionalesForm" />
+
+		<form-bean name="OCAPUsuariosForm"
+			type="es.jcyl.fqs.ocap.actionforms.usuarios.OCAPUsuariosForm" />
+
+		<form-bean name="OCAPMeritosForm"
+			type="es.jcyl.fqs.ocap.actionforms.meritos.OCAPMeritosForm" />
+
+		<form-bean name="OCAPMeritoscurricularesForm"
+			type="es.jcyl.fqs.ocap.actionforms.meritosCurriculares.OCAPMeritoscurricularesForm" />
+
+		<form-bean name="OCAPMerModalidadForm"
+			type="es.jcyl.fqs.ocap.actionforms.meritosModalidad.OCAPMerModalidadForm" />
+
+		<form-bean name="OCAPMeractividadForm"
+			type="es.jcyl.fqs.ocap.actionforms.meritosActividad.OCAPMeractividadForm" />
+
+		<form-bean name="OCAPMensajesMcForm"
+			type="es.jcyl.fqs.ocap.actionforms.mensajesMc.OCAPMensajesMcForm" />
+
+		<form-bean name="OCAPMensajesForm"
+			type="es.jcyl.fqs.ocap.actionforms.mensajes.OCAPMensajesForm" />
+
+		<form-bean name="OCAPFactoresImpactoForm"
+			type="es.jcyl.fqs.ocap.actionforms.factoresImpacto.OCAPFactoresImpactoForm" />
+
+		<form-bean name="OCAPTiposFirmanteForm"
+			type="es.jcyl.fqs.ocap.actionforms.tiposFirmante.OCAPTiposFirmanteForm" />
+
+		<form-bean name="OCAPConvocatoriasForm"
+			type="es.jcyl.fqs.ocap.actionforms.convocatorias.OCAPConvocatoriasForm" />
+
+		<form-bean name="OCAPAreasForm"
+			type="es.jcyl.fqs.ocap.actionforms.areas.OCAPAreasForm" />
+
+		<form-bean name="OCAPUnidadesForm"
+			type="es.jcyl.fqs.ocap.actionforms.unidades.OCAPUnidadesForm" />
+
+		<form-bean name="OCAPPuestosForm"
+			type="es.jcyl.fqs.ocap.actionforms.puestos.OCAPPuestosForm" />
+
+		<form-bean name="OCAPCuestionariosForm"
+			type="es.jcyl.fqs.ocap.actionforms.cuestionarios.OCAPCuestionariosForm" />
+
+		<form-bean name="OCAPSugerenciasForm"
+			type="es.jcyl.fqs.ocap.actionforms.sugerencias.OCAPSugerenciasForm" />
+
+		<form-bean name="OCAPGlosarioForm"
+			type="es.jcyl.fqs.ocap.actionforms.glosario.OCAPGlosarioForm" />
+
+		<form-bean name="OCAPComponentesfqsForm"
+			type="es.jcyl.fqs.ocap.actionforms.componentesfqs.OCAPComponentesfqsForm" />
+
+		<form-bean name="OCAPGestionCtesForm"
+			type="es.jcyl.fqs.ocap.actionforms.gestionCtes.OCAPGestionCtesForm" />
+
+		<form-bean name="OCAPDocumentosForm"
+			type="es.jcyl.fqs.ocap.actionforms.documentos.OCAPDocumentosForm" />
+
+		<form-bean name="OCAPPreguntasForm"
+			type="es.jcyl.fqs.ocap.actionforms.preguntas.OCAPPreguntasForm" />
+
+		<form-bean name="OCAPConversionesForm"
+			type="es.jcyl.fqs.ocap.actionforms.conversiones.OCAPConversionesForm" />
+
+		<form-bean name="OCAPReunionesForm"
+			type="es.jcyl.fqs.ocap.actionforms.reuniones.OCAPReunionesForm" />
+
+		<form-bean name="OCAPMonitorizacionForm"
+			type="es.jcyl.fqs.ocap.actionforms.monitorizacion.OCAPMonitorizacionForm" />
+
+		<form-bean name="OCAPDudasTutoresForm"
+			type="es.jcyl.fqs.ocap.actionforms.dudasTutores.OCAPDudasTutoresForm" />
+
+		<form-bean name="OCAPExpedientesForm"
+			type="es.jcyl.fqs.ocap.actionforms.expedientes.OCAPExpedientesForm" />
+
+		<form-bean name="OCAPActasForm"
+			type="es.jcyl.fqs.ocap.actionforms.actas.OCAPActasForm" />
+		<form-bean name="OCAPNoAportaMeritosForm"
+			type="es.jcyl.fqs.ocap.actionforms.meritos.OCAPNoAportaMeritosForm" />
+		<form-bean name="OCAPMeritosAnterioresForm"
+			type="es.jcyl.fqs.ocap.actionforms.meritos.OCAPMeritosAnterioresForm" />
+
+	</form-beans>
+
+
+	<!-- ========== Global Forward Definitions ============================== -->
+	<global-forwards type="org.apache.struts.action.ActionForward">
+
+		<!-- Error -->
+		<forward name="fallo" path="/error.jsp" />
+		<forward name="falloPublico" path="/errorPublico.jsp" />
+		<forward name="mensaje" path="/mensajes.jsp" />
+		<forward name="sinsesion" path="/sinsesion.jsp" />
+		<forward name="sinpermisos" path="/sinpermisos.jsp" />
+		<forward name="accesoJSPnopermitido" path="/accesoJSPnopermitido.jsp" />
+
+	</global-forwards>
+
+	<!-- ========== Action Mapping Definitions ============================== -->
+	<action-mappings type="org.apache.struts.action.ActionMapping">
+
+		<!-- Login de usuario -->
+		<action path="/Login" type="es.jcyl.fqs.ocap.actions.OCAPLoginAction"
+			name="OCAPLoginForm" scope="request" validate="false" input="/login.jsp">
+
+			<forward name="exito" path="/PaginaInicio.do" />
+			<forward name="fallo" path="/login.jsp" />
+			<forward name="elegirPerfil" path="/login.jsp" />
+			<forward name="publico" path="/publicoAccion.jsp" />
+			<forward name="enviarMail" path="/login.jsp" />
+			<forward name="irInsertarUsuario"	path="/OCAPNuevaSolicitud.do?accion=irInsertarUsuarioPruebas"	redirect="true" />
+			<forward name="elegirConvocatoria" path="/OCAPUsuarios.do?accion=elegirConvocatoria" redirect="true" />							
+			<forward name="irRegistrarAcceso" path="/OCAPAcceso.do?accion=irInsertarAcceso" redirect="true" />  	
+		</action>
+		
+		
+		
+
+		<!-- Login por Certificado de usuario -->
+		<action path="/LoginCert" type="es.jcyl.fqs.ocap.actions.OCAPLoginCertAction">
+			<forward name="exito" path="/PaginaInicio.do" />
+			<forward name="fallo" path="/login.jsp" />
+		</action>
+
+		<action path="/CerrarSesion" type="es.jcyl.fqs.ocap.actions.OCAPCerrarSesionAction">
+			<forward name="exito" path="/logout.jsp" />
+		</action>
+
+		<action path="/verCambiarPasswordAction" forward="/cambiarPasswordForm.jsp" />
+
+		<action path="/cambiarPasswordAction"
+			type="es.jcyl.fqs.ocap.actions.OCAPCambiarPasswordAction" name="OCAPCambioPasswordForm"
+			scope="request" validate="true" input="/cambiarPasswordForm.jsp">
+
+			<forward name="input" path="/verCambiarPasswordAction.do" />
+			<forward name="exito" path="/verCambiarPasswordAction.do" />
+		</action>
+
+		
+		<!-- OCAPAcceso -->
+		<action path="/OCAPAcceso"
+			type="es.jcyl.fqs.ocap.actions.acceso.OCAPAccesoAction" name="OCAPAccesoForm"
+			scope="request" validate="true" parameter="accion" input="irAcceso.page">
+			<forward name="irInsertar" path="irAcceso.page" />			
+			<forward name="error" path="mensajeErrorSinFormulario.page" />
+			<forward name="exito" path="mensajeExitoSinFormulario.page" /> 
+			
+		</action>
+
+		<action path="/reloadSeguridad" type="es.jcyl.fqs.ocap.actions.OCAPReloadSeguridad">
+		</action>
+
+		<action path="/GenericAction" type="es.jcyl.fqs.ocap.actions.OCAPGenericAction">
+			<forward name="exito" path="/generic.jsp" />
+		</action>
+
+		<action path="/PaginaInicio" forward="/index.jsp" />
+		<action path="/AvisoLegal" forward="/avisoLegal.jsp" />
+		<action path="/InformacionLegal" forward="/informacionLegal.jsp" />
+		
+		
+
+		<!-- OCAPSolicitudes -->
+		<action path="/OCAPSolicitudes"
+			type="es.jcyl.fqs.ocap.actions.solicitudes.OCAPSolicitudesAction"
+			name="OCAPSolicitudesForm" scope="request" validate="true" parameter="accion">
+
+			<forward name="irSolicitud" path="irSolicitud.page" />
+			<!--forward name="irGenerarActas" path="irGenerarActas.page"/ -->
+			<forward name="irInsertar" path="irInsertar.page" />
+			<forward name="irBuscar" path="irBuscar.page" />
+			<forward name="irBuscarGrs" path="irBuscarGrs.page" />
+			<forward name="irCSVDinamico" path="irCSVDinamico.page" />
+			<forward name="irCSVDinamicoFQS" path="irCSVDinamicoFQS.page" />
+			<forward name="irDetalle" path="irDetalle.page" />
+			<forward name="irDenegacion" path="irDenegacion.page" />
+			<forward name="irInconformidad" path="irInconformidad.page" />
+			<forward name="irModificar" path="irModificar.page" />
+			<forward name="aceptarSolicitud" path="aceptarSolicitud.page" />
+			<forward name="listarFase" path="listarFaseCa.page" />
+			<forward name="listarFaseDocumentos" path="listarFaseDocumentos.page" />
+			<forward name="irAltaDocumentos"
+				path="/OCAPDocumentos.do?accion=irAltaDocumento&amp;tarea=actualizar&amp;tareaDocu=alta" />
+			<forward name="mensajeExito" path="mensajeExito.page" />
+			<forward name="ayuda" path="ayuda.page" />
+			<forward name="paginaInicio" path="/PaginaInicio.do" />
+			<forward name="irNoExistenConvocatorias" path="irNoExistenConvocatorias.page" />
+			<forward name="irNoExistenConvocatoriasSolic" path="irNoExistenConvocatoriasSolic.page" />
+			<forward name="irNoExisteSolicitud" path="irNoExisteSolicitud.page" />
+			<forward name="irFinalizarEvaluacionFinPlazo" path="finalizarMC.page" />
+			<forward name="irFaseMCnoConcluida" path="irFaseMCnoConcluida.page" />
+			<forward name="irEliminarItinerarioAsignadoUsuario" path="eliminarItinerarioAsignado.page" />
+			<forward name="irFaseCAnoIniciadaConcluida" path="irFaseCAnoIniciadaConcluida.page" />
+			<forward name="irFaseCAConcluida" path="irFaseCAConcluida.page" />
+			<forward name="irReactivarCA" path="irReactivarCA.page" />
+			<forward name="irNoExisteUsuario" path="irNoExisteUsuario.page" />
+			<forward name="irModificarCuestionarioObservEvidencia" path="irModificarCuestionarioObservEvidencia.page" />
+			<forward name="modificarCuestionarioObservEvidencia" path="irModificarCuestionarioObservEvidencia.page" />
+		</action>
+
+		<!-- OCAPNuevaSolicitud -->
+		<action path="/OCAPNuevaSolicitud"
+			type="es.jcyl.fqs.ocap.actions.solicitudes.OCAPNuevaSolicitudAction"
+			name="OCAPNuevaSolicitudForm" scope="request" validate="true"
+			parameter="accion">
+
+			<forward name="mensajeExito" path="mensajeExito.page" />
+			<forward name="mensajeExitoSinFormulario" path="mensajeExitoSinFormulario.page" />
+			<forward name="mensajeConfirma" path="mensajeConfirma.page" />
+			<forward name="publico" path="/publicoAccion.jsp" />
+			<forward name="irBuscarSolic" path="irBuscarSolic.page" />
+			<forward name="irNoExistenConvocatorias" path="irNoExistenConvocatorias.page" />
+			<forward name="irNoExistenConvocatoriasSolic" path="irNoExistenConvocatoriasSolic.page" />
+			<forward name="irConvocatoriaCerrada" path="irConvocatoriaCerrada.page" />
+			<forward name="irNuevaInsertar" path="irNuevaInsertar.page" />
+			<forward name="irNuevaInsertarFechas" path="irNuevaInsertarFechas.page" />
+			<forward name="irNuevaInsertarExp" path="irNuevaInsertarExp.page" />
+			<forward name="irNuevaInsertarPrueba" path="irNuevaInsertarPrueba.page" />
+			<forward name="irNuevaModificar" path="irNuevaModificar.page" />
+			<forward name="irNuevaSolicitud" path="irNuevaSolicitud.page" />
+			<forward name="irImprimirSolicitud" path="irImprimirSolicitud.page" />
+			<forward name="irImprimirSolicitudPublica" path="irImprimirSolicitudPublica.page" />
+			<forward name="irListado" path="irListado.page" />
+			<forward name="irBuscar" path="irBuscar.page" />
+			<forward name="irBuscarB" path="irBuscarB.page" />
+			<forward name="irCSVDinamico" path="irCSVDinamico.page" />
+			<forward name="irGenerarActas" path="irGenerarActas.page" />
+			<forward name="irBuscarGrs" path="irBuscarGrs.page" />
+			<forward name="irCopiarDNI" path="irCopiarDNI.page" />
+			<forward name="irFinalizarEvaluacionFinPlazo" path="finalizarMC.page" />
+			<forward name="irEliminarItinerarioAsignadoUsuario" path="eliminarItinerarioAsignado.page" />
+			<forward name="irBuscarAdmGrs" path="irBuscarAdmGrs.page" />
+			<forward name="irBuscarAdmGrsFechas" path="irBuscarAdmGrsFechas.page" />
+			<forward name="listarFase" path="listarFaseCa.page" />
+			<forward name="detalleEvaluado" path="detalleEvaluado.page" />
+			<forward name="falloSolicitud" path="errorSolicitud.page" />
+			<forward name="irItinerario"
+				path="/OCAPCuestionarios.do?accion=irExplicacionAreas" />
+			<forward name="irItinerarioPruebas"
+				path="/OCAPCuestionarios.do?accion=irExplicacionAreasPruebas" />
+		</action>
+
+		<!-- OCAPGerencias -->
+		<action path="/OCAPGerencias"
+			type="es.jcyl.fqs.ocap.actions.gerencias.OCAPGerenciasAction" name="OCAPGerenciasForm"
+			scope="request" validate="true" parameter="accion">
+
+			<forward name="irInsertar" path="irInsertarGer.page" />
+			<forward name="irModificar" path="irInsertarGer.page" />
+			<forward name="verDetalle" path="irInsertarGer.page" />
+			<forward name="irBuscar" path="irConsultarGer.page" />
+			<forward name="error" path="/mensajes.jsp" />
+			<forward name="exito" path="mensajeExito.page" />
+		</action>
+
+		<!-- OCAPGrado -->
+		<action path="/OCAPGrado" type="es.jcyl.fqs.ocap.actions.grado.OCAPGradoAction"
+			name="OCAPGradoForm" scope="request" validate="true" parameter="accion">
+
+			<forward name="irInsertar" path="irInsertarGra.page" />
+			<forward name="irModificar" path="irInsertarGra.page" />
+			<forward name="verDetalle" path="irInsertarGra.page" />
+			<forward name="irBuscar" path="irConsultarGra.page" />
+			<forward name="error" path="/mensajes.jsp" />
+			<forward name="exito" path="mensajeExito.page" />
+		</action>
+
+		<!-- OCAPAreasTrabajo -->
+		<action path="/OCAPAreasTrabajo"
+			type="es.jcyl.fqs.ocap.actions.areasTrabajo.OCAPAreasTrabajoAction"
+			name="OCAPAreasTrabajoForm" scope="request" validate="true"
+			parameter="accion">
+
+			<forward name="irInsertar" path="irInsertarArT.page" />
+			<forward name="irModificar" path="irInsertarArT.page" />
+			<forward name="verDetalle" path="irInsertarArT.page" />
+			<forward name="irBuscar" path="irConsultarArT.page" />
+			<forward name="error" path="/mensajes.jsp" />
+			<forward name="exito" path="mensajeExito.page" />
+		</action>
+
+		<!-- OCAPRenuncia -->
+		<action path="/OCAPRenuncia"
+			type="es.jcyl.fqs.ocap.actions.renuncia.OCAPRenunciaAction" name="OCAPAreasTrabajoForm"
+			scope="request" validate="true" parameter="accion">
+
+			<forward name="irRenunciar" path="irRenunciar.page" />
+			<forward name="irNoExisteSolicitud" path="irNoExisteSolicitud.page" />
+			<forward name="irSolicitudNoAceptada" path="irSolicitudNoAceptada.page" />
+			<forward name="irFaseMCnoIniciada" path="irFaseMCnoIniciada.page" />
+			<forward name="irRenunciaSolicitud" path="irRenunciaSolicitud.page" />
+			<forward name="error" path="/mensajes.jsp" />
+			<forward name="mensajeExitoSinFormulario" path="mensajeExitoSinFormulario.page" />
+			<forward name="irNoPermiteRenunciaSolicitud" path="irNoPermiteRenunciaSolicitud.page" />
+		</action>
+
+		<!-- OCAPEncuestaCalidad -->
+		<action path="/OCAPEncuestaCalidad"
+			type="es.jcyl.fqs.ocap.actions.encuestaCalidad.OCAPEncuestaCalidadAction"
+			name="OCAPEncuestaCalidadForm" scope="session" validate="true"
+			parameter="accion">
+
+			<forward name="irRellenar" path="irRellenarEnc.page" />
+			<forward name="irBuscarEncuestaGeneral" path="irListarEncuestaGeneral.page" />
+			<forward name="irBuscarEncuestaPreguntas" path="irBuscarEncuestaPreguntas.page" />
+			<forward name="error" path="/mensajes.jsp" />
+			<forward name="exito" path="mensajeExito.page" />
+		</action>
+
+		<!-- OCAPTipoGerencias -->
+		<action path="/OCAPTipoGerencias"
+			type="es.jcyl.fqs.ocap.actions.tipoGerencias.OCAPTipoGerenciasAction"
+			name="OCAPTipoGerenciasForm" scope="request" validate="true"
+			parameter="accion">
+
+			<forward name="irInsertar" path="irInsertarTip.page" />
+			<forward name="irModificar" path="irInsertarTip.page" />
+			<forward name="verDetalle" path="irInsertarTip.page" />
+			<forward name="irBuscar" path="irConsultarTip.page" />
+			<forward name="error" path="/mensajes.jsp" />
+			<forward name="exito" path="mensajeExito.page" />
+		</action>
+
+		<!-- OCAPServicios -->
+		<action path="/OCAPServicios"
+			type="es.jcyl.fqs.ocap.actions.servicios.OCAPServiciosAction" name="OCAPServiciosForm"
+			scope="request" validate="true" parameter="accion">
+
+			<forward name="irInsertar" path="irInsertarSer.page" />
+			<forward name="irModificar" path="irInsertarSer.page" />
+			<forward name="verDetalle" path="irInsertarSer.page" />
+			<forward name="irBuscar" path="irConsultarSer.page" />
+			<forward name="error" path="/mensajes.jsp" />
+			<forward name="exito" path="mensajeExito.page" />
+		</action>
+
+		<!-- OCAPPersEstatutario -->
+		<action path="/OCAPPersEstatutario"
+			type="es.jcyl.fqs.ocap.actions.personalEstatutario.OCAPPersEstatutarioAction"
+			name="OCAPPersEstatutarioForm" scope="request" validate="true"
+			parameter="accion">
+
+			<forward name="irInsertar" path="irInsertarPer.page" />
+			<forward name="irModificar" path="irInsertarPer.page" />
+			<forward name="verDetalle" path="irInsertarPer.page" />
+			<forward name="irBuscar" path="irConsultarPer.page" />
+			<forward name="error" path="/mensajes.jsp" />
+			<forward name="exito" path="mensajeExito.page" />
+		</action>
+
+		<!-- OCAPEstatutario -->
+		<action path="/OCAPEstatutario"
+			type="es.jcyl.fqs.ocap.actions.estatutario.OCAPEstatutarioAction"
+			name="OCAPEstatutarioForm" scope="request" validate="true" parameter="accion">
+
+			<forward name="irInsertar" path="irInsertarEst.page" />
+			<forward name="irModificar" path="irInsertarEst.page" />
+			<forward name="verDetalle" path="irInsertarEst.page" />
+			<forward name="irBuscar" path="irConsultarEst.page" />
+			<forward name="error" path="/mensajes.jsp" />
+			<forward name="exito" path="mensajeExito.page" />
+		</action>
+
+		<!-- OCAPPerfiles -->
+		<action path="/OCAPPerfiles"
+			type="es.jcyl.fqs.ocap.actions.perfiles.OCAPPerfilesAction" name="OCAPPerfilesForm"
+			scope="request" validate="true" parameter="accion">
+
+			<forward name="irInsertar" path="irInsertarPrf.page" />
+			<forward name="irModificar" path="irInsertarPrf.page" />
+			<forward name="verDetalle" path="irInsertarPrf.page" />
+			<forward name="irBuscar" path="irConsultarPrf.page" />
+			<forward name="error" path="/mensajes.jsp" />
+			<forward name="exito" path="mensajeExito.page" />
+		</action>
+
+		<!-- OCAPEspecialidades -->
+		<action path="/OCAPEspecialidades"
+			type="es.jcyl.fqs.ocap.actions.especialidades.OCAPEspecialidadesAction"
+			name="OCAPEspecialidadesForm" scope="request" validate="true"
+			parameter="accion">
+
+			<forward name="irInsertar" path="irInsertarEsp.page" />
+			<forward name="irModificar" path="irInsertarEsp.page" />
+			<forward name="verDetalle" path="irInsertarEsp.page" />
+			<forward name="irBuscar" path="irConsultarEsp.page" />
+			<forward name="error" path="/mensajes.jsp" />
+			<forward name="exito" path="mensajeExito.page" />
+		</action>
+
+		<!-- OCAPCentroTrabajo -->
+		<action path="/OCAPCentroTrabajo"
+			type="es.jcyl.fqs.ocap.actions.centroTrabajo.OCAPCentroTrabajoAction"
+			name="OCAPCentroTrabajoForm" scope="request" validate="true"
+			parameter="accion">
+
+			<forward name="irInsertar" path="irInsertarCen.page" />
+			<forward name="irModificar" path="irInsertarCen.page" />
+			<forward name="verDetalle" path="irInsertarCen.page" />
+			<forward name="irBuscar" path="irConsultarCen.page" />
+			<forward name="error" path="/mensajes.jsp" />
+			<forward name="exito" path="mensajeExito.page" />
+		</action>
+
+		<!-- OCAPDefMeritoscurriculares -->
+		<action path="/OCAPDefMeritoscurriculares"
+			type="es.jcyl.fqs.ocap.actions.defMeritosCurriculares.OCAPDefMeritoscurricularesAction"
+			name="OCAPDefMeritoscurricularesForm" scope="request" validate="true"
+			parameter="accion">
+
+			<forward name="irInsertar" path="irInsertarMer.page" />
+			<forward name="irModificar" path="irInsertarMer.page" />
+			<forward name="verDetalle" path="irInsertarMer.page" />
+			<forward name="irBuscar" path="irConsultarMer.page" />
+			<forward name="error" path="/mensajes.jsp" />
+			<forward name="exito" path="mensajeExito.page" />
+		</action>
+
+		<!-- OCAPCreditos -->
+		<action path="/OCAPCreditos"
+			type="es.jcyl.fqs.ocap.actions.creditos.OCAPCreditosAction" name="OCAPCreditosForm"
+			scope="request" validate="true" parameter="accion">
+
+			<forward name="irInsertar" path="irInsertarCre.page" />
+			<forward name="irModificar" path="irInsertarCre.page" />
+			<forward name="verDetalle" path="irInsertarCre.page" />
+			<forward name="irBuscar" path="irConsultarCre.page" />
+			<forward name="error" path="/mensajes.jsp" />
+			<forward name="exito" path="mensajeExito.page" />
+		</action>
+
+		<!-- OCAPMiembrosComites -->
+		<action path="/OCAPMiembrosComites"
+			type="es.jcyl.fqs.ocap.actions.actas.OCAPMiembrosComitesAction" name="OCAPMiembrosComitesForm"
+			scope="request" validate="true" parameter="accion">
+
+			<forward name="irCargar" path="irCargar.page" />
+			<forward name="insertar" path="insertar.page" />
+			<forward name="error" path="/mensajes.jsp" />
+			<forward name="exito" path="mensajeExito.page" />
+		</action>
+
+		<!-- OCAPCategProfesionales -->
+		<action path="/OCAPCategProfesionales"
+			type="es.jcyl.fqs.ocap.actions.categProfesionales.OCAPCategProfesionalesAction"
+			name="OCAPCategProfesionalesForm" scope="request" validate="true"
+			parameter="accion">
+
+			<forward name="irInsertar" path="irInsertarCat.page" />
+			<forward name="irModificar" path="irInsertarCat.page" />
+			<forward name="verDetalle" path="irInsertarCat.page" />
+			<forward name="irBuscar" path="irConsultarCat.page" />
+			<forward name="error" path="/mensajes.jsp" />
+			<forward name="exito" path="mensajeExito.page" />
+		</action>
+
+		<!-- OCAPMeritoscurriculares -->
+		<action path="/OCAPMeritoscurriculares"
+			type="es.jcyl.fqs.ocap.actions.meritosCurriculares.OCAPMeritoscurricularesAction"
+			name="OCAPMeritoscurricularesForm" scope="request" validate="true"
+			parameter="accion">
+
+			<forward name="irInsertar" path="irInsertarMerCurr.page" />
+			<forward name="irModificar" path="irInsertarMerCurr.page" />
+			<forward name="verDetalle" path="irInsertarMerCurr.page" />
+			<forward name="irBuscar" path="irConsultarMerCurr.page" />
+			<forward name="error" path="/mensajes.jsp" />
+			<forward name="exito" path="mensajeExito.page" />
+			<forward name="irOCAPDesbloqueoCurriculares" path="irOCAPDesbloqueoCurriculares.page" />
+			<forward name="irErrorCurriculares" path="irErrorCurriculares.page" />
+			<forward name="irOCAPAvisoCurriculares" path="irOCAPAvisoCurriculares.page" />
+			<forward name="irOkCurriculares" path="irOkCurriculares.page" />
+		</action>
+
+		<!-- OCAPMerModalidad -->
+		<action path="/OCAPMerModalidad"
+			type="es.jcyl.fqs.ocap.actions.meritosModalidad.OCAPMerModalidadAction"
+			name="OCAPMerModalidadForm" scope="request" validate="true"
+			parameter="accion">
+
+			<forward name="irInsertar" path="irInsertarMerMod.page" />
+			<forward name="irModificar" path="irInsertarMerMod.page" />
+			<forward name="verDetalle" path="irInsertarMerMod.page" />
+			<forward name="irBuscar" path="irConsultarMerMod.page" />
+			<forward name="error" path="/mensajes.jsp" />
+			<forward name="exito" path="mensajeExito.page" />
+		</action>
+
+		<!-- OCAPMeractividad -->
+		<action path="/OCAPMeractividad"
+			type="es.jcyl.fqs.ocap.actions.meritosActividad.OCAPMeractividadAction"
+			name="OCAPMeractividadForm" scope="request" validate="true"
+			parameter="accion">
+
+			<forward name="irInsertar" path="irInsertarMerAct.page" />
+			<forward name="irModificar" path="irInsertarMerAct.page" />
+			<forward name="verDetalle" path="irInsertarMerAct.page" />
+			<forward name="irBuscar" path="irConsultarMerAct.page" />
+			<forward name="error" path="/mensajes.jsp" />
+			<forward name="exito" path="mensajeExito.page" />
+		</action>
+
+		<!-- OCAPMensajesMc -->
+		<action path="/OCAPMensajesMc"
+			type="es.jcyl.fqs.ocap.actions.mensajesMc.OCAPMensajesMcAction" name="OCAPMensajesMcForm"
+			scope="request" validate="true" parameter="accion">
+
+			<forward name="irInsertar" path="irInsertarMenMc.page" />
+			<forward name="irModificar" path="irInsertarMenMc.page" />
+			<forward name="verDetalle" path="irInsertarMenMc.page" />
+			<forward name="irBuscar" path="irConsultarMenMc.page" />
+			<forward name="error" path="/mensajes.jsp" />
+			<forward name="exito" path="mensajeExito.page" />
+		</action>
+
+		<!-- OCAPMensajes -->
+		<action path="/OCAPMensajes"
+			type="es.jcyl.fqs.ocap.actions.mensajes.OCAPMensajesAction" name="OCAPMensajesForm"
+			scope="request" validate="true" parameter="accion">
+
+			<forward name="irInsertar" path="irInsertarMen.page" />
+			<forward name="irModificar" path="irInsertarMen.page" />
+			<forward name="verDetalle" path="irInsertarMen.page" />
+			<forward name="irBuscar" path="irConsultarMen.page" />
+			<forward name="error" path="/mensajes.jsp" />
+			<forward name="exito" path="mensajeExito.page" />
+		</action>
+
+		<!-- OCAPFactoresImpacto -->
+		<action path="/OCAPFactoresImpacto"
+			type="es.jcyl.fqs.ocap.actions.factoresImpacto.OCAPFactoresImpactoAction"
+			name="OCAPFactoresImpactoForm" scope="request" validate="true"
+			parameter="accion">
+
+			<forward name="irInsertar" path="irInsertarFact.page" />
+			<forward name="irModificar" path="irInsertarFact.page" />
+			<forward name="verDetalle" path="irInsertarFact.page" />
+			<forward name="irBuscar" path="irConsultarFact.page" />
+			<forward name="error" path="/mensajes.jsp" />
+			<forward name="exito" path="mensajeExito.page" />
+		</action>
+
+		<!-- OCAPTiposFirmante -->
+		<action path="/OCAPTiposFirmante"
+			type="es.jcyl.fqs.ocap.actions.tiposFirmante.OCAPTiposFirmanteAction"
+			name="OCAPTiposFirmanteForm" scope="request" validate="true"
+			parameter="accion">
+
+			<forward name="irInsertar" path="irInsertarTipFir.page" />
+			<forward name="irModificar" path="irInsertarTipFir.page" />
+			<forward name="verDetalle" path="irInsertarTipFir.page" />
+			<forward name="irBuscar" path="irConsultarTipFir.page" />
+			<forward name="error" path="/mensajes.jsp" />
+			<forward name="exito" path="mensajeExito.page" />
+		</action>
+
+		<!-- OCAPConvocatorias -->
+		<action path="/OCAPConvocatorias"
+			type="es.jcyl.fqs.ocap.actions.convocatorias.OCAPConvocatoriasAction"
+			name="OCAPConvocatoriasForm" scope="request" validate="true"
+			parameter="accion">
+
+			<forward name="irInsertar" path="irInsertarCon.page" />
+			<forward name="irModificar" path="irInsertarCon.page" />
+			<forward name="verDetalle" path="irInsertarCon.page" />
+			<forward name="irBuscar" path="irConsultarCon.page" />
+			<forward name="error" path="/mensajes.jsp" />
+			<forward name="exito" path="mensajeExito.page" />
+		</action>
+
+		<!-- OCAPAreas -->
+		<action path="/OCAPAreas" type="es.jcyl.fqs.ocap.actions.areas.OCAPAreasAction"
+			name="OCAPAreasForm" scope="request" validate="true" parameter="accion">
+
+			<forward name="irInsertar" path="irInsertarAre.page" />
+			<forward name="irModificar" path="irInsertarAre.page" />
+			<forward name="verDetalle" path="irInsertarAre.page" />
+			<forward name="irBuscar" path="irConsultarAre.page" />
+			<forward name="error" path="/mensajes.jsp" />
+			<forward name="exito" path="mensajeExito.page" />
+		</action>
+
+		<!-- OCAPUnidades -->
+		<action path="/OCAPUnidades"
+			type="es.jcyl.fqs.ocap.actions.unidades.OCAPUnidadesAction" name="OCAPUnidadesForm"
+			scope="request" validate="true" parameter="accion">
+
+			<forward name="irInsertar" path="irInsertarUni.page" />
+			<forward name="irModificar" path="irInsertarUni.page" />
+			<forward name="verDetalle" path="irInsertarUni.page" />
+			<forward name="irBuscar" path="irConsultarUni.page" />
+			<forward name="error" path="/mensajes.jsp" />
+			<forward name="exito" path="mensajeExito.page" />
+		</action>
+
+		<!-- OCAPPuestos -->
+		<action path="/OCAPPuestos"
+			type="es.jcyl.fqs.ocap.actions.puestos.OCAPPuestosAction" name="OCAPPuestosForm"
+			scope="request" validate="true" parameter="accion">
+
+			<forward name="irInsertar" path="irInsertarPue.page" />
+			<forward name="irModificar" path="irInsertarPue.page" />
+			<forward name="verDetalle" path="irInsertarPue.page" />
+			<forward name="irBuscar" path="irConsultarPue.page" />
+			<forward name="error" path="/mensajes.jsp" />
+			<forward name="exito" path="mensajeExito.page" />
+		</action>
+
+		<!-- OCAPUsuarios -->
+		<action path="/OCAPUsuarios"
+			type="es.jcyl.fqs.ocap.actions.usuarios.OCAPUsuariosAction" name="OCAPUsuariosForm"
+			scope="session" validate="true" parameter="accion"
+			input="/usuarios/OCAPUsuariosMCAlDtMf.jsp">
+
+			<forward name="irInsertar" path="irInsertarMC.page" />
+			<forward name="irFinEvaluacion" path="irFinEvaluacionMC.page" />
+			<forward name="irProteccionDatos" path="irProteccionDatos.page" />
+			<forward name="error" path="/mensajes.jsp" />
+			<forward name="exito" path="exito.page" />
+			<forward name="irSolicitudNoAceptada" path="irSolicitudNoAceptada.page" />
+			<forward name="irNoExisteSolicitud" path="irNoExisteSolicitud.page" />
+			<forward name="irFaseMCnoIniciada" path="irFaseMCnoIniciada.page" />
+			<forward name="irPedirPuesto" path="irPedirPuesto.page" />
+			<forward name="irRenunciaSolicitud" path="irRenunciaSolicitud.page" />
+			<forward name="irBuscadorUsuariosDNI" path="listadoUsuariosDNI.page" />
+			<forward name="listarUsuariosDNI" path="listadoUsuariosDNI.page" />
+			<forward name="irModificarUsuarioDNI" path="formularioUsuarioDNI.page" />
+			<forward name="elegirConvocatoria" path="elegirConvocatoriaUsuario.page" />
+			<forward name="inicio" path="/PaginaInicio.do" />			
+		</action>
+
+		<!-- OCAPMeritos -->
+		<action path="/OCAPMeritos"
+			type="es.jcyl.fqs.ocap.actions.meritos.OCAPMeritosAction" name="OCAPMeritosForm"
+			scope="request" validate="true" parameter="accion"
+			input="/meritos/OCAPMasterAlDtMf.jsp">
+
+			<forward name="irEliminarMerito" path="irEliminarMerito.page" />
+			<forward name="irInvalidarMerito" path="irInvalidarMerito.page" />
+			<forward name="irInsertarMaster" path="irInsertarMaster.page" />
+			<forward name="irModificarMaster" path="irInsertarMaster.page" />
+			<forward name="irInsertarTaller" path="irInsertarTaller.page" />
+			<forward name="irModificarTaller" path="irInsertarTaller.page" />
+			<forward name="irInsertarCongreso" path="irInsertarCongreso.page" />
+			<forward name="irModificarCongreso" path="irInsertarCongreso.page" />
+			<forward name="irInsertarSesionClinica" path="irInsertarSesionClinica.page" />
+			<forward name="irModificarSesionClinica" path="irInsertarSesionClinica.page" />
+			<forward name="irInsertarEspecialidad" path="irInsertarEspecialidad.page" />
+			<forward name="irModificarEspecialidad" path="irInsertarEspecialidad.page" />
+			<forward name="irInsertarLicenDiplo" path="irInsertarLicenDiplo.page" />
+			<forward name="irModificarLicenDiplo" path="irInsertarLicenDiplo.page" />
+			<forward name="irInsertarOtroFP" path="irInsertarOtroFP.page" />
+			<forward name="irModificarOtroFP" path="irInsertarOtroFP.page" />
+			<forward name="irInsertarFPSuperior" path="irInsertarFPSuperior.page" />
+			<forward name="irModificarFPSuperior" path="irInsertarFPSuperior.page" />
+			<forward name="irInsertarDoctorado" path="irInsertarDoctorado.page" />
+			<forward name="irModificarDoctorado" path="irInsertarDoctorado.page" />
+			<forward name="irInsertarEstancia" path="irInsertarEstancia.page" />
+			<forward name="irModificarEstancia" path="irInsertarEstancia.page" />
+			<forward name="irInsertarBeca" path="irInsertarBeca.page" />
+			<forward name="irModificarBeca" path="irInsertarBeca.page" />
+			<forward name="irInsertarCursoDoc" path="irInsertarCursoDoc.page" />
+			<forward name="irModificarCursoDoc" path="irInsertarCursoDoc.page" />
+			<forward name="irInsertarBibliograficas" path="irInsertarBibliograficas.page" />
+			<forward name="irModificarBibliograficas" path="irInsertarBibliograficas.page" />
+			<forward name="irInsertarBibliograficasAct" path="irInsertarBibliograficasAct.page" />
+			<forward name="irModificarBibliograficasAct" path="irInsertarBibliograficasAct.page" />
+			<forward name="irInsertarSeminariosDoc" path="irInsertarSeminariosDoc.page" />
+			<forward name="irModificarSeminariosDoc" path="irInsertarSeminariosDoc.page" />
+			<forward name="irInsertarModeradorMesa" path="irInsertarModeradorMesa.page" />
+			<forward name="irModificarModeradorMesa" path="irInsertarModeradorMesa.page" />
+			<forward name="irInsertarDocenciaPre" path="irInsertarDocenciaPre.page" />
+			<forward name="irModificarDocenciaPre" path="irInsertarDocenciaPre.page" />
+			<forward name="irInsertarDocenciaPost" path="irInsertarDocenciaPost.page" />
+			<forward name="irModificarDocenciaPost" path="irInsertarDocenciaPost.page" />
+			<forward name="irInsertarMeritoSiNo" path="irInsertarMeritoSiNo.page" />
+			<forward name="irModificarMeritoSiNo" path="irInsertarMeritoSiNo.page" />
+			<forward name="irInsertarParticipaProyecto" path="irInsertarParticipaProyecto.page" />
+			<forward name="irModificarParticipaProyecto" path="irInsertarParticipaProyecto.page" />
+			<forward name="irInsertarParticipaProyectoInvestigacion"
+				path="irInsertarParticipaProyectoInvestigacion.page" />
+			<forward name="irModificarParticipaProyectoInvestigacion"
+				path="irInsertarParticipaProyectoInvestigacion.page" />
+			<forward name="irInsertarMeritoGestion" path="irInsertarJefeServicio.page" />
+			<forward name="irModificarMeritoGestion" path="irInsertarJefeServicio.page" />
+			<forward name="irInsertarJefeServicio" path="irInsertarJefeServicio.page" />
+			<forward name="irModificarJefeServicio" path="irInsertarJefeServicio.page" />
+			<forward name="irInsertarResponsableUnidadTutor" path="irInsertarResponsableUnidadTutor.page" />
+			<forward name="irModificarResponsableUnidadTutor" path="irInsertarResponsableUnidadTutor.page" />
+			<forward name="irInsertarResponsableMaterialUnidad" path="irInsertarResponsableMaterialUnidad.page" />
+			<forward name="irModificarResponsableMaterialUnidad" path="irInsertarResponsableMaterialUnidad.page" />
+			<forward name="irInsertarResponsableMaterialServ" path="irInsertarResponsableMaterialServ.page" />
+			<forward name="irModificarResponsableMaterialServ" path="irInsertarResponsableMaterialServ.page" />
+			<forward name="irInsertarResponsableDocencia" path="irInsertarResponsableDocencia.page" />
+			<forward name="irModificarResponsableDocencia" path="irInsertarResponsableDocencia.page" />
+			<forward name="irInsertarResponsableComisionCal" path="irInsertarResponsableComisionCal.page" />
+			<forward name="irModificarResponsableComisionCal" path="irInsertarResponsableComisionCal.page" />
+			<forward name="irInsertarResponsableCartServicio" path="irInsertarResponsableCartServicio.page" />
+			<forward name="irModificarResponsableCartServicio" path="irInsertarResponsableCartServicio.page" />
+			<forward name="irInsertarResponsableActEspecifica" path="irInsertarResponsableActEspecifica.page" />
+			<forward name="irModificarResponsableActEspecifica" path="irInsertarResponsableActEspecifica.page" />
+			<forward name="irInsertarResponsableActAE" path="irInsertarResponsableActAE.page" />
+			<forward name="irModificarResponsableActAE" path="irInsertarResponsableActAE.page" />
+			<forward name="irInsertarOrganizadorDifusor" path="irInsertarOrganizadorDifusor.page" />
+			<forward name="irModificarOrganizadorDifusor" path="irInsertarOrganizadorDifusor.page" />
+			<forward name="irInsertarMiembroTribunal" path="irInsertarMiembroTribunal.page" />
+			<forward name="irModificarMiembroTribunal" path="irInsertarMiembroTribunal.page" />
+			<forward name="irInsertarMiembroConsejo" path="irInsertarMiembroConsejo.page" />
+			<forward name="irModificarMiembroConsejo" path="irInsertarMiembroConsejo.page" />
+			<forward name="irInsertarMiembroComision" path="irInsertarMiembroComision.page" />
+			<forward name="irModificarMiembroComision" path="irInsertarMiembroComision.page" />
+			<forward name="irInsertarMiembroComite" path="irInsertarMiembroComite.page" />
+			<forward name="irModificarMiembroComite" path="irInsertarMiembroComite.page" />
+			<forward name="irInsertarCoordinaEAP" path="irInsertarCoordinaEAP.page" />
+			<forward name="irModificarCoordinaEAP" path="irInsertarCoordinaEAP.page" />
+			<forward name="irInsertarBResponsableCO" path="irInsertarBResponsableCO.page" />
+			<forward name="irModificarBResponsableCO" path="irInsertarBResponsableCO.page" />
+			<forward name="irInsertarMiembroGrupo" path="irInsertarMiembroGrupo.page" />
+			<forward name="irModificarMiembroGrupo" path="irInsertarMiembroGrupo.page" />
+			<forward name="irInsertarTesis" path="irInsertarTesis.page" />
+			<forward name="irModificarTesis" path="irInsertarTesis.page" />
+			<forward name="irInsertarPatentesModelos" path="irInsertarPatentesModelos.page" />
+			<forward name="irModificarPatentesModelos" path="irInsertarPatentesModelos.page" />
+			<forward name="irInsertarRevistaCientifica" path="irInsertarRevistaCientifica.page" />
+			<forward name="irModificarRevistaCientifica" path="irInsertarRevistaCientifica.page" />
+			<forward name="irRevistaCientifica" path="irInsertarRevistaCientifica.page" />
+			<forward name="irInsertarRevisaProtocolo" path="irInsertarRevisaProtocoloGuia.page" />
+			<forward name="irModificarRevisaProtocolo" path="irInsertarRevisaProtocoloGuia.page" />
+			<forward name="irInsertarRevisaProtocoloGuia" path="irInsertarRevisaProtocoloGuia.page" />
+			<forward name="irModificarRevisaProtocoloGuia" path="irInsertarRevisaProtocoloGuia.page" />
+			<forward name="irInsertarRevisaProtocoloProced" path="irInsertarRevisaProtocoloProced.page" />
+			<forward name="irModificarRevisaProtocoloProced" path="irInsertarRevisaProtocoloProced.page" />
+			<forward name="irInsertarCreaProtocolo" path="irInsertarCreaProtocolo.page" />
+			<forward name="irModificarCreaProtocolo" path="irInsertarCreaProtocolo.page" />
+			<forward name="irInsertarExponeCasosSesCli" path="irInsertarExponeCasosSesCli.page" />
+			<forward name="irModificarExponeCasosSesCli" path="irInsertarExponeCasosSesCli.page" />
+			<forward name="irInsertarPublicacionRevistaProf" path="irInsertarPublicacionRevistaProf.page" />
+			<forward name="irModificarPublicacionRevistaProf" path="irInsertarPublicacionRevistaProf.page" />
+			<forward name="irInsertarPublicacionIndex" path="irInsertarPublicacionIndex.page" />
+			<forward name="irModificarPublicacionIndex" path="irInsertarPublicacionIndex.page" />
+			<forward name="irInsertarOtraPublicacion" path="irInsertarOtraPublicacion.page" />
+			<forward name="irModificarOtraPublicacion" path="irInsertarOtraPublicacion.page" />
+			<forward name="irInsertarOtraPublicacionISBN" path="irInsertarOtraPublicacionISBN.page" />
+			<forward name="irModificarOtraPublicacionISBN" path="irInsertarOtraPublicacionISBN.page" />
+			<forward name="irInsertarPreparaImparteAct" path="irInsertarPreparaImparteAct.page" />
+			<forward name="irModificarPreparaImparteAct" path="irInsertarPreparaImparteAct.page" />
+			<forward name="irInsertarFormaNuevoPersonal" path="irInsertarFormaNuevoPersonal.page" />
+			<forward name="irModificarFormaNuevoPersonal" path="irInsertarFormaNuevoPersonal.page" />
+			<forward name="irInsertarEvaluadorProyectos" path="irInsertarEvaluadorProyectos.page" />
+			<forward name="irModificarEvaluadorProyectos" path="irInsertarEvaluadorProyectos.page" />
+			<forward name="irInsertarCentinela" path="irInsertarCentinela.page" />
+			<forward name="irModificarCentinela" path="irInsertarCentinela.page" />
+			<forward name="irModificarCreditoMerito" path="irModificarCreditoMerito.page" />
+			<forward name="falloMerito" path="errorMerito.page" />
+			<forward name="exitoMerito" path="exitoMerito.page" />
+		</action>
+
+		<!-- OCAPCuestionarios -->
+		<action path="/OCAPCuestionarios"
+			type="es.jcyl.fqs.ocap.actions.cuestionarios.OCAPCuestionariosAction"
+			name="OCAPCuestionariosForm" scope="request" validate="true"
+			parameter="accion" input="/cuestionarios/OCAPCuestionariosAlDtMf.jsp">
+
+			<forward name="irCuestionario" path="irInsertarCuestionario.page" />
+			<forward name="irCuestionarioAS05" path="irInsertarCuestionarioAS05.page" />
+			<forward name="irEnlaces" path="irEnlacesCuestionario.page" />
+			<forward name="irPresentacion" path="irPresentacionCuestionarios.page" />
+			<forward name="irExplicacionAreas" path="irIntroduccionItinerario.page" />
+			<forward name="irInformacionArea" path="irInformacionArea.page" />
+			<forward name="irNoExisteSolicitud" path="irNoExisteSolicitud.page" />
+			<forward name="irFaseIInoAceptada" path="irFaseIInoAceptada.page" />
+			<forward name="irFaseCAnoIniciada" path="irFaseCAnoIniciada.page" />
+			<forward name="irListar" path="irListarCuestionarios.page" />
+			<forward name="irListarEvaluador" path="irListarCuestionariosEvaluador.page" />
+			<forward name="irGenerarInforme" path="irGenerarInformeCuestionarios.page" />
+			<forward name="irGenerarInforme2" path="irGenerarInformeCuestionarios2.page" />
+			<forward name="irGenerarAuditoria" path="irGenerarAuditoria.page" />
+			<forward name="irGenerarInformeCTE" path="irGenerarInformeCTECuestionarios.page" />
+			<forward name="irGenerarInformeCE" path="irGenerarInformeCECuestionarios.page" />
+			<forward name="irGenerarInformeSacyl" path="irGenerarInformeCuestionarios_Sacyl.page" />
+			<forward name="irGenerarInformeSacyl2" path="irGenerarInformeCuestionarios_Sacyl2.page" />
+			<forward name="irGenerarInformeCTESacyl" path="irGenerarInformeCTECuestionarios_Sacyl.page" />
+			<forward name="irGenerarInformeCESacyl" path="irGenerarInformeCECuestionarios_Sacyl.page" />
+			<forward name="irGenerarInformeCC" path="irGenerarInformeCCCuestionarios.page" />
+			<forward name="irEvalCuestionario" path="irEvaluacionCuestionario.page" />
+			<forward name="irAnalisisCuestionario" path="irAnalisisCuestionario.page" />
+			<forward name="irProteccionDatos" path="irProteccionDatos.page" />
+			<forward name="irSintesis" path="irInsertarSintesis.page" />
+			<forward name="irPonderacion" path="irPonderacion.page" />
+			<forward name="irDossier" path="irDossier.page" />
+			<forward name="error" path="/mensajes.jsp" />
+			<forward name="exito" path="exito.page" />
+			<forward name="irDatosUsuario" path="datosUsuarioFaseIII.page" />
+			<forward name="irRenunciaSolicitud" path="irRenunciaSolicitud.page" />
+			<forward name="irElegirItinerario"
+				path="/OCAPNuevaSolicitud.do?accion=irInsertarUsuarioPruebas"
+				redirect="true" />
+			<forward name="irAlertaProteccionDatos" path="irAlertaProteccionDatos.page" />
+		</action>
+
+		<!-- OCAPSugerencias -->
+		<action path="/OCAPSugerencias"
+			type="es.jcyl.fqs.ocap.actions.sugerencias.OCAPSugerenciasAction"
+			name="OCAPSugerenciasForm" scope="request" validate="true" parameter="accion">
+
+			<forward name="irSugerencias" path="irSugerencias.page" />
+			<forward name="exito" path="mensajeExito.page" />
+			<forward name="inicio" path="/PaginaInicio.do" />
+		</action>
+
+		<!-- OCAPGlosario -->
+		<action path="/OCAPGlosario"
+			type="es.jcyl.fqs.ocap.actions.glosario.OCAPGlosarioAction" name="OCAPGlosarioForm"
+			scope="request" validate="true" parameter="accion">
+
+			<forward name="irGlosario" path="irGlosario.page" />
+		</action>
+
+		<!-- OCAPEvaluadores -->
+		<action path="/OCAPEvaluadores"
+			type="es.jcyl.fqs.ocap.actions.evaluadores.OCAPEvaluadoresAction"
+			name="OCAPComponentesfqsForm" scope="request" validate="true"
+			parameter="accion">
+
+			<forward name="irInsertar" path="irInsertarCompfqs.page" />
+			<forward name="verDetalle" path="irInsertarCompfqs.page" />
+			<forward name="irBuscar" path="irListarEval.page" />
+			<forward name="irEvaluados" path="irListarEvaluados.page" />
+			<forward name="irListarEvaluadosGerenciaCTE" path="irListarEvaluadosGerenciaCTE.page" />
+			<forward name="irBuscarEvaluadosGrenciaCTE" path="irListarEvaluadosGerenciaCTE.page" />
+			<forward name="irEvaluadosEpr" path="irListarEvaluadosEpr.page" />
+			<forward name="irEvaluadosEprSacyl" path="irListarEvaluadosEpr_Sacyl.page" />
+			<forward name="irModificar" path="irInsertarCompfqs.page" />
+			<forward name="irBuscarEncuestaParticular" path="irListarEncuestaParticular.page" />
+			<forward name="irModificarConv" path="irModificarConv.page" />
+			<forward name="irIndicadores" path="irIndicadores.page" />
+			<forward name="error" path="/mensajes.jsp" />
+			<forward name="exito" path="mensajeExito.page" />
+			<forward name="irAsignarEvaluados" path="irAsignarEvaluados.page" />
+		</action>
+
+		<!-- OCAPIndicadores -->
+		<action path="/OCAPIndicadores"
+			type="es.jcyl.fqs.ocap.actions.indicadores.OCAPIndicadoresAction"
+			name="OCAPComponentesfqsForm" scope="request" validate="true"
+			parameter="accion">
+
+			<forward name="irIndicadores" path="irIndicador.page" />
+			<forward name="irIndicadoresProfesional" path="irIndicadoresProfesional.page" />
+			<forward name="irIndicadoresEvaluador" path="irIndicadoresEvaluador.page" />
+			<forward name="irIndicadoresCTE" path="irIndicadoresCTE.page" />
+			<forward name="irIndicadoresCE" path="irIndicadoresCE.page" />
+			<forward name="irIndicadoresSecretaria" path="irIndicadoresSecretaria.page" />
+			<forward name="error" path="/mensajes.jsp" />
+			<forward name="exito" path="mensajeExito.page" />
+		</action>
+
+		<!-- OCAPEncuestas -->
+		<action path="/OCAPEncuestas"
+			type="es.jcyl.fqs.ocap.actions.evaluadores.OCAPEncuestasAction" name="OCAPComponentesfqsForm"
+			scope="request" validate="true" parameter="accion">
+
+			<forward name="irInsertar" path="irInsertarCompfqs.page" />
+		</action>
+
+		<!-- OCAPComponentesCtes -->
+		<action path="/OCAPComponentesCtes"
+			type="es.jcyl.fqs.ocap.actions.componentesCtes.OCAPComponentesCtesAction"
+			name="OCAPComponentesfqsForm" scope="request" validate="true"
+			parameter="accion">
+
+			<forward name="irInsertar" path="irInsertarCompCtes.page" />
+			<forward name="irComponentes" path="irListarCompCtes.page" />
+			<forward name="irListar" path="irListarCompCtes.page" />
+			<forward name="irBorrar" path="irBorrarCompCtes.page" />
+			<forward name="irModificar" path="irInsertarCompCtes.page" />
+			<forward name="irListarEval" path="irListarEval.page" />
+			<forward name="error" path="/mensajes.jsp" />
+			<forward name="exito" path="mensajeExito.page" />
+			<forward name="irListarEvaluadoresEvaluados" path="irListarEvaluadoresEvaluados.page" />
+		</action>
+
+		<!-- OCAPGestionCtes -->
+		<action path="/OCAPGestionCtes"
+			type="es.jcyl.fqs.ocap.actions.gestionCtes.OCAPGestionCtesAction"
+			name="OCAPGestionCtesForm" scope="request" validate="true" parameter="accion">
+
+			<forward name="irInsertar" path="irInsertarCtes.page" />
+			<forward name="verDetalle" path="irInsertarCtes.page" />
+			<forward name="irListar" path="irListarCtes.page" />
+			<forward name="irBorrar" path="irBorrarCtes.page" />
+			<forward name="irModificar" path="irInsertarCtes.page" />
+			<forward name="error" path="/mensajes.jsp" />
+			<forward name="exito" path="mensajeExito.page" />
+		</action>
+
+		<!-- OCAPDocumentos -->
+		<action path="/OCAPDocumentos"
+			type="es.jcyl.fqs.ocap.actions.documentos.OCAPDocumentosAction" name="OCAPDocumentosForm"
+			scope="request" validate="true" parameter="accion">
+			<forward name="mostrar" path="irAltaDocumentos.page" />
+			<forward name="cargarXML" path="irCargarXML.page" />
+			<forward name="exito" path="mensajeExito.page" />
+			<forward name="irNoExisteSolicitud" path="irNoExisteSolicitud.page" />
+			<forward name="irNoExisteItinerario" path="irNoExisteItinerario.page" />
+			<forward name="mensajeExitoSinFormulario" path="mensajeExitoSinFormulario.page" />
+			<forward name="mostrarDocEvidencia" path="irAltaDocumentosEvidencia.page" />
+		</action>
+
+		<!-- OCAPPreguntas -->
+		<action path="/OCAPPreguntas"
+			type="es.jcyl.fqs.ocap.actions.preguntas.OCAPPreguntasAction" name="OCAPPreguntasForm"
+			scope="request" validate="true" parameter="accion">
+
+			<forward name="irPreguntas" path="irPreguntas.page" />
+			<forward name="irModificarPregunta" path="irModificarPregunta.page" />
+			<forward name="irAltaRespuestas" path="irAltaRespuestas.page" />
+			<forward name="exito" path="mensajeExito.page" />
+		</action>
+
+		<!-- OCAPConversiones -->
+		<action path="/OCAPConversiones"
+			type="es.jcyl.fqs.ocap.actions.conversiones.OCAPConversionesAction"
+			name="OCAPConversionesForm" scope="request" validate="true"
+			parameter="accion">
+
+			<forward name="irConvertirHtmlItinerario" path="irConvertirHtmlItinerario.page" />
+			<forward name="exito" path="mensajeExito.page" />
+		</action>
+
+		<!-- OCAPReuniones -->
+		<action path="/OCAPReuniones"
+			type="es.jcyl.fqs.ocap.actions.reuniones.OCAPReunionesAction" name="OCAPReunionesForm"
+			scope="request" validate="true" parameter="accion">
+
+			<forward name="irInsertar" path="irInsertarReu.page" />
+			<forward name="error" path="/mensajes.jsp" />
+			<forward name="exito" path="mensajeExito.page" />
+		</action>
+
+		<!-- Monitorizacion: Todo lo que tenga que ver con monitorización del sistema 
+			para sacar estadisticas -->
+		<action path="/OCAPMonitorizacion"
+			type="es.jcyl.fqs.ocap.actions.monitorizacion.OCAPMonitorizacionAction"
+			name="OCAPMonitorizacionForm" scope="request" parameter="accion"
+			validate="true" input="irMonitorizarBD.page">
+
+			<forward name="irMonitorizarBD" path="irMonitorizarBD.page" />
+			<forward name="monitorizarBD" path="monitorizarBD.page" />
+		</action>
+
+		<!-- OCAPDudasTutores -->
+		<action path="/OCAPDudasTutores"
+			type="es.jcyl.fqs.ocap.actions.dudasTutores.OCAPDudasTutoresAction"
+			name="OCAPDudasTutoresForm" scope="request" validate="true"
+			parameter="accion">
+
+			<forward name="irPreguntasFrecuentes" path="irPreguntasFrecuentes.page" />
+			<forward name="irTutor" path="irTutor.page" />
+			<forward name="irTutoresLs" path="irTutoresLs.page" />
+			<forward name="irDuda" path="irDuda.page" />
+			<forward name="irDudasTutorLs" path="irDudasTutorLs.page" />
+			<forward name="irDudasUsuarioLs" path="irDudasUsuarioLs.page" />
+			<forward name="irDudasLs" path="irDudasLs.page" />
+			<forward name="irCSVDudas" path="irCSVDudas.page" />
+			<forward name="error" path="/mensajes.jsp" />
+			<forward name="exito" path="mensajeExito.page" />
+			<forward name="exitoDuda" path="mensajeExitoDuda.page" />
+		</action>
+
+		<!-- Expedientes: Nuevo action de expedientes para acciones posteiores 
+			a solicitudes -->
+		<action path="/OCAPExpedientes"
+			type="es.jcyl.fqs.ocap.actions.expedientes.OCAPExpedientesAction"
+			name="OCAPExpedientesForm" scope="session" parameter="accion"
+			validate="true" input="formularioExpedientes.page">
+			<!-- <forward name="irInsercionExpediente" path="formularioExpediente.page"/> 
+				<forward name="insertarExpediente" path="mensajeExito.page"/> -->
+			<forward name="irBuscadorExpedientes" path="listadoExpedientes.page" />
+			<forward name="listarExpedientes" path="listadoExpedientes.page" />
+			<forward name="irNoExistenConvocatoriasSolic" path="irNoExistenConvocatoriasSolic.page" />
+			<forward name="irConvocatoriaCerrada" path="irConvocatoriaCerrada.page" />
+			<forward name="error" path="/mensajes.jsp" />
+			<forward name="exito" path="mensajeExito.page" />
+		</action>
+
+		<!-- OCAPActas -->
+		<action path="/OCAPActas" type="es.jcyl.fqs.ocap.actions.actas.OCAPActasAction"
+			name="OCAPActasForm" scope="session" validate="true" parameter="accion"
+			input="/actas/OCAPGenerarActas.jsp">
+
+			<forward name="irGenerarActas" path="irGenerarActas.page" />
+			<forward name="irImprimirActa" path="irImprimirActa.page" />
+			<forward name="irGenerarActas" path="irGenerarActas.page" />
+			<forward name="irConsultarActas" path="irConsultarActas.page" />
+		</action>
+
+		<!-- Obtencion de listado de logs -->
+		<action path="/Log" type="es.jcyl.cee.log.actions.LOGListadoAction"
+			parameter="_LOG_inicial">
+			<forward name="exito" path="LOGListado.page" />
+			<forward name="fallo" path="/mensajes.jsp" />
+		</action>
+
+		<!-- Descarga del log -->
+		<action path="/DescargaLog" type="es.jcyl.cee.log.actions.LOGDescargaAction"></action>
+
+		<!-- Cambiar el nivel del log -->
+		<action path="/ListaNivelLog" type="es.jcyl.cee.log.actions.LOGListaNivelAction">
+			<forward name="exito" path="LOGListaNivel.page" />
+			<forward name="fallo" path="/mensajes.jsp" />
+		</action>
+
+		<action path="/CambiaNivelLog" type="es.jcyl.cee.log.actions.LOGCambiaNivelAction">
+			<forward name="exito" path="/ListaNivelLog.do" />
+			<forward name="fallo" path="/mensajes.jsp" />
+		</action>
+		
+		<!-- OCAP No aporta meritos -->
+		<action path="/OCAPNoAportaMeritos" name="OCAPNoAportaMeritosForm"
+			type="es.jcyl.fqs.ocap.actions.meritos.OCAPNoAportaMeritosAction" scope="request" parameter="accion">
+
+			<forward name="MC" path="noAportaMc.page" />
+			<forward name="MA" path="noAportaMa.page" />
+			<forward name="sinConvocatoriasMc" path="sinConvocatoriasMc.page" />
+			<forward name="sinConvocatoriasMa" path="sinConvocatoriasMa.page" />
+			<forward name="OK" path="OkMeritos.page" />
+			<forward name="ERROR" path="ErrorMeritos.page" />
+		</action>
+		
+		
+		<!-- OCAP Ver meritos anteriores -->
+		<action path="/OCAPMeritosAnteriores" name="OCAPMeritosAnterioresForm"
+			type="es.jcyl.fqs.ocap.actions.meritos.OCAPMeritosAnterioresAction" scope="request" parameter="accion">
+
+			<forward name="verMeritosAnterioresValidados" path="verMeritosAnteriores.page" />
+			
+		</action>
+		
+		<!-- OCAPAsistenciales -->
+		<action path="/OCAPAsistenciales"
+			type="es.jcyl.fqs.ocap.actions.meritosAsistenciales.OCAPAsistencialesAction" name="OCAPAreasTrabajoForm"
+			scope="request" validate="true" parameter="accion">
+
+			<forward name="irOCAPDesbloqueoAsistenciales" path="irOCAPDesbloqueoAsistenciales.page" />
+			<forward name="irErrorAsistenciales" path="irErrorAsistenciales.page" />
+			<forward name="irOCAPAvisoAsistenciales" path="irOCAPAvisoAsistenciales.page" />
+			<forward name="irOkAsistenciales" path="irOkAsistenciales.page" />
+		</action>
+
+	</action-mappings>
+
+
+	<!-- ========== Tiles plug-in setting settings =================== -->
+	<!-- Here you can specify your own RequestProcessor extending the TilesRequestProcessor 
+		If you have no RequestProcessor, let Tiles plug-in register appropriate RequestProcessor -->
+
+	<controller processorClass="es.jcyl.framework.JCYLRequestProcessor" />
+
+	<!-- ========== Associated Messages Ressource settings =================== -->
+	<!-- Not used by tiles or this website, but needed due to a bug in actual 
+		Struts version -->
+	<!-- comment following if struts1.0.x -->
+	<message-resources
+		parameter="org.apache.struts.webapp.tiles.dev1-1.ApplicationResources"
+		null="false" />
+	<!-- end comment if struts1.0.x -->
+
+	<!-- ========== Tiles plugin =================== -->
+	<!-- -->
+	<!-- This plugin initialize Tiles definition factory. This later can takes 
+		some parameters explain here after. The plugin first read parameters from 
+		web.xml, then overload them with parameters defined here. All parameters 
+		are optional. The plugin should be declared in each struts-config file. - 
+		definitions-config: (optional) Specify configuration file names. There can 
+		be several comma separated file names (default: ?? ) - moduleAware: (optional 
+		- struts1.1) Specify if the Tiles definition factory is module aware. If 
+		true (default), there will be one factory for each Struts module. If false, 
+		there will be one common factory for all module. In this later case, it is 
+		still needed to declare one plugin per module. The factory will be initialized 
+		with parameters found in the first initialized plugin (generally the one 
+		associated with the default module). true : One factory per module. (default) 
+		false : one single shared factory for all modules - definitions-parser-validate: 
+		(optional) Specify if xml parser should validate the Tiles configuration 
+		file. true : validate. DTD should be specified in file header. (default) 
+		false : no validation - definitions-debug: (deprecated - no more effect) 
+		Specify Tiles debug level. O : no debug information 1 : debug information 
+		2 : more debug information - definitions-parser-details: (deprecated -no 
+		more effect) Specify Digester debug level. This value is passed to Digester 
+		O : no debug information (default) 1 : debug information 2 : more debug information 
+		The TilesPlugin class create one single definition factory shared by all 
+		struts modules, even if the plugin is declared several times. Paths found 
+		in Tiles definitions are relative to the main context. -->
+	<!-- comment following if struts1.0.x -->
+	<plug-in className="org.apache.struts.tiles.TilesPlugin">
+		<set-property property="definitions-config" value="/WEB-INF/tiles-def.xml" />
+		<set-property property="definitions-debug" value="1" />
+		<set-property property="moduleAware" value="true" />
+		<set-property property="definitions-parser-details"
+			value="0" />
+		<set-property property="definitions-parser-validate"
+			value="true" />
+	</plug-in>
+
+	<!-- end comment if struts1.0.x -->
+	<plug-in className="org.apache.struts.validator.ValidatorPlugIn">
+		<set-property property="pathnames"
+			value="/WEB-INF/validator-rules.xml,/WEB-INF/validation.xml" />
+	</plug-in>
+
+</struts-config>

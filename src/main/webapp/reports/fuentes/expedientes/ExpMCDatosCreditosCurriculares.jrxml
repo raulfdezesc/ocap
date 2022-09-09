@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ExpMCDatosCreditosCurriculares" pageWidth="555" pageHeight="105" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<style name="normal" isDefault="true" fontName="Helvetica" fontSize="11" isBold="false" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica-Oblique" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+	<style name="negrita" isDefault="false" fontName="Helvetica" fontSize="11" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica-BoldOblique" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+	<style name="normal13" isDefault="false" fontName="Helvetica" fontSize="13" isBold="false" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica-Oblique" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+	<style name="negrita13" isDefault="false" fontName="Helvetica" fontSize="13" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica-BoldOblique" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+	<field name="actividad" class="java.lang.String"/>
+	<field name="creditosNecesarios" class="java.lang.Float"/>
+	<field name="creditosObtenidos" class="java.lang.Float"/>
+	<field name="creditosCEIS" class="java.lang.Float"/>
+	<field name="creditosCC" class="java.lang.Float"/>
+	<field name="conseguido" class="java.lang.Boolean"/>
+	<field name="conseguidoCEIS" class="java.lang.Boolean"/>
+	<field name="conseguidoCC" class="java.lang.Boolean"/>
+	<field name="verCEIS" class="java.lang.Boolean"/>
+	<field name="verCC" class="java.lang.Boolean"/>
+	<columnHeader>
+		<band height="82" isSplitAllowed="false">
+			<staticText>
+				<reportElement key="staticText-CreditosCurriculares" style="negrita13" x="0" y="0" width="555" height="25"/>
+				<box padding="2">
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Bottom"/>
+				<text><![CDATA[CRÉDITOS CURRICULARES]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-Actividad" style="negrita" x="11" y="33" width="179" height="49"/>
+				<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Actividad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-CreditosNecesarios" style="negrita" x="190" y="33" width="90" height="49"/>
+				<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Nº Creditos Necesarios]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-CreditosObtenidos" style="negrita" x="280" y="33" width="90" height="49"/>
+				<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Nº Creditos Alcanzados]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-CreditosCEIS" style="negrita" x="370" y="33" width="90" height="49">
+					<printWhenExpression><![CDATA[$F{verCEIS}]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Nº Creditos Validados CEIS]]></text>
+			</staticText>
+			<staticText>
+				<reportElement key="staticText-CreditosCC" style="negrita" x="460" y="33" width="90" height="49">
+					<printWhenExpression><![CDATA[$F{verCC}]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<text><![CDATA[Nº Creditos Validados CC]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="17">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement key="textField-Actividad" style="negrita" x="11" y="0" width="179" height="17"/>
+				<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{actividad}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement key="textField-CreditosNecesarios" style="normal" x="190" y="0" width="90" height="17"/>
+				<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.Float"><![CDATA[$F{creditosNecesarios}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement key="textField-CreditosObtenidos" style="normal" mode="Opaque" x="280" y="0" width="90" height="17" backcolor="#E0FFE0">
+					<printWhenExpression><![CDATA[$F{conseguido}]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.Float"><![CDATA[$F{creditosObtenidos}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement key="textField-CreditosObtenidos" style="normal" mode="Opaque" x="280" y="0" width="90" height="17" backcolor="#FFBFBF">
+					<printWhenExpression><![CDATA[new Boolean(!($F{conseguido}).booleanValue())]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.Float"><![CDATA[$F{creditosObtenidos}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement key="textField-CreditosCEIS" style="normal" mode="Opaque" x="370" y="0" width="90" height="17" backcolor="#E0FFE0">
+					<printWhenExpression><![CDATA[new Boolean(($F{conseguidoCEIS}).booleanValue()&& ($F{verCEIS}).booleanValue())]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.Float"><![CDATA[$F{creditosCEIS}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement key="textField-CreditosCEIS" style="normal" mode="Opaque" x="370" y="0" width="90" height="17" backcolor="#FFBFBF">
+					<printWhenExpression><![CDATA[new Boolean((!($F{conseguidoCEIS}).booleanValue())&& ($F{verCEIS}).booleanValue())]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.Float"><![CDATA[$F{creditosCEIS}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement key="textField-CreditosCC" style="normal" mode="Opaque" x="460" y="0" width="90" height="17" backcolor="#E0FFE0">
+					<printWhenExpression><![CDATA[new Boolean(($F{conseguidoCC}).booleanValue()&& ($F{verCC}).booleanValue())]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.Float"><![CDATA[$F{creditosCC}]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement key="textField-CreditosCC" style="normal" mode="Opaque" x="460" y="0" width="90" height="17" backcolor="#FFBFBF">
+					<printWhenExpression><![CDATA[new Boolean((!($F{conseguidoCC}).booleanValue())&& ($F{verCC}).booleanValue())]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2">
+					<topPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<leftPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+					<rightPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+				</box>
+				<textElement textAlignment="Center" verticalAlignment="Middle"/>
+				<textFieldExpression class="java.lang.Float"><![CDATA[$F{creditosCC}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="5"/>
+	</columnFooter>
+</jasperReport>

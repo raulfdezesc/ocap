@@ -1,0 +1,1117 @@
+<!DOCTYPE tiles-definitions PUBLIC  "-//Apache Software Foundation//DTD Tiles Configuration//EN"  "http://jakarta.apache.org/struts/dtds/tiles-config.dtd">
+
+<tiles-definitions>
+
+	<definition name="plantilla_estructura_jsp" path="/estructura.jsp">
+		<put name='cabecera' value='/cabecera.jsp' />
+		<put name='consejApartado' value='/consejeria.jsp' />
+		<put name='menu' value='/menuHTML.jsp' />
+		<put name='rutaNavegacion' value='/rutaNavegacion.jsp' />
+		<put name='contenido' value='/blank.jsp' />
+		<put name='pie' value='/bottom.jsp' />
+	</definition>
+
+	<definition name="plantilla_itinerarios_jsp" path="/estructura.jsp">
+		<put name='cabecera' value='/cabeceraItinerarios.jsp' />
+		<put name='consejApartado' value='/consejeria.jsp' />
+		<put name='menu' value='/menuHTML.jsp' />
+		<put name='rutaNavegacion' value='/rutaNavegacion.jsp' />
+		<put name='contenido' value='/blank.jsp' />
+		<put name='pie' value='/bottom.jsp' />
+	</definition>
+
+
+
+	<definition name='irAcceso.page' path='/acceso/altaAcceso.jsp'>	</definition>
+
+	<!-- Solicitudes -->
+	<definition name='irSolicitud.page' path='/solicitudes/OCAPSolicitudesUsuarioAl.jsp'>
+	</definition>
+
+	<definition name='irNuevaSolicitud.page'
+		path='/solicitudes/OCAPNuevaSolicitudUsuarioAl.jsp'>
+	</definition>
+
+	<definition name="irImprimirSolicitud.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPImprimirSolicitudDt.jsp" />
+	</definition>
+
+	<definition name='irImprimirSolicitudPublica.page'
+		path='/solicitudes/OCAPImprimirSolicitudPublicaDt.jsp'>
+	</definition>
+
+	<definition name="irInsertar.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPSolicitudesAl.jsp" />
+	</definition>
+
+	<definition name="irNuevaInsertar.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPNuevaSolicitudAl.jsp" />
+	</definition>
+
+	<definition name="irNuevaInsertarFechas.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPNuevaSolicitudAlFechas.jsp" />
+	</definition>
+
+	<definition name="irNuevaInsertarExp.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPNuevaSolicitudExpDt.jsp" />
+	</definition>
+
+	<definition name="irNuevaInsertarPrueba.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPSolicitudPruebasAl.jsp" />
+	</definition>
+
+	<definition name="irNuevaModificar.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPNuevaSolicitudMf.jsp" />
+	</definition>
+
+	<definition name="irModificar.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPSolicitudesMf.jsp" />
+	</definition>
+
+	<definition name="irBuscarSolic.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPSolicitudes_aLs.jsp" />
+	</definition>
+
+	<definition name="irBuscarB.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPSolicitudes_bLs.jsp" />
+	</definition>
+
+	<definition name="irBuscarAdmGrs.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPSolicitudes_cLs.jsp" />
+	</definition>
+
+	<definition name="irBuscarAdmGrsFechas.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPSolicitudes_fechas.jsp" />
+	</definition>
+
+	<definition name="irListado.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPSolicitudesListadosLs.jsp" />
+	</definition>
+
+	<definition name="irBuscar.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPSolicitudesLs.jsp" />
+	</definition>
+
+	<definition name="irBuscarGrs.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPSolicitudesGrsLs.jsp" />
+	</definition>
+
+	<definition name="irCopiarDNI.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPSolicitudesCopiarDNIAl.jsp" />
+	</definition>
+
+	<definition name="irCSVDinamico.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPSolicitudesCSVDinamico.jsp" />
+	</definition>
+
+	<definition name="irCSVDinamicoFQS.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/solicitudes/OCAPSolicitudesCSVDinamico.jsp" />
+	</definition>
+
+	<!-- <definition name="irDetalle.page" extends="plantilla_estructura_jsp"> 
+		<put name="contenido" value="/solicitudes/OCAPSolicitudesDt.jsp"/> </definition> -->
+
+	<definition name="irDetalle.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPNuevaSolicitudDt.jsp" />
+	</definition>
+
+	<definition name="irDenegacion.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPDenegacion_aAl.jsp" />
+	</definition>
+
+	<definition name="irInconformidad.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPInconformidad_aAl.jsp" />
+	</definition>
+
+	<definition name="listarFaseCa.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPSolicitudesFaseLs.jsp" />
+	</definition>
+
+	<definition name="listarFaseDocumentos.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPSolicitudesFaseDocumentosLs.jsp" />
+	</definition>
+
+	<definition name="detalleEvaluado.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPSolicitudesFaseDt.jsp" />
+	</definition>
+
+	<definition name="mensajeExito.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/comun/mensajeExito.jsp" />
+	</definition>
+
+	<definition name="mensajeExitoSinFormulario.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/comun/mensajeExitoSinFormulario.jsp" />
+	</definition>
+
+<definition name="mensajeErrorSinFormulario.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/comun/mensajeErrorSinFormulario.jsp" />
+	</definition>
+
+	<definition name="mensajeConfirma.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPMensajeConfirma.jsp" />
+	</definition>
+
+	<definition name="ayuda.page" path="/solicitudes/OCAPAyudaSolicitud.jsp">
+	</definition>
+
+	<definition name="exito.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/comun/mensajeExito.jsp" />
+	</definition>
+
+	<definition name="irNoExistenConvocatorias.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPNoExistenConvocatoriasDt.jsp" />
+	</definition>
+
+	<definition name="irNoExistenConvocatoriasSolic.page"
+		extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPNoExistenConvocatoriasSolicDt.jsp" />
+	</definition>
+
+	<definition name="irConvocatoriaCerrada.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPConvocatoriaCerradaDt.jsp" />
+	</definition>
+
+	<definition name="irNoExisteSolicitud.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPNoExisteSolicitudDt.jsp" />
+	</definition>
+
+	<definition name="irNoPermiteRenunciaSolicitud.page"
+		extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPNoPermiteRenunciaSolicitudDt.jsp" />
+	</definition>
+
+	<definition name="irNoExisteSolicitudFaseIII.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/solicitudes/OCAPNoExisteSolicitudDt.jsp" />
+	</definition>
+
+	<definition name="irFaseIInoAceptada.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/solicitudes/OCAPFaseMCnoAceptadaDt.jsp" />
+	</definition>
+
+	<definition name="irFaseMCnoConcluida.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPFaseMCnoConcluidaDt.jsp" />
+	</definition>
+
+	<definition name="irFaseCAnoIniciada.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPFaseCAnoIniciadaDt.jsp" />
+	</definition>
+
+	<definition name="irFaseCAnoIniciadaConcluida.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPFaseCAnoIniciadaConcluidaDt.jsp" />
+	</definition>
+
+	<definition name="irFaseCAConcluida.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPFaseCAConcluidaDt.jsp" />
+	</definition>
+
+	<definition name="irReactivarCA.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPReactivarCaAl.jsp" />
+	</definition>
+
+	<definition name="irFaseMCnoIniciada.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPFaseMCnoIniciadaDt.jsp" />
+	</definition>
+
+	<definition name="irRenunciaSolicitud.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPRenunciaSolicitudDt.jsp" />
+	</definition>
+
+	<definition name="irNoExisteItinerario.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/cuestionarios/OCAPNoExisteItinerarioDt.jsp" />
+	</definition>
+
+	<definition name="irSolicitudNoAceptada.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPSolicitudNoAceptadaDt.jsp" />
+	</definition>
+
+	<definition name="irNoExisteUsuario.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPUsuarioNoEncontradoDt.jsp" />
+	</definition>
+
+	<definition name="errorSolicitud.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/solicitudes/OCAPSolicitudesError.jsp" />
+	</definition>
+
+	<!-- Gerencias -->
+	<definition name="irInsertarGer.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/gerencias/OCAPGerenciasAlDtMf.jsp" />
+	</definition>
+
+	<definition name="irConsultarGer.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/gerencias/OCAPGerenciasCn.jsp" />
+	</definition>
+
+	<!-- Grado -->
+	<definition name="irInsertarGra.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/grado/OCAPGradoAlDtMf.jsp" />
+	</definition>
+
+	<definition name="irConsultarGra.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/grado/OCAPGradoCn.jsp" />
+	</definition>
+
+	<!-- Areas de trabajo -->
+	<definition name="irInsertarArT.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/areasTrabajo/OCAPAreasTrabajoAlDtMf.jsp" />
+	</definition>
+
+	<definition name="irConsultarArT.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/areasTrabajo/OCAPAreasTrabajoCn.jsp" />
+	</definition>
+
+	<!-- Renuncia -->
+	<definition name="irRenunciar.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/renuncia/OCAPRenuncia.jsp" />
+	</definition>
+
+	<!-- Encuesta calidad -->
+	<definition name="irRellenarEnc.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/encuestaCalidad/OCAPEncuestaCalidadAlDtMf.jsp" />
+	</definition>
+
+	<!-- Tipos de gerencia -->
+	<definition name="irInsertarTip.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/tipoGerencias/OCAPTipoGerenciasAlDtMf.jsp" />
+	</definition>
+
+	<definition name="irConsultarTip.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/tipoGerencias/OCAPTipoGerenciasCn.jsp" />
+	</definition>
+
+	<!-- Servicios -->
+	<definition name="irInsertarSer.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/servicios/OCAPServiciosAlDtMf.jsp" />
+	</definition>
+
+	<definition name="irConsultarSer.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/servicios/OCAPServiciosCn.jsp" />
+	</definition>
+
+	<!-- Personal Estatutario -->
+	<definition name="irInsertarPer.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/personalEstatutario/OCAPPersEstatutarioAlDtMf.jsp" />
+	</definition>
+
+	<definition name="irConsultarPer.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/personalEstatutario/OCAPPersEstatutarioCn.jsp" />
+	</definition>
+
+	<!-- Estatutario -->
+	<definition name="irInsertarEst.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/estatutario/OCAPEstatutarioAlDtMf.jsp" />
+	</definition>
+
+	<definition name="irConsultarEst.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/estatutario/OCAPEstatutarioCn.jsp" />
+	</definition>
+
+	<!-- Perfiles -->
+	<definition name="irInsertarPrf.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/perfiles/OCAPPerfilesAlDtMf.jsp" />
+	</definition>
+
+	<definition name="irConsultarPrf.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/perfiles/OCAPPerfilesCn.jsp" />
+	</definition>
+
+	<!-- Especialidades -->
+	<definition name="irInsertarEsp.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/especialidades/OCAPEspecialidadesAlDtMf.jsp" />
+	</definition>
+
+	<definition name="irConsultarEsp.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/especialidades/OCAPEspecialidadesCn.jsp" />
+	</definition>
+
+	<!-- Centros de trabajo -->
+	<definition name="irInsertarCen.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/centroTrabajo/OCAPCentroTrabajoAlDtMf.jsp" />
+	</definition>
+
+	<definition name="irConsultarCen.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/centroTrabajo/OCAPCentroTrabajoCn.jsp" />
+	</definition>
+
+	<!-- Definicion de meritos curriculares -->
+	<definition name="irInsertarMer.page" extends="plantilla_estructura_jsp">
+		<put name="contenido"
+			value="/defMeritosCurriculares/OCAPDefMeritoscurricularesAlDtMf.jsp" />
+	</definition>
+
+	<definition name="irConsultarMer.page" extends="plantilla_estructura_jsp">
+		<put name="contenido"
+			value="/defMeritosCurriculares/OCAPDefMeritoscurricularesCn.jsp" />
+	</definition>
+
+	<!-- Creditos -->
+	<definition name="irInsertarCre.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/creditos/OCAPCreditosAlDtMf.jsp" />
+	</definition>
+
+	<definition name="irConsultarCre.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/creditos/OCAPCreditosCn.jsp" />
+	</definition>
+
+	<!-- MiembrosComites -->
+	<definition name="irCargar.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/actas/OCAPMiembrosComitesAlCn.jsp" />
+	</definition>
+
+	<!-- Categorias Profesionales -->
+	<definition name="irInsertarCat.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/categProfesionales/OCAPCategProfesionalesAlDtMf.jsp" />
+	</definition>
+
+	<definition name="irConsultarCat.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/categProfesionales/OCAPCategProfesionalesCn.jsp" />
+	</definition>
+
+	<!-- Meritos Curriculares -->
+	<definition name="irInsertarMerCurr.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritosCurriculares/OCAPMeritoscurricularesDtMf.jsp" />
+	</definition>
+
+	<definition name="irConsultarMerCurr.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritosCurriculares/OCAPMeritoscurricularesCn.jsp" />
+	</definition>
+
+	<!-- Meritos Modalidad -->
+	<definition name="irInsertarMerMod.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritosModalidad/OCAPMerModalidadAlDtMf.jsp" />
+	</definition>
+
+	<definition name="irConsultarMerMod.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritosModalidad/OCAPMerModalidadCn.jsp" />
+	</definition>
+
+	<!-- Meritos Actividad -->
+	<definition name="irInsertarMerAct.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritosActividad/OCAPMeractividadAlDtMf.jsp" />
+	</definition>
+
+	<definition name="irConsultarMerAct.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritosActividad/OCAPMeractividadCn.jsp" />
+	</definition>
+
+	<!-- Mensajes MC -->
+	<definition name="irInsertarMenMc.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/mensajesMc/OCAPMensajesMcAlDtMf.jsp" />
+	</definition>
+
+	<definition name="irConsultarMenMc.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/mensajesMc/OCAPMensajesMcCn.jsp" />
+	</definition>
+
+	<!-- Mensajes -->
+	<definition name="irInsertarMen.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/mensajes/OCAPMensajesAlDtMf.jsp" />
+	</definition>
+
+	<definition name="irConsultarMen.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/mensajes/OCAPMensajesCn.jsp" />
+	</definition>
+
+	<!-- Factores de Impacto -->
+	<definition name="irInsertarFact.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/factoresImpacto/OCAPFactoresImpactoAlDtMf.jsp" />
+	</definition>
+
+	<definition name="irConsultarFact.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/factoresImpacto/OCAPFactoresImpactoCn.jsp" />
+	</definition>
+
+	<!-- Tipos de firmante -->
+	<definition name="irInsertarTipFir.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/tiposFirmante/OCAPTiposFirmanteAlDtMf.jsp" />
+	</definition>
+
+	<definition name="irConsultarTipFir.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/tiposFirmante/OCAPTiposFirmanteCn.jsp" />
+	</definition>
+
+	<!-- Convocatorias -->
+	<definition name="irInsertarCon.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/convocatorias/OCAPConvocatoriasAlDtMf.jsp" />
+	</definition>
+
+	<definition name="irConsultarCon.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/convocatorias/OCAPConvocatoriasCn.jsp" />
+	</definition>
+
+	<!-- Areas -->
+	<definition name="irInsertarAre.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/areas/OCAPAreasAlDtMf.jsp" />
+	</definition>
+
+	<definition name="irConsultarAre.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/areas/OCAPAreasCn.jsp" />
+	</definition>
+
+	<!-- Unidades -->
+	<definition name="irInsertarUni.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/unidades/OCAPUnidadesAlDtMf.jsp" />
+	</definition>
+
+	<definition name="irConsultarUni.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/unidades/OCAPUnidadesCn.jsp" />
+	</definition>
+
+	<!-- Puestos -->
+	<definition name="irInsertarPue.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/puestos/OCAPPuestosAlDtMf.jsp" />
+	</definition>
+
+	<definition name="irConsultarPue.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/puestos/OCAPPuestosCn.jsp" />
+	</definition>
+
+	<!-- Usuarios: Meritos Curriculares -->
+	<definition name="irInsertarMC.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/usuarios/OCAPUsuariosMCAlDtMf.jsp" />
+	</definition>
+
+	<!-- Usuarios: FIN Evaluacion Meritos Curriculares -->
+	<definition name="irFinEvaluacionMC.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/usuarios/OCAPFinEvaluacionMCDt.jsp" />
+	</definition>
+
+	<!-- Usuarios: Aceptación de LOPD -->
+	<definition name="irProteccionDatos.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/comun/proteccionDatos.jsp" />
+	</definition>
+
+	<!-- Usuarios: Meritos Curriculares -->
+	<definition name="irPedirPuesto.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/usuarios/OCAPPedirPuestoAl.jsp" />
+	</definition>
+
+	<!-- Admin: finaliza eval MC de los usuarios que no hayan finalizado -->
+	<definition name="finalizarMC.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPAdminFinalizarMC.jsp" />
+	</definition>
+
+	<!-- Admin: elimina itinerario asignado a un usuario -->
+	<definition name="eliminarItinerarioAsignado.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/itinerarios/OCAPAdminEliminaItinerarioAsignado.jsp" />
+	</definition>
+
+	<!-- Admin: modifica el campo observaciones de evidencia de un cuestionario -->
+	<definition name="irModificarCuestionarioObservEvidencia.page"
+		extends="plantilla_estructura_jsp">
+		<put name="contenido"
+			value="/cuestionarios/OCAPAdminModificarCuestionarioObservEvidencia.jsp" />
+	</definition>
+
+	<!-- Meritos: Eliminar -->
+	<definition name="irEliminarMerito.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPMeritoBj.jsp" />
+	</definition>
+	<definition name="irInvalidarMerito.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPMeritoCEISBj.jsp" />
+	</definition>
+	<definition name="exitoMerito.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPMeritosMensajeExito.jsp" />
+	</definition>
+	<definition name="errorMerito.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPMeritosError.jsp" />
+	</definition>
+	<!-- Meritos: Master -->
+	<definition name="irInsertarMaster.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPMasterAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: Taller -->
+	<definition name="irInsertarTaller.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPTallerAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: Congreso -->
+	<definition name="irInsertarCongreso.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPCongresoAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: SesionClinica -->
+	<definition name="irInsertarSesionClinica.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPSesionClinicaAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: Especialidad -->
+	<definition name="irInsertarEspecialidad.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPEspecialidadAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: LicenciaturasDiplomaturas -->
+	<definition name="irInsertarLicenDiplo.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPLicenDiploAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: Otro F.P. -->
+	<definition name="irInsertarOtroFP.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPOtroFPAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: F.P. Superior -->
+	<definition name="irInsertarFPSuperior.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPFPSuperiorAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: Doctorado -->
+	<definition name="irInsertarDoctorado.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPDoctoradoAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: Estancia -->
+	<definition name="irInsertarEstancia.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPEstanciaAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: Beca -->
+	<definition name="irInsertarBeca.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPBecaAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: CursoDoc -->
+	<definition name="irInsertarCursoDoc.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPCursoDocAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: Bibliograficas -->
+	<definition name="irInsertarBibliograficas.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPBibliograficasAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: BibliograficasAct -->
+	<definition name="irInsertarBibliograficasAct.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPBibliograficasActAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: SeminariosDoc -->
+	<definition name="irInsertarSeminariosDoc.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPSeminariosDocAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: ModeradorMesa -->
+	<definition name="irInsertarModeradorMesa.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPModeradorMesaAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: DocenciaPre -->
+	<definition name="irInsertarDocenciaPre.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPDocenciaPreAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: DocenciaPost -->
+	<definition name="irInsertarDocenciaPost.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPDocenciaPostAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: MeritoSiNo -->
+	<definition name="irInsertarMeritoSiNo.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPMeritoSiNoAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: ParticipaProyecto -->
+	<definition name="irInsertarParticipaProyecto.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPParticipaProyectoAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: ParticipaProyectoInvestigacion -->
+	<definition name="irInsertarParticipaProyectoInvestigacion.page"
+		extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPParticipaProyectoInvestigacionAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: JefeServicio -->
+	<definition name="irInsertarJefeServicio.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPJefeServicioAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: ResponsableUnidadTutor -->
+	<definition name="irInsertarResponsableUnidadTutor.page"
+		extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPResponsableUnidadTutorAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: ResponsableMaterialUnidad -->
+	<definition name="irInsertarResponsableMaterialUnidad.page"
+		extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPResponsableMaterialUnidadAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: ResponsableMaterialServ -->
+	<definition name="irInsertarResponsableMaterialServ.page"
+		extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPResponsableMaterialServAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: ResponsableDocencia -->
+	<definition name="irInsertarResponsableDocencia.page"
+		extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPResponsableDocenciaAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: ResponsableComisionCal -->
+	<definition name="irInsertarResponsableComisionCal.page"
+		extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPResponsableComisionCalAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: ResponsableCartServicio -->
+	<definition name="irInsertarResponsableCartServicio.page"
+		extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPResponsableCartServicioAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: ResponsableActEspecifica -->
+	<definition name="irInsertarResponsableActEspecifica.page"
+		extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPResponsableActEspecificaAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: ResponsableActAE -->
+	<definition name="irInsertarResponsableActAE.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPResponsableActAEAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: OrganizadorDifusor -->
+	<definition name="irInsertarOrganizadorDifusor.page"
+		extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPOrganizadorDifusorAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: MiembroTribunal -->
+	<definition name="irInsertarMiembroTribunal.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPMiembroTribunalAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: MiembroConsejo -->
+	<definition name="irInsertarMiembroConsejo.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPMiembroConsejoAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: MiembroComision -->
+	<definition name="irInsertarMiembroComision.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPMiembroComisionAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: MiembroComite -->
+	<definition name="irInsertarMiembroComite.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPMiembroComiteAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: CoordinaEAP -->
+	<definition name="irInsertarCoordinaEAP.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPCoordinaEAPAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: BResponsableCO -->
+	<definition name="irInsertarBResponsableCO.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPBResponsableCOAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: MiembroGrupo -->
+	<definition name="irInsertarMiembroGrupo.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPMiembroGrupoAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: Tesis -->
+	<definition name="irInsertarTesis.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPTesisAlDtMf.jsp" />
+	</definition>
+	<!--revistas cientificas -->
+	<definition name="irInsertarRevistaCientifica.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPRevistaCientificaAlDtMf.jsp" />
+	</definition>
+	<!--patentes modelos -->
+	<definition name="irInsertarPatentesModelos.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPPatentesModelosAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: RevisaProtocoloGuia -->
+	<definition name="irInsertarRevisaProtocoloGuia.page"
+		extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPRevisaProtocoloGuiaAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: CreaProtocolo -->
+	<definition name="irInsertarCreaProtocolo.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPCreaProtocoloAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: RevisaProtocoloProced -->
+	<definition name="irInsertarRevisaProtocoloProced.page"
+		extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPRevisaProtocoloProcedAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: ExponeCasosSesCli -->
+	<definition name="irInsertarExponeCasosSesCli.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPExponeCasosSesCliAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: PublicacionRevistaProf -->
+	<definition name="irInsertarPublicacionRevistaProf.page"
+		extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPPublicacionRevistaProfAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: PublicacionIndex -->
+	<definition name="irInsertarPublicacionIndex.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPPublicacionIndexAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: OtraPublicacion -->
+	<definition name="irInsertarOtraPublicacion.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPOtraPublicacionAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: OtraPublicacionISBN -->
+	<definition name="irInsertarOtraPublicacionISBN.page"
+		extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPOtraPublicacionISBNAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: PreparaImparteAct -->
+	<definition name="irInsertarPreparaImparteAct.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPPreparaImparteActAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: FormaNuevoPersonal -->
+	<definition name="irInsertarFormaNuevoPersonal.page"
+		extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPFormaNuevoPersonalAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: EvaluadorProyectos -->
+	<definition name="irInsertarEvaluadorProyectos.page"
+		extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPEvaluadorProyectosAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: Centinela -->
+	<definition name="irInsertarCentinela.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPCentinelaAlDtMf.jsp" />
+	</definition>
+	<!-- Meritos: Modificar crédito -->
+	<definition name="irModificarCreditoMerito.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritos/OCAPCreditoMeritoMf.jsp" />
+	</definition>
+
+	<!-- Cuestionarios: lista de cuestionarios de un itinerario -->
+	<definition name="irPresentacionCuestionarios.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/cuestionarios/OCAPCuestionariosPresentacionLs.jsp" />
+	</definition>
+	<definition name="irExplicacionAreas.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/cuestionarios/OCAPCuestionariosExplicacionAreasLs.jsp" />
+	</definition>
+	<definition name="irIntroduccionItinerario.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/itinerarios/OCAPItinerariosIntroduccion.jsp" />
+	</definition>
+	<definition name="irListarCuestionarios.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/cuestionarios/OCAPCuestionariosLs.jsp" />
+	</definition>
+	<definition name="irListarCuestionariosEvaluador.page"
+		extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/cuestionarios/OCAPCuestionariosEvaluadorLs.jsp" />
+	</definition>
+	<definition name="irEvaluacionCuestionario.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/cuestionarios/OCAPCuestionariosEvaluacionAlDt.jsp" />
+	</definition>
+	<definition name="irGenerarInformeCuestionarios.page"
+		extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/cuestionarios/OCAPCuestionariosInformeDt.jsp" />
+	</definition>
+	<definition name="irGenerarInformeCuestionarios2.page"
+		extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/cuestionarios/OCAPCuestionariosInforme2Dt.jsp" />
+	</definition>
+	<definition name="irGenerarAuditoria.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/cuestionarios/OCAPCuestionariosAuditoriasDt.jsp" />
+	</definition>
+	<definition name="irAnalisisCuestionario.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/cuestionarios/OCAPCuestionariosAnalisisAlDt.jsp" />
+	</definition>
+	<definition name="irGenerarInformeCTECuestionarios.page"
+		extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/cuestionarios/OCAPCuestionariosInformeCTEDt.jsp" />
+	</definition>
+	<definition name="irGenerarInformeCECuestionarios.page"
+		extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/cuestionarios/OCAPCuestionariosInformeCEDt.jsp" />
+	</definition>
+	<definition name="irGenerarInformeCuestionarios_Sacyl.page"
+		extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/cuestionarios/OCAPCuestionariosInformeDt.jsp" />
+	</definition>
+	<definition name="irGenerarInformeCuestionarios_Sacyl2.page"
+		extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/cuestionarios/OCAPCuestionariosInformeDt.jsp" />
+	</definition>
+	<definition name="irGenerarInformeCTECuestionarios_Sacyl.page"
+		extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/cuestionarios/OCAPCuestionariosInformeCTEDt.jsp" />
+	</definition>
+	<definition name="irGenerarInformeCECuestionarios_Sacyl.page"
+		extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/cuestionarios/OCAPCuestionariosInformeCEDt.jsp" />
+	</definition>
+	<definition name="irGenerarInformeCCCuestionarios.page"
+		extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/cuestionarios/OCAPCuestionariosInformeCCDt.jsp" />
+	</definition>
+
+	<!-- Cuestionarios: preguntas de un cuestionario -->
+	<definition name="irInsertarCuestionario.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/cuestionarios/OCAPCuestionariosAlDt.jsp" />
+	</definition>
+	<definition name="irInsertarCuestionarioAS05.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/cuestionarios/OCAPCuestionarioAS05AlDt.jsp" />
+	</definition>
+	<definition name="irEnlacesCuestionario.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/cuestionarios/OCAPCuestionariosEnlaces.jsp" />
+	</definition>
+	<definition name="irInformacionArea.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/cuestionarios/OCAPCuestionariosInformacionArea.jsp" />
+	</definition>
+	<definition name="irInsertarSintesis.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/cuestionarios/OCAPSintesisAlDt.jsp" />
+	</definition>
+	<definition name="irPonderacion.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/cuestionarios/OCAPPonderacionDt.jsp" />
+	</definition>
+	<definition name="irDossier.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/cuestionarios/OCAPDossierAlDt.jsp" />
+	</definition>
+	<definition name="irSugerencias.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/sugerencias/OCAPSugerenciasAlDt.jsp" />
+	</definition>
+
+	<!-- GLOSARIO -->
+	<definition name="irGlosario.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/glosario/OCAPGlosario.jsp" />
+	</definition>
+	<!-- -->
+
+	<definition name="datosUsuarioFaseIII.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/cuestionarios/OCAPDatosUsuarioDt.jsp" />
+	</definition>
+
+	<!-- Evaluadores: Gestión de evaluadores externos -->
+	<definition name="irInsertarCompfqs.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/componentesfqs/OCAPComponentesfqsAlDtMf.jsp" />
+	</definition>
+	<definition name="irListarEval.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/evaluadores/OCAPEvaluadoresLs.jsp" />
+	</definition>
+	<definition name="irAsignarEvaluados.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/evaluadores/OCAPAsignarEvaluados.jsp" />
+	</definition>
+	<definition name="irListarEvaluados.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/evaluados/OCAPEvaluadosLs.jsp" />
+	</definition>
+	<definition name="irListarEvaluadosGerenciaCTE.page"
+		extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/evaluados/OCAPEvaluadosGerenciaCTELs.jsp" />
+	</definition>
+	<definition name="irListarEvaluadosEpr.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/evaluados/OCAPEvaluadosEprLs.jsp" />
+	</definition>
+	<definition name="irListarEvaluadosEpr_Sacyl.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/evaluados/OCAPEvaluadosEprLs.jsp" />
+	</definition>
+	<definition name="irModificarConv.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/componentesfqs/OCAPConvocatoriasMf.jsp" />
+	</definition>
+	<definition name="irListarEvaluadoresEvaluados.page"
+		extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/evaluados/OCAPEvaluadoresEvaluadosLs.jsp" />
+	</definition>
+	<definition name="irListarEncuestaParticular.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/evaluados/OCAPEvaluadosEncuestasLs.jsp" />
+	</definition>
+	<definition name="irListarEncuestaGeneral.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/evaluados/OCAPEvaluadosEncuestasGeneralesLs.jsp" />
+	</definition>
+	<definition name="irBuscarEncuestaPreguntas.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/evaluados/OCAPEvaluadosEncuestasPreguntasLs.jsp" />
+	</definition>
+	<definition name="irIndicadores.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/evaluados/OCAPIndicadoresDt.jsp" />
+	</definition>
+	<definition name="irIndicador.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/indicadores/OCAPIndicadoresDt.jsp" />
+	</definition>
+	<definition name="irIndicadoresProfesional.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/indicadores/OCAPIndicadoresProfDt.jsp" />
+	</definition>
+	<definition name="irIndicadoresEvaluador.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/indicadores/OCAPIndicadoresEvalDt.jsp" />
+	</definition>
+	<definition name="irIndicadoresCTE.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/indicadores/OCAPIndicadoresCTEDt.jsp" />
+	</definition>
+	<definition name="irIndicadoresCE.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/indicadores/OCAPIndicadoresCEDt.jsp" />
+	</definition>
+	<definition name="irIndicadoresSecretaria.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/indicadores/OCAPIndicadoresSecretariaDt.jsp" />
+	</definition>
+
+	<!-- Componentes de CTEs: Gestión de componentes de Comités Técnicos de 
+		Evaluación -->
+	<definition name="irInsertarCompCtes.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/componentesCtes/OCAPComponentesCtesAlMf.jsp" />
+	</definition>
+	<definition name="irBorrarCompCtes.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/componentesCtes/OCAPComponentesCtesBj.jsp" />
+	</definition>
+	<definition name="irListarCompCtes.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/componentesCtes/OCAPComponentesCtesLs.jsp" />
+	</definition>
+
+	<!-- CTEs: Gestión de Comités Técnicos de Evaluación -->
+	<definition name="irInsertarCtes.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/gestionCtes/OCAPGestionCtesAlDtMf.jsp" />
+	</definition>
+	<definition name="irListarCtes.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/gestionCtes/OCAPGestionCtesLs.jsp" />
+	</definition>
+	<definition name="irBorrarCtes.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/gestionCtes/OCAPGestionCtesBj.jsp" />
+	</definition>
+
+	<!-- Subir formularios escaneados -->
+	<definition name="irAltaDocumentos.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/documentos/OCAPDocumentoAl.jsp" />
+	</definition>
+	<definition name="irCargarXML.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/documentos/OCAPEvidenciasXmlAl.jsp" />
+	</definition>
+
+	<definition name="irPreguntas.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/preguntas/OCAPPreguntasLs.jsp" />
+	</definition>
+
+	<definition name="irModificarPregunta.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/preguntas/OCAPPreguntasMf.jsp" />
+	</definition>
+
+	<definition name="irAltaRespuestas.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/preguntas/OCAPRespuestasAl.jsp" />
+	</definition>
+
+	<definition name="irConvertirHtmlItinerario.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/conversiones/OCAPConvertirHtmlItinerarioMf.jsp" />
+	</definition>
+
+	<!-- Reuniones -->
+	<definition name="irInsertarReu.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/reuniones/OCAPReunionesAl.jsp" />
+	</definition>
+
+	<!-- Monitorización de la BD -->
+	<definition name="irMonitorizarBD.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/monitorizacion/OCAPMonitorizacionBDCn.jsp" />
+	</definition>
+	<definition name="monitorizarBD.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/monitorizacion/OCAPMonitorizacionBDLs.jsp" />
+	</definition>
+
+	<!-- DUDAS TUTORES -->
+	<definition name="irTutor.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/dudasTutores/OCAPTutoresAlDtMf.jsp" />
+	</definition>
+	<definition name="irPreguntasFrecuentes.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/dudasTutores/OCAPPreguntasFrecuentes.jsp" />
+	</definition>
+	<definition name="irTutoresLs.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/dudasTutores/OCAPTutoresLs.jsp" />
+	</definition>
+	<definition name="irDuda.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/dudasTutores/OCAPDudasAlDtMf.jsp" />
+	</definition>
+	<definition name="irDudasTutorLs.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/dudasTutores/OCAPDudasTutorLs.jsp" />
+	</definition>
+	<definition name="irDudasUsuarioLs.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/dudasTutores/OCAPDudasUsuarioLs.jsp" />
+	</definition>
+	<definition name="irDudasLs.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/dudasTutores/OCAPDudasLs.jsp" />
+	</definition>
+	<definition name="irCSVDudas.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/dudasTutores/OCAPDudasCSVLs.jsp" />
+	</definition>
+	<definition name="mensajeExitoDuda.page" extends="plantilla_itinerarios_jsp">
+		<put name="contenido" value="/dudasTutores/OCAPMensajeExitoDuda.jsp" />
+	</definition>
+
+	<!-- Usuarios DNI -->
+	<definition name="listadoUsuariosDNI.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/usuarios/OCAPUsuariosDNILs.jsp" />
+	</definition>
+
+	<definition name="formularioUsuarioDNI.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/usuarios/OCAPUsuariosDNIMf.jsp" />
+	</definition>
+
+	<definition name='elegirConvocatoriaUsuario.page' path='/usuarios/OCAPConvocatoriaUsuarioAl.jsp'></definition>
+	
+	
+
+	<!-- Expedientes: Nuevo action de expedientes para acciones posteiores a 
+		solicitudes -->
+	<definition name="listadoExpedientes.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/expedientes/OCAPExpedientesLs.jsp" />
+	</definition>
+
+	<definition name="formularioExpediente.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/expedientes/OCAPExpedienteAl.jsp" />
+	</definition>
+
+	<!-- Actas -->
+	<definition name="irGenerarActas.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/actas/OCAPGenerarActas.jsp" />
+	</definition>
+	
+	<definition name="irConsultarActas.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/actas/OCAPConsultarActasLs.jsp" />
+	</definition>	
+
+	<definition name="irImprimirActa.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/actas/OCAPImprimirActaDt.jsp" />
+	</definition>
+
+	<!-- Definiciones de pantallas: Logs -->
+	<definition name="LOGListado.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/verLogs/LOGListado.jsp" />
+	</definition>
+
+	<definition name="LOGListaNivel.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/verLogs/LOGListaNivel.jsp" />
+	</definition>
+
+	<!-- Documentos evidencias escaneados -->
+	<definition name="irAltaDocumentosEvidencia.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/documentos/OCAPDocumentoAlEvidencia.jsp" />
+	</definition>
+
+	<!-- Alerta Áreas Evaluación -->
+	<definition name="irAlertaProteccionDatos.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/comun/alertaProteccionDatos.jsp" />
+	</definition>
+	
+	<definition name="noAportaMc.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/noAportaMeritos/noAportaMc.jsp" />
+	</definition>
+	
+	<definition name="noAportaMa.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/noAportaMeritos/noAportaMa.jsp" />
+	</definition>
+	
+	<definition name="sinConvocatoriasMc.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/noAportaMeritos/sinConvocatoriasMc.jsp" />
+	</definition>
+	
+	<definition name="sinConvocatoriasMa.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/noAportaMeritos/sinConvocatoriasMa.jsp" />
+	</definition>
+	
+	<definition name="OkMeritos.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/noAportaMeritos/okMeritos.jsp" />
+	</definition>
+	
+	<definition name="ErrorMeritos.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/noAportaMeritos/errorMeritos.jsp" />
+	</definition>
+	 
+	<definition name="verMeritosAnteriores.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/usuarios/OCAPUsuariosVerMeritosAnteriores.jsp" />
+	</definition>
+	
+	<!-- Desbloqueo asistenciales -->
+	<definition name="irOCAPDesbloqueoAsistenciales.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritosAsistenciales/OCAPDesbloqueoAsistenciales.jsp" />
+	</definition>
+	<definition name="irErrorAsistenciales.page"
+		extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritosAsistenciales/errorAsistenciales.jsp" />
+	</definition>
+	<definition name="irOCAPAvisoAsistenciales.page"
+		extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritosAsistenciales/OCAPAvisoAsistenciales.jsp" />
+	</definition>
+		<definition name="irOkAsistenciales.page"
+		extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritosAsistenciales/okAsistenciales.jsp" />
+	</definition>
+	
+	
+	<!-- Desbloqueo curriculares -->
+	<definition name="irOCAPDesbloqueoCurriculares.page" extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritosCurriculares/OCAPDesbloqueoCurriculares.jsp" />
+	</definition>
+	<definition name="irErrorCurriculares.page"
+		extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritosCurriculares/errorCurriculares.jsp" />
+	</definition>
+	<definition name="irOCAPAvisoCurriculares.page"
+		extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritosCurriculares/OCAPAvisoCurriculares.jsp" />
+	</definition>
+		<definition name="irOkCurriculares.page"
+		extends="plantilla_estructura_jsp">
+		<put name="contenido" value="/meritosCurriculares/okCurriculares.jsp" />
+	</definition>
+
+</tiles-definitions>

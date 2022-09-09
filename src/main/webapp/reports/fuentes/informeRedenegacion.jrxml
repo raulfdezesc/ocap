@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<import value="es.jcyl.fqs.ocap.ot.solicitudes.OCAPSolicitudesOT"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="datosDocu" class="es.jcyl.fqs.ocap.ot.solicitudes.OCAPSolicitudesOT" isForPrompting="false"/>
+	<parameter name="ruta" class="java.lang.String"/>
+	<parameter name="fechaForm" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="67">
+			<image hyperlinkType="None">
+				<reportElement x="0" y="0" width="555" height="63"/>
+				<imageExpression class="java.lang.String"><![CDATA[$P{ruta}+"/imagenes/imagenes_ocap/degradadoCab.gif"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<detail>
+		<band height="687">
+			<rectangle>
+				<reportElement mode="Transparent" x="31" y="371" width="484" height="38" backcolor="#FFFFFF"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#916547"/>
+				</graphicElement>
+			</rectangle>
+			<rectangle>
+				<reportElement mode="Transparent" x="31" y="154" width="484" height="212" backcolor="#FFFFFF"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#916547"/>
+				</graphicElement>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="83" y="379" width="204" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getDGrado_des()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="42" y="379" width="41" height="20"/>
+				<textElement/>
+				<text><![CDATA[Grado:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="42" y="504" width="245" height="20"/>
+				<textElement/>
+				<text><![CDATA[Tiene la condición de personal fijo:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="287" y="504" width="228" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getBInconf_plazaprop()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="42" y="472" width="245" height="20"/>
+				<textElement/>
+				<text><![CDATA[Cumple con el requisito de antigüedad requerida:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="287" y="472" width="228" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getBInconf_antiguedad()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="42" y="563" width="473" height="79"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getDRespuestaInconfSolic()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="31" y="535" width="484" height="17"/>
+				<textElement/>
+				<text><![CDATA[OBSERVACIONES:]]></text>
+			</staticText>
+			<line>
+				<reportElement x="20" y="3" width="515" height="1"/>
+			</line>
+			<line>
+				<reportElement x="20" y="57" width="515" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="497" y="64" width="38" height="20" forecolor="#916547"/>
+				<textElement>
+					<font isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[DCP1C]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="42" y="263" width="115" height="20"/>
+				<textElement/>
+				<text><![CDATA[Provincia:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="262" y="159" width="243" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getDSitAdministrativa_nombre()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="42" y="237" width="115" height="20"/>
+				<textElement/>
+				<text><![CDATA[Especialidad:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="157" y="290" width="348" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getDTipogerencia_desc()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="157" y="259" width="348" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getDProvincia()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="42" y="315" width="115" height="20"/>
+				<textElement/>
+				<text><![CDATA[Gerencia:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="157" y="237" width="348" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getDEspec_nombre()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="42" y="211" width="115" height="20"/>
+				<textElement/>
+				<text><![CDATA[Categoría Profesional:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="157" y="211" width="348" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getDProfesional_nombre()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="42" y="289" width="115" height="20"/>
+				<textElement/>
+				<text><![CDATA[Tipo Gerencia:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="157" y="315" width="348" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getDGerencia_nombre()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="42" y="159" width="220" height="20"/>
+				<textElement/>
+				<text><![CDATA[Procedimiento de evaluación por el que opta:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="10" width="515" height="19" forecolor="#916547"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="15" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[NOTIFICACIÓN DE INADMISIÓN DE SOLICITUD]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="157" y="341" width="348" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getDCentrotrabajo_nombre()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="42" y="341" width="115" height="20"/>
+				<textElement/>
+				<text><![CDATA[Centro de Trabajo:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="327" y="123" width="48" height="20"/>
+				<textElement/>
+				<text><![CDATA[NIF/NIE:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="375" y="123" width="130" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getCDniReal()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="42" y="123" width="84" height="20"/>
+				<textElement/>
+				<text><![CDATA[Nombre:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="42" y="97" width="84" height="20"/>
+				<textElement/>
+				<text><![CDATA[Apellidos:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="126" y="123" width="190" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getDNombre()]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement positionType="FixRelativeToBottom" stretchType="RelativeToTallestObject" mode="Transparent" x="31" y="90" width="484" height="59" forecolor="#916547" backcolor="#FFFFFF"/>
+				<graphicElement>
+					<pen lineWidth="1.0" lineStyle="Solid" lineColor="#916547"/>
+				</graphicElement>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="126" y="97" width="379" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getDApellido1()]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="42" y="419" width="473" height="43"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA["En respuesta a la solicitud de inicio de procedimiento para el reconocimiento del " + $P{datosDocu}.getDGrado_des() + " de Carrera Profesional presentada en la fecha " + $P{datosDocu}.getFRegistro_oficial() + " le informamos que queda inadmitida. El motivo de la inadmisión de la solicitud es el siguiente:"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="33" width="515" height="20" forecolor="#916547"/>
+				<textElement textAlignment="Center">
+					<font fontName="Times New Roman" size="15" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[DE ACCESO A GRADO DE CARRERA PROFESIONAL]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="42" y="656" width="319" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getDGerencia_nombre() + ", " + $P{fechaForm} + "."]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="157" y="185" width="348" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getDEstatut_nombre()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="42" y="185" width="115" height="20"/>
+				<textElement/>
+				<text><![CDATA[Personal:]]></text>
+			</staticText>
+		</band>
+	</detail>
+</jasperReport>

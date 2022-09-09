@@ -1,0 +1,415 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ExpMCDatosPersonales" pageWidth="555" pageHeight="452" columnWidth="555" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<import value="es.jcyl.fqs.ocap.ot.expedientes.OCAPReportExpedientesOT"/>
+	<import value="es.jcyl.fqs.ocap.util.Constantes"/>
+	<style name="normal" isDefault="true" fontName="Helvetica" fontSize="11" isBold="false" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica-Oblique" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+	<style name="negrita" isDefault="false" fontName="Helvetica" fontSize="11" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica-BoldOblique" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+	<style name="normal13" isDefault="false" fontName="Helvetica" fontSize="13" isBold="false" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica-Oblique" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+	<style name="negrita13" isDefault="false" fontName="Helvetica" fontSize="13" isBold="true" isItalic="true" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica-BoldOblique" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+	<parameter name="datosPersonales" class="es.jcyl.fqs.ocap.ot.expedientes.OCAPReportExpedientesOT" isForPrompting="false"/>
+	<detail>
+		<band height="452" isSplitAllowed="false">
+			<staticText>
+				<reportElement key="staticText-DatosPersonales" style="negrita13" x="0" y="0" width="555" height="25"/>
+				<box padding="2">
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Bottom"/>
+				<text><![CDATA[DATOS PERSONALES]]></text>
+			</staticText>
+			<frame>
+				<reportElement key="frame-DatosPersonales1" positionType="Float" x="0" y="30" width="555" height="17"/>
+				<staticText>
+					<reportElement key="staticText-Apellidos" style="negrita" x="0" y="0" width="100" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Right" verticalAlignment="Top"/>
+					<text><![CDATA[Apellidos:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+					<reportElement key="textField-Apellidos" style="normal" x="100" y="0" width="175" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Top"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{datosPersonales}.getDApellidos()]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="staticText-Nombre" style="negrita" x="275" y="0" width="100" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Right" verticalAlignment="Top"/>
+					<text><![CDATA[Nombre:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+					<reportElement key="textField-Nombre" style="normal" x="375" y="0" width="175" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Top"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{datosPersonales}.getDNombre()]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement key="frame-DatosPersonales2" positionType="Float" x="0" y="47" width="555" height="17"/>
+				<staticText>
+					<reportElement key="staticText-NIF" style="negrita" x="0" y="0" width="100" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Right" verticalAlignment="Top"/>
+					<text><![CDATA[N.I.F./N.I.E.:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+					<reportElement key="textField-NIF" style="normal" x="100" y="0" width="175" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Top"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{datosPersonales}.getCDNIReal()]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="staticText-Sexo" style="negrita" x="275" y="0" width="100" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Right" verticalAlignment="Top"/>
+					<text><![CDATA[Sexo:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+					<reportElement key="textField-Sexo" style="normal" x="375" y="0" width="175" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Top"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{datosPersonales} != null 
+									&& $P{datosPersonales}.getBSexo() != null 
+									&& $P{datosPersonales}.getBSexo().equals(Constantes.SEXO_MUJER_VALUE) 
+								? Constantes.SEXO_MUJER : Constantes.SEXO_HOMBRE]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement key="frame-DatosPersonales3" positionType="Float" x="0" y="64" width="555" height="17"/>
+				<staticText>
+					<reportElement key="staticText-Telefono1" style="negrita" x="0" y="0" width="100" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Right" verticalAlignment="Top"/>
+					<text><![CDATA[Teléfono 1:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+					<reportElement key="textField-Telefono1" style="normal" x="100" y="0" width="175" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Top"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{datosPersonales}.getNTelefono1() != 0 ? ""+$P{datosPersonales}.getNTelefono1(): ""]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="staticText-Telefono2" style="negrita" x="275" y="0" width="100" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Right" verticalAlignment="Top"/>
+					<text><![CDATA[Teléfono 2:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+					<reportElement key="textField-Telefono2" style="normal" x="375" y="0" width="175" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Top"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{datosPersonales}.getNTelefono2() != 0 ? ""+$P{datosPersonales}.getNTelefono2(): ""]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement key="frame-DatosPersonales4" positionType="Float" x="0" y="81" width="555" height="17"/>
+				<staticText>
+					<reportElement key="staticText-Email" style="negrita" x="0" y="0" width="100" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Right" verticalAlignment="Top"/>
+					<text><![CDATA[Correo-e:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+					<reportElement key="textField-Email" style="normal" x="100" y="0" width="450" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Top"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{datosPersonales}.getACorreoElectronico()]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement key="frame-DatosPersonales5" positionType="Float" x="0" y="98" width="555" height="17"/>
+				<staticText>
+					<reportElement key="staticText-Domicilio" style="negrita" x="0" y="0" width="100" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Right" verticalAlignment="Top"/>
+					<text><![CDATA[Domicilio:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+					<reportElement key="textField-Domicilio" style="normal" x="100" y="0" width="450" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Top"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{datosPersonales}.getADomicilio()]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement key="frame-DatosPersonales6" positionType="Float" x="0" y="115" width="555" height="17"/>
+				<staticText>
+					<reportElement key="staticText-Provincia" style="negrita" x="0" y="0" width="100" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Right" verticalAlignment="Top"/>
+					<text><![CDATA[Provincia:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+					<reportElement key="textField-Provincia" style="normal" x="100" y="0" width="175" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Top"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{datosPersonales}.getDProvincia()]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement key="staticText-Provincia" style="negrita" x="275" y="0" width="100" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Right" verticalAlignment="Top"/>
+					<text><![CDATA[C.P.:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+					<reportElement key="textField-CP" style="normal" x="375" y="0" width="175" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Top"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{datosPersonales}.getACodigopostal()]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement key="frame-DatosPersonales7" positionType="Float" x="0" y="132" width="555" height="17"/>
+				<staticText>
+					<reportElement key="staticText-Localidad" style="negrita" x="0" y="0" width="100" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Right" verticalAlignment="Top"/>
+					<text><![CDATA[Localidad:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+					<reportElement key="textField-Localidad" style="normal" x="100" y="0" width="450" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Top"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{datosPersonales}.getDLocalidad()]]></textFieldExpression>
+				</textField>
+			</frame>
+			<staticText>
+				<reportElement key="staticText-DatosCarreraProfesional" style="negrita13" positionType="Float" x="0" y="154" width="555" height="25"/>
+				<box padding="2">
+					<bottomPen lineWidth="1.0" lineStyle="Solid" lineColor="#775124"/>
+				</box>
+				<textElement textAlignment="Left" verticalAlignment="Bottom"/>
+				<text><![CDATA[DATOS POR LOS QUE OPTA A CARRERA PROFESIONAL]]></text>
+			</staticText>
+			<frame>
+				<reportElement key="frame-DatosCarreraProfesional1" positionType="Float" x="0" y="205" width="555" height="17"/>
+				<staticText>
+					<reportElement key="staticText-Grado" style="negrita" x="0" y="0" width="175" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Right" verticalAlignment="Top"/>
+					<text><![CDATA[Grado:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+					<reportElement key="textField-Grado" style="normal" x="175" y="0" width="375" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Top"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{datosPersonales}.getDGrado()]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement key="frame-DatosCarreraProfesional2" positionType="Float" x="0" y="222" width="555" height="17"/>
+				<staticText>
+					<reportElement key="staticText-ModAnterior" style="negrita" x="0" y="0" width="175" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Right" verticalAlignment="Top"/>
+					<text><![CDATA[Grado que posee:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+					<reportElement key="textField-ModAnterior" style="normal" x="175" y="0" width="375" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Top"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{datosPersonales}.getDModAnterior()]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement key="frame-DatosCarreraProfesional2" positionType="Float" x="0" y="239" width="555" height="17"/>
+				<staticText>
+					<reportElement key="staticText-Procedimiento" style="negrita" x="0" y="0" width="175" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Right" verticalAlignment="Top"/>
+					<text><![CDATA[Procedimiento de evaluación:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+					<reportElement key="textField-Procedimiento" style="normal" x="175" y="0" width="375" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Top"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{datosPersonales}.getDProcAdministrativo()]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement key="frame-DatosCarreraProfesional3" positionType="Float" x="0" y="256" width="555" height="17"/>
+				<staticText>
+					<reportElement key="staticText-Juridico" style="negrita" x="0" y="0" width="175" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Right" verticalAlignment="Top"/>
+					<text><![CDATA[Régimen jurídico:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+					<reportElement key="textField-Juridico" style="normal" x="175" y="0" width="375" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Top"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{datosPersonales}.getDRegJuridico()]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement key="frame-DatosCarreraProfesional4" positionType="Float" x="0" y="273" width="555" height="17"/>
+				<staticText>
+					<reportElement key="staticText-Tipo" style="negrita" x="0" y="0" width="175" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Right" verticalAlignment="Top"/>
+					<text><![CDATA[Tipo:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+					<reportElement key="textField-Tipo" style="normal" x="175" y="0" width="375" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Top"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{datosPersonales}.getCTipo() == 0 
+									? null :
+									(""+$P{datosPersonales}.getCTipo()).equals(Constantes.C_JURIDICO_SANITARIO_FIJO_COD) 
+										? Constantes.C_JURIDICO_SANITARIO_FIJO : 			
+										(""+$P{datosPersonales}.getCTipo()).equals(Constantes.C_JURIDICO_GS_FIJO_COD) 
+											? Constantes.C_JURIDICO_GS_FIJO 
+											: ""+$P{datosPersonales}.getCTipo()]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement key="frame-DatosCarreraProfesional5" positionType="Float" x="0" y="290" width="555" height="17"/>
+				<staticText>
+					<reportElement key="staticText-SitAdministrativa" style="negrita" x="0" y="0" width="175" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Right" verticalAlignment="Top"/>
+					<text><![CDATA[Situación Administrativa:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+					<reportElement key="textField-SitAdministrativa" style="normal" x="175" y="0" width="375" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Top"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{datosPersonales}.getDSitAdministrativa()]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement key="frame-DatosCarreraProfesional6" positionType="Float" x="0" y="307" width="555" height="17"/>
+				<staticText>
+					<reportElement key="staticText-CatProfesional" style="negrita" x="0" y="0" width="175" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Right" verticalAlignment="Top"/>
+					<text><![CDATA[Categoría:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+					<reportElement key="textField-CatProfesional" style="normal" x="175" y="0" width="375" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Top"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{datosPersonales}.getDCategProfesional()]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement key="frame-DatosCarreraProfesional7" positionType="Float" x="0" y="324" width="555" height="17"/>
+				<staticText>
+					<reportElement key="staticText-Especialidad" style="negrita" x="0" y="0" width="175" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Right" verticalAlignment="Top"/>
+					<text><![CDATA[Especialidad:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+					<reportElement key="textField-Especialidad" style="normal" x="175" y="0" width="375" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Top"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{datosPersonales}.getDEspecialidad()]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement key="frame-DatosCarreraProfesional8" positionType="Float" x="0" y="341" width="555" height="17"/>
+				<staticText>
+					<reportElement key="staticText-ProvinciaGerencia" style="negrita" x="0" y="0" width="175" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Right" verticalAlignment="Top"/>
+					<text><![CDATA[Provincia:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+					<reportElement key="textField-ProvinciaGerencia" style="normal" x="175" y="0" width="375" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Top"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{datosPersonales}.getDProvinciaGerencia()]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement key="frame-DatosCarreraProfesional9" positionType="Float" x="0" y="358" width="555" height="17"/>
+				<staticText>
+					<reportElement key="staticText-Gerencia" style="negrita" x="0" y="0" width="175" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Right" verticalAlignment="Top"/>
+					<text><![CDATA[Gerencia:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+					<reportElement key="textField-Gerencia" style="normal" x="175" y="0" width="375" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Top"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{datosPersonales}.getDGerencia()]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement key="frame-DatosCarreraProfesional10" positionType="Float" x="0" y="375" width="555" height="17"/>
+				<staticText>
+					<reportElement key="staticText-CentroTrabajo" style="negrita" x="0" y="0" width="175" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Right" verticalAlignment="Top"/>
+					<text><![CDATA[Centro de trabajo:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+					<reportElement key="textField-CentroTrabajo" style="normal" x="175" y="0" width="375" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Top"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{datosPersonales}.getDCentroTrabajo()]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement key="frame-DatosCarreraProfesional11" positionType="Float" x="0" y="392" width="555" height="17"/>
+				<staticText>
+					<reportElement key="staticText-Servicio" style="negrita" x="0" y="0" width="175" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Right" verticalAlignment="Top"/>
+					<text><![CDATA[Servicio:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+					<reportElement key="textField-Servicio" style="normal" x="175" y="0" width="375" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Top"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{datosPersonales}.getAServicio()]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement key="frame-DatosCarreraProfesional12" positionType="Float" x="0" y="409" width="555" height="17"/>
+				<staticText>
+					<reportElement key="staticText-Puesto" style="negrita" x="0" y="0" width="175" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Right" verticalAlignment="Top"/>
+					<text><![CDATA[Área/Unidad/Puesto:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+					<reportElement key="textField-Puesto" style="normal" x="175" y="0" width="375" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Top"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{datosPersonales}.getAPuesto()]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement key="frame-DatosCarreraProfesional13" positionType="Float" x="0" y="426" width="555" height="17"/>
+				<staticText>
+					<reportElement key="staticText-Ejercicio" style="negrita" x="0" y="0" width="175" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Right" verticalAlignment="Top"/>
+					<text><![CDATA[Tiempo en la Cat. Profesional:]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+					<reportElement key="textField-Puesto" style="normal" x="175" y="0" width="375" height="17"/>
+					<box topPadding="0" leftPadding="2" bottomPadding="0" rightPadding="2"/>
+					<textElement textAlignment="Left" verticalAlignment="Top"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{datosPersonales}.getAntiguedad()]]></textFieldExpression>
+				</textField>
+			</frame>
+			<frame>
+				<reportElement x="0" y="185" width="555" height="20"/>
+			</frame>
+			<staticText>
+				<reportElement style="negrita" x="0" y="187" width="175" height="17"/>
+				<textElement textAlignment="Right"/>
+				<text><![CDATA[Convocatoria:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true">
+				<reportElement style="normal" x="178" y="187" width="372" height="17"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosPersonales}.getDConvocatoria()]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

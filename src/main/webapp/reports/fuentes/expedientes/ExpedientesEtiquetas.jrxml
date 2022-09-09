@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"  ?>
+<!DOCTYPE jasperReport PUBLIC "//JasperReports//DTD Report Design//EN" "http://jasperreports.sourceforge.net/dtds/jasperreport.dtd">
+<jasperReport name="ExpedientesEtiquetas"
+		printOrder="Vertical" orientation="Portrait"
+		pageWidth="595" pageHeight="842" 
+		columnCount="3"
+		columnWidth="185" columnSpacing="0"
+		leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" 
+		whenNoDataType="NoPages"
+		isTitleNewPage="false"
+		isSummaryNewPage="false">
+
+	<import value="es.jcyl.fqs.ocap.ot.expedientes.OCAPReportExpedientesOT" />
+
+
+	<style name="normal" isDefault="true" fontName="Helvetica" fontSize="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica-Oblique" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+
+
+	<parameter name="SubExpEtiqDatosDatosPersonales" 	class="net.sf.jasperreports.engine.JasperReport" isForPrompting="false"/>
+	
+	<parameter name="rutaImagen"	class="java.lang.String" isForPrompting="false"/>
+
+	
+	<field name="datosPersonales"	class="es.jcyl.fqs.ocap.ot.expedientes.OCAPReportExpedientesOT"/>
+
+	
+	<detail>
+   	<band height="114" isSplitAllowed="true" >
+	
+			<subreport>
+				<reportElement
+						style="normal"
+						x="0" y="0"
+						width="185" height="114"
+						key="subreport-1"
+						isRemoveLineWhenBlank="true"/>
+				
+				<subreportParameter name="datosPersonales">
+					<subreportParameterExpression><![CDATA[$F{datosPersonales}]]></subreportParameterExpression>
+				</subreportParameter>
+
+				<dataSourceExpression><![CDATA[new JREmptyDataSource()]]></dataSourceExpression>
+				<subreportExpression class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{SubExpEtiqDatosDatosPersonales}]]></subreportExpression>
+			</subreport>
+			
+    	</band>
+   </detail>
+
+
+</jasperReport>

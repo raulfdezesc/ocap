@@ -1,0 +1,769 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="1000" columnWidth="575" leftMargin="10" rightMargin="10" topMargin="10" bottomMargin="0">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<import value="es.jcyl.fqs.ocap.ot.solicitudes.OCAPSolicitudesOT"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="SUB_REPORT" class="net.sf.jasperreports.engine.JasperReport" isForPrompting="false"/>
+	<parameter name="datosReport" class="es.jcyl.fqs.ocap.ot.solicitudes.OCAPSolicitudesOT" isForPrompting="false"/>
+	<parameter name="datosSubReport" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="ruta" class="java.lang.String"/>
+	<parameter name="siHombre" class="java.lang.String"/>
+	<parameter name="siMujer" class="java.lang.String"/>
+	<parameter name="estatutario" class="java.lang.String"/>
+	<parameter name="funcionario" class="java.lang.String"/>
+	<parameter name="siActivo" class="java.lang.String"/>
+	<parameter name="siGeneral" class="java.lang.String"/>
+	<parameter name="siEspecial" class="java.lang.String"/>
+	<parameter name="siDirectivo" class="java.lang.String"/>
+	<parameter name="siExcedencia" class="java.lang.String"/>
+	<parameter name="siLiberado" class="java.lang.String"/>
+	<parameter name="siEstructura" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="59">
+			<image scaleImage="FillFrame" hAlign="Center" isUsingCache="true" hyperlinkType="None">
+				<reportElement x="10" y="0" width="535" height="55"/>
+				<imageExpression class="java.lang.String"><![CDATA[$P{ruta}+"/imagenes/imagenes_ocap/degradadoCabPDF.gif"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<detail>
+		<band height="820">
+			<staticText>
+				<reportElement x="20" y="1" width="535" height="15" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="11" isBold="true" isUnderline="true"/>
+				</textElement>
+				<text><![CDATA[ANEXO II]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="18" width="535" height="15" forecolor="#000000"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="11" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[SOLICITUD DE ACCESO A GRADO DE CARRERA PROFESIONAL]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="42" width="201" height="15"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1.- DATOS PERSONALES:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="20" y="59" width="287" height="32"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="25" y="60" width="282" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1.1. Apellidos:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="25" y="75" width="280" height="15"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getDApellido1()]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="307" y="59" width="186" height="32"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="312" y="60" width="173" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1.2. Nombre:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="312" y="75" width="181" height="15"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getDNombre()]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="493" y="59" width="62" height="32"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="501" y="60" width="52" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1.3. Sexo:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="497" y="75" width="11" height="11"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[V]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="508" y="75" width="10" height="10"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="509" y="75" width="10" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="false" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{siHombre}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="524" y="75" width="11" height="11"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[M]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="535" y="75" width="10" height="10"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="536" y="75" width="10" height="10"/>
+				<textElement>
+					<font fontName="Arial" size="8" isBold="false" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{siMujer}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="20" y="91" width="74" height="32"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="25" y="92" width="67" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1.4. NIF/NIE:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="25" y="105" width="70" height="15"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getCDniReal()]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="94" y="91" width="108" height="32"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="99" y="92" width="93" height="15"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1.5. Teléfono 1:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="99" y="105" width="106" height="15"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getNTelefono1()]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="202" y="91" width="105" height="32"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="207" y="92" width="98" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1.6. Teléfono 2:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="206" y="105" width="99" height="15"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getNTelefono2()]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="307" y="91" width="248" height="32"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="312" y="92" width="174" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1.7. Correo Electrónico:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="311" y="104" width="243" height="14"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getDCorreoelectronico()]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="20" y="123" width="535" height="32"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="26" y="124" width="170" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1.8. Domicilio, Calle o Plaza y nº:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="25" y="136" width="527" height="14"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getDDomicilio()]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="20" y="155" width="296" height="31"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="24" y="155" width="100" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1.9. Localidad:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="24" y="168" width="291" height="13"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getDLocalidad()]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="316" y="155" width="144" height="31"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="320" y="156" width="136" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1.10. Provincia:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="320" y="169" width="140" height="15"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getDProvinciaUsu()]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="460" y="155" width="95" height="31"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="464" y="156" width="89" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[1.11. Código Postal:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="464" y="169" width="88" height="15"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getCPostalUsu()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="199" width="380" height="15"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.- DATOS PROFESIONALES:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="219" width="450" height="15"/>
+				<textElement>
+					<font fontName="Arial" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.1.- Datos condición personal estatutario o funcionario sanitario de carrera:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="21" y="275" width="299" height="37"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="26" y="276" width="190" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.1.1. Régimen Jurídico:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="26" y="291" width="286" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getCJuridico()]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="320" y="275" width="236" height="37"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="325" y="276" width="127" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.1.2. Tipo:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="326" y="291" width="227" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getDRegimenJuridicoOtros()]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="21" y="312" width="299" height="37"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="26" y="313" width="211" height="15"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.1.3. Categoría:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="26" y="328" width="294" height="18"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getDProfesional_nombre()]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="320" y="312" width="236" height="37"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="326" y="313" width="147" height="15"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.1.4. Especialidad:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="326" y="328" width="230" height="18"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getDEspec_nombre()]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="21" y="349" width="268" height="32"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="25" y="350" width="263" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.1.5. Servicio:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="25" y="362" width="266" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getAServicio()]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="289" y="349" width="267" height="32"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="293" y="350" width="263" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.1.6. Área/Unidad/Puesto:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="293" y="362" width="263" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getAPuesto()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="20" y="385" width="380" height="15"/>
+				<textElement>
+					<font fontName="Arial" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["2.2.- Situación a 31 de diciembre de "+$P{datosReport}.getDAnioConvocatoria()+" (Según Convocatoria):"]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="21" y="405" width="115" height="33"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="26" y="406" width="109" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.2.1. Grado al que opta:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="26" y="418" width="109" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getDGrado_des()]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="136" y="405" width="420" height="33"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="141" y="406" width="406" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.2.2. Procedimiento de evaluación por el que opta:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="141" y="418" width="405" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getDProcedimiento()]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="21" y="438" width="299" height="37"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="26" y="439" width="187" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.2.3. Situación Administrativa:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="26" y="451" width="286" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getDSitAdministrativaAux_nombre()]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="320" y="438" width="236" height="37"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="326" y="439" width="185" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.2.4. Otros (indicar):]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="326" y="451" width="227" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getDSitAdministrativaOtros()]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="21" y="475" width="115" height="50"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="26" y="476" width="85" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.2.5. Provincia:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="26" y="488" width="109" height="25"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getDProvincia()]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="136" y="475" width="184" height="50"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="141" y="476" width="157" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.2.6. Gerencia:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="141" y="488" width="176" height="25"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getDGerencia_nombre()]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="320" y="475" width="236" height="50"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="326" y="476" width="228" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.2.7. Centro de Trabajo:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="326" y="488" width="228" height="25"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getDCentrotrabajo_nombre()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="530" width="380" height="15"/>
+				<textElement>
+					<font fontName="Arial" size="10" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.3.- Situación a fecha de convocatoria:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="21" y="550" width="299" height="37"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="26" y="551" width="187" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.3.1. Situación Administrativa (5):]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="26" y="563" width="286" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getDSitAdmonActual()]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="320" y="550" width="236" height="37"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="326" y="551" width="185" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.3.2. Otros (indicar):]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="326" y="563" width="227" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getAOtraSitAdmonActual()]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="21" y="587" width="115" height="50"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="26" y="588" width="85" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.3.3. Provincia:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="26" y="600" width="109" height="25"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getDProvCarreraActual()]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="136" y="587" width="184" height="50"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="141" y="588" width="157" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.3.4. Gerencia:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="141" y="600" width="176" height="25"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getDGerenciaActual()]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="320" y="587" width="236" height="50"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="326" y="588" width="228" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.3.5. Centro de Trabajo:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="326" y="600" width="228" height="25"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getDCentroTrabActual()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="20" y="645" width="535" height="20"/>
+				<textElement>
+					<font fontName="Arial" size="10" isBold="true"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["2.4.- Años de ejercicio profesional como personal en el S.N.S. hasta el 31/12/"+$P{datosReport}.getDAnioConvocatoria()+" (Según Convocatoria):"]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="21" y="665" width="535" height="32"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="26" y="666" width="472" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.4.1. Años de ejercicio en la categoría profesional por la que se accede:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="26" y="678" width="510" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Total:      Años: " + $P{datosReport}.getNAniosantiguedad()+"          Meses: " + $P{datosReport}.getNMesesantiguedad() + "          Días: " + $P{datosReport}.getNDiasantiguedad()]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Transparent" x="21" y="697" width="535" height="13"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="26" y="698" width="523" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[2.4.2. Tiene servicios prestados en otro centro de trabajo distinto al actual:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="21" y="710" width="144" height="32"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="50" y="720" width="129" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Centro de Trabajo]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="165" y="710" width="193" height="32"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="200" y="720" width="177" height="15"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Categoría/Especialidad/Cuerpo]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement x="358" y="710" width="61" height="32"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="370" y="720" width="51" height="15"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Provincia]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="419" y="710" width="35" height="32"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="420" y="720" width="33" height="12"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Vínculo]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="454" y="710" width="51" height="32"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="462" y="715" width="36" height="12"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="462" y="727" width="36" height="12"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Inicio]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="505" y="710" width="51" height="32"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="513" y="715" width="36" height="12"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="513" y="727" width="36" height="12"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Fin]]></text>
+			</staticText>
+			<subreport>
+				<reportElement x="21" y="742" width="535" height="13" isPrintInFirstWholeBand="true"/>
+				<dataSourceExpression><![CDATA[$P{datosSubReport}]]></dataSourceExpression>
+				<subreportExpression class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{SUB_REPORT}]]></subreportExpression>
+			</subreport>
+			<staticText>
+				<reportElement positionType="Float" x="20" y="765" width="380" height="15"/>
+				<textElement>
+					<font fontName="Arial" size="11" isBold="true"/>
+				</textElement>
+				<text><![CDATA[3.- GRADO DE CARRERA PROFESIONAL RECONOCIDO:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="21" y="785" width="535" height="30"/>
+			</rectangle>
+			<staticText>
+				<reportElement positionType="Float" x="26" y="786" width="523" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[3.1. Grado que posee:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="26" y="798" width="523" height="12"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getDModAnterior()]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement x="21" y="240" width="535" height="35"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="26" y="242" width="519" height="15"/>
+				<textElement>
+					<font fontName="Arial" size="9" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Convocatoria:]]></text>
+			</staticText>
+			<textField hyperlinkType="None">
+				<reportElement x="26" y="257" width="519" height="17"/>
+				<textElement>
+					<font fontName="Arial" size="9"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosReport}.getDConvocatoria_nombre()]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<pageFooter>
+		<band height="41">
+			<textField hyperlinkType="None">
+				<reportElement x="390" y="10" width="166" height="20"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["Nº Solicitud: "+$P{datosReport}.getCodigoSolicitud()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+</jasperReport>

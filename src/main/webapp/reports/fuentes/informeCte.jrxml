@@ -1,0 +1,397 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="1500" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<import value="es.jcyl.fqs.ocap.ot.cuestionarios.OCAPCuestionariosOT"/>
+	<style name="conformidad" isDefault="false" forecolor="#FFFFFF">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean(es.jcyl.fqs.ocap.util.Constantes.SI.equals($P{datosDocu}.getBConformidadCte()))]]></conditionExpression>
+			<style isDefault="false" style="conformidad" backcolor="#000000"/>
+		</conditionalStyle>
+	</style>
+	<style name="inconformidad" isDefault="false" forecolor="#FFFFFF">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean(es.jcyl.fqs.ocap.util.Constantes.NO.equals($P{datosDocu}.getBConformidadCte()))]]></conditionExpression>
+			<style isDefault="false" style="inconformidad" backcolor="#000000"/>
+		</conditionalStyle>
+	</style>
+	<style name="revision" isDefault="false" forecolor="#FFFFFF">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean(es.jcyl.fqs.ocap.util.Constantes.NO.equals($P{datosDocu}.getBNuevaRevision()))]]></conditionExpression>
+			<style isDefault="false" style="revision" backcolor="#000000"/>
+		</conditionalStyle>
+	</style>
+	<style name="revisionNueva" isDefault="false" forecolor="#FFFFFF">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean(es.jcyl.fqs.ocap.util.Constantes.SI.equals($P{datosDocu}.getBNuevaRevision()))]]></conditionExpression>
+			<style isDefault="false" style="revisionNueva" backcolor="#000000"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="datosDocu" class="es.jcyl.fqs.ocap.ot.cuestionarios.OCAPCuestionariosOT"/>
+	<parameter name="ruta" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="53">
+			<image scaleImage="RetainShape" hAlign="Left" isUsingCache="true" hyperlinkType="None">
+				<reportElement x="20" y="0" width="515" height="53" isPrintWhenDetailOverflows="true"/>
+				<imageExpression class="java.lang.String"><![CDATA[$P{ruta}+"/imagenes/imagenes_ocap/logo-FQS.gif"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="13">
+			<printWhenExpression><![CDATA[new Boolean($V{PAGE_NUMBER}.intValue() == 1)]]></printWhenExpression>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band/>
+	</columnHeader>
+	<detail>
+		<band height="1236">
+			<staticText>
+				<reportElement x="76" y="10" width="419" height="20" forecolor="#916547"/>
+				<textElement textAlignment="Center">
+					<font fontName="sansserif" size="13" isBold="true" isUnderline="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[INFORME DE CONFORMIDAD DEL COMITÉ TÉCNICO ]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="217" y="34" width="161" height="20" forecolor="#916547"/>
+				<textElement textAlignment="Center">
+					<font fontName="sansserif" size="13" isBold="true" isUnderline="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[DE EVALUACIÓN]]></text>
+			</staticText>
+			<line>
+				<reportElement x="20" y="5" width="515" height="1"/>
+			</line>
+			<line>
+				<reportElement x="20" y="59" width="515" height="1"/>
+			</line>
+			<staticText>
+				<reportElement x="20" y="67" width="249" height="20" forecolor="#916547"/>
+				<box leftPadding="5"/>
+				<textElement>
+					<font isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[DATOS DE IDENTIFICACIÓN DEL COMITÉ]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" hyperlinkType="None">
+				<reportElement x="20" y="91" width="515" height="20"/>
+				<box leftPadding="5">
+					<pen lineWidth="1.0" lineColor="#916547"/>
+					<topPen lineWidth="1.0" lineColor="#916547"/>
+					<leftPen lineWidth="1.0" lineColor="#916547"/>
+					<bottomPen lineWidth="1.0" lineColor="#916547"/>
+					<rightPen lineWidth="1.0" lineColor="#916547"/>
+				</box>
+				<textElement markup="styled"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["<style pdfFontName=\"Helvetica-Bold\" size=\"12\">Nombre del CTE:</style> " + $P{datosDocu}.getDNombreCte()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="121" width="208" height="20" forecolor="#916547"/>
+				<box leftPadding="5"/>
+				<textElement>
+					<font isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[PROFESIONAL EVALUADO]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="20" y="145" width="525" height="96" forecolor="#916547"/>
+				<box leftPadding="5">
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textField isStretchWithOverflow="true" hyperlinkType="None">
+					<reportElement x="0" y="0" width="515" height="20"/>
+					<box>
+						<pen lineWidth="0.0"/>
+						<topPen lineWidth="0.0"/>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement markup="styled"/>
+					<textFieldExpression class="java.lang.String"><![CDATA["<style pdfFontName=\"Helvetica-Bold\" size=\"12\">Código del evaluado:</style> " + $P{datosDocu}.getDCodigoId()]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" hyperlinkType="None">
+					<reportElement x="0" y="24" width="515" height="20"/>
+					<box>
+						<pen lineWidth="0.0"/>
+						<topPen lineWidth="0.0"/>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement markup="styled"/>
+					<textFieldExpression class="java.lang.String"><![CDATA["<style pdfFontName=\"Helvetica-Bold\" size=\"12\">Especialidad/Categoría/Desempeño:</style> " + $P{datosDocu}.getDCategoriaEspecialidadEvaluado()]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" hyperlinkType="None">
+					<reportElement x="0" y="47" width="515" height="20"/>
+					<box>
+						<pen lineWidth="0.0"/>
+						<topPen lineWidth="0.0"/>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement markup="styled"/>
+					<textFieldExpression class="java.lang.String"><![CDATA["<style pdfFontName=\"Helvetica-Bold\" size=\"12\">Itinerario de Evaluación Competencial (IEC) evaluado:</style> " + $P{datosDocu}.getDNombreItinerario()]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" hyperlinkType="None">
+					<reportElement x="0" y="72" width="515" height="20"/>
+					<box>
+						<pen lineWidth="0.0"/>
+						<topPen lineWidth="0.0"/>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement markup="styled"/>
+					<textFieldExpression class="java.lang.String"><![CDATA["<style pdfFontName=\"Helvetica-Bold\" size=\"12\">Grado de Carrera Profesional solicitado:</style> " + $P{datosDocu}.getDGrado_des()]]></textFieldExpression>
+				</textField>
+			</frame>
+			<staticText>
+				<reportElement x="20" y="251" width="208" height="20" forecolor="#916547"/>
+				<box leftPadding="5"/>
+				<textElement>
+					<font isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[EVALUADOR]]></text>
+			</staticText>
+			<frame>
+				<reportElement x="20" y="275" width="525" height="72" forecolor="#916547"/>
+				<box leftPadding="5">
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textField isStretchWithOverflow="true" hyperlinkType="None">
+					<reportElement x="0" y="0" width="515" height="20"/>
+					<box>
+						<pen lineWidth="0.0"/>
+						<topPen lineWidth="0.0"/>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement markup="styled"/>
+					<textFieldExpression class="java.lang.String"><![CDATA["<style pdfFontName=\"Helvetica-Bold\" size=\"12\">Código de evaluador:</style> " + $P{datosDocu}.getDCodigoEvaluadorId()]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" hyperlinkType="None">
+					<reportElement x="0" y="24" width="515" height="20"/>
+					<box>
+						<pen lineWidth="0.0"/>
+						<topPen lineWidth="0.0"/>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement markup="styled"/>
+					<textFieldExpression class="java.lang.String"><![CDATA["<style pdfFontName=\"Helvetica-Bold\" size=\"12\">Fecha de inicio Evaluación Externa:</style> " + $P{datosDocu}.getFInicioEvaluacion()]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" hyperlinkType="None">
+					<reportElement x="0" y="48" width="515" height="20"/>
+					<box>
+						<pen lineWidth="0.0"/>
+						<topPen lineWidth="0.0"/>
+						<leftPen lineWidth="0.0"/>
+						<bottomPen lineWidth="0.0"/>
+						<rightPen lineWidth="0.0"/>
+					</box>
+					<textElement markup="styled"/>
+					<textFieldExpression class="java.lang.String"><![CDATA["<style pdfFontName=\"Helvetica-Bold\" size=\"12\">Fecha de finalización Evaluación Externa:</style> " + $P{datosDocu}.getFFinEvaluacion()]]></textFieldExpression>
+				</textField>
+			</frame>
+			<break>
+				<reportElement x="0" y="360" width="545" height="1"/>
+			</break>
+			<staticText>
+				<reportElement x="20" y="370" width="515" height="20" forecolor="#916547"/>
+				<box leftPadding="5"/>
+				<textElement>
+					<font isBold="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[INFORME DE CONFORMIDAD DEL COMITÉ TÉCNICO DE EVALUACIÓN ]]></text>
+			</staticText>
+			<frame>
+				<reportElement stretchType="RelativeToTallestObject" x="20" y="412" width="522" height="313" forecolor="#916547"/>
+				<box leftPadding="0"/>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" hyperlinkType="None">
+					<reportElement x="5" y="0" width="515" height="19"/>
+					<textElement textAlignment="Justified">
+						<font isBold="false"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["Don / Doña " + $P{datosDocu}.getDNombrePresidente()]]></textFieldExpression>
+				</textField>
+				<textField hyperlinkType="None">
+					<reportElement x="5" y="23" width="515" height="51"/>
+					<textElement/>
+					<textFieldExpression class="java.lang.String"><![CDATA["Como presidente del Comité Técnico de Evaluación de "+$P{datosDocu}.getDNombreCte()+" creado por la FQS para el proceso de Evaluación del Desempeño de la Competencia(EDC) para el reconocimiento de grado de Carrera Profesional de la Consejería de Sanidad - SACYL de la Junta de Castilla y León, y tras la reunión celebrada el "+$P{datosDocu}.getFEvaluacion()+" INFORMO:"]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement mode="Opaque" x="5" y="82" width="3" height="3" backcolor="#000000"/>
+				</rectangle>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" hyperlinkType="None">
+					<reportElement x="11" y="78" width="509" height="71"/>
+					<textElement textAlignment="Justified" markup="styled">
+						<font isBold="false"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["Que el Profesional Evaluado con código <style pdfFontName=\"Helvetica-Bold\">" + $P{datosDocu}.getDCodigoId() + "</style> ha realizado la Evaluación del Desempeño de la Competencia según el Itinerario de Evaluación Competencial que le corresponde para el reconocimiento de grado de Carrera Profesional, obteniendo los siguientes créditos: <style pdfFontName=\"Helvetica-Bold\">" + $P{datosDocu}.getNCreditosEvaluados() + "</style> sobre <style pdfFontName=\"Helvetica-Bold\">" + $P{datosDocu}.getNCreditos() + "</style> "]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement mode="Opaque" x="5" y="156" width="3" height="3" backcolor="#000000"/>
+				</rectangle>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" hyperlinkType="None">
+					<reportElement x="11" y="152" width="509" height="71"/>
+					<textElement textAlignment="Justified" markup="styled">
+						<font isBold="false"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["Que el análisis de Evaluación Externa realizado por el Evaluador  <style pdfFontName=\"Helvetica-Bold\">" + $P{datosDocu}.getDCodigoEvaluadorId() + "</style> según los criterios y metodología acreditada por la FQS (Fundación Centro Regional de Calidad y Acreditación Sanitaria) ha dado como resultado: <style pdfFontName=\"Helvetica-Bold\">" + $P{datosDocu}.getNCreditosEvaluados() + "</style> sobre los <style pdfFontName=\"Helvetica-Bold\">" + $P{datosDocu}.getNCreditos() + "</style> necesarios. "]]></textFieldExpression>
+				</textField>
+				<rectangle>
+					<reportElement mode="Opaque" x="5" y="230" width="3" height="3" backcolor="#000000"/>
+				</rectangle>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" hyperlinkType="None">
+					<reportElement x="11" y="227" width="495" height="19"/>
+					<textElement textAlignment="Justified" markup="styled">
+						<font isBold="false"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["Por lo cual la C.T.E. " + $P{datosDocu}.getDNombreCte() + "acuerda: "]]></textFieldExpression>
+				</textField>
+				<ellipse>
+					<reportElement style="conformidad" mode="Opaque" x="30" y="254" width="5" height="5"/>
+					<graphicElement>
+						<pen lineColor="#000000"/>
+					</graphicElement>
+				</ellipse>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+					<reportElement x="40" y="249" width="480" height="30"/>
+					<textElement textAlignment="Justified" markup="styled">
+						<font isBold="false"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["CONFORMIDAD con la evaluación realizada por el Evaluador Externo y VALIDO su actuación, en la que se otorgan al Profesional Evaluados " + $P{datosDocu}.getNCreditosEvaluados() + " ."]]></textFieldExpression>
+				</textField>
+				<ellipse>
+					<reportElement style="inconformidad" mode="Opaque" x="30" y="286" width="5" height="5"/>
+					<graphicElement>
+						<pen lineColor="#000000"/>
+					</graphicElement>
+				</ellipse>
+				<staticText>
+					<reportElement x="40" y="284" width="480" height="28"/>
+					<textElement/>
+					<text><![CDATA[NO CONFORMIDAD con la evaluación realizada por el Evaluador Externo y solicito a la FQS la realización de una nueva evaluación.]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement mode="Transparent" x="20" y="729" width="522" height="26" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean(es.jcyl.fqs.ocap.util.Constantes.NO.equals($P{datosDocu}.getBConformidadCte()))]]></printWhenExpression>
+				</reportElement>
+				<ellipse>
+					<reportElement style="revision" mode="Opaque" x="42" y="7" width="5" height="5"/>
+					<graphicElement>
+						<pen lineColor="#000000"/>
+					</graphicElement>
+				</ellipse>
+				<staticText>
+					<reportElement x="53" y="4" width="467" height="18"/>
+					<textElement/>
+					<text><![CDATA[Solicita la revisión de la evaluación realizada al encontrar discrepancias en los siguientes aspectos:
+]]></text>
+				</staticText>
+			</frame>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" isPrintRepeatedValues="false" x="53" y="759" width="467" height="109" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean(es.jcyl.fqs.ocap.util.Constantes.NO.equals($P{datosDocu}.getBConformidadCte()) && es.jcyl.fqs.ocap.util.Constantes.NO.equals($P{datosDocu}.getBNuevaRevision()))]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getADiscrepancias()]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement x="20" y="873" width="522" height="35" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean(es.jcyl.fqs.ocap.util.Constantes.NO.equals($P{datosDocu}.getBConformidadCte()))]]></printWhenExpression>
+				</reportElement>
+				<ellipse>
+					<reportElement style="revisionNueva" mode="Opaque" x="42" y="7" width="5" height="5"/>
+					<graphicElement>
+						<pen lineColor="#000000"/>
+					</graphicElement>
+				</ellipse>
+				<staticText>
+					<reportElement x="53" y="4" width="467" height="29"/>
+					<textElement/>
+					<text><![CDATA[Solicita una nueva revisión de la evaluación por un evaluador diferente al encontrar discrepancias en los siguientes aspectos:
+]]></text>
+				</staticText>
+			</frame>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" isPrintRepeatedValues="false" x="53" y="912" width="467" height="109" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean(es.jcyl.fqs.ocap.util.Constantes.NO.equals($P{datosDocu}.getBConformidadCte()) && es.jcyl.fqs.ocap.util.Constantes.SI.equals($P{datosDocu}.getBNuevaRevision()))]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getADiscrepancias()]]></textFieldExpression>
+			</textField>
+			<frame>
+				<reportElement positionType="Float" x="20" y="1031" width="522" height="169"/>
+				<rectangle>
+					<reportElement mode="Opaque" x="3" y="7" width="3" height="4" backcolor="#000000"/>
+				</rectangle>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" hyperlinkType="None">
+					<reportElement x="9" y="4" width="495" height="19"/>
+					<textElement textAlignment="Justified" markup="styled">
+						<font isBold="false"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["Asimismo realizo las siguientes especificaciones: "]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+					<reportElement positionType="Float" x="20" y="27" width="500" height="109"/>
+					<box>
+						<pen lineWidth="1.0"/>
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<bottomPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement textAlignment="Justified"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getAEspecificaciones()]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="false" hyperlinkType="None">
+					<reportElement x="6" y="145" width="495" height="19"/>
+					<textElement textAlignment="Justified" markup="styled">
+						<font isBold="false"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA["Fecha: " + $P{datosDocu}.getFEvaluacion()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band/>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

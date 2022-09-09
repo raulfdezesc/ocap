@@ -1,0 +1,298 @@
+/*	Modificaciones en la hoja de estilo para IE7	*/
+.contenidoFaseIII .formulario .unTercio {
+	float: left;
+	width: 33.3%;
+}
+
+.contenidoFaseIII .formulario .unTercio select.completo {
+	width: 95.5%;
+}
+
+.contenidoFaseIII .formulario .unTercio span.resultado {
+	width: 52.3%;
+}
+
+.contenidoFaseIII .formulario .dosTercios {
+	float: left;
+	width: 66.5%;
+}
+
+.contenidoFaseIII .formulario .dosTercios input {
+	width: 75.5%;
+}
+
+.contenidoFaseIII .formulario .dosTercios input.corto {
+	
+}
+
+.contenidoFaseIII .formulario .unMedio {
+	float: left;
+	width: 49.8%;
+}
+
+.contenidoFaseIII .formulario .unMedio input {
+	width: 67.5%;
+}
+
+.contenidoFaseIII .formulario .ajustarIE7 input {
+	margin-left: 0.6em !important;
+}
+
+.contenidoFaseIII .formulario .ajustarIE7 select {
+	margin-left: 0.5em !important;
+}
+
+.contenidoFaseIII .formulario .todo {
+	width: 99.7%;
+}
+
+.contenidoFaseIII .formulario .todo input.cuadroTodoG {
+	width: 83.1%;
+}
+
+.contenidoFaseIII .formulario .todo input.cuadroTodoP {
+	width: 63%;
+}
+
+.contenidoFaseIII .formulario .todo input.resultadoP {
+	width: 61.7%;
+}
+
+.contenidoFaseIII .formulario .todo select.cuadroTodoP {
+	width: 63.1%;
+}
+
+.contenidoFaseIII .formulario .todo span.resultadoP {
+	width: 63.5%;
+}
+
+.contenidoFaseIII .formulario .todo span.resultadoN {
+	width: 63.5%;
+}
+
+.contenidoFaseIII .formulario label.buscadorCon {
+	width: 5.9em;
+}
+
+.contenidoFaseIII .formulario .unMedio select.buscador {
+	width: 69.7%;
+	margin-left: 4px
+}
+
+.contenidoFaseIII .formulario .todo textarea {
+	width: 94.6%;
+	margin-left: 2%;
+}
+
+.contenidoFaseIII .formularioDudas .todo .consultaDudas {
+	width: 95.2% !important;
+}
+
+.contenidoFaseIII .formulario .ajusteIE input, .contenidoFaseIII .formulario .ajusteIE select
+	{
+	margin-left: 0.3em;
+}
+
+.contenidoFaseIII .formulario select {
+	height: 1.6em;
+}
+
+/* No comprobados estos estilos	*/
+.contenidoFaseIII .formulario .dosTercios span.resultado {
+	width: 75%;
+}
+
+.contenidoFaseIII .formulario select {
+	margin-left: 3px;
+}
+
+.contenidoFaseIII .formulario .unMedio select {
+	width: 67.3%;
+}
+
+.contenidoFaseIII .formulario .unMedio input.corto {
+	width: 24.6%;
+}
+
+.contenidoFaseIII .formulario .unMedio select.corto {
+	width: 26.8%;
+}
+
+.contenidoFaseIII .formulario .dosTercios select {
+	width: 75.5%;
+}
+
+.contenidoFaseIII .formulario .todo select.cuadroTodoG {
+	width: 83.4%;
+}
+/* No comprobados estos estilos	*/
+
+/*  Contenido TextoECP  */
+.contenidoFaseIII .contenidoTextoECP .tablaECP .parteCentro {
+	float: left;
+	display: block;
+}
+
+.contenidoFaseIII .contenidoTextoECP .tablaECP .numeracion {
+	float: left;
+	display: block;
+}
+
+/*	Encuesta de calidad	*/
+.tablaEncuestaCalidad .centrarCaja1 {
+	margin-left: 18px;
+}
+
+.tablaEncuestaCalidad .centrarCaja2 {
+	margin-left: 15px;
+}
+/*	/Encuesta de calidad	*/
+
+/*	Fin de pantalla de Ponderaciones	*/
+.contenidoFaseIII .contenidoTextoAutoevaluacion .indexar .contenidoTextoProcedimiento .bordeCuadro
+	{
+	margin-left: -2.5em;
+}
+/*	Pantalla de datos Profesionales	*/
+
+/*	Formulario de dudas		*/
+.contenidoFaseIII .tablaDudas tr td.fRecepcion {
+	padding-left: 1em;;
+}
+/*	Fin del Formulario de dudas		*/
+
+/* Formulario de Modificacion de Evaluadores	*/
+.contenidoFaseIII .modificacionEvaluadores .modEvalEsp {
+	margin-left: 0.3em;
+}
+
+.contenidoFaseIII .modificacionEvaluadores .modEvalTelf2 {
+	margin-left: 0.3em;
+}
+
+/*	Fin de Formulario de Modificacion de Evaluadores	*/
+
+/*	Itinerarios	*/
+
+/*	sttitulo	*/
+.contenidoFaseIII .contenidoTextoProcedimiento .stTitulo .nivel0 {
+	width: 99.2%;
+}
+/*	Fin sttitulo	*/
+.contenidoFaseIII .contenidoTextoProcedimiento .botonesPagina  .botonAccion
+	{
+	margin-bottom: 0;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .listadoSangrado li {
+	margin-bottom: 1em;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .cuadroListadoCuestionario1
+	{
+	width: 50em;
+}
+
+/*	sttextarea	*/
+.contenidoFaseIII .contenidoTextoProcedimiento .sttextarea .tablaRespuestas
+	{
+	width: 100%;
+	margin-top: 0.5em;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttextarea .tablaRespuestas .cuadroTACuestionario1
+	{
+	width: 97.6%;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttextarea .cuadroTACuestionario
+	{
+	width: 97.2%;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttextarea .tablaRespuestas .cuadroTACuestionario2
+	{
+	width: 18em;
+}
+/*	Fin sttextarea	*/
+.contenidoFaseIII .contenidoTextoProcedimiento .cuadroListadoCuestionario3
+	{
+	width: 12.5em;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .cuadroListadoCuestionarioC3
+	{
+	width: 12.5em;
+}
+
+/*	sttext	*/
+.contenidoFaseIII .contenidoTextoProcedimiento .sttext .tablaRespuestas .cuadroListadoNCuestionarioC1
+	{
+	width: 38.5em;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttext .tablaRespuestas .cuadroListadoNCuestionarioC2
+	{
+	width: 22em;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttext .tablaRespuestas .cuadroListadoCuestionario3
+	{
+	width: 95% !important;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttext .tablaRespuestas .cuadroListadoCuestionarioC3
+	{
+	width: 95% !important;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttext .tablaRespuestas .cuadroListadoNCuestionario3
+	{
+	width: 12.5em;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttext .tablaRespuestas .cuadroListadoNCuestionarioC3
+	{
+	float: left;
+	margin-top: 2px;
+	line-height: 1.2em;
+}
+/*	Fin sttext	*/
+
+/* stfecha	*/
+.contenidoFaseIII .contenidoTextoProcedimiento .stfecha  a {
+	vertical-align: bottom;
+}
+/*	Fin stfecha	*/
+
+/*	stradio	*/
+.contenidoFaseIII .contenidoTextoProcedimiento .stradio .textoRadioCuestionarioCorto
+	{
+	width: 9.1em;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .stradio .textoRadioCuestionarioLargo
+	{
+	width: 44.4em;
+}
+/* Fin	stradio	*/
+
+/*	Radio_Text	*/
+.contenidoFaseIII .contenidoTextoProcedimiento .stradioText .textoRadioLinea
+	{
+	margin-top: 1em;
+	width: 90.5%;
+}
+/*	Fin de Radio_Text	*/
+.contenidoFaseIII .areasAuto .datosAreasAuto table td .numeracion {
+	width: 13%;
+	float: left;
+	line-height: 1.2em;
+}
+
+.contenidoFaseIII .areasAuto .datosAreasAuto table td .enunciado {
+	width: 86%;
+	float: left;
+	vertical-align: bottom;
+	line-height: 1.2em;
+}

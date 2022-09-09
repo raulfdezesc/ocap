@@ -1,0 +1,283 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="822" pageHeight="595" orientation="Landscape" columnWidth="822" leftMargin="0" rightMargin="0" topMargin="3" bottomMargin="5">
+	<parameter name="ruta" class="java.lang.String"/>
+	<field name="definitiva" class="java.lang.String"/>
+	<field name="dGrado_des" class="java.lang.String"/>
+	<field name="dConvocatoria" class="java.lang.String"/>
+	<field name="fConvocatoria" class="java.lang.String"/>
+	<field name="dGerencia_nombre" class="java.lang.String"/>
+	<field name="dApellido1" class="java.lang.String"/>
+	<field name="dNombre" class="java.lang.String"/>
+	<field name="dProfesional_nombre" class="java.lang.String"/>
+	<field name="dEspec_nombre" class="java.lang.String"/>
+	<field name="dModalidad" class="java.lang.String"/>
+	<field name="fase" class="java.lang.String"/>
+	<field name="causasExclusion" class="java.lang.String"/>
+	<field name="dDni" class="java.lang.String"/>
+	<variable name="numCasos" class="java.lang.Integer" resetType="Group" resetGroup="gerencia" calculation="Count">
+		<variableExpression><![CDATA[$F{dApellido1}]]></variableExpression>
+	</variable>
+	<variable name="numPag" class="java.lang.Integer" resetType="Page" calculation="Count">
+		<variableExpression><![CDATA[$V{PAGE_COUNT}]]></variableExpression>
+	</variable>
+	<variable name="numPagTotal" class="java.lang.Integer" resetType="Group" resetGroup="gerencia" incrementType="Group" incrementGroup="gerencia" calculation="Sum">
+		<variableExpression><![CDATA[$V{PAGE_NUMBER}]]></variableExpression>
+	</variable>
+	<group name="gerencia" isStartNewPage="true" isResetPageNumber="true" isReprintHeaderOnEachPage="true">
+		<groupExpression><![CDATA[$F{dGerencia_nombre}]]></groupExpression>
+		<groupHeader>
+			<band height="176">
+				<image hyperlinkType="None">
+					<reportElement x="703" y="0" width="94" height="50"/>
+					<imageExpression class="java.lang.String"><![CDATA[$P{ruta}+"/imagenes/imagenes_ocap/SACYL-LOGO.gif"]]></imageExpression>
+				</image>
+				<image hyperlinkType="None">
+					<reportElement x="2" y="0" width="83" height="53"/>
+					<imageExpression class="java.lang.String"><![CDATA[$P{ruta}+"/imagenes/imagenes_ocap/logo-junta.gif"]]></imageExpression>
+				</image>
+				<staticText>
+					<reportElement x="327" y="54" width="70" height="18"/>
+					<textElement>
+						<font size="12" isBold="true" pdfFontName="Helvetica-Bold"/>
+					</textElement>
+					<text><![CDATA[ANEXO I]]></text>
+				</staticText>
+				<textField isStretchWithOverflow="true" hyperlinkType="None">
+					<reportElement x="9" y="77" width="803" height="45"/>
+					<textElement textAlignment="Justified"/>
+					<textFieldExpression class="java.lang.String"><![CDATA["RELACIÓN"+$F{definitiva}+" DE "+$F{fase}+" AL "+$F{dGrado_des}.toUpperCase()+" DE CARRERA PROFESIONAL A TRAVÉS DEL PROCEDIMIENTO ORDINARIO PREVISTO EN EL DECRETO 43/2009, DE 2 DE JULIO, DE LA JUNTA DE CASTILLA Y LEÓN, POR EL QUE SE REGULA LA CARRERA PROFESIONAL DEL PERSONAL ESTATUTARIO DE LOS CENTROS E INSTITUCIONES SANITARIAS DEL SERVICIO DE SALUD DE CASTILLA Y LEÓN."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+					<reportElement x="9" y="130" width="803" height="17"/>
+					<textElement/>
+					<textFieldExpression class="java.lang.String"><![CDATA["CONVOCATORIA DE FECHA "+$F{fConvocatoria}.toUpperCase()+"."]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+					<reportElement x="9" y="148" width="803" height="20"/>
+					<textElement verticalAlignment="Middle"/>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{dGerencia_nombre}.toUpperCase()]]></textFieldExpression>
+				</textField>
+			</band>
+		</groupHeader>
+		<groupFooter>
+			<band height="34" isSplitAllowed="false">
+				<textField hyperlinkType="None">
+					<reportElement positionType="Float" x="87" y="10" width="112" height="22"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<textFieldExpression class="java.lang.Integer"><![CDATA[$V{numCasos}]]></textFieldExpression>
+				</textField>
+				<staticText>
+					<reportElement positionType="Float" x="54" y="10" width="33" height="22"/>
+					<textElement>
+						<font size="10"/>
+					</textElement>
+					<text><![CDATA[Total:]]></text>
+				</staticText>
+			</band>
+		</groupFooter>
+	</group>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band/>
+	</title>
+	<pageHeader>
+		<band/>
+	</pageHeader>
+	<columnHeader>
+		<band/>
+	</columnHeader>
+	<detail>
+		<band height="34" isSplitAllowed="false">
+			<frame>
+				<reportElement x="2" y="0" width="817" height="20" isRemoveLineWhenBlank="true" backcolor="#969696">
+					<printWhenExpression><![CDATA[new Boolean($V{numPag}.intValue()==1)]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<staticText>
+					<reportElement isPrintRepeatedValues="false" mode="Opaque" x="0" y="0" width="151" height="20" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" backcolor="#999999">
+						<printWhenExpression><![CDATA[new Boolean($V{numPag}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="9" isUnderline="false" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[ APELLIDOS]]></text>
+				</staticText>
+				<staticText>
+					<reportElement isPrintRepeatedValues="false" mode="Opaque" x="151" y="0" width="100" height="20" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" backcolor="#999999">
+						<printWhenExpression><![CDATA[new Boolean($V{numPag}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="9" isUnderline="false" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[ NOMBRE]]></text>
+				</staticText>
+				<staticText>
+					<reportElement isPrintRepeatedValues="false" mode="Opaque" x="251" y="0" width="64" height="20" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" backcolor="#999999">
+						<printWhenExpression><![CDATA[new Boolean($V{numPag}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="9" isUnderline="false" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[ DNI]]></text>
+				</staticText>
+				<staticText>
+					<reportElement isPrintRepeatedValues="false" mode="Opaque" x="315" y="0" width="214" height="20" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" backcolor="#999999">
+						<printWhenExpression><![CDATA[new Boolean($V{numPag}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="9" isUnderline="false" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[ CUERPO/CATEGORÍA]]></text>
+				</staticText>
+				<staticText>
+					<reportElement isPrintRepeatedValues="false" mode="Opaque" x="529" y="0" width="144" height="20" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" backcolor="#999999">
+						<printWhenExpression><![CDATA[new Boolean($V{numPag}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="9" isUnderline="false" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[ ESPECIALIDAD]]></text>
+				</staticText>
+				<staticText>
+					<reportElement isPrintRepeatedValues="false" mode="Opaque" x="673" y="0" width="144" height="20" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true" backcolor="#999999">
+						<printWhenExpression><![CDATA[new Boolean($V{numPag}.intValue()==1)]]></printWhenExpression>
+					</reportElement>
+					<box>
+						<topPen lineWidth="1.0"/>
+						<leftPen lineWidth="1.0"/>
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement verticalAlignment="Middle">
+						<font size="9" isUnderline="false" pdfFontName="Helvetica-Bold" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+					</textElement>
+					<text><![CDATA[ CAUSAS DE EXCLUSIÓN]]></text>
+				</staticText>
+			</frame>
+			<frame>
+				<reportElement x="2" y="20" width="817" height="14"/>
+				<box>
+					<pen lineWidth="1.0"/>
+					<topPen lineWidth="1.0"/>
+					<leftPen lineWidth="1.0"/>
+					<bottomPen lineWidth="1.0"/>
+					<rightPen lineWidth="1.0"/>
+				</box>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+					<reportElement stretchType="RelativeToTallestObject" x="0" y="0" width="151" height="14" isPrintWhenDetailOverflows="true"/>
+					<box topPadding="1" leftPadding="2">
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{dApellido1}.toUpperCase()]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+					<reportElement stretchType="RelativeToTallestObject" x="151" y="0" width="100" height="14" isPrintWhenDetailOverflows="true"/>
+					<box topPadding="1" leftPadding="2">
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{dNombre}.toUpperCase()]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+					<reportElement stretchType="RelativeToTallestObject" x="251" y="0" width="64" height="14" isPrintWhenDetailOverflows="true"/>
+					<box topPadding="1" leftPadding="2">
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{dDni}]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+					<reportElement stretchType="RelativeToTallestObject" x="315" y="0" width="214" height="14" isPrintWhenDetailOverflows="true"/>
+					<box topPadding="1" leftPadding="2">
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{dProfesional_nombre}.toUpperCase()]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+					<reportElement stretchType="RelativeToTallestObject" x="529" y="0" width="144" height="14" isPrintWhenDetailOverflows="true"/>
+					<box topPadding="1" leftPadding="2">
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{dEspec_nombre}.toUpperCase()]]></textFieldExpression>
+				</textField>
+				<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+					<reportElement stretchType="RelativeToTallestObject" x="673" y="0" width="144" height="14" isPrintWhenDetailOverflows="true"/>
+					<box topPadding="1" leftPadding="2">
+						<rightPen lineWidth="1.0"/>
+					</box>
+					<textElement>
+						<font size="8"/>
+					</textElement>
+					<textFieldExpression class="java.lang.String"><![CDATA[$F{causasExclusion}.toUpperCase()]]></textFieldExpression>
+				</textField>
+			</frame>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="27">
+			<textField evaluationTime="Group" evaluationGroup="gerencia" hyperlinkType="None">
+				<reportElement positionType="FixRelativeToBottom" x="397" y="6" width="124" height="18"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[""+$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="FixRelativeToBottom" x="274" y="6" width="123" height="18"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["Pág. "+$V{PAGE_NUMBER}+"/"]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

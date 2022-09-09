@@ -1,0 +1,103 @@
+.romperAfter {
+	page-break-after: always;
+}
+
+.romperBefore {
+	page-break-before: always;
+	height: 0;
+	line-height: 0;
+}
+
+body {
+	font-size: 0.5em;
+	padding: 6px;
+	margin-top: 0px;
+	margin-left: 6px;
+}
+
+.contenido {
+	width: 75em;
+	margin-left: -10px;
+}
+
+fieldset {
+	overflow: hidden;
+}
+
+.tituloContenido {
+	margin-top: 0;
+}
+
+/*  Colocación de Solicitudes  */
+.colocaDatosVis {
+	width: 250px;
+}
+
+.colocaDatosVisGrande {
+	width: 510px;
+}
+
+div.contenidoDCP1A .tituloTablaCertif {
+	margin: 0 0 20px 170px;
+}
+
+div.contenidoDCP1A .tablaCertif {
+	margin-left: 50px;
+}
+
+.contenidoDCP2A span.colocaTitRadio {
+	margin-left: 393px;
+}
+
+/*  /Colocación de Solicitudes  */
+
+/* Impresion en los Itinerarios */
+fieldset .sttextarea .cuadroTACuestionario {
+	width: 450px;
+	height: 99px;
+}
+
+.colocaApellidosDossier {
+	width: 188px;
+	margin-left: 5px;
+}
+
+.colocaDNIDossier {
+	width: 60px;
+	margin-left: 5px;
+}
+
+.colocaCategoriaDossier {
+	width: 308px;
+	margin-left: 43px;
+}
+
+.colocaCentroDossier {
+	width: 308px;
+	margin-left: 54px;
+}
+
+.colocaFechaDossier {
+	width: 75px;
+	margin-left: 57px;
+}
+
+/*	Itinerarios	*/
+.contenidoTextoProcedimiento .textoRadioCuestionarioLargo {
+	width: 60em;
+	padding-top: 5px;
+}
+/*	/Itinerarios	*/
+.informeCC .ajusteBorde1 {
+	width: 457px;
+}
+
+.informeCC .ajusteBorde2 {
+	width: 515px;
+}
+
+.noImprimir * {
+	color: #FFFFFF;
+	background-color: #FFFFFF;
+	border: none;
+}

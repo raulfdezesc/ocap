@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<configurations version="1.0"
+	xmlns:xsi='http://www.w3.org/2001/XMLSchema-instance'
+	xsi:schemaLocation='ConfigurationRepository.xsd'>
+
+	<!-- Configuraciones globales a todos los contextos -->
+	<globals>
+		<!-- Ruta base para todos los ficheros de configuración -->
+		<initialPath value="${web-inf.directory}/config/" />
+
+		<!-- Propiedades globales -->
+		<properties>
+			<property name="minimumCheckDelay" value="300000"
+				comment="Tiempo de recarga de las propiedades de configuración (un valor de 0 equivale a no recargar). Expresado en milisegundos." />
+			<property name="contextTimeOut" value="300000"
+				comment="Tiempo que el sistema mantiene el contexto en memoria (un valor de 0 equivale a no recargar). Expresado en milisegundos." />
+		</properties>
+	</globals>
+
+	<!-- Lista de contextos de la aplicación -->
+	<contexts>
+		<context id="default" name="Configuración de la aplicación"
+			minimumCheckDelay="300000" contextTimeOut="900000">
+			<configurationFile id="1" name="AppConfig"
+				location="./app-config.properties" minimumCheckDelay="300000"
+				comment="" />
+		</context>
+		<context id="log" name="Configuración Sistema Log"
+			minimumCheckDelay="300000" contextTimeOut="300000">
+			<configurationFile id="ficheroLog4j" name="LogConfig"
+				location="./log.xml" minimumCheckDelay="300000" comment="" />
+		</context>
+	</contexts>
+</configurations>

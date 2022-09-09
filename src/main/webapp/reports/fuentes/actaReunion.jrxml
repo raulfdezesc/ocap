@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="900" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<parameter name="grado" class="es.jcyl.fqs.ocap.ot.grado.OCAPGradoOT" isForPrompting="false"/>
+	<parameter name="ruta" class="java.lang.String" isForPrompting="false"/>
+	<parameter name="datosDocu" class="es.jcyl.fqs.ocap.ot.actas.OCAPActasOT"/>
+	<parameter name="gerencia" class="es.jcyl.fqs.ocap.ot.gerencias.OCAPGerenciasOT"/>
+	<parameter name="datosListadoVocales" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="listadoVocales" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="datosListadoUsuarios" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="listadoUsuarios" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="categoria" class="es.jcyl.fqs.ocap.ot.categProfesionales.OCAPCategProfesionalesOT"/>
+	<parameter name="datosListadoVocalesSuplentes" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<parameter name="listadoVocalesSuplentes" class="net.sf.jasperreports.engine.JasperReport"/>
+	<parameter name="vocalesVacio" class="java.lang.String"/>
+	<parameter name="vocalesSuplentesVacio" class="java.lang.String"/>
+	<parameter name="usuariosVacio" class="java.lang.String"/>
+	<parameter name="nombreComite" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<pageHeader>
+		<band height="67">
+			<image hyperlinkType="None">
+				<reportElement x="21" y="0" width="83" height="53" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true"/>
+				<imageExpression class="java.lang.String"><![CDATA[$P{ruta}+"/imagenes/imagenes_ocap/logo-junta.gif"]]></imageExpression>
+			</image>
+			<image hyperlinkType="None">
+				<reportElement x="442" y="0" width="94" height="50" isPrintInFirstWholeBand="true" isPrintWhenDetailOverflows="true"/>
+				<imageExpression class="java.lang.String"><![CDATA[$P{ruta}+"/imagenes/imagenes_ocap/SACYL-LOGO.gif"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<detail>
+		<band height="696">
+			<textField isStretchWithOverflow="true" hyperlinkType="None">
+				<reportElement x="21" y="8" width="515" height="61"/>
+				<textElement textAlignment="Justified">
+					<font pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{nombreComite}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="21" y="79" width="515" height="19"/>
+				<textElement textAlignment="Center">
+					<font size="11" isBold="true" isUnderline="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[ACTA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="21" y="101" width="108" height="19"/>
+				<textElement>
+					<font size="10" isBold="true" isUnderline="true" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[ASISTENTES:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="21" y="123" width="515" height="18"/>
+				<textElement>
+					<font size="10" isBold="true" isUnderline="false" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Presidente Comité:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="31" y="139" width="246" height="15"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getDNombreApellidosPresi1()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="281" y="139" width="246" height="15"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getDNombreApellidosPresi2()]]></textFieldExpression>
+			</textField>
+			<subreport isUsingCache="false">
+				<reportElement positionType="Float" x="21" y="158" width="515" height="3" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true"/>
+				<dataSourceExpression><![CDATA[$P{datosListadoVocales}]]></dataSourceExpression>
+				<subreportExpression class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{listadoVocales}]]></subreportExpression>
+			</subreport>
+			<textField isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="21" y="158" width="100" height="1" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{vocalesVacio}]]></textFieldExpression>
+			</textField>
+			<subreport isUsingCache="false">
+				<reportElement positionType="Float" x="21" y="164" width="515" height="3" isRemoveLineWhenBlank="true" isPrintInFirstWholeBand="true"/>
+				<dataSourceExpression><![CDATA[$P{datosListadoVocalesSuplentes}]]></dataSourceExpression>
+				<subreportExpression class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{listadoVocalesSuplentes}]]></subreportExpression>
+			</subreport>
+			<textField isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="21" y="164" width="100" height="1" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{vocalesSuplentesVacio}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="21" y="171" width="515" height="18"/>
+				<textElement>
+					<font size="10" isBold="true" isUnderline="false" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Secretarios/as:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="31" y="189" width="246" height="15"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getDNombreApellidosSecre1()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="281" y="189" width="246" height="15"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getDNombreApellidosSecre2()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="21" y="209" width="515" height="18"/>
+				<textElement>
+					<font size="10" isBold="true" isUnderline="false" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[Miembros que excusan su ausencia:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="33" y="227" width="503" height="20"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getDMiembrosAusentes()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="21" y="252" width="515" height="44"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["Siendo las "+$P{datosDocu}.getNHoraInicio()+" horas del  día "+$P{datosDocu}.getFSesionImprimible()+", en la Sala de reuniones de la "+$P{gerencia}.getDNombre()+", situada en "+$P{gerencia}.getDProvinciaNombre()+", se reúnen las personas al margen señaladas para tratar los asuntos fijados en el siguiente:"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="21" y="299" width="515" height="20"/>
+				<textElement>
+					<font size="10" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[ORDEN DEL DÍA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="21" y="319" width="515" height="18"/>
+				<textElement>
+					<font size="10" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[1.   Evaluación de los méritos curriculares.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="21" y="337" width="515" height="18"/>
+				<textElement>
+					<font size="10" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[2.   Asuntos de trámite.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="21" y="355" width="515" height="18"/>
+				<textElement>
+					<font size="10" isBold="false" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[3.   Ruegos y preguntas.]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="21" y="382" width="515" height="20"/>
+				<textElement>
+					<font size="10" isBold="true" isUnderline="false" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[PUNTO PRIMERO.- VALORACIÓN DE LA AUTOEVALUACIÓN DE LOS MÉRITOS CURRICULARES.]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="21" y="402" width="515" height="54"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["Abierta la sesión por el Presidente, se comienza la Evaluación de los méritos curriculares de las solicitudes de acceso" + $P{grado}.getDDescripcion() + " de Carrera Profesional de la categoría de " + $P{categoria}.getDNombre() + " procediéndose posteriormente a revisar todos los méritos de acuerdo a los criterios señalados en la normativa de aplicación, de los siguientes profesionales:"]]></textFieldExpression>
+			</textField>
+			<subreport isUsingCache="false">
+				<reportElement positionType="Float" x="21" y="457" width="515" height="20" isPrintInFirstWholeBand="true"/>
+				<dataSourceExpression><![CDATA[$P{datosListadoUsuarios}]]></dataSourceExpression>
+				<subreportExpression class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{listadoUsuarios}]]></subreportExpression>
+			</subreport>
+			<textField isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="51" y="457" width="449" height="20" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{usuariosVacio}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="21" y="484" width="515" height="20"/>
+				<textElement>
+					<font size="10" isBold="true" isUnderline="false" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[PUNTO SEGUNDO.- ASUNTOS DE TRAMITE.]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="21" y="504" width="515" height="20"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getDAsuntosTramite()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="21" y="527" width="515" height="20"/>
+				<textElement>
+					<font size="10" isBold="true" isUnderline="false" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[PUNTO TERCERO.- RUEGOS Y PREGUNTAS.]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="21" y="547" width="515" height="20"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getDRuegosPreguntas()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="21" y="570" width="515" height="108"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["No habiendo más asuntos que tratar se levanta la sesión a las " + $P{datosDocu}.getNHoraFin()+ " horas, de lo cual como secretario certifico con el visto bueno del Sr. Presidente.\n"+
+"\n "+
+"                   VºBº\n"+
+"                    PRESIDENTE	                                  																					SECRETARIO "+
+"\n"+
+"\n\n\n"+
+"                    Fdo.:	                                      			      																							Fdo.: "]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band isSplitAllowed="false"/>
+	</pageFooter>
+	<lastPageFooter>
+		<band/>
+	</lastPageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,258 @@
+.romperAfter {
+	page-break-after: always;
+}
+
+.romperBefore {
+	page-break-before: always;
+}
+
+.ocultarCampo {
+	display: none;
+	visibility: hidden;
+}
+
+.mostrarImpresion {
+	display: block;
+	visibility: visible;
+}
+
+/*  ESTRUCTURA CSS GENERAL DEL PORTAL  */
+body {
+	font-size: 0.7em;
+	background-color: #FFFFFF;
+	padding: 6px;
+	margin-top: 0px;
+}
+
+.envoltorio {
+	width: 100%;
+	border-style: none;
+	overflow: visible;
+	background-color: #FFFFFF;
+}
+
+.cuerpo {
+	width: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.lateralIzquierda {
+	width: 0;
+	height: 0;
+	display: none;
+	visibility: hidden;
+}
+
+.lateralDerecha {
+	float: left;
+	width: 100%;
+	margin: 0em;
+	padding: 0em;
+}
+
+.contenido {
+	margin: 0;
+	padding: 0;
+	width: 100%;
+	height: auto;
+}
+
+p {
+	text-align: justify;
+}
+
+/*  /ESTRUCTURA GENERAL DEL PORTAL  */
+
+/*  CABECERA */
+.midCabecera {
+	display: none;
+	visibility: hidden;
+}
+
+.midCabecera h1 {
+	color: #3C5E81;
+	font-size: 2em;
+	font-weight: bold;
+	line-height: 3em;
+	margin: 2em 5em 1em 5em;
+	text-align: center;
+}
+
+.miCabecera h1 {
+	color: #004B98;
+	font-size: 2em;
+	font-weight: bold;
+	margin: 0 5em 0 5em;
+	text-align: center;
+}
+
+.tituloContenido {
+	margin-top: 30px;
+}
+
+div.cabecera .cuadroInfo {
+	display: none;
+	visibility: hidden;
+}
+
+div.contenido a img.flotaIzq {
+	visibility: hidden;
+	display: none;
+}
+
+div.marcoContAccesible {
+	visibility: hidden;
+	display: none;
+}
+
+.cuadroInfo {
+	visibility: hidden;
+	display: none;
+}
+
+.conexion {
+	visibility: hidden;
+	display: none;
+}
+
+.botoneraCS, .botonera {
+	visibility: hidden;
+	display: none;
+}
+
+/*  /CABECERA  */
+
+/*  MENU  */
+div.cuerpo .marcoContAccesible {
+	visibility: hidden;
+	display: none;
+}
+
+div.cuerpo .menuAcc {
+	visibility: hidden;
+	display: none;
+}
+
+.menuAccesible {
+	visibility: hidden;
+	display: none;
+}
+
+/*  /MENU  */
+
+/*  CLASES GENERALES DE CONTENIDO  */
+.botonesPagina {
+	visibility: hidden;
+	display: none;
+}
+
+.opcionRegistro {
+	visibility: hidden;
+	display: none;
+}
+
+.botonOK {
+	visibility: hidden;
+	display: none;
+}
+
+/*  /CLASES GENERALES DE CONTENIDO  */
+
+/*  PIE  */
+#footer {
+	visibility: hidden;
+	display: none;
+}
+
+/*  /PIE  */
+
+/*  Colocaciï¿½n de Solicitudes  */
+.contenidoDCP2A span.colocaTitRadio {
+	margin-left: 520px;
+}
+
+/* Impresion en los Itinerarios */
+fieldset .tituloLegend {
+	width: 450px;
+}
+
+fieldset .sttextarea .cuadroTACuestionario {
+	width: 500px;
+	height: 60px;
+}
+
+fieldset .cuadroFieldset .colocaDatosVis {
+	width: 45%;
+}
+
+/*  /Colocaciï¿½n de Solicitudes  */
+
+/* Evidencia de conformidad */
+.evidenciaImpresion {
+	height: auto;
+	padding-top: 3em;
+}
+
+.evidenciaImpresion  ol {
+	margin-top: 4em;
+	margin-bottom: 4em;
+}
+
+.evidenciaImpresion  ol li {
+	margin-top: 1.5em;
+	margin-bottom: 1.5em;
+}
+
+.evidenciaImpresion input {
+	padding-top: 5em;
+	vertical-align: middle;
+}
+
+.evidenciaImpresion  fieldset {
+	margin-top: 4em;
+	height: 10em;
+}
+
+/* /Evidencia de conformidad */
+
+/* Dossier */
+.colocaApellidosDossier {
+	width: 300px;
+	margin-left: 5px;
+}
+
+.colocaDNIDossier {
+	width: 78px;
+	margin-left: 5px;
+}
+
+.colocaCategoriaDossier {
+	width: 452px;
+	margin-left: 55px;
+}
+
+.colocaCentroDossier {
+	width: 452px;
+	margin-left: 70px;
+}
+
+.colocaFechaDossier {
+	width: 75px;
+	margin-left: 75px;
+}
+
+/* Dossier */
+
+/*	Itinerarios	*/
+.contenidoTextoProcedimiento .textoRadioCuestionarioLargo {
+	width: 52em;
+}
+/*	/Itinerarios	*/
+.noImprimir * {
+	color: #FFFFFF;
+	background-color: #FFFFFF;
+	border: none;
+	display: none;
+	visibility: hidden;
+}

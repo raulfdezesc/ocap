@@ -1,0 +1,7364 @@
+/* Hoja de estilos principal, desarrollada para Firefox 3 y Opera 9.1 */
+/* Las correciones para IE version 6 y 7 estan en las hojas ocap_ie6.css y ocap_ie7.css  */
+
+/* Prototipos desarrollados en IE 6.0 2800, FF 2.0.0.14 y Opera 9.10.8679 */
+
+/* 0 - VALORES POR DEFECTO 
+
+- Cada navegador tiene unos valores por defecto distintos.
+- Para tratar de obtener la misma presentacion en todos debemos poner aqui todos los valores que difieran entre distintos navegadores y versiones.
+
+*/
+* {
+	padding: 0;
+	margin: 0;
+	border: 0;
+	font-family: sans-serif;
+	font-weight: normal;
+	font-style: normal;
+	text-decoration: none;
+	outline: none;
+}
+
+code, kbd, samp, pre, tt, var, textarea, input, select, isindex, listing,
+	xmp, plaintext {
+	font-size: 1em;
+	font: inherit;
+}
+
+dfn, i, cite, var, address, em {
+	font-style: normal;
+}
+
+th, b, strong, h1, h2, h3, h4, h5, h6 {
+	font-weight: normal;
+}
+
+a, img, a img, iframe, form, abbr, acronym, object, applet, table {
+	border: none;
+}
+
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+caption, th, td, center {
+	vertical-align: top;
+	text-align: left;
+}
+
+body {
+	padding: 10px 0;
+	line-height: 1;
+}
+
+q {
+	quotes: "" "";
+}
+
+ul, ol, dir, menu {
+	list-style: none;
+}
+
+sub, sup {
+	vertical-align: baseline;
+}
+
+a {
+	color: inherit;
+}
+
+hr {
+	display: none;
+}
+
+font {
+	color: inherit !important;
+	font: inherit !important;
+}
+
+img {
+	border: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+html {
+	overflow-y: scroll;
+}
+
+/* /VALORES POR DEFECTO */
+
+/*  ESTRUCTURA CSS GENERAL DEL PORTAL  */
+body {
+	font-size: 0.7em;
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+	background-color: #ebebec;
+	text-align: center;
+	margin-top: -35px;
+}
+
+.envoltorio {
+	clear: both;
+	text-align: left;
+	width: 80em;
+	background-color: #FBFAF8;
+	margin: 0 auto;
+}
+
+.cabecera, .cuerpo {
+	clear: both;
+	width: 100%;
+}
+
+.lateralIzquierda {
+	float: left;
+	width: 15em;
+}
+
+.imagenLateralIzquierda {
+	/*   background-image: url("../imagenes/imagenes_ocap/evaluanet_menu.gif");
+   background-position: center;
+   background-repeat: no-repeat;*/
+	height: 20em;
+}
+
+.lateralDerecha {
+	float: left;
+	/*width: 64em;*/
+}
+
+.contenido {
+	/*width: 62em;*/
+	margin: 2em;
+	padding: 0.3em;
+}
+
+.colorError {
+	color: #FF0000 !important;
+}
+
+.margenDcho10 {
+	margin-right: 10px;
+}
+
+/*  /ESTRUCTURA GENERAL DEL PORTAL  */
+
+/*  CLASES GENERICAS  */
+h3 {
+	font-weight: bold;
+	font-size: 1.4em;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	color: #3C5E81;
+}
+
+h4 {
+	font-weight: bold;
+	font-size: 1.2em;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	color: #004B98;
+}
+
+p.parrafo, p {
+	color: #34291D;
+	font-weight: bold;
+	text-align: justify;
+	padding: 5px;
+	line-height: 20px;
+}
+
+fieldset {
+	border-style: solid;
+	border-width: 1px;
+	padding-left: 10px;
+	color: #004B98;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	text-align: left;
+}
+
+.lineaBajaM {
+	border-bottom-style: solid;
+	border-bottom-width: 1px;
+	border-bottom-color: #004B98;
+}
+
+.recuadroM {
+	clear: both;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #7A7D81;
+	padding: 0 0 0 5px;
+}
+
+.recuadroM2 {
+	clear: both;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #7A7D81;
+	padding: 0 0 0 5px;
+}
+
+.limpiadora {
+	clear: both;
+}
+
+.flotaDer {
+	float: right;
+}
+
+.flotaIzq {
+	float: left;
+}
+
+.flotaCentro {
+	float: left;
+	margin-left: 50px !important;
+}
+
+.espaciador {
+	font-size: 1px;
+	line-height: 1px;
+	height: 1px;
+	margin-top: 10px;
+	margin-bottom: 10px;
+	width: 100%;
+}
+
+.espaciadorPeq {
+	font-size: 1px;
+	line-height: 1px;
+	height: 1px;
+	margin-top: 1px;
+	margin-bottom: 1px;
+	width: 100%;
+}
+
+.textoNegrita {
+	font-weight: bold !important;
+	color: #34291D !important;
+	margin-left: 0 !important;
+	padding-left: 0 !important;
+}
+
+.letraMarron {
+	color: #004B98;
+}
+
+.textoRojo {
+	color: #FF0000 !important;
+	text-align: left;
+}
+
+.textoRojoFichero {
+	color: #FF0000 !important;
+	text-align: left;
+	font-size: 0.9em;
+}
+
+.textoNegro {
+	color: #000000 !important;
+}
+
+.negrita {
+	font-weight: bold !important;
+}
+
+.textoNormal {
+	font-weight: normal !important;
+}
+
+.Textonormal {
+	font-weight: normal !important;
+}
+
+.textoSubrayado {
+	text-decoration: underline !important;
+	margin-left: 0 !important;
+	padding-left: 0 !important;
+}
+
+.textoJustificado {
+	width: 95%;
+	/* sobre todo para quitar margenes que hay a mayores en los: " .cuadroFieldset label" */
+	text-align: justify !important;
+	display: inline-block;
+}
+
+.textoCentrado {
+	text-align: center !important;
+}
+
+.textoIzquierda {
+	text-align: left !important;
+}
+
+.textoCursiva {
+	font-style: italic !important;
+	margin-left: 0 !important;
+	padding-left: 0 !important;
+}
+
+.textoCursiva2 {
+	font-style: italic !important;
+	font-family: Verdana;
+}
+
+.textoColorN {
+	color: #000000 !important;
+}
+
+.textoColorM {
+	color: #34291D !important;
+}
+
+.textoColorVerde {
+	color: #0B610B !important;
+}
+
+.cuadroFieldset label .textoCursivaMC, .textoCursivaMC {
+	display: inline-block;
+	font-style: italic;
+	font-size: 1.1em;
+	font-weight: normal;
+	line-height: 1.2em;
+	margin-left: 0;
+}
+
+.textoComentario {
+	border: 2px #004B98 solid;
+	background-image: url(../imagenes/imagenes_ocap/degradadoMarron.gif);
+	background-repeat: repeat-y;
+	color: #000000;
+	padding: 15px;
+	font-size: 1.1em;
+	font-weight: normal;
+	text-align: justify;
+	width: 40em;
+	margin: 0 auto;
+}
+
+div.contenidoMC .textoDatos, div.contenidoDCP1A .textoDatos {
+	color: #000000;
+	font-weight: normal;
+}
+
+div.contenidoDCP1A .informacionSituacion {
+	padding-left: 28px !important;
+	display: block;
+}
+
+.radiosMC {
+	margin-left: 20px;
+}
+
+.mensajeErrorMC {
+	text-align: left;
+	color: Red;
+	margin: -20px 0 0 40px;
+	line-height: 1.3em;
+}
+
+.ocultarDatos {
+	display: none;
+	visibility: hidden;
+}
+
+.mensajePie {
+	margin-top: 3px;
+	display: block;
+}
+
+/* /CLASES GENERICAS  */
+
+/*  CONTENIDO DEL PORTAL  */
+
+/*  CUERPO  */
+.textoInferiorPortada {
+	text-align: center;
+}
+
+.enlacePortada {
+	color: #34291D;
+	font-weight: bold;
+}
+
+.enlacePortada a {
+	text-decoration: none;
+}
+
+/*  CONTENIDO  */
+.flotaDerBotones {
+	float: right;
+}
+
+.ajusteLOPD {
+	padding-right: 10px;
+}
+
+.posicionLOPD {
+	margin-right: 50px;
+}
+
+/*  Clases Generales de Contenido  */
+.tituloContenido {
+	text-align: center;
+	font-size: 1.4em;
+	font-weight: bold;
+	color: #004B98;
+	padding: 10px 0px 10px 0px;
+	margin-top: -20px;
+	margin-bottom: 30px;
+	border-style: solid;
+	border-color: #004B98;
+	border-width: 1px;
+	border-left: none;
+	border-right: none;
+}
+
+.subTituloContenido {
+	text-align: right;
+	font-size: 1.4em;
+	font-weight: bold;
+	margin-bottom: 10px;
+	color: #004B98;
+}
+
+.subTituloContenidoEval {
+	text-align: right;
+	font-size: 1.4em;
+	font-weight: bold;
+	margin-bottom: 10px;
+	margin-top: 0px;
+	color: #004B98;
+}
+
+.subTituloContenidoMC {
+	text-align: left;
+	font-size: 1.3em;
+	font-weight: bold;
+	margin-bottom: 5px;
+	color: #004B98;
+}
+
+.tituloLegend {
+	font-weight: bold;
+	font-size: 1.1em;
+	padding-left: 5px;
+	padding-right: 5px;
+	line-height: 1.2em;
+}
+
+.cuadroFieldsetLOPD {
+	width: 100%;
+	padding: 5px 0 0 0;
+	line-height: 2em;
+}
+
+.cuadroFieldsetLOPD p {
+	line-height: 1.2em;
+}
+
+.cuadroFieldset {
+	width: 94%;
+	padding: 20px;
+}
+
+.cuadroFieldset span, .cuadroFieldset label {
+	margin-left: 7px;
+	font-weight: bold;
+	font-size: 1em;
+	color: #7A7D81;
+}
+
+.cuadroFieldset a {
+	color: #000000;
+	font-weight: bold;
+}
+
+.cuadroFieldset .botonesCertifIncDocencia, .cuadroFieldset .botonesCertif2Docencia
+	{
+	padding-left: 100px;
+}
+
+.cuadroFieldset .botonesCertifIncDocencia span, .cuadroFieldset .botonesCertif2Docencia span
+	{
+	margin-left: 0;
+}
+
+.cuadroFieldset .botonesCertifIncDocencia span.izqBoton, .cuadroFieldset .botonesCertif2Docencia span.izqBoton
+	{
+	margin-left: 10px;
+}
+
+.separaIzq {
+	margin-left: 20px !important;
+}
+
+.separaIzqTit {
+	margin-left: 17px !important;
+	font-weight: normal !important;
+}
+
+.baja {
+	margin-top: -4px !important;
+}
+
+.separaIzqSub {
+	margin-left: 30px !important;
+}
+
+.separaMasIzq {
+	margin-left: 40px !important;
+	float: left;
+}
+
+.letraGrande {
+	font-size: 1.1em !important;
+}
+
+.tituloPregunta {
+	margin-left: 80px !important;
+	margin-top: 10px !important;
+	text-align: justify !important;
+	font-size: 11px;
+	font-weight: bold;
+	color: #004B98;
+}
+
+.tablaPreguntas {
+	margin-top: 0px !important;
+	width: 95% !important;
+}
+
+div.contenidoListadoAspirantesGCP .tituloItinerarioPreguntas {
+	font-size: 15px;
+	font-weight: bold;
+	color: #004B98;
+	margin-bottom: 0px !important;
+	margin-top: 24px;
+}
+
+.alineaDcha {
+	margin-right: 420px;
+	float: right;
+}
+
+.cuadroFieldsetEv {
+	width: 94%;
+	padding: 20px;
+}
+
+.taGrande {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #004B98;
+	width: 66em;
+	height: 20em;
+	padding: 10px;
+	text-align: left;
+}
+
+.taMediano {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #004B98;
+	width: 55em;
+	height: 10em;
+	padding: 10px;
+	text-align: left;
+}
+
+.taPeq {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #004B98;
+	width: 43em;
+	height: 10em;
+	padding: 10px;
+	text-align: left;
+}
+
+.cbCuadros {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #7A7D81;
+	font-size: 1em;
+	font-weight: normal;
+}
+
+.botonera .botonAccion {
+	display: inline;
+}
+
+.botonesPagina .botonAccion {
+	text-align: center;
+	display: inline;
+	float: right;
+	margin-bottom: 20px;
+	margin-right: 5px;
+}
+
+.botonAccion span.izqBoton {
+	display: block;
+	float: left;
+	background-image: url(../imagenes/imagenes_ocap/botonIzq.gif);
+	background-repeat: no-repeat;
+	height: 22px;
+	width: 5px;
+}
+
+.botonAccion span.cenBoton {
+	display: flex;
+	float: left;
+	background-image: url(../imagenes/imagenes_ocap/botonCen.gif);
+	background-repeat: repeat-x;
+	height: 22px;
+}
+
+.botonAccion span.cenBoton a:hover {
+	text-decoration: none;
+	cursor: pointer;
+}
+
+.botonAccion span.cenBoton img {
+	margin-top: 2px;
+	float: left;
+	padding-left: 5px;
+}
+
+.botonAccion span.cenBoton input, .botonAccion span.cenBoton .botonNoLink
+	{
+	font-size: 1em;
+	font-weight: bold;
+	font-family: sans-serif;
+	letter-spacing: 1px;
+	color: #FFF;
+	padding: 2px 30px 0px 30px;
+	line-height: 1em;
+	float: left;
+	background-color: transparent;
+	border-style: none;
+	cursor: pointer;
+}
+
+.botonAccion span.cenBoton input.textoBotonInput, .botonAccion span.cenBoton span
+	{
+	font-size: 1em;
+	font-weight: bold;
+	font-family: sans-serif;
+	letter-spacing: 1px;
+	color: #FFF;
+	padding: 5px 10px 0px 10px;
+	float: left;
+}
+
+.botonAccion span.cenBoton input.textoBotonInputAncho {
+	font-size: 1em;
+	font-weight: bold;
+	font-family: sans-serif;
+	letter-spacing: 1px;
+	color: #FFF;
+	padding: 3px 8px 0px 8px;
+	float: left;
+}
+
+.botonAccion span.cenBoton input.textoBotonInput {
+	padding: 3px 5px 10px 10px;
+}
+
+.botonAccion span.derBoton {
+	display: block;
+	float: left;
+	background-image: url(../imagenes/imagenes_ocap/botonDer.gif);
+	background-repeat: no-repeat;
+	height: 22px;
+	width: 3px;
+}
+
+.botoneraCentrada {
+	width: auto;
+	text-align: center;
+	margin-top: 20px;
+	margin-bottom: 20px;
+	float: right;
+}
+
+.botoneraCentrada span.izqBoton {
+	display: block;
+	float: left;
+	background-image: url(../imagenes/imagenes_ocap/botonIzq.gif);
+	background-repeat: no-repeat;
+	height: 22px;
+	width: 5px;
+}
+
+.botoneraCentrada span.cenBoton {
+	display: block;
+	float: left;
+	background-image: url(../imagenes/imagenes_ocap/botonCen.gif);
+	background-repeat: repeat-x;
+	height: 22px;
+	padding: 5px 10px 0px 10px;
+}
+
+.botoneraCentrada span.cenBoton a {
+	font-size: 1.2em;
+	font-weight: bold;
+	font-family: sans-serif;
+	letter-spacing: 1px;
+	color: #FFF;
+}
+
+.botoneraCentrada span.derBoton {
+	display: block;
+	float: left;
+	background-image: url(../imagenes/imagenes_ocap/botonDer.gif);
+	background-repeat: no-repeat;
+	height: 22px;
+	width: 3px;
+}
+
+.colocarBotonLogout {
+	margin-left: 20px;
+}
+
+.botonAyuda {
+	float: right;
+	padding: 5px 5px 0px 5px;
+}
+
+.botonAyuda span {
+	color: #004B98;
+	font-weight: bold;
+	vertical-align: top;
+}
+
+.botonAyuda a:hover {
+	text-decoration: none;
+}
+
+.botonOK {
+	color: #000;
+	font-weight: bold;
+	background-color: #E2BF90;
+	padding: 0px 2px 0px 2px;
+	margin-left: 10px;
+	border: solid #6E4616 1px;
+}
+
+.fechaLinea {
+	text-align: right;
+	margin: 20px 0px 0px 0px;
+	font-weight: bold;
+	color: #004B98;
+}
+
+.fechaLinea label {
+	font-weight: bold;
+}
+
+.fechaGrado {
+	display: inline;
+	margin: 0 0 0 170px;
+}
+
+.fechaGrado span {
+	font-weight: bold;
+}
+
+.fechaCuadro {
+	color: #004B98;
+	margin-top: 20px;
+}
+
+.fechaCuadro label {
+	font-weight: bold;
+	float: right;
+	margin-right: 65px;
+}
+
+.paginacion ul.listaHorizontal li {
+	float: left;
+	display: inline;
+	margin: 10px;
+}
+
+.paginacion ul.listaHorizontal li a {
+	color: #004B98;
+}
+
+.paginacion ul.listaHorizontal li a img {
+	margin-bottom: 1px;
+}
+
+.titulosRadio {
+	float: left;
+	width: 60%;
+	line-height: 1.8em;
+	margin-left: 9px;
+}
+
+.titulosRadioPequenios {
+	width: 25%;
+}
+
+.titulosRadio span, .titulosRadio div {
+	font-weight: bold;
+}
+
+.radioTitulos {
+	float: left;
+	width: 15%;
+	line-height: 1.85em;
+	margin-left: 64px;
+}
+
+.radioTitulos div .opcionRadio {
+	margin-right: 8px;
+}
+
+.opcionRadioSeparados {
+	margin-right: 8px;
+}
+
+.titulosRadio2 {
+	float: left;
+	width: 40%;
+	line-height: 1.2em;
+}
+
+.titulosRadio2 span, .titulosRadio2 div {
+	font-weight: bold;
+	margin-left: 10px;
+}
+
+.textoRadioLinea {
+	padding: 0 5px 0 50px;
+}
+
+.textoRadioLinea2 {
+	padding: 0 5px 0 0;
+}
+
+.altoLinea {
+	line-height: 1.1em;
+}
+
+.pestanaPagina .pestanaAccion {
+	text-align: center;
+	display: block;
+	float: left;
+	margin-right: -2px;
+	margin-bottom: -1px;
+	border-bottom: 1px solid #004B98;
+}
+
+.pestanaAccion .pestanaHover {
+	background-color: #E2C091;
+	display: block;
+	height: 1.8em;
+	float: left;
+}
+
+.pestanaAccion .pestanaHover:hover {
+	background-color: #F9EFE3;
+	cursor: pointer;
+	text-decoration: none;
+}
+
+.pestanaAccion span.izqPestana {
+	display: block;
+	float: left;
+	background-image: url(../imagenes/imagenes_ocap/pestanaIzq.gif);
+	background-repeat: no-repeat;
+	height: 20px;
+	width: 10px;
+}
+
+.pestanaAccion span.izqPestanaSel {
+	display: block;
+	float: left;
+	background-image: url(../imagenes/imagenes_ocap/pestanaSelIzq.gif);
+	background-repeat: no-repeat;
+	height: 20px;
+	width: 10px;
+}
+
+.pestanaAccion span.cenPestana {
+	display: block;
+	float: left;
+	background-image: url(../imagenes/imagenes_ocap/pestanaCen.gif);
+	background-repeat: repeat-x;
+	height: 20px;
+}
+
+.pestanaAccion span.cenPestana span {
+	font-size: 0.9em;
+	font-weight: bold;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #000000;
+	padding: 5px 5px 0px 5px;
+	float: left;
+}
+
+.pestanaAccion span.cenPestanaSel {
+	display: block;
+	float: left;
+	background-image: url(../imagenes/imagenes_ocap/pestanaSelCen.gif);
+	background-repeat: repeat-x;
+	height: 20px;
+}
+
+.pestanaAccion span.cenPestanaSel span {
+	font-size: 0.9em;
+	font-weight: bold;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	color: #FFFFFF;
+	padding: 5px 5px 0px 5px;
+	float: left;
+}
+
+.pestanaAccion span.derPestana {
+	display: block;
+	float: left;
+	background-image: url(../imagenes/imagenes_ocap/pestanaDer.gif);
+	background-repeat: no-repeat;
+	height: 20px;
+	width: 8px;
+}
+
+.pestanaAccion span.derPestanaSel {
+	display: block;
+	float: left;
+	background-image: url(../imagenes/imagenes_ocap/pestanaSelDer.gif);
+	background-repeat: no-repeat;
+	height: 20px;
+	width: 9px;
+}
+
+.textoCaracteres label, .textoCaracteres {
+	color: #004B98;
+	font-weight: bold;
+}
+
+/*  /Clases Generales de Contenido  */
+
+/*  Colocacion de Cuadros Solicitudes  */
+.colocaEPR {
+	width: 255px;
+	margin-left: 50px;
+	font-weight: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.colocaEPR {
+		width: 255px;
+		margin-left: 46px !important;
+		font-weight: normal;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.colocaEPR {
+		width: 255px;
+		margin-left: 46px !important;
+		font-weight: normal;
+	}
+}
+
+.colocaConvocatoriaCBAl2 {
+	width: 358px;
+	margin-left: 106px;
+}
+
+.colocaConvocatoriaCBAl1 {
+	width: 358px;
+	margin-left: 44px;
+}
+
+.colocaApellidos {
+	width: 255px;
+	margin-left: 60px;
+	font-weight: normal;
+}
+
+.colocaApellidosDes {
+	width: 260px;
+	margin-left: 60px;
+	color: #ACA899;
+	border-color: #C9C7BA;
+}
+
+.colocaNombre {
+	width: 215px;
+	margin-left: 5px;
+	font-weight: normal;
+}
+
+.colocaNombreDes {
+	width: 208px;
+	margin-left: 17px;
+	color: #ACA899;
+	border-color: #C9C7BA;
+}
+
+.colocaDNI {
+	width: 150px;
+	margin-left: 71px;
+	margin-right: 29px;
+	font-weight: normal;
+}
+
+.colocaCorreo {
+	width: 260px;
+	margin-left: 2px;
+}
+
+.colocaTelefono {
+	width: 88px;
+	margin-left: 5px;
+}
+
+.colocaTelefonoDt {
+	width: 89px;
+	margin-left: 12px;
+}
+
+.colocaSexoCB {
+	width: 95px;
+	margin-left: 27px;
+}
+
+.colocaDireccionAlta {
+	width: 506px;
+	margin-left: 5px;
+}
+
+.textoDonde {
+	padding-top: 5px;
+}
+
+.cuadroDonde {
+	border: 1px solid #004B98;
+	margin-left: 131px;
+}
+
+.colocaDatoLocAlta span {
+	font-weight: normal;
+	margin-left: 25px;
+}
+
+.colocaFechaMf {
+	margin-left: 25px;
+}
+
+/*	Alta del PGP	*/
+.colocaApellidosAlta {
+	width: 255px;
+	margin-left: 60px;
+	margin-right: 5px;
+}
+
+.colocaNombreAlta {
+	width: 183px;
+	margin-left: 26px;
+}
+
+.colocaDNIAlta {
+	width: 89px;
+	margin-left: 70px;
+	margin-right: 171px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.colocaDNIAlta {
+		margin-left: 70px !important;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.colocaDNIAlta {
+		margin-left: 70px !important;
+	}
+}
+
+.colocaSexoAlta {
+	width: 95px;
+	margin-left: 43px;
+}
+
+.colocaTelefono1Alta {
+	width: 89px;
+	margin-left: 62px;
+	margin-right: 170px;
+}
+
+.colocaTelefono1AltaAsterisco {
+	width: 89px;
+	margin-left: 56px;
+	margin-right: 165px;
+}
+
+.colocaCorreoAlta {
+	width: 255px;
+	margin-left: 17px;
+}
+
+.colocaCorreoAltaAsterisco {
+	width: 250px;
+	margin-left: 11px;
+}
+
+.colocaProvAlta {
+	margin-right: 120px;
+	width: 148px;
+	margin-left: 60px;
+}
+
+.colocaSituacionCBAlta {
+	width: 554px;
+	margin-left: 62px;
+}
+
+.colocaCategoriaAlta {
+	width: 554px;
+	margin-left: 58px;
+}
+
+.colocaEspecialidadAlta {
+	width: 554px;
+	margin-left: 43px;
+}
+
+.colocaItinerarioAlta {
+	width: 554px;
+	margin-left: 62px;
+}
+
+.colocaServiciosAlta {
+	width: 554px;
+	margin-left: 68px;
+}
+
+.colocaProvinciaAlta {
+	width: 154px;
+	margin-left: 69px;
+	color: #ACA899;
+	border-color: #C9C7BA;
+	margin-right: 113px;
+}
+
+.colocaProvinciaMf {
+	width: 154px;
+	margin-left: 67px;
+	border-color: #C9C7BA;
+	margin-right: 113px;
+}
+
+.colocaProvinciaAlta2 {
+	width: 154px;
+	margin-left: 69px;
+	margin-right: 113px;
+}
+
+.cuadroDondeAlta {
+	border: 1px solid #004B98;
+	margin-left: 84px;
+	width: 186px;
+	font-weight: normal;
+}
+
+.colocaCentroAlta {
+	margin-left: 13px;
+	width: 553px;
+}
+
+.colocaCentroAltaNew {
+	margin-left: 43px;
+	width: 490px;
+}
+
+.colocaCentroAlta2 {
+	margin-left: 87px;
+	width: 476px;
+}
+
+.colocaCategoriaEspecialidadAlta {
+	margin-left: 5px;
+	width: 476px;
+}
+
+.colocaEstadoAlta {
+	margin-left: 68px;
+	width: 155px;
+	margin-right: 116px;
+}
+
+.colocaVinculoAlta {
+	margin-left: 68px;
+	width: 155px;
+}
+
+.colocaFechaAlta {
+	width: 80px;
+}
+
+.fechaFinAlta {
+	padding-left: 132px;
+}
+
+.colocaBotonesAlta {
+	padding-left: 135px !important;
+}
+
+select.textoTituloGrisAlta {
+	color: #004B98;
+	width: 100%;
+	border: 1px solid #004B98;
+}
+
+select.textoTituloGrisAlta3 {
+	color: #004B98;
+	margin-left: 1em;
+	width: 83%;
+	border: 1px solid #004B98;
+}
+
+select.textoTituloGrisAlta2 {
+	color: #004B98;
+	width: 97%;
+	margin-left: 10px;
+	margin-top: 10px;
+	background-color: transparent;
+	border: 1px solid #004B98;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+
+.altaPGP .tiempoEjercicioNew {
+	margin-left: 50px;
+	margin-right: 50px;
+	text-align: center;
+}
+
+.altaPGP .modDesdeOpta {
+	margin-left: 30px;
+	width: 190px;
+}
+
+.altaPGP .regJuridic {
+	margin-left: 19px;
+	width: 148px;
+	margin-right: 213px;
+}
+
+.altaPGP .regJuridicNew {
+	margin-left: 24px;
+	width: 160px;
+	margin-right: 50px;
+}
+
+.altaPGP .colocaTipoRegJuric {
+	margin-left: 16px;
+	width: 117px !important;
+	color: #004B98 !important;
+}
+
+.altaPGP .colocaTipoRegJuricNew {
+	margin-left: 16px;
+	width: 230px !important;
+}
+
+.altaPGP .colocaTelefono2Alta {
+	width: 88px;
+	margin-left: 20px;
+}
+
+.altaPGP .colocaLocAlta {
+	width: 148px;
+	margin-left: 58px;
+	margin-right: 120px;
+}
+
+.altaPGP .colocaCPAlta {
+	width: 88px;
+	margin-left: 0;
+}
+
+.altaPGP .colocaCategoriaAlta {
+	height: 18px;
+	margin-left: 59px;
+	width: 553px;
+}
+
+.altaPGP .colocaCategoriaAltaNew {
+	height: 18px;
+	margin-left: 63px;
+	width: 511px;
+}
+
+.altaPGP .colocaEspecialidadAlta {
+	height: 18px;
+	margin-left: 44px;
+	width: 553px;
+}
+
+.altaPGP .colocaEspecialidadAltaNew {
+	height: 18px;
+	margin-left: 48px;
+	width: 511px;
+}
+
+.altaPGP .cuadroDondeAl {
+	border: 1px solid #004B98;
+	margin-left: 15px;
+	width: 222px;
+}
+
+.altaPGP .cuadroDondeAlNew {
+	border: 1px solid #004B98;
+	margin-left: 5px;
+	width: 140px;
+}
+
+.altaPGP .situAdmin {
+	margin-left: 7px;
+	width: 180px;
+	margin-right: 81px;
+}
+
+.altaPGP .situAdminNew {
+	margin-left: 7px;
+	width: 280px;
+	margin-right: 0;
+}
+
+.altaPGP .radioGradoAlta2 {
+	width: 148px;
+	margin-left: 16px;
+	margin-right: 64px;
+}
+
+.altaPGP .colocaGradoAltaNew {
+	width: 160px;
+	margin-left: 44px;
+}
+
+.altaPGP .colocaServicioAlta {
+	margin-left: 75px !important;
+	width: 512px !important;
+}
+
+.altaPGP .colocaServicioAltaNew {
+	margin-left: 80px !important;
+	width: 503px !important;
+}
+
+.altaPGP .colocaAreaUnidadAlta {
+	margin-left: -1px;
+	width: 546px;
+}
+
+.altaPGP .colocaAreaUnidadAltaNew {
+	margin-left: 5px;
+	width: 503px;
+}
+
+.altaPGP .colocaAniosAlta {
+	margin-right: 21px !important;
+	margin-left: 76px !important;
+}
+
+.altaPGP .colocaMesesAlta {
+	margin-right: 23px !important;
+}
+
+.altaPGP .colocaAniosAltaNew {
+	width: 25px;
+	margin-left: 10px !important;
+	margin-right: 10px;
+}
+
+.altaPGP .colocaMesesAltaNew {
+	width: 25px;
+	margin-left: 10px !important;
+	margin-right: 10px;
+}
+
+.altaPGP .colocaDiasAltaNew {
+	width: 25px;
+	margin-left: 10px !important;
+	margin-right: 10px;
+}
+
+.altaPGP .colocaProvinciaAlta {
+	width: 149px;
+	margin-left: 69px;
+	color: #ACA899;
+	border-color: #C9C7BA;
+}
+
+.altaPGP .colocaProvinciaAltaNew {
+	width: 160px;
+	margin-left: 89px;
+}
+
+.altaPGP .colocaProvinciaAlta3 {
+	width: 150px;
+	margin-left: 132px;
+	margin-right: 62px;
+}
+
+.altaPGP .colocaVinculoAltaNew {
+	margin-left: 10px;
+	width: 204px;
+}
+
+.altaPGP .fechaFinSP {
+	padding-left: 95px;
+}
+
+.altaPGP .colocaFechaInicioSP {
+	width: 80px;
+	margin-left: 43px;
+	margin-right: 0;
+}
+
+.altaPGP .colocaFechaFinSP {
+	width: 80px;
+	margin-left: 10px;
+	margin-right: 0;
+}
+
+.altaPGP .labelReg { #
+	vertical-align: top; #
+	height: 35px !important;
+	_height: 22px !important;
+}
+
+.altaPGP .colocaNuevoEstado {
+	margin-left: 8px;
+	width: 160px;
+}
+
+.altaPGP .margenIzdaFechaAlta2 {
+	margin-left: 26px;
+}
+
+.altaPGP .margenIzdaFechaAlta3 {
+	margin-left: 45px;
+}
+
+.altaPGP .textoTituloGrisAlta2 {
+	color: #000000;
+}
+
+.altaPGP .tablaUsuarios {
+	margin-bottom: 2em;
+	margin-left: 2em;
+}
+
+.altaPGP .tablaUsuarios td {
+	text-align: center;
+}
+
+.altaPGP .tablaUsuarios .datosTitulo {
+	color: #004B98;
+}
+
+.altaPGP .tablaUsuarios .datosTitulo td {
+	font-weight: bold;
+}
+
+.altaPGP .tablaUsuarios .lineaBajaM td {
+	border-bottom: 1px solid #004B98;
+}
+
+.altaPGP .tablaUsuarios .datosTitulo td.tituloNombre {
+	width: 200px;
+}
+
+.altaPGP .tablaUsuarios .datosTitulo td.tituloApellidos {
+	width: 380px; #
+	width: 350px;
+}
+
+.altaPGP .tablaUsuarios .datosTitulo td.tituloNumSolic {
+	width: 70px;
+}
+
+.altaPGP .tablaUsuarios .datosTitulo td.tituloIcono {
+	width: 60px;
+}
+
+.altaPGP .tablaUsuarios .datosAsp td {
+	color: #000000;
+	padding-left: 3px;
+	padding-right: 3px;
+	padding-top: 2px;
+}
+
+.altaPGP .tablaUsuarios .datosAsp td .campoNombre {
+	width: 200px;
+	overflow: hidden;
+}
+
+.altaPGP .tablaUsuarios .datosAsp td .campoApellidos {
+	width: 350px;
+	overflow: hidden;
+}
+
+.altaPGP .tablaUsuarios .datosAsp td .campoNumSolic {
+	width: 70px;
+	overflow: hidden;
+}
+
+.altaPGP .tablaNuevoExpediente {
+	margin-left: 300px;
+	margin-bottom: 20px;
+}
+
+.altaPGP .tablaNuevoExpediente .nuevoExp {
+	width: 110px;
+	color: #004B98;
+	font-weight: bold;
+	padding-top: 3px;
+}
+
+.altaPGP .listadoRespuesta .titulosRadio {
+	width: 90%;
+	margin-bottom: 10px;
+}
+
+.altaPGP .listaMotivos {
+	margin-left: 10px;
+	margin-bottom: 10px;
+	margin-right: 10px;
+}
+
+.altaPGP .listaMotivosRow {
+	width: 100%;
+	display: inline-block;
+	margin-bottom: 10px;
+	vertical-align: top;
+}
+
+.altaPGP .listaMotivosCheck {
+	float: left;
+	margin: 0;
+	padding: 0;
+	vertical-align: top;
+}
+
+.altaPGP .listaMotivosDes {
+	width: 95%;
+	float: left;
+	margin-left: 10px;
+	vertical-align: top;
+}
+
+.altaPGP .otrosMotivosExclusion {
+	margin-left: 30px;
+	margin-right: 5px;
+	text-align: left;
+	padding: 0;
+}
+
+.altaPGP .otrosMotivosExclusion span {
+	padding-left: 0;
+	text-align: left;
+}
+
+.altaPGP .otrosMotivosExclusionTA {
+	width: 50em;
+	border: 1px solid #004B98;
+	padding: 5px;
+	text-align: justify;
+}
+
+.altaPGP .listadoRespuesta .colocaTitRadio {
+	margin-left: 544px;
+	margin-right: 10px;
+}
+
+.altaPGP .colocaCarTADen {
+	margin-left: 17px;
+	padding-left: 17px;
+}
+
+.altaPGP .colocaTASub {
+	margin-left: 15px;
+}
+
+.altaPGP .colocaCarTADen {
+	margin-left: 0;
+}
+
+.altaPGP .colocaTADen {
+	margin-left: 0;
+}
+
+.altaPGP fieldset .cuadroFieldset .ajustaMargen {
+	margin-left: 38px;
+}
+
+.altaPGP fieldset h4 {
+	margin-bottom: 10px;
+}
+
+.altaPGP fieldset div.textoMotivoAlegacion {
+	margin-bottom: 15px;
+	margin-right: 15px;
+}
+
+.altaPGP .titulosRadio {
+	width: 75%;
+}
+
+.altaPGP .titulosRadio div {
+	line-height: 2.2em;
+}
+
+.altaPGP .radioTitulos {
+	float: left;
+	width: 15%;
+	line-height: 0.5em;
+	margin-left: 15px;
+}
+
+.altaPGP .textoRadio {
+	margin-left: 5px;
+	margin-right: 10px;
+}
+
+.altaPGP .CarTADen2 {
+	padding-left: 0;
+}
+
+.altaPGP .botonesPagina {
+	background-color: #FF0000 !important;
+}
+
+.altaPGP .aviso {
+	font-weight: bold;
+	color: #FF0000 !important;
+	text-align: center;
+}
+
+.altaPGP .contenedorFechas {
+	margin-bottom: 0.5em;
+}
+
+.altaPGP .contenedorFechas img {
+	vertical-align: middle;
+}
+
+.altaPGP .contenedorFechas .margenF1 {
+	margin-left: 35px;
+}
+
+.altaPGP .contenedorFechas .margenF2 {
+	margin-left: 68px;
+}
+
+.altaPGP .contenedorFechas .margenF3 {
+	margin-left: 86px;
+}
+
+.altaPGP .contenedorFechas .margenF4 {
+	margin-left: 125px;
+}
+
+.altaPGP .contenedorFechas .margenF5 {
+	margin-left: 108px;
+}
+
+.altaPGP .contenedorFechas .margenF6 {
+	margin-left: 138px;
+}
+
+.altaPGP .contenedorFechas .margenF7 {
+	margin-left: 94px;
+}
+
+.altaPGP .contenedorFechas .margenF8 {
+	margin-left: 19px;
+}
+
+.altaPGP .contenedorFechas .margenF9 {
+	margin-left: 122px;
+}
+
+.altaPGP .contenedorFechas .margenF10 {
+	margin-left: 302px;
+}
+
+.altaPGP .contenedorFechas .margenF20 {
+	margin-left: 88px;
+}
+
+.altaPGP .contenedorFechas .margenF21 {
+	margin-left: 176px;
+}
+
+/*  Fin del Alta del PGP	*/
+
+/* Modificacion de una solicitud */
+.colocaApellidosMf {
+	width: 249px;
+	margin-left: 67px;
+	margin-right: 5px;
+}
+
+.colocaDNIDes {
+	width: 89px;
+	margin-left: 84px;
+	margin-right: 165px;
+	color: #ACA899;
+	border-color: #C9C7BA;
+}
+
+.colocaNombreMf {
+	width: 190px;
+	margin-left: 33px;
+}
+
+.colocaSexoMf {
+	width: 95px;
+	margin-left: 43px;
+}
+
+.colocaTelefono1Mf {
+	width: 89px;
+	margin-left: 61px;
+	margin-right: 164px;
+}
+
+.colocaTelefono2Mf {
+	width: 89px;
+	margin-left: 20px;
+}
+
+.cuadroDondeMf {
+	border: 1px solid #004B98;
+	margin-left: 192px;
+	width: 186px;
+	font-weight: normal;
+}
+
+.colocaCorreoMf {
+	width: 248px;
+	margin-left: 16px;
+}
+
+.colocaLocMf {
+	width: 148px;
+	margin-left: 67px;
+	margin-right: 113px;
+}
+
+.colocaCPMf {
+	width: 88px;
+	margin-left: 2px;
+}
+
+.colocaProvinciaCBMf {
+	width: 160px;
+	margin-left: 68px;
+	color: #ACA899;
+	border-color: #C9C7BA;
+	margin-right: 102px;
+}
+
+.colocaTipoGerenciaMf {
+	width: 266px;
+	margin-left: 42px;
+	color: #ACA899;
+	border-color: #C9C7BA;
+}
+
+.colocaGerenciaCBMf {
+	width: 554px;
+	margin-left: 69px;
+	color: #ACA899;
+	border-color: #C9C7BA;
+}
+
+.colocaCentroMf {
+	margin-left: 12px;
+	width: 554px;
+}
+
+/* Fin de la modificacion de una Solicitud */
+
+/*	Nueva Pantalla de Modificacion de una Solicitud de acceso	*/
+.modificarSolicitudAcceso .colocaNombreAlta {
+	margin-left: 28px;
+	width: 181px;
+}
+
+.modificarSolicitudAcceso .colocaSexoAlta {
+	margin-left: 45px;
+}
+
+.modificarSolicitudAcceso .colocaTelefono2Alta {
+	margin-left: 22px;
+	width: 88px;
+}
+
+.modificarSolicitudAcceso .colocaLoc {
+	margin-left: 60px;
+	width: 262px;
+	margin-right: 4px;
+}
+
+.modificarSolicitudAcceso .colocaCP {
+	margin-left: 4px;
+	width: 88px;
+}
+
+.modificarSolicitudAcceso .colocaGradoOpta {
+	margin-left: 16px;
+	width: 139px;
+	margin-right: 95px;
+}
+
+.modificarSolicitudAcceso .colocaGradoMfNew {
+	width: 160px;
+	margin-left: 44px;
+}
+
+.modificarSolicitudAcceso .colocaGradoPosee {
+	margin-left: 10px;
+	width: 188px;
+}
+
+.modificarSolicitudAcceso .colocaSituacionMfNew {
+	width: 375px;
+	margin-left: 10px;
+}
+
+.modificarSolicitudAcceso .regJuridic {
+	margin-left: 19px;
+	width: 160px;
+	margin-right: 130px;
+}
+
+.modificarSolicitudAcceso .colocaCentroAlta2 {
+	margin-left: 68px;
+}
+
+.modificarSolicitudAcceso .colocaServicio {
+	margin-left: 75px;
+	width: 512px;
+}
+
+.modificarSolicitudAcceso .colocaConvocatoria {
+	margin-left: 45px;
+	width: 512px;
+}
+
+.modificarSolicitudAcceso .colocaArea {
+	margin-left: -1px;
+	width: 546px;
+}
+
+.modificarSolicitudAcceso .colocaAniosAlta {
+	width: 70px;
+	margin-left: 76px !important;
+	margin-bottom: 5px;
+	margin-right: 20px;
+}
+
+.modificarSolicitudAcceso .colocaMesesAlta {
+	width: 70px;
+	margin-left: 77px !important;
+	margin-bottom: 5px;
+	margin-right: 20px;
+}
+
+.modificarSolicitudAcceso .colocaDiasAlta {
+	width: 70px;
+	margin-left: 78px !important;
+	margin-bottom: 5px;
+}
+
+.modificarSolicitudAcceso .colocaCtrAlta {
+	margin-left: 20px;
+	width: 546px;
+}
+
+.modificarSolicitudAcceso .colocaProvinciaServicios {
+	margin-left: 69px;
+	width: 150px;
+	margin-right: 121px;
+}
+
+.modificarSolicitudAcceso .colocaVinculoServicios {
+	margin-left: 70px;
+	width: 152px;
+}
+
+.modificarSolicitudAcceso .cuadroDondeTipo {
+	border: 1px solid #004B98;
+	margin-left: 15px;
+	width: 189px;
+	font-weight: normal;
+	color: #000000;
+	padding-left: 3px;
+}
+
+.modificarSolicitudAcceso .colocaTipoRegJuric {
+	margin-left: 16px !important;
+	width: 188px !important;
+}
+
+.modificarSolicitudAcceso .colocaCategoriaAlta {
+	width: 553px;
+	margin-left: 59px;
+}
+
+.modificarSolicitudAcceso .colocaEspecialidadAlta {
+	width: 553px;
+	margin-left: 44px;
+}
+
+.modificarSolicitudAcceso .colocaProvinciaMf {
+	width: 154px;
+	margin-left: 69px;
+	border-color: #C9C7BA;
+	margin-right: 113px;
+}
+
+.modificarSolicitudAcceso .colocaGerenciaMf {
+	width: 553px;
+	margin-left: 70px;
+	border-color: #C9C7BA;
+}
+
+.modificarSolicitudAcceso .situAdminMfNew {
+	margin-left: 7px;
+	width: 280px;
+	margin-right: 5px;
+}
+
+.modificarSolicitudAcceso .cuadroDondeAl {
+	border: 1px solid #004B98;
+	margin-left: 5px;
+	width: 140px;
+	font-weight: normal;
+	color: #000000;
+	padding-left: 3px;
+}
+
+.modificarSolicitudAcceso .cuadroDondeAlNew {
+	border: 1px solid #004B98;
+	margin-left: 5px;
+	width: 140px;
+	font-weight: normal;
+	color: #000000;
+	padding-left: 3px;
+}
+
+.modificarSolicitudAcceso .colocaProvinciaMfNew {
+	width: 160px;
+	margin-left: 90px;
+}
+
+.modificarSolicitudAcceso .colocaGerenciaMfNew {
+	width: 490px;
+	margin-left: 91px;
+}
+
+.modificarSolicitudAcceso .colocaCentroMfNew {
+	margin-left: 42px;
+	width: 490px;
+}
+
+.modificarSolicitudAcceso .tiempoEjercicioNew {
+	margin-left: 50px;
+	margin-right: 50px;
+	text-align: center;
+}
+
+.modificarSolicitudAcceso .colocaAniosMfNew {
+	width: 25px;
+	margin-left: 10px !important;
+	margin-right: 10px;
+}
+
+.modificarSolicitudAcceso .colocaMesesMfNew {
+	width: 25px;
+	margin-left: 10px !important;
+	margin-right: 10px;
+}
+
+.modificarSolicitudAcceso .colocaDiasMfNew {
+	width: 25px;
+	margin-left: 10px !important;
+	margin-right: 10px;
+}
+/*	/Nueva Pantalla de Modificacion de una Solicitud de acceso	*/
+.fechaGradoAlta {
+	display: inline;
+	margin: 0 0 0 60px;
+}
+
+.fechaGradoAltaConf {
+	display: inline;
+	margin: 0 0 0 242px;
+}
+
+.fechaGradoAlta2 {
+	margin: 0 0 0 320px;
+}
+
+.fechaGradoAlta3 {
+	margin: 0 0 0 247px;
+}
+
+.margenIzdaAlta {
+	margin-left: 23px;
+}
+
+.margenIzdaFechaAlta {
+	margin-left: 20px;
+}
+
+.colocaAntAlta {
+	width: 70px;
+	margin-left: 85px;
+	margin-bottom: 5px;
+}
+
+.altaUsuario .colocaAniosAlta {
+	width: 70px;
+	margin-left: 75px;
+	margin-bottom: 5px;
+	margin-right: 20px;
+}
+
+.altaUsuario .colocaMesesAlta {
+	width: 70px;
+	margin-left: 75px;
+	margin-bottom: 5px;
+	margin-right: 20px;
+}
+
+.altaUsuario .colocaDiasAlta {
+	width: 70px;
+	margin-left: 75px;
+	margin-bottom: 5px;
+}
+
+.colocaCategoriaCB {
+	width: 552px;
+	margin-left: 59px;
+}
+
+.colocaCategoriaBuscCB {
+	width: 522px;
+	margin-left: 58px;
+}
+
+.colocaCategoriaCBCEIS {
+	width: 552px;
+	margin-left: 59px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.colocaCategoriaCBCEIS {
+		width: 552px;
+		margin-left: 25px !important;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.colocaCategoriaCBCEIS {
+		width: 552px;
+		margin-left: 59px !important;
+	}
+}
+
+.colocaEspecialidadCB {
+	width: 552px;
+	margin-left: 42px;
+}
+
+.colocaEspecialidadBuscCB {
+	width: 522px;
+	margin-left: 43px;
+}
+
+.colocaGradoBuscCB {
+	width: 100px;
+	margin-left: 78px;
+}
+
+.colocaConvocatoriaBuscCB {
+	width: 356px;
+	margin-left: 5px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.colocaConvocatoriaBuscCB {
+		width: 356px;
+		margin-left: 8px !important;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.colocaConvocatoriaBuscCB {
+		width: 356px;
+		margin-left: 8px !important;
+	}
+}
+
+.colocaAccionBuscCB {
+	width: 100px;
+	margin-left: 73px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.colocaAccionBuscCB {
+		width: 100px;
+		margin-left: 72px !important;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.colocaAccionBuscCB {
+		width: 100px;
+		margin-left: 73px !important;
+	}
+}
+
+.colocaGerenciaBuscCB {
+	width: auto;
+	margin-left: 62px;
+}
+
+.colocaGerenciaExpedientesCB {
+	margin-left: 62px !important;
+}
+
+select.colocaGerenciaBuscCB {
+	width: 552px;
+	margin-left: 62px;
+}
+
+.colocaEstadoBuscCB {
+	margin-left: 73px;
+	width: 262px;
+}
+
+.colocaFaseProcesoCB {
+	width: 20em;
+	margin-left: 17px;
+}
+
+.colocaEstadoCB {
+	width: 11em;
+}
+
+.colocaEstadoCBMC {
+	width: 19em;
+	margin-left: 73px;
+}
+
+.colocaEstadoCBMC2 {
+	width: 14em;
+	margin-left: 75px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.colocaEstadoCBMC2 {
+		width: 14em;
+		margin-left: 71px !important;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.colocaEstadoCBMC2 {
+		width: 14em;
+		margin-left: 73px !important;
+	}
+}
+
+.colocaConvocatoriaLF1 {
+	width: 358px;
+	margin-left: 3px;
+	margin-right: 45px;
+}
+
+.colocaGradoBuscLF1 {
+	width: 100px;
+	margin-left: 25px;
+}
+
+.colocaEstadoLF1 {
+	width: 11em;
+	margin-left: 49px;
+}
+
+.colocaFaseLLF1 {
+	width: 11em;
+	margin-left: 49px;
+}
+
+.colocaGerenciaLF1 {
+	width: auto;
+	margin-left: 33px;
+}
+
+.colocaSituacionAlta {
+	width: 420px;
+}
+
+.colocaSituacionAltaNew {
+	width: 380px;
+	margin-left: 10px;
+}
+
+.colocaProcedimientoAlta {
+	width: 590px;
+	margin-left: 12px;
+}
+
+.colocaPersonalAlta {
+	width: 554px;
+	margin-left: 62px;
+}
+
+.colocaGerenciaAlta {
+	width: 553px;
+	margin-left: 70px;
+	color: #ACA899;
+	border-color: #C9C7BA;
+}
+
+.colocaGerenciaAltaNew {
+	width: 490px;
+	margin-left: 91px;
+}
+
+.colocaGerenciaMf {
+	width: 524px;
+	margin-left: 68px;
+	border-color: #C9C7BA;
+}
+
+.imagencalendarioAlta {
+	vertical-align: bottom;
+	padding-top: 3px;
+}
+
+.colocaSituacionCB {
+	width: 562px;
+	margin-left: 56px;
+}
+
+.colocaCategoriaCBAlta {
+	width: 562px;
+	margin-left: 52px;
+}
+
+.colocaEspecialidadCBAlta {
+	width: 562px;
+	margin-left: 37px;
+}
+
+.colocaProvinciaCBAlta {
+	width: 160px;
+	margin-left: 62px;
+	color: #ACA899;
+	border-color: #C9C7BA;
+}
+
+.colocaProvinciaCBDt {
+	width: 160px;
+	margin-left: 62px;
+}
+
+.colocaTipoGerenciaCBAlta {
+	width: 306px;
+	margin-left: 1px;
+	color: #ACA899;
+	border-color: #C9C7BA;
+}
+
+.colocaTipoGerenciaCBDt {
+	width: 100px;
+	margin-left: 1px;
+}
+
+.colocaGerenciaCBAlta {
+	width: 562px;
+	margin-left: 63px;
+	color: #ACA899;
+	border-color: #C9C7BA;
+}
+
+.colocaGerenciaCBDt {
+	width: 562px;
+	margin-left: 63px;
+}
+
+.colocaCentroCBAlta {
+	margin-left: 6px;
+	width: 562px;
+}
+
+.colocaPuestoCBAlta {
+	margin-left: 66px;
+	width: 562px;
+}
+
+.colocaServicioCBAlta {
+	margin-left: 11px;
+	width: 562px;
+}
+
+.colocaNumAlta {
+	display: inline-block;
+	margin-left: 0 !important;
+	line-height: 1.2em;
+}
+
+.colocaTipoGerenciaAlta {
+	width: 266px;
+	margin-left: 43px;
+	color: #ACA899;
+	border-color: #C9C7BA;
+}
+
+.colocaProvinciaCB {
+	width: 160px;
+	margin-left: 25px;
+	margin-right: -4px;
+}
+
+.colocaTipoGerenciaCB {
+	width: 345px;
+	margin-left: 1px;
+}
+
+.colocaGerenciaCB {
+	width: 597px;
+	margin-left: 26px;
+}
+
+.colocaCentroCB {
+	width: 566px;
+}
+
+.colocaPuestoCB {
+	width: 513px;
+	margin-left: 29px;
+}
+
+.colocaServicioCB {
+	width: 566px;
+	margin-left: 5px;
+}
+
+.colocaAreaCB {
+	width: 566px;
+	margin-left: 73px;
+}
+
+.colocaUnidadCB {
+	width: 566px;
+	margin-left: 62px;
+}
+
+.colocaApellidosEvaluadores {
+	width: 250px;
+	margin-left: 53px;
+	font-weight: normal;
+}
+
+.colocaNombreEvaluadores {
+	width: 170px;
+	margin-left: 11px;
+	font-weight: normal;
+}
+
+.colocaDNIEvaluadores {
+	width: 100px;
+	margin-left: 70px;
+	margin-right: 151px;
+	font-weight: normal;
+}
+
+.colocaDNIEvaluadores2 {
+	width: 100px;
+	margin-left: 3.3em;
+	margin-right: 151px;
+	font-weight: normal;
+}
+
+.colocaDNIEvaluadores3 {
+	width: 100px;
+	margin-left: 65px;
+	margin-right: 151px;
+	font-weight: normal;
+}
+
+.colocaCorreoEvaluadores {
+	width: 250px;
+	margin-left: 2px;
+}
+
+.colocaTelefonoEvaluadores {
+	width: 170px;
+	margin-left: 7px;
+	font-weight: normal;
+}
+
+.colocaCategoriaCBEvaluadores {
+	width: 500px;
+	margin-left: 25px;
+}
+
+.colocaEspecialidadCBEvaluadores {
+	width: 500px;
+	margin-left: 10px;
+}
+
+.colocaConvocatoriaCBEvaluadores {
+	width: 500px;
+	margin-left: 10px;
+}
+
+.colocaConvocatoriaCBEvaluadoresLs {
+	width: 509px;
+	margin-left: 32px;
+}
+
+.colocaTitulacionBuscadorEvaluadores {
+	margin-left: 51px;
+	width: 44.9em;
+	font-weight: normal;
+}
+
+.colocaAnioBuscadorEvaluadores {
+	margin-left: 82px;
+	width: 9em;
+	font-weight: normal;
+}
+
+.colocaComiteCBEvaluadoresLs {
+	width: 45.5em;
+	margin-left: 64px;
+}
+
+.colocaTitulosEvaluadores {
+	width: 45.4em;
+	margin-left: 52px;
+	font-weight: normal;
+}
+
+.colocaEspecialidadEvaluadores {
+	width: 45.4em;
+	margin-left: 44px;
+	font-weight: normal;
+}
+
+.colocaCentroTrabajoEvaluadores {
+	width: 45.4em;
+	margin-left: 5px;
+	font-weight: normal;
+}
+
+.colocaProvinciaConvo {
+	margin-left: 55px;
+}
+
+.colocaComunidadConvo {
+	margin-left: 49px;
+}
+
+.taMedianoEvaluadores {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #004B98;
+	width: 61em;
+	height: 10em;
+	padding: 10px;
+	text-align: left;
+	font-weight: normal;
+}
+
+.colocaConvocatoriaCBCTESDet {
+	width: 492px;
+	margin-left: 10px;
+}
+
+.colocaCategoriaCBCtes {
+	width: 212px;
+}
+
+.colocaCategoriaCBECtes {
+	width: 410px;
+	margin-left: 25px;
+}
+
+.colocaEspecialidadCBCtes {
+	width: 410px;
+	margin-left: 10px;
+}
+
+.colocaCategoria {
+	width: 220px;
+}
+
+.colocaEspecialidad {
+	width: 214px;
+	margin-left: 7px;
+}
+
+.colocaTipoGerencia {
+	width: 213px;
+}
+
+.colocaProvincia {
+	width: 220px;
+	margin-left: 3px;
+}
+
+.colocaGerencia {
+	width: 535px;
+	margin-left: 4px;
+}
+
+.colocaGerenciaGrande {
+	width: 800px;
+}
+
+.colocaCentro {
+	width: 489px;
+}
+
+.colocaUnidad {
+	width: 155px;
+}
+
+.colocaPuesto {
+	width: 155px;
+}
+
+.colocaSituacionDen {
+	width: 524px;
+}
+
+.colocaCategoriaDen {
+	width: 260px;
+}
+
+.colocaEspecialidadDen {
+	width: 240px;
+	margin-left: 8px;
+}
+
+.colocaProvinciaDen {
+	width: 260px;
+	margin-left: 3px;
+}
+
+.colocaTipoGerenciaDen {
+	width: 240px;
+}
+
+.colocaGerenciaDen {
+	width: 602px;
+	margin-left: 4px;
+}
+
+.colocaCentroDen {
+	width: 555px;
+}
+
+.colocaPuestoDen {
+	margin-left: 14px;
+	width: 601px;
+}
+
+.colocaServicioDen {
+	margin-left: 9px;
+	width: 601px;
+}
+
+.colocaAreaDen {
+	margin-left: 27px;
+	width: 601px;
+}
+
+.colocaUnidadDen {
+	margin-left: 16px;
+	width: 601px;
+}
+
+.colocaCarTADen {
+	margin-left: 52px;
+}
+
+.colocaTADen {
+	margin-left: 52px;
+}
+
+.colocaCuadroFOficialDen {
+	margin-left: 32px;
+	width: 8em;
+}
+
+.colocaCuadroFOficialDt {
+	margin-left: 2px;
+	width: 6.5em;
+}
+
+.colocaFechaRegistroDen {
+	width: 8em;
+	margin-bottom: 10px;
+}
+
+.colocaApellidosInc {
+	width: 170px;
+	margin-left: 53px;
+}
+
+.colocaNombreInc {
+	width: 180px;
+	margin-left: 61px;
+}
+
+.colocaDNIInc {
+	width: 170px;
+	margin-left: 10px;
+}
+
+.colocaTelefonoInc {
+	width: 180px;
+	margin-left: 56px;
+}
+
+.colocaCorreoInc {
+	width: 483px;
+}
+
+.colocaPuestoInc {
+	width: 535px;
+	margin-left: 13px;
+}
+
+.colocaServicioInc {
+	width: 535px;
+	margin-left: 8px;
+}
+
+.colocaAreaInc {
+	width: 535px;
+	margin-left: 26px;
+}
+
+.colocaUnidadInc {
+	width: 535px;
+	margin-left: 15px;
+}
+
+.colocaFechaInc {
+	margin-left: 16px;
+	width: 75px;
+}
+
+.colocaAnt {
+	width: 70px;
+	margin-left: 66px;
+	margin-bottom: 2px;
+}
+
+.colocaPlaza {
+	width: 70px;
+	margin-left: 143px;
+}
+
+.colocaSINO {
+	margin-left: 25px !important;
+}
+
+.altoRadios {
+	vertical-align: middle;
+}
+
+.colocaTitCertificado {
+	font-size: 13px !important;
+}
+
+.colocaTaIngreso {
+	margin-left: 10px;
+	margin-top: 20px;
+}
+
+.colocaEvaluadorCBsolicitudFase {
+	margin-left: 5px;
+	width: 25em;
+}
+
+.colocaFechaLinea {
+	width: 100px;
+}
+
+.colocaTamGrado {
+	width: 3em;
+	margin-left: 3px;
+	margin-right: 30px;
+}
+
+.colocaGradoTexto {
+	width: 40px;
+}
+
+.colocaConvoTexto {
+	width: 300px;
+}
+
+.colocaNoAutor1 {
+	margin-left: 113px;
+}
+
+.colocaNoAutor2 {
+	margin-left: 30px;
+}
+
+.colocaTitGradoBusc {
+	padding-top: 0px;
+}
+
+.colocaGradoBusc {
+	width: 100px;
+	margin-left: 20px;
+}
+
+.colocaTitSolicitudBusc {
+	padding-top: 0px;
+	padding-bottom: 0px;
+}
+
+.colocaSolicitudBusc {
+	width: 250px;
+	margin-left: 7px;
+}
+
+.colocaBotonBusc {
+	margin-right: 52px;
+}
+
+span.colocaTitRadio {
+	margin-left: 467px;
+}
+
+span.colocaTitRadio2 {
+	margin-left: 430px;
+}
+
+.colocaImgPrint {
+	padding-top: 1px;
+}
+
+.colocaAceptado {
+	margin-left: 37px;
+}
+
+.colocaNoAceptado {
+	margin-left: 20px;
+}
+
+.colocaDatosVis {
+	float: left;
+	width: 330px;
+}
+
+.colocaDatosVisGrande {
+	float: left;
+	width: 610px;
+}
+
+.colocaDatosVisMuyGrande {
+	float: left;
+	width: 650px;
+}
+
+.colocaDatosVis span, .colocaDatosVisGrande span,
+	.colocaDatosVisMuyGrande span {
+	font-size: 1em;
+	font-weight: normal;
+	color: #000000;
+}
+
+span.textoDatosDt {
+	margin-left: 0;
+}
+
+.margenCuadroTextoAlegaciones {
+	margin-left: 30px;
+}
+
+.textoCaracteresAl label, .textoCaracteresAl {
+	color: #004B98;
+	font-weight: bold;
+}
+
+.textoCaracteresAl {
+	padding-left: 20px;
+}
+
+/*  /Colocacion de Cuadros Solicitudes  */
+
+/*	Resultado devuelto por el buscador de Informes motivados de Meritos Curriculares	*/
+.tableInformesMotivados {
+	width: 100%;
+}
+
+.tableInformesMotivados tr.cabeceraTabla th {
+	font-weight: bold;
+	padding-bottom: 0.3em;
+	border-bottom: 1px solid #004B98;
+}
+
+.tableInformesMotivados tr.cabeceraTabla th a {
+	color: #004B98;
+}
+
+.tableInformesMotivados tr.cuerpoTabla .check {
+	padding-top: 0.5em;
+}
+
+.tableInformesMotivados tr td {
+	line-height: 1.5em;
+	color: #004B98;
+}
+
+/*	fin de Resultado devuelto por el buscador de Informes motivados de Meritos Curriculares	*/
+
+/*	Buscador de Solicitudes	*/
+.buscadorSolicitudes .colocaDNI {
+	width: 93px;
+}
+
+.buscadorSolicitudes .colocaConvocatoria {
+	margin-left: 41px;
+	width: 261px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.buscadorSolicitudes .colocaConvocatoria {
+		margin-left: 39px !important;
+		width: 261px;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.buscadorSolicitudes .colocaConvocatoria {
+		margin-left: 39px !important;
+		width: 261px;
+	}
+}
+
+.buscadorSolicitudes .colocaGradoBusc {
+	margin-left: 16px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.buscadorSolicitudes .colocaGradoBusc {
+		margin-left: 20px !important;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.buscadorSolicitudes .colocaGradoBusc {
+		margin-left: 15px !important;
+	}
+}
+
+.buscadorSolicitudes .listadoSolicitudes {
+	padding: 0;
+	width: 98%;
+	padding-top: 15px;
+}
+
+.buscadorSolicitudes table td {
+	text-align: center;
+	line-height: 20px;
+	vertical-align: middle;
+}
+
+.buscadorSolicitudes table td a {
+	font-weight: normal;
+}
+
+.buscadorSolicitudes table .datosTitulo td {
+	font-size: 1em;
+	font-weight: bold;
+	text-align: center;
+	color: #004B98;
+}
+
+.buscadorSolicitudes table .datosTitulo td.tituloSolicitud {
+	width: 50px;
+}
+
+.buscadorSolicitudes table .datosTitulo td.tituloDNI {
+	width: 60px;
+}
+
+.buscadorSolicitudes table .datosTitulo td.tituloNombre {
+	width: 170px;
+}
+
+.buscadorSolicitudes table .datosTitulo td.tituloApellidos {
+	width: 215px;
+}
+
+.buscadorSolicitudes table .datosTitulo td.tituloGrado {
+	width: 50px;
+}
+
+.buscadorSolicitudes table .datosTitulo td.tituloEstado {
+	width: 150px;
+}
+
+.buscadorSolicitudes table .datosTitulo td.tituloIcono {
+	width: 25px;
+}
+
+.buscadorSolicitudes table td {
+	padding-left: 3px;
+	padding-right: 3px;
+	overflow: hidden;
+}
+
+.buscadorSolicitudes table .datosAsp td {
+	text-align: left;
+}
+
+.buscadorSolicitudes table td .campoApellido {
+	width: 220px;
+	overflow: hidden;
+}
+
+.buscadorSolicitudes .lineaBajaM td {
+	border-bottom: 1px solid #004B98;
+}
+
+.buscadorSolicitudes table .datosTitulo .tituloDNI, .buscadorSolicitudes table .datosTitulo .tituloNombre,
+	.buscadorSolicitudes table .datosTitulo .tituloApellidos,
+	.buscadorSolicitudes table .datosTitulo .tituloGrado,
+	.buscadorSolicitudes table .datosTitulo .tituloEstado,
+	.buscadorSolicitudes table .datosAsp td.barraLateral {
+	border-left: 1px solid #004B98;
+}
+
+.buscadorSolicitudes table {
+	border-bottom: 1px solid #004B98;
+}
+/*	/Buscador de Solicitudes	*/
+
+/*	Registro de Solicitudes	*/
+
+/*	/Registro de Solicitudes	*/
+
+/* Clases de Solicitud acceso a Grado  */
+.cuadroFieldset .spanEspecial {
+	margin-left: 150px;
+}
+
+.cuadroFieldset .radioEspecial {
+	margin-left: 250px;
+	padding-top: 5px;
+	padding-bottom: 5px;
+}
+
+.solicitudAltaGrado span {
+	line-height: 15px;
+}
+
+.colocaApellidos1Sol {
+	width: 190px;
+	margin-left: 20px;
+	margin-right: 25px;
+}
+
+.colocaApellidos2Sol {
+	width: 185px;
+	margin-left: 21px;
+}
+
+.colocaDNISol {
+	width: 89px;
+	margin-left: 71px;
+	margin-right: 127px;
+}
+
+.colocaCorreoSol {
+	width: 190px;
+	margin-left: 10px;
+}
+
+.colocaSituacionCBSol {
+	width: 560px;
+	margin-left: 56px;
+}
+
+.colocaCategoriaCBSol {
+	width: 560px;
+	margin-left: 52px;
+}
+
+.colocaEspecialidadCBSol {
+	width: 560px;
+	margin-left: 37px;
+}
+
+.colocaProvinciaCBSol {
+	width: 148px;
+	margin-left: 55px;
+	margin-right: 75px;
+}
+
+.colocaProvinciaAdm {
+	width: 148px;
+	margin-left: 61px;
+	margin-right: 75px;
+}
+
+.colocaTipoGerenciaCBSol {
+	width: 148px;
+	margin-left: 29px;
+}
+
+.colocaTipoGerenciaAdm {
+	width: 148px;
+	margin-left: 35px;
+}
+
+.colocaGerenciaCBSol {
+	width: 560px;
+	margin-left: 56px;
+}
+
+.colocaGerenciaAdm {
+	width: 554px;
+	margin-left: 62px;
+}
+
+.colocaCentroCBSol {
+	margin-left: 6px;
+	width: 560px;
+}
+
+.colocaSexoSol {
+	width: 95px;
+	margin-left: 90px;
+}
+
+.colocaNombreSol {
+	width: 190px;
+	margin-left: 62px;
+}
+
+.colocaTelefono1Sol {
+	width: 89px;
+	margin-left: 55px;
+	margin-right: 127px;
+}
+
+.colocaTelefono2Sol {
+	width: 89px;
+	margin-left: 66px;
+}
+
+.colocaDireccionSol {
+	width: 510px;
+	margin-left: 5px;
+}
+
+.colocaProvinciaSol {
+	width: 190px;
+	margin-left: 63px;
+	margin-right: 33px;
+}
+
+.cuadroOtras {
+	border: 1px solid #004B98;
+	margin-left: 100px;
+	width: 271px;
+	font-weight: normal;
+}
+
+.colocaCPSol {
+	width: 88px;
+	margin-left: 48px;
+}
+
+.colocaLocalidadSol {
+	width: 190px;
+	margin-left: 61px;
+	margin-right: 33px;
+}
+
+.colocaServiciosCentroCBSol {
+	margin-left: 14px;
+	width: 548px;
+}
+
+.colocaCategoriaSol {
+	margin-left: 14px;
+	width: 479px;
+}
+
+.colocaSituacionSol {
+	width: 148px;
+	margin-left: 63px;
+	margin-right: 142px;
+}
+
+.colocaVinculoSol {
+	width: 132px;
+	margin-left: 74px;
+}
+
+.colocaFecha1Sol {
+	width: 80px;
+}
+
+.fechaFinSol {
+	padding-left: 144px;
+}
+
+.colocaFecha2Sol {
+	width: 80px;
+}
+
+.colocaBotonesSol {
+	padding-left: 135px !important;
+}
+
+select.textoTituloGrisSol {
+	color: #004B98;
+	width: 100%;
+	border: 1px solid #004B98;
+}
+
+.radioGradoAlta {
+	width: 15%;
+	margin-left: 78px;
+}
+
+.radioGradoSol {
+	width: 15%;
+	margin-left: 9px;
+}
+
+.radioGradoMf {
+	width: 15%;
+	margin-left: 75px;
+}
+
+.solicitudAlta input {
+	margin-top: 2px;
+}
+
+.regJuridic {
+	margin-left: 18px;
+	width: 140px;
+	margin-right: 150px;
+}
+
+.colocaTipoRegJuric {
+	margin-left: 18px;
+}
+
+.situAdmin {
+	margin-left: 7px;
+	width: 180px;
+	margin-right: 81px;
+}
+
+.mostrarCampoOculto {
+	display: inline;
+}
+
+.cuadroOcultoAlta {
+	border: 1px solid #004B98;
+	margin-left: 0px;
+	width: 250px;
+	font-weight: normal;
+}
+
+.solicitudAlta img {
+	vertical-align: middle;
+}
+
+/* Fin Clases de Solicitud acceso a Grado  */
+
+/*  Colocacion de Cuadros en los Meritos Curriculares  */
+.colocaFechasMC {
+	width: 9.15em;
+	font-weight: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.colocaFechasMC {
+		margin-left: 0.4em !important;
+		width: 9.15em;
+		font-weight: normal;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.colocaFechasMC {
+		margin-left: 0.3em !important;
+		width: 9.15em;
+		font-weight: normal;
+	}
+}
+
+.colocaFechasMC2 {
+	width: 9.15em;
+	font-weight: normal;
+	margin-left: 3em;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.colocaFechasMC2 {
+		width: 9.15em;
+		font-weight: normal;
+		margin-left: 3.3em;
+		!
+		important
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.colocaFechasMC2 {
+		width: 9.15em;
+		font-weight: normal;
+		margin-left: 3.2em;
+		!
+		important
+	}
+}
+
+.colocaFechasMC3 {
+	width: 9.15em;
+	font-weight: normal;
+	margin-left: 4.3em;
+}
+
+.colocaGradoMeritos {
+	margin-left: 19px;
+}
+
+.iconoCalendario {
+	vertical-align: bottom;
+}
+
+.colocaTitTallerMC {
+	margin-left: 53px;
+	width: 48.6em;
+	font-weight: normal;
+}
+
+.colocaFechaTallerMC {
+	width: 10em;
+	font-weight: normal;
+}
+
+.TallerMC .colocaFechaTallerMC {
+	width: 9.1em;
+}
+
+.colocaNHorasTAllerMC {
+	margin-left: 10px;
+	margin-right: 50px;
+	width: 6em;
+	font-weight: normal;
+}
+
+.colocaNHorasSeminariosDocMC {
+	margin-left: 8.2em;
+	width: 6em;
+	font-weight: normal;
+}
+
+.colocaNumTallerMC {
+	width: 6em;
+	margin-left: 10px;
+	font-weight: normal;
+}
+
+.colocaOrganizaTallerMC {
+	width: 48.6em;
+	font-weight: normal;
+}
+
+.radiosAcreditacionesMC {
+	margin: 1em 0 1em 3em;
+}
+
+.radiosAcreditacionesMC span {
+	vertical-align: top;
+}
+
+.radiosAcreditacionesMC .radioHorizontal {
+	display: inline-block;
+	margin-right: 2em;
+}
+
+.contenidoAltaMC .infoAdicional {
+	margin-left: 0;
+}
+
+.contenidoAltaMC .ajustarSeminarios {
+	margin-left: 1.2em !important;
+}
+
+.contenidoAltaMC .botonesBibliograficas {
+	margin-top: 2em;
+	margin-bottom: 5em;
+	margin-left: 3em;
+}
+
+.contenidoAltaMC .botonesDocencia {
+	margin-top: 3em;
+	margin-bottom: 5em;
+	margin-left: 3em;
+}
+
+.contenidoAltaMC .colocaTituloBibliograficasMC {
+	margin-left: 1.1em;
+	width: 47em;
+	font-weight: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.contenidoAltaMC .colocaTituloBibliograficasMC {
+		margin-left: 1.6em !important;
+		width: 47em;
+		font-weight: normal;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.contenidoAltaMC .colocaTituloBibliograficasMC {
+		margin-left: 1.4em !important;
+		width: 47em;
+		font-weight: normal;
+	}
+}
+
+.contenidoAltaMC .colocaHorasBibliograficasMC {
+	margin-left: 6em;
+	width: 5em;
+	font-weight: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.contenidoAltaMC .colocaHorasBibliograficasMC {
+		margin-left: 6.2em !important;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.contenidoAltaMC .colocaHorasBibliograficasMC {
+		margin-left: 6.1em !important;
+	}
+}
+
+.colocaFechaIGestMC {
+	font-weight: normal;
+}
+
+.colocaTitCongresoMC {
+	margin-left: 53px;
+	width: 48.6em;
+	font-weight: normal;
+}
+
+.colocaOrganCongresoMC {
+	width: 48.6em;
+	font-weight: normal;
+}
+
+.colocaSesionClinicaMC {
+	width: 5em;
+	margin-left: 5px;
+	font-weight: normal;
+}
+
+.colocaEspecEspecialidadMC {
+	margin-left: 44px;
+	width: 47em;
+	font-weight: normal;
+}
+
+.colocaLugarEspecialidadMC {
+	width: 47em;
+	font-weight: normal;
+}
+
+.colocaTitDiploMC {
+	width: 44em;
+	font-weight: normal;
+}
+
+.colocaLugarDiploMC {
+	margin-left: 24px;
+	width: 44em;
+	font-weight: normal;
+}
+
+.colocaDescEstanciaMC {
+	margin-left: 15px;
+	width: 41.3em;
+	font-weight: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.colocaDescEstanciaMC {
+		margin-left: 22px !important;
+		width: 41.3em;
+		font-weight: normal;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.colocaDescEstanciaMC {
+		margin-left: 18px !important;
+		width: 41.3em;
+		font-weight: normal;
+	}
+}
+
+.colocaLugarEstanciaMC {
+	margin-left: 47px;
+	width: 41.3em;
+	font-weight: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.colocaLugarEstanciaMC {
+		margin-left: 53px !important;
+		width: 41.3em;
+		font-weight: normal;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.colocaLugarEstanciaMC {
+		margin-left: 50px !important;
+		width: 41.3em;
+		font-weight: normal;
+	}
+}
+
+.colocaActividadFMasterMC {
+	margin-right: 20px;
+	font-weight: normal;
+}
+
+.colocaExpertoMasterMC {
+	margin-right: 36px;
+	font-weight: normal;
+}
+
+.colocaModalidadMasterMC {
+	margin-right: 115px;
+	font-weight: normal;
+}
+
+.colocaTitMasterMC {
+	margin-left: 126px;
+	width: 42em;
+	font-weight: normal;
+}
+
+.colocaOrganMasterMC {
+	margin-left: 12px;
+	width: 42em;
+	font-weight: normal;
+}
+
+.colocaTitCursoDocMC {
+	margin-left: 53px;
+	width: 48.6em;
+	font-weight: normal;
+}
+
+.colocaNumHCursoDocMC {
+	margin-left: 38px;
+	width: 5em;
+	font-weight: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.colocaNumHCursoDocMC {
+		margin-left: 36px !important;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.colocaNumHCursoDocMC {
+		margin-left: 37px !important;
+	}
+}
+
+.colocaOrganCursoDocMC {
+	width: 48.6em;
+	font-weight: normal;
+}
+
+.colocaTitSeminariosMC {
+	width: 45em;
+	font-weight: normal;
+}
+
+.colocaTitBibliograficaMC {
+	margin-left: 5px;
+	width: 51.5em;
+	font-weight: normal;
+}
+
+.colocaTitModeradorMC {
+	margin-left: 5px;
+	width: 47em;
+	font-weight: normal;
+}
+
+.colocaAnyoDocenciaPreMC {
+	margin-left: 5px;
+	width: 5em;
+	font-weight: normal;
+}
+
+.colocaTitParticipaMC {
+	margin-left: 5px;
+	width: 53em;
+	font-weight: normal;
+}
+
+.obligaParticipaIzqMC {
+	float: left;
+	height: 8em;
+	display: inline-block;
+	font-weight: normal;
+	font-weight: normal;
+}
+
+.obligaParticipaIzqMC span {
+	height: 7em;
+	padding-top: 3.5em;
+	display: inline-block;
+	font-weight: normal;
+}
+
+.obligaParticipaDerMC {
+	float: left;
+	height: 8em;
+	display: inline-block;
+	font-weight: normal;
+}
+
+.colocaTitParticipaInvMC {
+	margin-left: 5px;
+	width: 54em;
+	font-weight: normal;
+}
+
+.colocaComisionParticipaInvMC {
+	width: 30.9em;
+	margin-left: 23px;
+	font-weight: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.colocaComisionParticipaInvMC {
+		width: 30.9em;
+		margin-left: 28px !important;
+		font-weight: normal;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.colocaComisionParticipaInvMC {
+		width: 30.9em;
+		margin-left: 29px !important;
+		font-weight: normal;
+	}
+}
+
+.colocaTitTesisMC {
+	margin-left: 37px;
+	width: 50em;
+	font-weight: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.colocaTitTesisMC {
+		margin-left: 35px !important;
+		width: 50em;
+		font-weight: normal;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.colocaTitTesisMC {
+		margin-left: 37px !important;
+		width: 50em;
+		font-weight: normal;
+	}
+}
+
+.colocaUniversidadTesisMC {
+	width: 50em;
+	font-weight: normal;
+}
+
+.colocaTitRevistaCientificaMC {
+	margin-left: 5px;
+	width: 47em;
+	font-weight: normal;
+}
+
+.colocaTitPublicacionMC {
+	margin-left: 5px;
+	width: 52em;
+	font-weight: normal;
+}
+
+.colocaTitOtraPMC {
+	margin-left: 31px;
+	width: 45em;
+	font-weight: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.colocaTitOtraPMC {
+		margin-left: 29px !important;
+		width: 45em;
+		font-weight: normal;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.colocaTitOtraPMC {
+		margin-left: 30px !important;
+		width: 45em;
+		font-weight: normal;
+	}
+}
+
+.colocaNombreOtraPMC {
+	width: 45em;
+	font-weight: normal;
+}
+
+.colocaTitLibISBN {
+	margin-left: 40px;
+	width: 46.5em;
+	font-weight: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.colocaTitLibISBN {
+		margin-left: 44px !important;
+		width: 46.5em;
+		font-weight: normal;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.colocaTitLibISBN {
+		margin-left: 45px !important;
+		width: 46.5em;
+		font-weight: normal;
+	}
+}
+
+.colocaTitCapISBN {
+	width: 50em;
+	font-weight: normal;
+}
+
+.colocaIsbnISBN {
+	margin-left: 95px;
+	margin-right: 30px;
+	width: 10em;
+	font-weight: normal;
+}
+
+.colocaEditorialISBN {
+	width: 46.5em;
+	margin-left: 75px;
+	font-weight: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.colocaEditorialISBN {
+		width: 46.5em;
+		margin-left: 77px !important;
+		font-weight: normal;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.colocaEditorialISBN {
+		width: 46.5em;
+		margin-left: 76px !important;
+		font-weight: normal;
+	}
+}
+
+.colocaLugarISBN {
+	margin-left: 5px;
+	width: 46.5em;
+	font-weight: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.colocaLugarISBN {
+		margin-left: 9px !important;
+		width: 46.5em;
+		font-weight: normal;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.colocaLugarISBN {
+		margin-left: 9px !important;
+		width: 46.5em;
+		font-weight: normal;
+	}
+}
+
+.colocaTitProtocoloGuia {
+	width: 39.3em;
+	font-weight: normal;
+}
+
+.colocaTitEvaluadorMC {
+	margin-left: 76px;
+	width: 42em;
+	font-weight: normal;
+}
+
+.colocaAgenciaEvaluadorMC {
+	margin-left: 0;
+	width: 42em;
+	font-weight: normal;
+}
+
+.colocaNomComiteMC {
+	margin-left: 2px;
+	width: 45em;
+	font-weight: normal;
+}
+
+.colocaEntidadBecaMC {
+	margin-left: 14px;
+	width: 41.3em;
+	font-weight: normal;
+}
+
+.colocaLugarBecaMC {
+	margin-left: 2px;
+	width: 31.3em;
+	font-weight: normal;
+}
+
+.colocaInveBecaMC {
+	margin-left: 19px;
+	width: 41.3em;
+	font-weight: normal;
+}
+
+.colocaTituloSesionMC {
+	margin-left: 1em;
+	width: 75%;
+	font-weight: normal;
+}
+
+.colocaNHorasMC {
+	margin-left: 5.9em;
+	font-weight: normal;
+	width: 4em;
+}
+
+.colocaServicioJefeSMC {
+	width: 32em;
+	font-weight: normal;
+}
+
+.colocaCentroCoordinaMC {
+	width: 42em;
+	font-weight: normal;
+}
+
+.colocaGerenciaCBResponsableCartMC {
+	width: 52em;
+	margin-left: 13px;
+	font-weight: normal;
+}
+
+.colocaCentroResponsableCartMC {
+	margin-left: 18px;
+	width: 51.3em;
+	font-weight: normal;
+}
+
+.colocaProgramaAsistencialCartMC {
+	margin-left: 18px;
+	width: 44.8em;
+	font-weight: normal;
+}
+
+.colocaCargoCartMC {
+	margin-left: 18px;
+	width: 39.4em;
+	font-weight: normal;
+}
+
+.colocaFechaFResponsableCartMC {
+	margin-left: 8.3em;
+	font-weight: normal;
+}
+
+.colocaCentroResponsableComiMC {
+	margin-left: 5px;
+	width: 46.7em;
+	font-weight: normal;
+}
+
+.colocaUnidadResponsableUniMC {
+	margin-left: 5px;
+	width: 46.7em;
+	font-weight: normal;
+}
+
+.colocaUnidadResponsableDoceMC {
+	margin-left: 19px;
+	width: 41.2em;
+	font-weight: normal;
+}
+
+.colocaZonaMiembroConsejoMC {
+	margin-left: 5px;
+	width: 31.9em;
+	font-weight: normal;
+}
+
+.colocaActiBResponsable {
+	margin-left: 37px;
+	width: 41.1em;
+	font-weight: normal;
+}
+
+.colocaUnidadUnidadTutor {
+	margin-left: 5px;
+	width: 47.4em;
+	font-weight: normal;
+}
+
+.colocaComiMiembroComisionMC {
+	margin-left: 5px;
+	width: 50.1em;
+	font-weight: normal;
+}
+
+.colocaGrupoMiembroGrupoMC {
+	width: 47em;
+	font-weight: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.colocaGrupoMiembroGrupoMC {
+		margin-left: 3px !important;
+		width: 47em;
+		font-weight: normal;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.colocaGrupoMiembroGrupoMC {
+		margin-left: 2px !important;
+		width: 47em;
+		font-weight: normal;
+	}
+}
+
+.colocaCargoMiembroGrupoMC {
+	margin-left: 59px;
+	width: 47em;
+	font-weight: normal;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.colocaCargoMiembroGrupoMC {
+		margin-left: 60px !important;
+		width: 47em;
+		font-weight: normal;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.colocaCargoMiembroGrupoMC {
+		margin-left: 60px !important;
+		width: 47em;
+		font-weight: normal;
+	}
+}
+
+.colocaObjetivoMiembroGrupoMC {
+	margin-left: 47px;
+	width: 47em;
+	font-weight: normal;
+}
+
+.colocaTitOrganizadorMC {
+	width: 45.3em;
+	font-weight: normal;
+}
+
+.colocaTribunalMiembroTribunalMC {
+	margin-left: 5px;
+	width: 52em;
+	font-weight: normal;
+}
+
+.colocaTitOtroFPMC {
+	margin-left: 37px;
+	width: 46em;
+	font-weight: normal;
+}
+
+.colocaLugarOtroFPMC {
+	width: 46em;
+	font-weight: normal;
+}
+
+.colocaSIMeritoSINOMC {
+	margin: 0 20px 0 10px;
+	font-weight: normal;
+}
+
+.colocaNombreRevistaProfMC {
+	margin-left: 11px;
+	width: 46.5em;
+	font-weight: normal;
+}
+
+.colocaTitRevistaProfMC {
+	width: 46.5em;
+	font-weight: normal;
+}
+
+.colocaTitCasosSesMC {
+	margin-left: 5px;
+	width: 45.6em;
+	font-weight: normal;
+}
+
+.colocaServicioMaterialServMC {
+	margin-left: 5px;
+	width: 50.8em;
+	font-weight: normal;
+}
+
+.colocaActividadActEspecificaMC {
+	margin-left: 5px;
+	width: 50.3em;
+	font-weight: normal;
+}
+
+.colocaDocDoctoradoMC {
+	margin-left: 55px;
+	width: 47em;
+	font-weight: normal;
+}
+
+.colocaLugarDoctoradoMC {
+	width: 47em;
+	font-weight: normal;
+}
+
+.colocaTitFPSuperiorMC {
+	margin-left: 38px;
+	width: 47em;
+}
+
+.colocaLugarFPSuperiorMC {
+	width: 47em;
+	font-weight: normal;
+}
+
+.colocaTitRevisaProtoProcedMC {
+	margin-left: 5px;
+	width: 47.2em;
+	font-weight: normal;
+}
+
+.colocaNomPatenteMC {
+	width: 42em;
+	font-weight: normal;
+}
+
+.colocaActBResponsableMC {
+	width: 50.3em;
+	margin-left: 5px;
+	font-weight: normal;
+}
+
+.colocaActPreparaImpMC {
+	width: 51em;
+	margin-left: 5px;
+	font-weight: normal;
+}
+
+.cajaPuesto {
+	border: 1px solid #004B98;
+	width: 54em;
+	margin-left: 0.5em;
+	font-weight: normal;
+}
+
+.meritoCreditos .bloqueDato {
+	min-height: 1.3em;
+	_height: 1.3em;
+	min-width: 7em;
+	_width: 7em;
+}
+
+.meritoCreditos .bloqueDato span.titulo {
+	width: 4em;
+	display: inline-block;
+}
+
+/*  /Colocacion de Cuadros en los Meritos Curriculares  */
+
+/*  Contenido DCP1A  */
+div.contenidoDCP1A .radioGrado {
+	width: 15%;
+	margin-left: 10px;
+}
+
+div.contenidoDCP1A span.titRespuestas {
+	text-align: center;
+	margin-left: 55px;
+}
+
+div.contenidoDCP1A .listadoP {
+	list-style-type: disc;
+	margin: 10px 0px 10px 50px;
+	font-weight: bold;
+	color: #004B98;
+	text-align: left;
+}
+
+div.contenidoDCP1A .opcionRegistro {
+	padding-right: 20px;
+	padding-left: 20px;
+}
+
+div.contenidoDCP1A .opcionRegistro p {
+	margin-top: 20px;
+	margin-bottom: 10px;
+}
+
+div.contenidoDCP1A .opcionRadio {
+	display: inline-block;
+	margin-right: 10px;
+	margin-left: 10px;
+	height: 25px;
+}
+
+div.contenidoDCP1A .opcionTexto {
+	font-weight: bold;
+	line-height: 21px;
+	color: #004B98;
+}
+
+div.contenidoDCP1A .opcionImagen {
+	margin-left: 15px;
+}
+
+div.contenidoDCP1A .cuadroHistorialGrado table td {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #004B98;
+	padding: 3px;
+	text-align: center;
+	color: #004B98;
+}
+
+div.contenidoDCP1A .cuadroHistorialGrado tr.titulos td {
+	width: 25%;
+	font-weight: bold;
+	text-align: center;
+}
+
+div.contenidoDCP5B .tituloListadoCertif, div.contenidoDCP1A .tituloListadoCertif
+	{
+	margin: 0 0 20px 32px;
+	font-weight: bold;
+	font-size: 1.1em;
+	text-decoration: underline;
+}
+
+div.contenidoDCP5B .listaCertif, div.contenidoDCP1A .listaCertif {
+	margin: 0 0 5px 50px;
+	font-size: 1em;
+	font-weight: normal;
+	color: #000000;
+}
+
+select.textoTituloGris {
+	color: #004B98;
+	width: 100%;
+}
+
+.textosCertif {
+	font-weight: bold;
+	color: #004B98;
+	margin-left: 30px;
+}
+
+.botonesCertif {
+	margin: 20px 0 50px 0;
+	padding-left: 170px;
+}
+
+.botonesCertif2 {
+	margin: 0 0 50px 0;
+	padding-left: 100px;
+}
+
+.colocaTitCertif {
+	margin-left: 5px;
+	width: 400px;
+}
+
+.colocaDescCertif {
+	width: 450px;
+}
+
+.tituloCertificados {
+	font-weight: bold;
+	color: #004B98;
+}
+
+.colocaTablaCertif {
+	margin-left: 60px;
+}
+
+div.contenidoDCP5B {
+	text-align: left;
+}
+
+.opcionRadioAlta {
+	display: inline-block;
+	margin-right: 5px;
+	margin-left: 10px;
+	height: 0px;
+}
+
+/*  /Contenido DCP1A  */
+
+/*  Contenido DCP1B  */
+div.contenidoDCP1B .datosFechaComite {
+	padding: 20px;
+	padding-left: 40px;
+	color: #004B98;
+	font-weight: bold;
+}
+
+div.contenidoDCP1B .datosFechaComite label {
+	font-weight: bold;
+}
+
+div.contenidoDCP1B p span {
+	text-decoration: underline;
+	margin-left: 20px;
+	font-weight: bold;
+}
+
+div.contenidoDCP1B .radioGrado {
+	width: 15%;
+	margin-left: 10px;
+}
+
+/*  /Contenido DCP1B  */
+
+/*  Contenido DCP1C  */
+div.contenidoDCP1C {
+	text-align: left;
+}
+
+div.contenidoDCP1C .listadoRespuesta {
+	margin-left: 29px;
+	color: #004B98;
+}
+
+div.contenidoDCP1C .listadoRespuesta span.colocaTitRadioDCP1C {
+	font-weight: bold;
+	margin-right: 10px;
+}
+
+div.contenidoDCP1C .radio11 {
+	margin-left: 135px;
+}
+
+div.contenidoDCP1C .radio12 {
+	margin-left: 156px;
+}
+
+div.contenidoDCP1C .radio13 {
+	margin-left: 238px;
+}
+
+div.contenidoDCP1C .radio14 {
+	margin-left: 132px;
+}
+
+div.contenidoDCP1C .radio15 {
+	margin-left: 270px;
+}
+
+div.contenidoDCP1C .listadoRespuesta ul li span {
+	font-weight: bold;
+	line-height: 15px;
+}
+
+div.contenidoDCP1C p a {
+	color: #004B98;
+	font-style: italic;
+	font-size: 11px;
+}
+
+div.contenidoDCP1C h4 {
+	margin-left: 20px;
+}
+
+.denegacion .denegaComp {
+	width: 50%;
+}
+
+.denegacion .colocaDatosVisGrande input {
+	width: 80%;
+}
+
+.denegacion .colocaDatosVisMuyGrande input {
+	width: 70%;
+}
+
+.denegacion .colocaDatosVis input {
+	width: 70%;
+}
+
+.denegacion .ajustaProcedimiento {
+	margin-top: 2px;
+}
+
+.denegacion .ajustaSitAdmin {
+	margin-top: 2px;
+}
+
+.denegacion .ajustaPersonal {
+	margin-top: 2px;
+}
+
+.denegacion .ajustaCategoria {
+	margin-top: 3px;
+}
+
+.denegacion .ajustaEspecialidad {
+	margin-top: 3px;
+}
+
+.denegacion .ajustaProvincia {
+	margin-top: 3px;
+}
+
+.denegacion .ajustaGerencia {
+	margin-top: 3px;
+}
+
+.denegacion .ajustaTrabajo {
+	margin-top: 3px;
+}
+
+/*  /Contenido DCP1C  */
+
+/*  Contenido DCP2A  */
+div.contenidoDCP2A .cuadroHistorialGrado table td {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #004B98;
+	padding: 3px;
+	text-align: center;
+	color: #004B98;
+}
+
+div.contenidoDCP2A .cuadroHistorialGrado tr.titulos td {
+	width: 25%;
+	font-weight: bold;
+	text-align: center;
+}
+
+div.contenidoDCP2A .tablaFaseEvaluacion {
+	margin-top: 30px;
+	margin-left: 150px;
+}
+
+div.contenidoDCP2A .tablaFaseEvaluacion tr td {
+	padding: 3px 10px 3px 10px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #000000;
+	color: #004B98;
+	text-align: center;
+	font-weight: bold;
+}
+
+div.contenidoDCP2A .tablaFaseEvaluacion .titulos td {
+	background-color: #004B98;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+div.contenidoDCP2A .tablaFaseEvaluacion .tit {
+	text-align: left;
+}
+
+div.contenidoDCP2A .checkTramitacion {
+	margin-left: 10px;
+}
+
+div.contenidoDCP2A .textoObtenidos {
+	text-align: center;
+	background-color: #FBFAF8;
+}
+
+div.contenidoDCP2A .tablaCertif tr td {
+	border: 1px #000000 solid;
+	padding: 2px;
+	text-align: center;
+	color: #004B98;
+	width: 20em;
+}
+
+div.contenidoDCP2A .tablaCertif .tituloTabla {
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #004B98;
+}
+
+div.contenidoDCP2A .tablaCertif .textoTabla {
+	vertical-align: middle;
+	padding: 5px;
+}
+
+.contenidoDCP2A span.colocaTitRadio {
+	margin-left: 488px;
+}
+
+.contenidoDCP2A span.colocaTitRadio2 {
+	margin-left: 478px;
+}
+
+div.contenidoDCP2A .listadoRespuesta {
+	margin-bottom: 2em;
+}
+
+div.contenidoDCP2A .centrarTablaCertif2 {
+	margin-left: 100px;
+}
+
+.GestionCTE .textoTabla {
+	color: #000000;
+	padding-bottom: 0.3em;
+}
+
+.tablaEvidenciasCentrada {
+	text-align: center;
+}
+
+.tablaEvidenciasCentrada .tablaDocumentosEscaneados {
+	margin-left: auto;
+	margin-right: auto;
+}
+
+.tablaEvidenciasCentrada .tablaDocumentosEscaneados span {
+	font-weight: normal;
+}
+
+/*  /Contenido DCP2A  */
+
+/*  Contenido DCP2B  */
+div.contenidoDCP2B .cuadroFormacionDCP2B {
+	padding: 20px;
+}
+
+div.contenidoDCP2B .tablaFormacionDCP2B {
+	width: 100%;
+}
+
+div.contenidoDCP2B .tablaFormacionDCP2B tr.titulos td {
+	font-weight: bold;
+	font-size: 1.2em;
+	padding-bottom: 25px;
+	text-decoration: underline;
+}
+
+div.contenidoDCP2B .tablaFormacionDCP2B tr td {
+	text-align: center;
+	color: #004B98;
+	padding-bottom: 5px;
+	width: 25%;
+}
+
+div.contenidoDCP2B .tablaFormacionDCP2B tr td.primero {
+	text-align: left;
+}
+
+div.contenidoDCP2B .totalFormacionDCP2B {
+	font-weight: bold;
+	color: #004B98;
+	margin-right: 30px;
+	float: right;
+}
+
+div.contenidoDCP2B .ultimo {
+	margin-top: 10px;
+	margin-bottom: 40px;
+}
+
+/*  /Contenido DCP2B  */
+
+/*  Contenido DCP3A  */
+div.contenidoDCP3A .cuadroHistorialGrado table td {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #004B98;
+	padding: 3px;
+	text-align: center;
+	color: #004B98;
+}
+
+div.contenidoDCP3A .cuadroHistorialGrado tr.titulos td {
+	width: 25%;
+	font-weight: bold;
+	text-align: center;
+}
+
+div.contenidoDCP3A .tablaFaseEvaluacion {
+	margin-top: 30px;
+	margin-left: 40px;
+}
+
+div.contenidoDCP3A .ajusteMargenTabla .tablaFaseEvaluacion {
+	margin-left: 0;
+	margin-right: 10px;
+}
+
+div.contenidoDCP3A .tablaFaseEvaluacion tr td {
+	padding: 10px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #004B98;
+	color: #004B98;
+	text-align: center;
+	font-weight: bold;
+}
+
+div.contenidoDCP3A .tablaFaseEvaluacion .tit {
+	text-align: left;
+	width: 50%;
+}
+
+div.contenidoDCP3A .cbEvaluador span {
+	margin-right: 10px;
+}
+
+div.contenidoDCP3A .colocaTitRadio {
+	margin-left: 480px;
+}
+
+/*  Historial de carrera profesional  */
+.listadoCuestionariosEscaneados * {
+	font-size: 1em;
+}
+
+.listadoCuestionariosEscaneados .titulo {
+	color: #004B98;
+	font-weight: bold;
+	line-height: 2em;
+}
+
+.listadoCuestionariosEscaneados .colocaTituloEscaneado {
+	margin-left: 21px;
+	width: 17em;
+	font-weight: normal;
+}
+
+.listadoCuestionariosEscaneados .colocaDescripcionEscaneado {
+	margin-left: 6px;
+	width: 24.4em;
+	font-weight: normal;
+}
+
+.listadoCuestionariosEscaneados .colocaNumDocumentosEscaneado {
+	margin-left: 6px;
+	width: 3em;
+	font-weight: normal;
+}
+
+.listadoCuestionariosEscaneados .colocaArchivoEscaneado {
+	margin-left: 29px;
+	width: 35em;
+	border: 1px solid #004B98;
+}
+
+.listadoCuestionariosEscaneados .colocaAreaEscaneado {
+	margin-left: 45px;
+	width: 50.6em;
+	border: 1px solid #004B98;
+	font-weight: normal;
+}
+
+.listadoCuestionariosEscaneados .colocaCuestionarioEscaneado {
+	margin-left: 0;
+	width: 50.6em;
+	border: 1px solid #004B98;
+	font-weight: normal;
+}
+
+.listadoCuestionariosEscaneados .botonesPagina .izqBoton {
+	margin-right: -10px;
+}
+
+.listadoCuestionariosEscaneados .botonesPagina .derBoton {
+	margin-left: -1px;
+}
+
+.listadoCuestionariosEscaneados .tablaDocumentosEscaneados th {
+	font-weight: bold;
+	font-size: 1em;
+	color: #004B98;
+	text-align: center;
+}
+
+.listadoCuestionariosEscaneados .tablaDocumentosEscaneados td.centrado {
+	line-height: 2em;
+	text-align: center;
+}
+
+.listadoCuestionariosEscaneados .tablaDocumentosEscaneados td.normal {
+	line-height: 2em;
+	text-align: justify;
+}
+
+.listadoCuestionariosEscaneados .tablaDocumentosEscaneados td a span {
+	font-weight: normal;
+}
+
+.listadoCuestionariosEscaneados .tablaDocumentosEscaneados td a:hover {
+	text-decoration: none;
+}
+
+.listadoCuestionariosEscaneados .tablaDocumentosEscaneados td a:hover span
+	{
+	text-decoration: underline;
+}
+
+/*  /Historial de carreara profesional  */
+.listCuestEscaneados .tablaFondoBlanco .listado {
+	line-height: 1.5em;
+}
+
+.listCuestEscaneados .tablaFondoBlanco .listado td a span {
+	font-weight: normal;
+}
+
+.listCuestEscaneados .tablaFondoBlanco .listado td a:hover {
+	text-decoration: none;
+}
+
+.listCuestEscaneados .tablaFondoBlanco .listado td a:hover span {
+	text-decoration: underline;
+}
+
+/*  /Contenido DCP3A  */
+
+/*  Contenido Listado AspirantesGCP  */
+div.contenidoListadoAspirantesGCP .colocaVerMeritos {
+	margin-left: 4.3em;
+	width: 79.8%;
+}
+
+div.contenidoListadoAspirantesGCP .colocaApellidosLE {
+	margin-left: 2.45em;
+	margin-right: 2em;
+	width: 20.9em;
+}
+
+div.contenidoListadoAspirantesGCP .colocaApellidosLE2 {
+	margin-left: 4.9em;
+	margin-right: 2em;
+	width: 20.9em;
+}
+
+div.contenidoListadoAspirantesGCP .colocaApellidosLE3 {
+	margin-left: 2.3em;
+	margin-right: 2em;
+	width: 20.9em;
+}
+
+div.contenidoListadoAspirantesGCP .noDatos {
+	padding-top: 1em;
+	padding-bottom: 1em;
+}
+
+div.contenidoListadoAspirantesGCP .cuadroListadoAspirantes table, div.contenidoListadoAspirantesGCP .cuadroListadoAspirantesFase table
+	{
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+div.contenidoListadoAspirantesGCP .cuadroListadoAspirantes tr td {
+	text-align: center;
+	width: 30%;
+	padding-bottom: 2px;
+	color: #004B98;
+}
+
+div.contenidoListadoAspirantesGCP .cuadroListadoAspirantesFase tr td {
+	text-align: center;
+	padding-bottom: 2px;
+	color: #004B98;
+	width: 19em
+}
+
+div.contenidoListadoAspirantesGCP .cuadroListadoAspirantes .tituloAsp,
+	div.contenidoListadoAspirantesGCP .cuadroListadoAspirantesFase .tituloAsp
+	{
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #004B98;
+}
+
+div.contenidoListadoAspirantesGCP .radioGrado {
+	width: 15%;
+	margin-left: 10px;
+}
+
+div.contenidoListadoAspirantesGCP .radioSolicitud {
+	width: 20%;
+	text-align: center;
+	font-weight: bold;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+div.contenidoListadoAspirantesGCP .tituloGrado {
+	font-size: 15px;
+	font-weight: bold;
+	color: #004B98;
+	margin-bottom: 16px;
+	margin-top: 24px;
+}
+
+div.contenidoListadoAspirantesGCP .subTituloListado {
+	font-size: 11px;
+	font-weight: bold;
+	color: #004B98;
+}
+
+div.contenidoListadoAspirantesGCP .subTituloItin {
+	font-size: 11px;
+	font-weight: bold;
+	color: #004B98;
+	margin-top: 20px !important;
+	margin-left: 16px;
+}
+
+div.contenidoListadoAspirantesGCP .contadores {
+	font-size: 11px;
+	font-weight: bold;
+	color: #004B98;
+	margin-right: 30px;
+	margin-left: 10px;
+}
+
+div.contenidoListadoAspirantesGCP .lineaBajaM {
+	margin-top: 5px;
+}
+
+div.contenidoListadoAspirantesGCP .colocaEspecialidadGCP {
+	margin-left: 15px;
+}
+
+div.contenidoListadoAspirantesGCP .colocaEspecialidadGCPCB {
+	width: 280px;
+	margin-left: 2px;
+}
+
+div.contenidoListadoAspirantesGCP .cuadroListadoAspirantesBis table {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+div.contenidoListadoAspirantesGCP .cuadroListadoAspirantesBis tr td {
+	color: #004B98;
+}
+
+div.contenidoListadoAspirantesGCP .cuadroListadoAspirantesBis .tituloAsp
+	{
+	font-weight: bold;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	color: #004B98;
+}
+
+.colocaEstadoGCP {
+	width: 11em;
+	margin-left: 71px;
+}
+
+.colocaGradoBuscGPC {
+	width: 100px;
+	margin-left: 75px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.colocaGradoBuscGPC {
+		width: 100px;
+		margin-left: 73px !important;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.colocaGradoBuscGPC {
+		width: 100px;
+		margin-left: 74px !important;
+	}
+}
+
+.colocaConvocatoriaGPC {
+	width: 358px;
+	margin-left: 3px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.colocaConvocatoriaGPC {
+		width: 358px;
+		margin-left: 6px !important;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.colocaConvocatoriaGPC {
+		width: 358px;
+		margin-left: 5px !important;
+	}
+}
+
+.tablaListadoCSV {
+	width: 100% !important;
+}
+
+div.contenidoListadoAspirantesGCP table.tablaSolicitudes {
+	margin: 10px 0 20px;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+div.contenidoListadoAspirantesGCP table.tablaSolicitudes {
+	margin-top: 0.5em;
+}
+
+div.contenidoListadoAspirantesGCP .tablaSolicitudes .cabeceraTablaSolicitudes td
+	{
+	padding: 0 0 5px;
+}
+
+div.contenidoListadoAspirantesGCP .tablaSolicitudes .cabeceraTablaSolicitudes td.cabeceraNIF
+	{
+	width: 10em;
+}
+
+div.contenidoListadoAspirantesGCP .tablaSolicitudes .cabeceraTablaSolicitudes td.cabeceraApellidos
+	{
+	width: 10em;
+}
+
+div.contenidoListadoAspirantesGCP .tablaSolicitudes .cabeceraTablaSolicitudes td.cabeceraNombre
+	{
+	width: 8em;
+}
+
+div.contenidoListadoAspirantesGCP .tablaSolicitudes .cabeceraTablaSolicitudesC td
+	{
+	padding: 0 0 5px;
+}
+
+div.contenidoListadoAspirantesGCP .tablaSolicitudes .cabeceraTablaSolicitudesC td.cabeceraNIF
+	{
+	width: 10em;
+}
+
+div.contenidoListadoAspirantesGCP .tablaSolicitudes .cabeceraTablaSolicitudesC td.cabeceraApellidos
+	{
+	width: 50em;
+}
+
+div.contenidoListadoAspirantesGCP .tablaSolicitudes .cabeceraTablaSolicitudesC td.cabeceraNombre
+	{
+	width: 30em;
+}
+
+div.contenidoListadoAspirantesGCP .tablaSolicitudes .cabeceraTablaSolicitudes td.cabeceraFecha
+	{
+	width: 10em;
+	display: block;
+}
+
+div.contenidoListadoAspirantesGCP .tablaSolicitudes .cuerpoTablaSolicitudes td span
+	{
+	font-weight: normal;
+	display: block;
+}
+
+div.contenidoListadoAspirantesGCP .tablaSolicitudes .cuerpoTablaSolicitudes td.cuerpoNIF
+	{
+	width: 8em;
+	display: block;
+	text-align: left;
+}
+
+div.contenidoListadoAspirantesGCP .tablaSolicitudes .cuerpoTablaSolicitudes td.cuerpoApellido
+	{
+	text-align: left;
+}
+
+div.contenidoListadoAspirantesGCP .tablaSolicitudes .cuerpoTablaSolicitudes td.cuerpoApellido span
+	{
+	width: 15em;
+	overflow: hidden;
+}
+
+div.contenidoListadoAspirantesGCP .tablaSolicitudes .cuerpoTablaSolicitudes td.cuerpoNombre
+	{
+	text-align: left;
+}
+
+div.contenidoListadoAspirantesGCP .tablaSolicitudes .cuerpoTablaSolicitudes td.cuerpoNombre span
+	{
+	display: block;
+}
+
+div.contenidoListadoAspirantesGCP .tablaSolicitudes .cuerpoTablaSolicitudes td.cuerpoFecha
+	{
+	text-align: left;
+	width: 10em;
+	display: block;
+}
+
+div.contenidoListadoAspirantesGCP .tablaSolicitudes .cuerpoTablaSolicitudes td.cuerpoFecha span
+	{
+	display: block;
+	width: 10em;
+}
+
+/*  /Contenido Listado AspirantesGCP  */
+
+/*	Sugerencias	*/
+.sugerencias .colocaCorreo {
+	margin-left: 20px;
+	width: 15em;
+}
+
+.sugerencias .colocaTelefono {
+	margin-left: 74px;
+	width: 68px;
+}
+
+.sugerencias .botonera {
+	margin-bottom: 1em;
+}
+
+/*	/Sugerencias	*/
+
+/*	Finalizar MC */
+div.contenidoListadoSolicitudesGerencia .colocaGradoBuscCB {
+	width: 100px;
+	margin-left: 78px;
+	margin-right: 29px;
+}
+
+div.contenidoListadoSolicitudesGerencia .colocaConvocatoriaCB {
+	width: 300px;
+	margin-left: 15px;
+}
+/*	/Finalizar MC */
+
+/*	Eliminar Itinerario */
+div.contenidoEliminaItinerario .colocaGradoBuscCB {
+	width: 100px;
+	margin-left: 15px;
+	margin-right: 29px;
+}
+
+div.contenidoEliminaItinerario .colocaConvocatoriaCB {
+	width: 300px;
+	margin-left: 15px;
+}
+
+div.contenidoEliminaItinerario .colocaDniCB {
+	width: 100px;
+	margin-left: 13px;
+}
+/*	/Eliminar Itinerario */
+
+/*	Listado Dinamico	*/
+div.contenidoListadoDinamico .subTituloListado {
+	margin-left: 1em;
+	font-weight: bold;
+}
+
+div.contenidoListadoDinamico .colocaGradoBuscCB {
+	width: 100px;
+	margin-left: 75px;
+	margin-right: 29px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.contenidoListadoDinamico .colocaGradoBuscCB {
+		margin-left: 76px !important;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.contenidoListadoDinamico .colocaGradoBuscCB {
+		margin-left: 76px !important;
+	}
+}
+
+div.contenidoListadoDinamico .colocaConvocatoriaCB {
+	width: 300px;
+	margin-left: 15px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.contenidoListadoDinamico .colocaConvocatoriaCB {
+		width: 300px;
+		margin-left: 16px !important;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.contenidoListadoDinamico .colocaConvocatoriaCB {
+		width: 300px;
+		margin-left: 15px !important;
+	}
+}
+
+div.contenidoListadoDinamico .colocaFaseProcesoCB {
+	width: 20em;
+	margin-left: 13px;
+	margin-right: 57px;
+}
+
+div.contenidoListadoDinamico .checkEstadoCSV {
+	margin-left: 45px;
+}
+
+div.contenidoListadoDinamico .colocaEstadoCBMC {
+	width: 356px;
+	margin-left: 26px;
+}
+
+div.contenidoListadoDinamico .colocaNifCSVDinamico {
+	margin-left: 2em;
+	margin-right: 6.4em;
+}
+
+div.contenidoListadoDinamico .colocaApellidosCSVDinamico {
+	margin-left: 2em;
+	margin-right: 6.4em;
+}
+
+div.contenidoListadoDinamico .colocaNombreCSVDinamico {
+	margin-left: 2em;
+	margin-right: 6.4em;
+}
+
+div.contenidoListadoDinamico .colocaSexoCB {
+	width: 95px;
+	margin-left: 27px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.contenidoListadoDinamico .colocaSexoCB {
+		width: 95px;
+		margin-left: 27px !important;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.contenidoListadoDinamico .colocaSexoCB {
+		width: 95px;
+		margin-left: 25px !important;
+	}
+}
+
+div.contenidoListadoDinamico .colocaCategoriaCB {
+	width: 534px;
+	margin-left: 39px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.contenidoListadoDinamico .colocaCategoriaCB {
+		width: 534px;
+		margin-left: 40px !important;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.contenidoListadoDinamico .colocaCategoriaCB {
+		width: 534px;
+		margin-left: 41px !important;
+	}
+}
+
+div.contenidoListadoDinamico .colocaEspecialidadCSV {
+	width: 534px;
+	margin-left: 24px;
+}
+
+div.contenidoListadoDinamico .colocaProcEvaluaCSV {
+	width: 356px;
+	margin-left: 25px;
+}
+
+div.contenidoListadoDinamico .colocaGerenciaCSV {
+	width: 535px;
+	margin-left: 42px;
+}
+
+div.contenidoListadoDinamico .colocaGerencia {
+	width: 535px;
+	margin-left: 59px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.contenidoListadoDinamico .colocaGerencia {
+		width: 533px !important;
+		margin-left: 61px !important;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.contenidoListadoDinamico .colocaGerencia {
+		width: 533px !important;
+		margin-left: 61px !important;
+	}
+}
+
+div.contenidoListadoDinamico .colocaRegimenJuridicoCSV {
+	margin-left: 15px;
+	width: 180px;
+	margin-right: 40px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.contenidoListadoDinamico .colocaRegimenJuridicoCSV {
+		margin-left: 18px !important;
+		width: 180px;
+		margin-right: 40px;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.contenidoListadoDinamico .colocaRegimenJuridicoCSV {
+		margin-left: 18px !important;
+		width: 180px;
+		margin-right: 40px;
+	}
+}
+
+div.contenidoListadoDinamico .colocaSituacionAdministrativaCSV {
+	margin-left: 15px;
+	width: 148px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.contenidoListadoDinamico .colocaSituacionAdministrativaCSV {
+		margin-left: 18px !important;
+		width: 148px;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.contenidoListadoDinamico .colocaSituacionAdministrativaCSV {
+		margin-left: 16px !important;
+		width: 148px;
+	}
+}
+
+div.contenidoListadoDinamico .colocaEstadoCSV {
+	width: 11em;
+	margin-left: 71px;
+}
+
+div.contenidoListadoDinamico .colocaEstadoHistCSV {
+	width: 11em;
+	margin-left: 25px;
+}
+
+div.contenidoListadoDinamico .colocaProcEvaluaCSV2 {
+	width: 356px;
+	margin-left: 41px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.contenidoListadoDinamico .colocaProcEvaluaCSV2 {
+		width: 356px;
+		margin-left: 49px !important;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.contenidoListadoDinamico .colocaProcEvaluaCSV2 {
+		width: 356px;
+		margin-left: 47px !important;
+	}
+}
+
+div.contenidoListadoDinamico .colocaProcEvalCSV {
+	margin-right: 197px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.contenidoListadoDinamico .colocaProcEvalCSV {
+		margin-right: 196px !important;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.contenidoListadoDinamico .colocaProcEvalCSV {
+		margin-right: 197px !important;
+	}
+}
+
+div.contenidoListadoDinamico .colocaSitAdminCSV {
+	margin-right: 73px;
+}
+
+div.contenidoListadoDinamico .colocaModalidadCSV {
+	margin-right: 104px;
+}
+
+div.contenidoListadoDinamico .colocaConvocatoriaCSV {
+	margin-right: 134px
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.contenidoListadoDinamico .colocaConvocatoriaCSV {
+		margin-right: 132px !important;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.contenidoListadoDinamico .colocaConvocatoriaCSV {
+		margin-right: 133px !important;
+	}
+}
+
+div.contenidoListadoDinamico .colocaFechaSolicitudCSV {
+	margin-right: 106px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.contenidoListadoDinamico .colocaFechaSolicitudCSV {
+		margin-right: 106px !important;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.contenidoListadoDinamico .colocaFechaSolicitudCSV {
+		margin-right: 107px !important;
+	}
+}
+
+div.contenidoListadoDinamico .colocaCausaExclusionCSV {
+	margin-right: 95px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.contenidoListadoDinamico .colocaCausaExclusionCSV {
+		margin-right: 95px !important;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.contenidoListadoDinamico .colocaCausaExclusionCSV {
+		margin-right: 95px !important;
+	}
+}
+
+div.contenidoListadoDinamico .colocaAniosEjercicioCSV {
+	margin-right: 110px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.contenidoListadoDinamico .colocaAniosEjercicioCSV {
+		margin-right: 112px !important;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.contenidoListadoDinamico .colocaAniosEjercicioCSV {
+		margin-right: 111px !important;
+	}
+}
+
+div.contenidoListadoDinamico .colocaCentroCSV {
+	margin-right: 168px;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.contenidoListadoDinamico .colocaCentroCSV {
+		margin-right: 167px !important;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.contenidoListadoDinamico .colocaCentroCSV {
+		margin-right: 168px !important;
+	}
+}
+
+div.contenidoListadoDinamico .colocaServicioCSV {
+	margin-right: 161px;
+}
+
+/*	/Listado Dinamico	*/
+
+/*	Generacion de Actas	*/
+div.generarActas .colocaGradoGenActas {
+	width: 100px;
+	margin-left: 7.6em;
+}
+
+div.generarActas .colocaGradoGenActas option {
+	margin-left: 3px;
+}
+
+div.generarActas .colocaConvocatoriaGenActas {
+	width: 48.7em;
+	margin-left: 40px;
+}
+
+div.generarActas .colocaConvocatoriaGenActas option {
+	margin-left: 3px;
+}
+
+div.generarActas .colocaCategoriaGenActas {
+	width: 48.7em;
+	margin-left: 59px;
+}
+
+div.generarActas .colocaCategoriaGenActas option {
+	margin-left: 3px;
+}
+
+div.generarActas .colocaPresidente {
+	width: 358px;
+	margin-left: 60px;
+	margin-right: 5px;
+}
+
+div.generarActas .colocaVocal {
+	width: 358px;
+	margin-left: 60px;
+	margin-right: 5px;
+}
+
+div.generarActas .presi2 {
+	margin-left: 84px;
+}
+
+div.generarActas .tituloVocales {
+	float: left;
+	padding-top: 3px;
+}
+
+div.generarActas .vocales {
+	float: left;
+	font-size: 1em;
+	margin-left: 27px;
+}
+
+div.generarActas .colocaBoton {
+	clear: both;
+	margin-top: 1em;
+	margin-left: 12em;
+}
+
+div.generarActas .colocaDatosGenActa {
+	width: 255px;
+	margin-left: 48px;
+	margin-right: 5px;
+}
+
+div.generarActas .secre2 {
+	margin-left: 96px;
+}
+
+div.generarActas .miembrosAusentes {
+	float: left;
+}
+
+div.generarActas .colocaMiembrosAusentes {
+	width: 658px;
+	margin-left: 10px;
+	padding: 5px;
+}
+
+div.generarActas .botonAccion {
+	margin-left: 2em;
+	margin-right: 2em;
+}
+
+div.generarActas .separador {
+	margin-top: 2em;
+}
+
+div.generarActas .horarioActas {
+	margin-top: 1.5em;
+}
+
+div.generarActas .colocaFechaAlta {
+	width: 58px;
+}
+
+div.generarActas .colocaHoras {
+	width: 22px;
+}
+
+div.generarActas table.vocales tr td {
+	padding-bottom: 1em;
+}
+
+div.generarActas .colocaBoton .botonAccion span {
+	margin-left: 0 !important;
+}
+
+div.generarActas .bloqueEnvolturaDatos {
+	margin-top: 1em;
+	margin-left: 2em;
+	line-height: 2em;
+}
+
+div.generarActas .bloqueEnvolturaDatos select {
+	margin-left: 1em;
+}
+
+div.generarActas .bloqueEnvolturaDatos .cbCuadros {
+	width: 9em;
+}
+
+div.generarActas .informeMotivado {
+	line-height: 1.7em;
+	margin-left: 1em;
+}
+
+div.generarActas .asistentes span {
+	font-weight: normal;
+	display: block;
+	vertical-align: middle;
+}
+
+div.generarActas .asistentes table td input {
+	display: block;
+	position: relative;
+	top: 4px;
+}
+/*	/Generacion de Actas	*/
+
+/*  Contenido Listado Admitidos-Excluidos  */
+div.contenidoListadoAdmitidosExcluidos .cuadroListadoAdmitidos {
+	padding: 20px;
+}
+
+div.contenidoListadoAdmitidosExcluidos .cuadroListadoAdmitidos table {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+div.contenidoListadoAdmitidosExcluidos .cuadroListadoAdmitidos tr td {
+	text-align: center;
+	width: 20%;
+	padding-bottom: 2px;
+}
+
+div.contenidoListadoAdmitidosExcluidos .cuadroListadoAdmitidos .tituloAsp
+	{
+	font-weight: bold;
+	font-size: 12px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+
+div.contenidoListadoAdmitidosExcluidos .subTituloListado {
+	font-size: 15px;
+	font-weight: bold;
+	color: #004B98;
+}
+
+div.contenidoListadoAdmitidosExcluidos .cuadro {
+	padding: 20px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #004B98;
+}
+/*  /Contenido Listado Admitidos-Excluidos  */
+
+/*  Contenido Meritos Curriculares  */
+.ajusteGradoMC {
+	margin-right: 78px;
+}
+
+.colocaTipoMC {
+	margin-left: 88px;
+	margin-right: 88px;
+	width: 210px;
+}
+
+div.contenidoMC {
+	text-align: left;
+}
+
+div.contenidoMC .cuadroGradoMC {
+	float: left;
+	width: 45%;
+}
+
+div.contenidoMC .cuadroMC {
+	border: solid #004B98;
+	float: left;
+	width: 55%;
+	margin-bottom: 30px;
+	margin-left: 140px;
+}
+
+div.contenidoMC .cuadroMC .titulo {
+	padding: 4px;
+	font-weight: bold;
+	text-align: center;
+	color: #004B98;
+	/*width: 25%;*/
+}
+
+div.contenidoMC .cuadroMC tr td {
+	text-align: center;
+	padding: 5px;
+	color: #004B98;
+}
+
+.margenTexto {
+	padding-bottom: 30px;
+}
+
+div.contenidoMC .cuadroDatosGrado {
+	padding: 15px;
+	padding-left: 12px;
+}
+
+div.contenidoMC .cuadroDatosGrado label a {
+	color: #000000;
+	font-weight: bold;
+}
+
+div.contenidoMC .recuadroMC {
+	border: solid #004B98 1px;
+	padding-left: 20px;
+	padding-right: 20px;
+}
+
+div.contenidoMC .listaMC {
+	text-align: left;
+	font-size: 12px;
+	font-weight: bold;
+	color: #004B98;
+	margin: 5px 0px 5px 20px;
+	padding: 0;
+}
+
+div.contenidoMC .tituloMC {
+	display: inline-block;
+	font-size: 1.1em;
+	font-weight: bold;
+	color: #004B98;
+	width: 70%;
+	margin: 5px 20px 10px 40px;
+	border-bottom: 1px #004B98 solid;
+	color: #004B98;
+	padding: 3px 0 3px 0;
+}
+
+div.contenidoMC .colocaAnadir {
+	display: inline-block;
+	vertical-align: middle;
+	line-height: 3em;
+	color: #333399;
+}
+
+div.contenidoMC .anchoLinea {
+	line-height: 2em;
+}
+
+div.contenidoMC div.recuadroM .botonAccion {
+	margin: 0 3em 0 0em;
+}
+
+div.contenidoMC td .botonAccion span a span {
+	margin-left: 8px;
+	line-height: 2em;
+	vertical-align: top;
+}
+
+div.contenidoMC span.botonAccion span a span {
+	margin-left: 4px;
+	line-height: 2em;
+	vertical-align: top;
+	text-decoration: underline;
+}
+
+div.contenidoMC span.botonAccion span a, div.contenidoMC span.botonAccion span a span,
+	div.contenidoMC td .botonAccion span a:hover {
+	text-decoration: none;
+}
+
+div.contenidoMC .recuadroM p {
+	padding: 20px;
+}
+
+div.contenidoMC .recuadroM2 p {
+	padding: 10px;
+}
+
+div.contenidoMC ul li {
+	margin: 0 5em 0 5em;
+	line-height: 1.5em;
+	color: #004B98;
+	font-weight: bold;
+	list-style: disc;
+}
+
+div.contenidoMC .tituloOpcionesTabla {
+	font-size: 1.1em;
+	font-weight: bold;
+	margin: 1em 0 1em 1.4em;
+	padding: 3px 0 2px 10px;
+	background-color: #004B98;
+	color: #FFFFFF;
+	width: 95%;
+}
+
+div.contenidoMC .listadoMeritos .cuadroMeritos {
+	min-height: 3em;
+}
+
+div.contenidoMC tr.tablaMC td.primero {
+	width: 20em; /*  antes funcionaba con 26em  */
+	padding-left: 60px;
+	padding-right: 2em;
+	overflow: hidden;
+}
+
+div.contenidoMC tr.tablaMC td.primero span {
+	display: block;
+	margin-top: 5px;
+}
+
+div.contenidoMC tr.tablaMC td.icono {
+	width: 20em;
+}
+
+div.contenidoMC tr.tablaMC td.icono span.modificar {
+	display: block;
+	width: 11em;
+}
+
+div.contenidoMC tr.tablaMC td.icono .creditos {
+	display: block;
+	margin-top: 6px;
+	width: 6em;
+}
+
+div.contenidoMC tr.tablaMC td.icono .botonAccion {
+	margin: 0 !important;
+}
+
+div.contenidoMC tr.tablaMC td.primeroOpcionales {
+	width: 50em;
+	padding-left: 2em;
+	padding-right: 2em;
+	padding-top: 4px;
+}
+
+div.contenidoMC tr.tablaMC td span {
+	color: #004B98;
+	font-weight: normal;
+}
+/*  /Contenido Meritos Curriculares  */
+
+/*  Contenido GestionMC (Alta, Baja y Modificacion)  */
+div.contenidoModificacionMC .radioEnCuadro .flotaIzq, div.contenidoAltaMC .radioEnCuadro .flotaIzq
+	{
+	margin-left: 1em;
+}
+
+div.contenidoModificacionMC .radioEnCuadro .flotaIzq .primero, div.contenidoAltaMC .radioEnCuadro .flotaIzq .primero
+	{
+	padding-bottom: 8px;
+}
+
+.contenidoBajaMC .recuadroM p {
+	margin: 40px;
+	text-align: center;
+	font-size: 14px;
+}
+
+div.contenidoAltaMC .colocaFechaDocenciaPostMC {
+	margin-left: 7.5em;
+	width: 4em;
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	div.contenidoAltaMC .colocaFechaDocenciaPostMC {
+		margin-left: 7.3em !important;
+		width: 4em;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	div.contenidoAltaMC .colocaFechaDocenciaPostMC {
+		margin-left: 7.3em !important;
+		width: 4em;
+	}
+}
+
+div.contenidoAltaMC .colocaMesesDocenciaPostMC {
+	margin-left: 1em;
+	width: 3em;
+}
+
+div.contenidoAltaMC .colocaDiasDocenciaPostMC {
+	margin-left: 1em;
+	width: 3em;
+}
+
+div.contenidoAltaMC .tabula {
+	margin-left: 10.3em;
+}
+/*  /Contenido GestionMC (Alta, Baja y Modificacion)  */
+
+/*  Contenido Documento ICEIS  */
+div.contenidoICEIS .cuadroHistorialGrado table td {
+	border-style: solid;
+	border-width: 1px;
+	border-color: #004B98;
+	padding: 3px;
+	text-align: center;
+	color: #004B98;
+}
+
+div.contenidoICEIS .cuadroHistorialGrado tr.titulos td {
+	width: 25%;
+	font-weight: bold;
+	text-align: center;
+}
+
+div.contenidoICEIS .tablaFaseEvaluacion {
+	margin-top: 30px;
+	margin-left: 100px;
+}
+
+div.contenidoICEIS .tablaFaseEvaluacion tr td {
+	padding: 10px;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #004B98;
+	color: #004B98;
+	text-align: center;
+	font-weight: bold;
+}
+
+div.contenidoICEIS .tablaFaseEvaluacion .tit {
+	text-align: left;
+}
+
+div.contenidoICEIS .listaNoAceptacion ul {
+	padding: 1.5em;
+}
+
+div.contenidoICEIS .listaNoAceptacion ul li {
+	font-weight: bold;
+	line-height: 1.4em;
+}
+
+div.contenidoICEIS .tituloNoAceptacion {
+	font-weight: bold;
+	margin: 0 0 1.5em 1.5em;
+}
+/*  /Contenido Documento ICEIS  */
+
+/*  Contenido CCPs  */
+div.contenidoCCP ul.ccpCalificacion li {
+	margin-left: 10em;
+	color: #004B98;
+	font-weight: bold;
+}
+
+div.contenidoCCP .datosUsuario label input {
+	width: 3em;
+}
+
+div.contenidoCCP .datosUsuario .separaUsuario {
+	margin-left: 10em;
+}
+
+div.contenidoCCP .tablaPreguntas {
+	margin: 1em 0 1em 0;
+}
+
+div.contenidoCCP table {
+	width: 100%;
+}
+
+div.contenidoCCP table tr td {
+	border: solid #004B98 1px;
+	padding: 5px;
+}
+
+div.contenidoCCP table tr.titulosTabla td {
+	text-align: center;
+	color: #004B98;
+	font-weight: bold;
+}
+
+div.contenidoCCP table tr td.primero {
+	width: 50%;
+	color: #004B98;
+	font-weight: bold;
+	padding-left: 10px;
+}
+
+div.contenidoCCP .cuadroFirma {
+	width: 25%;
+	height: 10em;
+	margin-top: 20px;
+	padding: 10px;
+}
+
+div.contenidoCCP .cuadroFirma span {
+	font-weight: bold;
+	color: #004B98;
+}
+
+/*  /Contenido CCPs  */
+
+/*  Contenido ayudaDCP1A_PGP  */
+div.ayudaDCP1A_PGP ul li {
+	margin: 10px 0 10px 40px;
+	font-weight: bold;
+	color: #004B98;
+	list-style: disc;
+}
+
+/*  /Contenido ayudaDCP1A_PGP  */
+
+/*  Contenido TextoAutoevaluacion  */
+.evaluacionEvaluador .indexar {
+	margin-left: 2.5em !important;
+}
+
+.evaluacionEvaluador .indexarMas {
+	margin-left: 4em !important;
+}
+
+div.contenidoTextoAutoevaluacion .totalCreditosAuto {
+	font-weight: bold;
+	font-size: 1.2em;
+	color: #004B98;
+	text-decoration: underline;
+}
+
+div.contenidoTextoAutoevaluacion .numTotal {
+	font-weight: bold;
+	font-size: 1.2em;
+	color: #004B98;
+	padding: 2px 5px 2px 5px;
+	margin: 0 0 0 5px;
+}
+
+div.contenidoTextoAutoevaluacion .Autoevaluacion {
+	width: 100%;
+	border: 1px #004B98 solid;
+	padding: 10px 0 10px 0;
+	text-align: left;
+	margin: 30px 0 30px 0;
+}
+
+div.contenidoTextoAutoevaluacion .mensajeAutoevaluacion span {
+	font-size: 1em;
+	font-weight: bold;
+	color: #004B98;
+	margin: 0 20px 0 20px;
+}
+
+div.contenidoTextoAutoevaluacion a:hover {
+	cursor: pointer;
+	text-decoration: none;
+}
+
+div.contenidoTextoAutoevaluacion .informeConformidad p {
+	font-weight: normal;
+}
+
+div.contenidoTextoAutoevaluacion .informeConformidad p input {
+	width: 58px;
+}
+
+div.contenidoTextoAutoevaluacion .informeConformidad p span.nota {
+	border: 1px solid #004B98;
+	padding: 2px;
+	margin: 0;
+}
+
+div.contenidoTextoAutoevaluacion .informeConformidad ul li {
+	margin-left: 10px;
+}
+
+div.contenidoTextoAutoevaluacion .informeConformidad ul li ul li {
+	margin-left: 20px;
+}
+
+div.contenidoTextoAutoevaluacion .informeConformidad ul li textarea {
+	border: 1px solid #004B98;
+	margin-left: 25px;
+	width: 637px;
+}
+
+div.contenidoTextoAutoevaluacion .informeConformidad ul li ul li textarea
+	{
+	border: 1px solid #004B98;
+	margin-left: 25px;
+	width: 616px;
+}
+
+div.contenidoTextoAutoevaluacion .informeConformidad table span {
+	padding: 2px;
+	display: block
+}
+
+div.contenidoTextoAutoevaluacion .informeConformidad .cuadroResultados {
+	width: 95%;
+}
+
+.contenidoTextoAutoevaluacion .comentarioEnlace {
+	display: inline-block;
+	text-align: justify;
+}
+
+/*  /Contenido TextoAutoevaluacion  */
+.contenidoTextoAutoevaluacion .stComentario, .contenidoMC .stComentario
+	{
+	display: inline-block;
+	width: 95%;
+	text-align: justify;
+	margin: 0;
+	line-height: 1.5em;
+}
+
+.contenidoMC .textoListadoCuestionario {
+	display: inline-block;
+	width: 25em;
+	padding: 0 0 0 5px;
+	background-color: transparent;
+}
+
+.listadoSangrado2 {
+	margin: 0 0 0 20px;
+	text-align: justify;
+}
+
+.tamCampoListado {
+	display: inline-block;
+	width: 25em;
+}
+
+.tamTAListado {
+	display: inline-block;
+	width: 30em;
+}
+
+.observacionesPregunta {
+	display: inline-block;
+	text-align: justify;
+	margin: 0 0 10px 20px;
+	width: 95%;
+}
+
+#mensajeAvisoConfirmacion {
+	width: 95%;
+	text-align: justify;
+}
+
+/*  /Contenido TextoProcedimiento  */
+
+/* Contenido Cuestionario Presentacion */
+div.contenidoTextoAlgoritmo .cuadroAlgo {
+	border: 1px #000000 solid;
+	font-size: 1.2em;
+	font-weight: bold;
+	float: left;
+	margin: 5px;
+	width: 24.5em;
+}
+
+div.contenidoTextoAlgoritmo .cuadroAlgoLargo {
+	border: 1px #000000 solid;
+	font-size: 1.2em;
+	font-weight: bold;
+	float: left;
+	margin: 5px;
+	width: 50em;
+}
+
+div.contenidoTextoAlgoritmo .cuadroAlgoLargo .tituloCuadroAlgo, div.contenidoTextoAlgoritmo .cuadroAlgo .tituloCuadroAlgo
+	{
+	text-align: center;
+	font-weight: bold;
+	background-color: #004B98;
+	padding: 5px 0 5px 0;
+	color: #FFFFFF;
+}
+
+div.contenidoTextoAlgoritmo .cuadroAlgoLargo .datosCuadroAlgo, div.contenidoTextoAlgoritmo .cuadroAlgo .datosCuadroAlgo
+	{
+	margin: 10px;
+	color: #004B98;
+	font-weight: normal;
+	text-align: justify;
+	font-size: 0.9em;
+}
+
+div.contenidoTextoAlgoritmo .cuadroAlgoLargo .datosCuadroAlgo ol, div.contenidoTextoAlgoritmo .cuadroAlgo .datosCuadroAlgo ol
+	{
+	padding-left: 2em;
+}
+
+div.contenidoTextoAlgoritmo .cuadroAlgoLargo .datosCuadroAlgo ol li, div.contenidoTextoAlgoritmo .cuadroAlgo .datosCuadroAlgo ol li
+	{
+	list-style-type: decimal;
+	color: #004B98;
+	padding-top: 0.5em;
+	text-align: justify;
+}
+
+div.contenidoTextoAlgoritmo .cuadroAlgoLargo .datosCuadroAlgo ol li span,
+	div.contenidoTextoAlgoritmo .cuadroAlgo .datosCuadroAlgo ol li span {
+	display: block;
+}
+
+div.contenidoTextoAlgoritmo .cuadroAlgoLargo .datosCuadroDoble {
+	border: 1px #000000 solid;
+	margin: 5px 0 5px 11px;
+	padding: 5px;
+	float: left;
+	text-align: left;
+	width: 45%;
+	height: 520px;
+}
+
+div.contenidoTextoAlgoritmo .cuadroAlgoLargo .datosCuadroDoble ul li {
+	margin-bottom: 3px;
+}
+
+div.contenidoTextoAlgoritmo .cuadroAlgoLargo .datosCuadroDoble span.primero
+	{
+	margin-right: 10px;
+	color: #004B98;
+	text-align: center;
+	font-weight: bold;
+	display: inline-block;
+	width: 50px;
+}
+
+div.contenidoTextoAlgoritmo .cuadroAlgoLargo .datosCuadroDoble span {
+	color: #004B98;
+}
+
+div.contenidoTextoAlgoritmo .cuadroAlgoLargo .datosCuadroDoble .textoAlgo
+	{
+	color: #004B98;
+	margin: 10px;
+	text-align: justify;
+}
+
+div.contenidoTextoAlgoritmo .tablaItinerarios {
+	margin-left: 10px;
+	width: 94%;
+	border: 1px #004B98 solid;
+}
+
+div.contenidoTextoAlgoritmo .tablaItinerarios tr td {
+	padding: 6px;
+	color: #004B98;
+	text-align: center;
+	font-size: 1.1em;
+}
+
+div.contenidoTextoAlgoritmo .tablaItinerarios .titulo td {
+	color: #FFFFFF;
+	font-weight: bold;
+	text-align: center;
+	background-color: #004B98;
+}
+
+div.contenidoTextoAlgoritmo .tablaItinerarios .subTitulos td {
+	font-weight: bold;
+	font-size: 1em;
+	border: 1px #004B98 solid;
+	border-bottom-width: 3px;
+}
+
+div.contenidoTextoAlgoritmo .itinerarios {
+	margin: 10px 20px 10px 10px;
+}
+
+div.contenidoTextoAlgoritmo .itinerarios .columna {
+	width: 3em;
+	margin: 10px 30px 10px 10px;
+}
+
+div.contenidoTextoAlgoritmo .itinerarios .primero {
+	margin-left: 100px;
+}
+
+div.contenidoTextoAlgoritmo .itinerarios span.titulo {
+	color: #FFFFFF;
+	font-weight: bold;
+	text-align: center;
+	width: 100%;
+	border: 1px #004B98 solid;
+	background-color: #004B98;
+	margin-top: 9px;
+}
+
+div.contenidoTextoAlgoritmo .itinerarios span {
+	color: #004B98;
+	text-align: center;
+	width: 100%;
+	display: inline-block;
+	padding: 2px;
+	background-color: #FFFFFF;
+	border: 1px #004B98 solid;
+}
+
+div.contenidoTextoAlgoritmo .itinerarios .columna .sel {
+	background-color: #CCCCCC;
+	font-weight: bold;
+	color: #000000;
+	border: 1px #000000 solid;
+}
+
+/* Contenido Cuestionario Presentacion */
+
+/*  Contenido Evaluadores  */
+.tablaEvaluadores {
+	margin: 20px 0 0 30px;
+	width: 60em;
+}
+
+.tablaEvaluadores tr td, .tablaEvaluadores tr td a {
+	color: #000;
+	padding: 1px 0 1px 0;
+	overflow: hidden;
+}
+
+.tablaEvaluadores th {
+	border-bottom: 1px #004B98;
+	padding: 3px 3px 3px 0;
+	color: #004B98;
+	font-weight: bold;
+}
+
+.tablaEvaluadores .cabeceraColumna {
+	text-decoration: underline !important;
+}
+
+.tablaEvaluadores .tituloSeccion {
+	padding: 25px 0 8px 0;
+	font-size: 1.5em;
+}
+
+.tablaEvaluadores .tituloGrado {
+	padding: 10px 0 3px 5px;
+	font-size: 1.2em !important;
+}
+
+.tablaEvaluadores .tituloCategoria {
+	padding: 13px 0 7px 10px !important;
+	font-size: 1.1em;
+}
+
+.tablaEvaluadores .campoIcono {
+	width: 3em;
+}
+
+.altoFilaLupa {
+	height: 20px;
+}
+
+.tablaEvaluadores .campoIcono2 {
+	width: 3em;
+}
+
+.tablaEvaluadores td a {
+	display: block;
+	margin: 0;
+	padding: 0;
+}
+
+.tablaEvaluadores .col1 a, .tablaEvaluadores .col1 {
+	width: 15em;
+}
+
+.tablaEvaluadores .col2 a, .tablaEvaluadores .col2 {
+	width: 15em;
+}
+
+.tablaEvaluadores .col3 a, .tablaEvaluadores .col3, .tablaEvaluadores .col4 a,
+	.tablaEvaluadores .col4 {
+	width: 10em;
+	text-align: center;
+}
+
+.tablaEvaluadores td .colIcono {
+	width: 30em;
+}
+
+.tablaEvaluadores .colIcono a {
+	display: inline;
+}
+
+.tablaEvaluadores .colConvo, .tablaEvaluadores .colManual,
+	.tablaEvaluadores .colCte {
+	width: 27%;
+}
+
+.paginacionEvaluadores {
+	margin-right: 20px;
+}
+
+/*  /Contenido Evaluadores  */
+
+/*	Lista Evaluados	*/
+.listaEvaluados .colCodigo {
+	width: 7em;
+}
+
+.listaEvaluados .colNombre {
+	width: 13em;
+}
+
+.listaEvaluados .colApellidos {
+	width: 16em;
+}
+
+.listaEvaluados .icono {
+	width: 2em;
+}
+
+.listaEvaluados .icono2 {
+	width: 4em;
+}
+
+.listaEvaluados .campoIcono {
+	width: 2em;
+}
+
+.listaEvaluados .campoIconoU a {
+	display: inline-block;
+}
+
+.listaEvaluados .campoIconoU .lupa2 {
+	margin-left: 0.5em;
+}
+
+/*	/Lista Evaluados	*/
+
+/*  Contenido Evaluados  */
+.evaluados {
+	width: 45em;
+	margin-left: 9em;
+}
+
+/*  /Contenido Evaluados  */
+
+/*	Listado de Evaluadores por CTE	*/
+.listadoEvaluadoresCTE .tituloAsp {
+	width: 23%;
+}
+
+/*	/Listado de Evaluadores por CTE	*/
+
+/*	Modificaicon de Evaluadores	*/
+.modificacionEvaluadores .tituloTabla {
+	color: #004B98 !important;
+	font-weight: bold;
+}
+
+.modificacionEvaluadores .textoTabla {
+	color: #000000 !important;
+}
+
+.modificacionEvaluadores td {
+	padding: 2px 5px 5px 5px;
+}
+
+/*	/Modificacion de Evaluadores	*/
+.Noobligado {
+	padding-left: 8px;
+	font-weight: bold;
+	margin-right: 23px;
+}
+
+.Noobligado2 {
+	padding-left: 8px;
+	font-weight: bold;
+	margin-right: 24px;
+}
+
+.colocaGerenteGerencia {
+	margin-left: 68px;
+}
+
+.colocaDirectorGerencia {
+	margin-left: 69px;
+}
+
+.tabla10 td {
+	padding-top: 0.6em;
+	padding-bottom: 0.6em;
+}
+
+.tabla10 .campoIcono {
+	width: 2em;
+}
+
+/*	Pantalla Especialidades Quirurgicas */
+.espQuirurgicas {
+	width: 92%;
+	margin-left: 2em;
+}
+
+.espQuirurgicas ul {
+	text-align: left;
+	margin-left: 5em;
+	color: #004B98;
+	line-height: 1.5em;
+}
+
+.espQuirurgicas ul li span {
+	font-weight: bold;
+}
+
+.espQuirurgicas ul li input.tipo1 {
+	margin-left: 5em;
+	vertical-align: middle;
+}
+
+.espQuirurgicas ul li input.tipo2 {
+	margin-left: 4.5em;
+	vertical-align: middle;
+}
+
+/*	/Pantalla Especialidades Quirurgicas */
+
+/*	Ponderacion de Creditos */
+.puntosTotales {
+	margin: 2em 0 0 0;
+}
+
+.creditosTotales {
+	margin-top: 1em;
+}
+
+.creditosTotales span.total {
+	border: 1px solid #004B98;
+	padding: 2px;
+	height: 1em;
+}
+
+.creditosTotales .total input {
+	width: 4em;
+}
+
+.tablaPonderacion {
+	margin: 1em;
+	font-size: 1.2em;
+}
+
+.tablaPonderacion td {
+	text-align: center;
+	line-height: 2em;
+	border: 1px solid #004B98;
+}
+
+/* Dossier */
+.dossier {
+	width: 95%;
+	margin-left: 15px;
+}
+
+.dossier .tablaDossier td {
+	line-height: 1.5em;
+}
+
+.dossier .tablaDossier .cabecera {
+	width: 190px;
+	font-weight: bold;
+	color: #004B98;
+}
+
+.dossier .tablaDossier .cabecera span {
+	font-weight: bold;
+	color: #004B98;
+}
+
+.dossier .tablaDossier .introCabecera {
+	width: 200px;
+}
+
+.dossier .tablaDossier .centrar {
+	text-align: center;
+}
+
+.colocaApellidosDossier {
+	width: 350px;
+	margin-left: 5px;
+}
+
+.colocaDNIDossier {
+	width: 78px;
+	margin-left: 5px;
+}
+
+.colocaCategoriaDossier {
+	width: 497px;
+	margin-left: 60px;
+}
+
+.colocaCentroDossier {
+	width: 497px;
+	margin-left: 75px;
+}
+
+.colocaFechaDossier {
+	width: 75px;
+	margin-left: 81px;
+}
+
+/*	/Ponderacion de Creditos */
+.codigoFlotaIzquierda {
+	float: left;
+	font-weight: bold;
+}
+
+/*	Estadisticas de Evaluados	*/
+.estadisticasEvaluados fieldset {
+	padding: 0 2em 2em 2em;
+	line-height: 1.5em;
+}
+
+.estadisticasEvaluados .indexar {
+	margin-left: 2em !important;
+}
+
+.estadisticasEvaluados .indexar span {
+	margin-left: 2em;
+}
+
+.estadisticasEvaluados label.colocaDatosVis {
+	clear: left;
+}
+
+.estadisticasEvaluados .separador {
+	clear: both;
+	height: 2em;
+}
+
+.estadisticasEvaluados .separadorP {
+	clear: both;
+	height: 1em;
+}
+
+.estadisticasEvaluados .separador2 {
+	clear: both;
+}
+
+.estadisticasEvaluados .ajusteAncho {
+	width: 26em;
+	display: inline-block;
+}
+
+.estadisticasEvaluados .indexar .negrita {
+	font-weight: bold !important;
+	margin-left: 0 !important;
+}
+
+.estadisticasEvaluados .indexar .negrita2 {
+	font-weight: bold !important;
+}
+
+.estadisticasEvaluados .indexar .noMargin {
+	margin-left: 0;
+}
+
+.estadisticasEvaluados .indexarMas {
+	margin-left: 4em !important;
+}
+
+.estadisticasEvaluados .indexar5 {
+	margin-left: 5em !important;
+}
+
+/*	/Estadisticas de Evaluados	*/
+
+/* Glosario */
+
+/*	Evaluacion IEC	*/
+.evaluacionIEC ul.listadoResumen {
+	margin-bottom: 2em;
+	list-style: disc;
+	list-style-position: inside;
+}
+
+.evaluacionIEC ul.listadoResumen li {
+	line-height: 2.3em;
+}
+
+.evaluacionIEC ul.listadoResumen li span {
+	font-weight: bold;
+}
+
+.evaluacionIEC ul.listadoResumen li ul {
+	margin-left: 2em;
+	list-style: square;
+}
+
+.evaluacionIEC ul.listadoResumen li ul li ul {
+	margin-left: 3em;
+	list-style: circle;
+}
+
+.evaluacionIEC ul.listadoResumen .ponderacionMaxima {
+	margin-left: 200px;
+	border: 1px solid #004B98;
+	padding: 3px;
+	font-weight: normal;
+}
+
+.evaluacionIEC ul.listadoResumen .ponderacionObtenida {
+	margin-left: 121px;
+	border: 1px solid #004B98;
+	padding: 3px;
+	font-weight: normal;
+}
+
+.evaluacionIEC ul.listadoResumen a {
+	color: #004B98;
+}
+
+.evaluacionIEC ul.listadoResumen .acuerdo {
+	margin-left: 63px;
+}
+
+.evaluacionIEC ul.listadoResumen .desacuerdo {
+	margin-left: 43px;
+}
+
+.evaluacionIEC ul.listadoResumen .realizarAuditoria {
+	margin-left: 139px;
+}
+
+.evaluacionIEC ul.listadoResumen .modificarPonderacion {
+	margin-left: 14px;
+}
+
+.evaluacionIEC ul.listadoResumen .cajaTexto {
+	border: 1px solid #004B98;
+	width: 96%;
+	height: 10em;
+}
+
+.evaluacionIEC ul.listadoResumen .cajaTextoAuto {
+	border: 1px solid #004B98;
+	width: 96%;
+	margin-left: 1em;
+	padding: 3px;
+}
+
+.evaluacionIEC h4 {
+	margin-bottom: 0;
+	text-align: left;
+}
+
+.evaluacionIEC .propuestaAuditoria {
+	margin-left: 15px;
+	line-height: 2.2em;
+}
+
+.evaluacionIEC .propuestaAuditoria .tipoRegistro {
+	width: 538px;
+	margin-left: 25px;
+}
+
+.evaluacionIEC .propuestaAuditoria .documento {
+	width: 538px;
+	margin-left: 51px;
+}
+
+.evaluacionIEC .propuestaAuditoria .historialClinic1 {
+	width: 150px;
+	margin-left: 6px;
+	margin-right: 8px;
+}
+
+.evaluacionIEC .propuestaAuditoria .historialClinic {
+	width: 150px;
+	margin-left: 8px;
+	margin-right: 8px;
+}
+
+.contenido .textoContenidoGlosario {
+	text-align: center;
+}
+
+.cuadroFieldset ul.listadoGlosario {
+	margin-left: 2em;
+}
+
+.cuadroFieldset ul.listadoGlosario li {
+	margin: 4px;
+	width: 1.3em;
+	display: inline;
+	float: left;
+	text-align: center;
+	font-size: 1.1em;
+}
+
+.contenido .cuadroFieldset .cuadroFieldsetGlosario {
+	padding: 4px 0 0 10px;
+	width: 100%;
+	height: 1.2em;
+	background-color: #004B98;
+	color: #ffffff;
+	font-weight: bold;
+	font-size: 1.2em;
+}
+
+.contenido .cuadroFieldset .cuadroFieldsetGlosario a {
+	text-decoration: none;
+	color: #ffffff;
+}
+
+.cuadroFieldset ul.listadoGlosario a {
+	text-decoration: none;
+	color: #004B98;
+	font-weight: bold;
+}
+
+/* Glosario */
+
+/*	Gestion CTE Reuniones	*/
+.reuniones .taMedianoEvaluadores {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #004B98;
+	width: 59.5em;
+	height: 10em;
+	padding: 10px;
+	text-align: left;
+	font-weight: normal;
+	margin-top: 0.5em;
+}
+
+.reuniones .colocaNumeroInformes {
+	width: 3em;
+	margin-left: 44px;
+	font-weight: normal;
+}
+
+.reuniones .separaComite {
+	margin-left: 58px;
+}
+
+.reuniones .evaluadoresAsociados {
+	width: 60.3em;
+}
+
+.reuniones .modificacionEvaluadoresAsociados {
+	padding-left: 0;
+}
+
+.reuniones .tituloTabla {
+	font-weight: bold;
+	text-align: center;
+}
+
+.reuniones .tablaCertif th {
+	color: #004B98
+}
+
+.reuniones .tablaCertif td {
+	line-height: 2em;
+	color: #004B98
+}
+
+.reuniones .tablaCertif .fijaAncho {
+	width: 12em;
+}
+/*	/Gestion CTE Reuniones	*/
+
+/*	Evaluacion IEC	*/
+.informeDt .informeTabla {
+	border: 1px solid #004B98 !important;
+}
+
+.informeDt .bordeCuadro {
+	border: 1px solid #004B98;
+	width: 97%;
+	padding: 2px 1px 2px 1px;
+}
+
+.informe2Dt .bordeCuadro {
+	border: 1px solid #004B98;
+	width: 94.2%;
+	padding: 2px 1px 2px 5px;
+	margin-left: 10px;
+}
+
+.informe2Dt .bordeCuadro2 {
+	border: 1px solid #004B98;
+	width: 90%;
+	padding: 2px 1px 2px 5px;
+	margin-left: 40px;
+}
+
+.informe2Dt .bordeCuadroFecha {
+	border: 1px solid #004B98;
+	width: 10%;
+	padding: 2px 1px 2px 5px;
+	margin-left: 40px;
+}
+
+.informe2Dt .numeracion {
+	margin-left: 20px;
+}
+
+/*	Informe CTE	*/
+.informeCTE .negrita {
+	margin-left: 0;
+}
+
+.informeCTE .contenidoRadio {
+	float: left;
+	display: inline-block;
+}
+
+.informeCTE .bordeCuadro {
+	width: 88%;
+	margin-left: 65px;
+	padding-left: 5px;
+}
+
+.informeCTE .ajusteBordeCuadro {
+	width: 95%;
+	margin-left: 20px;
+}
+
+/*	Informe CC	*/
+.informeCC  .respuestaFormulario {
+	margin-left: 60px;
+}
+
+.informeCC .ajusteBorde1 {
+	width: 602px;
+	margin-left: 67px;
+	padding-left: 5px;
+}
+
+.informeCC .ajusteBorde2 {
+	width: 659px;
+	margin-left: 21px;
+	padding-left: 5px;
+}
+
+.listadoEvaluadoresEvaluados .tablaEvaluadores {
+	width: 300px;
+}
+
+.listadoEvaluadoresEvaluados .tablaEvaluadores .titulo {
+	font-weight: bold;
+	border-bottom: 1px solid #004B98;
+}
+
+.listadoEvaluadoresEvaluados .tablaEvaluadores .col1 {
+	padding-top: 5px;
+}
+
+/*	Solicitud de Auditoria	*/
+.solicitudAuditoria .indexar {
+	padding-left: 45px;
+}
+
+.solicitudAuditoria .historiaClinic {
+	font-weight: normal;
+	border: 1px solid #004B98;
+	display: inline-block;
+	width: 120px;
+	padding: 1px;
+}
+
+.solicitudAuditoria .bordeCuadroFecha {
+	border: 1px solid #004B98;
+	width: 65px;
+	padding-left: 2px;
+	font-weight: normal;
+}
+
+.solicitudAuditoria .bordeCuadroFecha2 {
+	border: 1px solid #004B98;
+	width: 100px;
+	padding-left: 2px;
+	font-weight: normal;
+}
+
+.solicitudAuditoria .horario {
+	margin-left: 120px;
+}
+
+/*	/Solicitud de Auditoria	*/
+
+/*	Pantalla de Bienvenida	*/
+.pantallaBienvenida .contenidoAccesible {
+	padding-top: 0;
+}
+
+.pantallaBienvenida .contenidoAccesible h3 {
+	margin-top: 10px;
+	margin-bottom: 15px;
+}
+
+.pantallaBienvenida .contenidoAccesible .contenedor {
+	width: 95%;
+	margin-left: 10px;
+}
+/*	/Pantalla de Bienvenida	*/
+
+/*	Gestion de Solicitudes	*/
+.gestionSolicitudes table {
+	border-bottom: 1px solid #004B98;
+}
+
+.gestionSolicitudes table.tablaListado {
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.gestionSolicitudes table.tablaListado .cabeceraTabla td {
+	font-weight: bold;
+	text-align: center;
+	color: #004B98;
+	height: 1.5em;
+}
+
+.gestionSolicitudes table.tablaListado .cabeceraTabla .tituloNIF {
+	width: 80px;
+}
+
+.gestionSolicitudes table.tablaListado .cabeceraTabla .tituloApellidos,
+	.gestionSolicitudes table.tablaListado .cabeceraTabla .tituloNombre,
+	.gestionSolicitudes table.tablaListado .cabeceraTabla .tituloEstado,
+	.gestionSolicitudes table.tablaListado .cabeceraTabla .tituloFRegistro,
+	.gestionSolicitudes table.tablaListado .cabeceraTabla .tituloNumSolic,
+	.gestionSolicitudes table.tablaListado .cabeceraTabla .tituloLupa,
+	.gestionSolicitudes table.tablaListado .cuerpoTabla .apellido,
+	.gestionSolicitudes table.tablaListado .cuerpoTabla .nombre,
+	.gestionSolicitudes table.tablaListado .cuerpoTabla .estado,
+	.gestionSolicitudes table.tablaListado .cuerpoTabla .fRegistro,
+	.gestionSolicitudes table.tablaListado .cuerpoTabla .numSolic,
+	.gestionSolicitudes table.tablaListado .cuerpoTabla .lateralImagen {
+	border-left: 1px solid #004B98
+}
+
+.gestionSolicitudes table.tablaListado .cabeceraTabla .tituloId,
+	.gestionSolicitudes table.tablaListado .cuerpoTabla .id {
+	border-right: 1px solid #004B98
+}
+
+.gestionSolicitudes .tablaListado tr.cabeceraTabla td {
+	border-bottom: 1px solid #004B98;
+	vertical-align: middle;
+}
+
+.gestionSolicitudes .tablaListado tr.cabeceraTabla .tituloApellidos {
+	width: 190px;
+}
+
+.gestionSolicitudes .tablaListado tr.cabeceraTabla .tituloNombre {
+	width: 140px;
+}
+
+.gestionSolicitudes .tablaListado tr.cabeceraTabla .tituloEstado {
+	width: 150px;
+}
+
+.gestionSolicitudes .tablaListado tr.cabeceraTabla .tituloFechaRegistro
+	{
+	width: 90px;
+}
+
+.gestionSolicitudes .tablaListado tr.cabeceraTabla .tituloLupa {
+	width: 40px;
+}
+
+.gestionSolicitudes .tablaListado tr.cabeceraTabla .tituloModificar {
+	width: 70px;
+}
+
+.gestionSolicitudes .tablaListado .cuerpoTabla td {
+	text-align: left;
+	padding-left: 5px;
+	padding-right: 4px;
+	padding-top: 5px;
+	height: 19px;
+	vertical-align: middle;
+	color: #000000;
+}
+
+.gestionSolicitudes .tablaListado .cuerpoTabla td a {
+	font-weight: normal;
+}
+
+.gestionSolicitudes .cuadroInferior {
+	padding-bottom: 0;
+	padding-top: 10px;
+}
+
+.gestionSolicitudes .cuadroFieldset div {
+	margin-bottom: 10px;
+	margin-top: 0;
+}
+
+/*	/Gestion de Solicitudes	*/
+
+/*	Monitorizacion de la Base de Datos	*/
+.monitorizacionBD fieldset table {
+	margin: 0 auto 0 auto;
+	border-bottom: 1px solid #004B98;
+}
+
+.monitorizacionBD fieldset table .datosTitulo td {
+	color: #004B98;
+	font-weight: bold;
+	text-align: center;
+	height: 16px;
+	vertical-align: middle;
+}
+
+.monitorizacionBD fieldset table .lineaBajaM td {
+	border-bottom: 1px solid #004B98;
+}
+
+.monitorizacionBD fieldset table .datosAsp td {
+	color: #000000;
+	text-align: left;
+	padding: 0 3px 0 3px;
+	height: 16px;
+	vertical-align: middle;
+}
+
+.monitorizacionBD fieldset table .datosAsp td.tipo, .monitorizacionBD fieldset table .datosTitulo td.tituloTipo,
+	.monitorizacionBD fieldset table .datosTitulo td.tituloMonitorizacion,
+	.monitorizacionBD fieldset table .datosAsp td.monitorizacion {
+	border-left: 1px solid #004B98;
+}
+
+/*	/Monitorizacion de la Base de Datos	*/
+
+/*	Carga de Miembros de las Actas	*/
+.cargaMiembros .cajaTexto {
+	border: 1px solid #004B98;
+	width: 96.5%;
+	padding: 0.5em;
+}
+
+.cargaMiembros .tablaCarga {
+	width: 100%;
+}
+
+.cargaMiembros .tablaCarga th {
+	font-weight: bold;
+	padding-bottom: 0.3em;
+}
+
+.cargaMiembros .tablaCarga tr th {
+	color: #004B98;
+	border-bottom: 1px solid #004B98;
+}
+
+.cargaMiembros .tablaCarga tr td {
+	color: #004B98;
+	padding-top: 0.2em;
+}
+
+.cargaMiembros .colocaConvocatoriaCB {
+	width: 552px;
+	margin-left: 40px;
+}
+/*	Carga de Miembros de las Actas	*/
+
+/*	GRS Administracion de Fechas	*/
+.admFechas .colocaGerenciaAdmF {
+	margin-left: 63px;
+	width: 552px;
+}
+/*	Fin de GRS Administracion de Fechas	*/
+.colocaNombreEDC {
+	width: 215px;
+	margin-left: 68px;
+	font-weight: normal;
+}
+
+/*	Estilos temporales para Gestionde Evaluados > Listado 	(Fase II luego se pondran los de Fase III) TEMPORAL	*/
+.listadoGestionEvaluados .colocaCodigo {
+	margin-left: 40px;
+}
+
+.listadoGestionEvaluados .colocaCodigo2 {
+	margin-left: 65px;
+}
+
+.listadoGestionEvaluados .colocaCodigo3 {
+	margin-left: 3.3em;
+}
+
+.listadoGestionEvaluados .colocaCategoria {
+	margin-left: 26px;
+	width: 80%;
+}
+
+.listadoGestionEvaluados .colocaCategoria2 {
+	margin-left: 54px;
+	width: 80%;
+}
+
+.listadoGestionEvaluados .colocaEspecialidad {
+	margin-left: 11px;
+	width: 80%
+}
+
+.listadoGestionEvaluados .colocaEspecialidad2 {
+	margin-left: 11px;
+	width: 80%
+}
+
+.listadoGestionEvaluados .colocaEspecialidad3 {
+	margin-left: 36px;
+	width: 80%
+}
+
+.listadoGestionEvaluados .colocaEstado {
+	margin-left: 45px;
+	width: 25%;
+}
+
+.listadoGestionEvaluados .colocaEstado2 {
+	margin-left: 73px;
+	width: 25%;
+}
+
+.listadoGestionEvaluados .colocaEstado3 {
+	margin-left: 70px;
+	width: 25%;
+}
+
+
+.colocaEstado4{
+	margin-left: 50px;
+    width: 80%;
+} 
+
+.listadoGestionEvaluados .colocaItinerario {
+	margin-left: 28px;
+	width: 80.2%;
+}
+
+.listadoGestionEvaluados .colocaItinerario2 {
+	margin-left: 28px;
+	width: 80.2%;
+}
+
+.listadoGestionEvaluados .colocaConvocatoria2 {
+	margin-left: 28px;
+	width: 80.2%;
+}
+
+.colocaConvocatoria3 {
+	margin-left: 33px;
+	width: 80.2%;
+}
+/*	Fin de Estilos temporales para Gestionde Evaluados > Listado	*/
+
+/*	Estilos temporales para Componentes de CTE > Alta 	(Fase II luego se pondran los de Fase III) TEMPORAL	*/
+.contenidoDCP1A .normales .cuadroEspecial .colocaCalleCtes {
+	width: 48em;
+	font-weight: normal;
+	margin: 0 0 0 1.8em;
+}
+
+.contenidoDCP1A .normales .cuadroEspecial .colocaNumCtesN {
+	width: 3em;
+	font-weight: normal;
+	margin: 0 4.8em 0 1em;
+}
+
+.contenidoDCP1A .normales .cuadroEspecial .colocaNumCtesE {
+	width: 3em;
+	font-weight: normal;
+	margin: 0 4.8em 0 1em;
+}
+
+.contenidoDCP1A .normales .cuadroEspecial .colocaNumCtesP {
+	width: 3em;
+	font-weight: normal;
+	margin: 0 4.8em 0 1em;
+}
+
+.contenidoDCP1A .normales .cuadroEspecial .colocaLetraCtes {
+	width: 3em;
+	font-weight: normal;
+	margin: 0 4.8em 0 1em;
+}
+
+.contenidoDCP1A .normales .cuadroEspecial .colocaCPCtes {
+	margin-right: 4em;
+	font-weight: normal;
+}
+
+.contenidoDCP1A .tmpDcha {
+	margin-left: 0.3em;
+	margin-right: 11.1em;
+	font-weight: normal;
+}
+
+.contenidoDCP1A .expProfesional {
+	border-width: 1px;
+	border-style: solid;
+	border-color: #004B98;
+	width: 97%;
+	height: 10em;
+	padding: 10px;
+	text-align: left;
+	font-weight: normal;
+}
+
+.contenidoDCP1A .colocaProfesionCBCtes {
+	width: 90.8%;
+	font-weight: normal;
+}
+
+.colocaConvoCtes {
+	margin-left: 65px;
+}
+
+.colocaComiteCtes {
+	margin-left: 45px;
+}
+
+.colocaCargoCtes {
+	margin-left: 15px;
+}
+
+.colocaCargoCes {
+	margin-left: 23px;
+}
+
+/*	Fin de Estilos temporales para Componentes de CTE > Alta 	(Fase II luego se pondran los de Fase III) TEMPORAL	*/
+
+/*	Pantalla de Renuncia	*/
+.botonesRenuncia {
+	margin: 1em 0.5em 0 0;
+}
+/*	Fin de Pantalla de Renuncia	*/
+
+/* Prueba de itinerarios */
+.altaPruebaItinerario .grado {
+	width: 580px;
+	margin-left: 40px;
+}
+
+.altaPruebaItinerario .procedimiento {
+	width: 484px;
+	margin-left: 10px;
+}
+
+.altaPruebaItinerario .categoria {
+	width: 580px;
+	margin-left: 20px;
+}
+
+.altaPruebaItinerario .especialidad {
+	width: 580px;
+	margin-left: 5px;
+}
+
+.altaPruebaItinerario .manual {
+	width: 580px;
+	margin-left: 34px;
+}
+
+/*  /CONTENIDO  */
+
+/*  /CUERPO  */
+
+/*  /CONTENIDO DEL PORTAL  */
+/ /*MODIFICACIONES PARA EL CHROME*/
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.colocaTitMasterMC {
+		margin-left: 123px !important;
+	}
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.colocaUnidadResponsableDoceMC {
+		margin-left: 20px !important;
+	}
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.recuadroM {
+		padding: 0 0 0 5px !important;
+	}
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.colocaGradoBuscCB {
+		margin-left: 76px !important;
+	}
+}
+
+@media screen and (-ms-high-contrast: active) , ( -ms-high-contrast :
+	none) { /* Para IE10, IE11 (edge)*/
+	.colocaGradoBuscCB {
+		margin-left: 78px !important;
+	}
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	select.colocaGerenciaBuscCB {
+		margin-left: 62px !important;
+	}
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.colocaEstadoCBMC {
+		margin-left: 72px !important;
+	}
+}
+
+@media screen and (-webkit-min-device-pixel-ratio:0)
+	/*Chrome hack para recolocar */ {
+	.colocaConvocatoriaCB {
+		margin-left: 5px !important;
+	}
+}
+
+/* Tabla de Historial Profesional en los datos de Solicitud/Expediente */
+div.historialProfesional .tablaHistorial {
+	border: solid #004B98;
+	float: left;
+	width: 90%;
+	margin-top: 30px;
+	margin-bottom: 30px;
+	margin-left: 30px;
+}
+
+div.historialProfesional .tablaHistorial .titulo {
+	padding: 6px;
+	font-weight: bold;
+	text-align: center;
+	color: #004B98;
+	border: 1px solid #004B98;
+}
+
+div.historialProfesional .tablaHistorial tr td {
+	text-align: center;
+	padding: 6px;
+	font-weight: normal;
+	border: 1px solid #004B98;
+	vertical-align: middle;
+	color: red;
+}
+
+.image-upload>input {
+	display: none;
+}
+
+.hiddenInput>input {
+position: absolute;
+max-width:0px;
+pointer-events: none;
+  /* IE 8 */
+  -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
+  /* IE 5-7 */
+  filter: alpha(opacity=0);
+  /* Netscape */
+  -moz-opacity: 0;
+  /* Safari 1.x */
+  -khtml-opacity: 0;
+  /* Good browsers */
+  opacity: 0;
+}
+
+
+.textoNombre {
+	width: 33%;
+	height: 22px;
+	color: #004b98;
+	font-size: 1em;
+	text-align: right;
+	float: right;
+	line-height:20px;
+
+}

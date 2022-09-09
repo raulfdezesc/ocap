@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<parameter name="datosDocu" class="es.jcyl.fqs.ocap.ot.revisiones.OCAPRevisionesOT" isForPrompting="false"/>
+	<parameter name="ruta" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band/>
+	</title>
+	<pageHeader>
+		<band height="73">
+			<image scaleImage="RetainShape" hAlign="Left" isUsingCache="true" hyperlinkType="None">
+				<reportElement x="20" y="0" width="515" height="53" isPrintWhenDetailOverflows="true"/>
+				<imageExpression class="java.lang.String"><![CDATA[$P{ruta}+"/imagenes/imagenes_ocap/logo-FQS.gif"]]></imageExpression>
+			</image>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band/>
+	</columnHeader>
+	<detail>
+		<band height="658">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="false" hyperlinkType="None">
+				<reportElement x="20" y="0" width="515" height="19"/>
+				<textElement textAlignment="Justified">
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Don / Doña " + $P{datosDocu}.getDNombreEvaluador()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="20" y="21" width="515" height="42"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Como Evaluador acreditado por la FQS en el proceso de Evaluación del Desempeño de la Competencia (EDC) para el reconocimiento de grado de Carrera Profesional de la Consejería de Sanidad - SACYL de la Junta de Castilla y León INFORMO:]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Opaque" x="25" y="71" width="3" height="3" backcolor="#000000"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="false" hyperlinkType="None">
+				<reportElement x="34" y="65" width="501" height="46"/>
+				<textElement textAlignment="Justified" markup="styled">
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Que el Profesional Evaluado con código <style pdfFontName=\"Helvetica-Bold\">" + $P{datosDocu}.getCodigoId() + "</style> ha realizado la Auto-evaluación del Desempeño de la Competencia según el Itinerario de Evaluación Competencial que le corresponde para el reconocimiento de grado de Carrera Profesional."]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement mode="Opaque" x="25" y="118" width="3" height="3" backcolor="#000000"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="34" y="113" width="501" height="36"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Que se ha realizado el análisis de 2ª Evaluación conforme a los criterios y metodología establecida por la FQS (Fundación Centro Regional de Calidad y Acreditación Sanitaria), obteniendo los siguientes resultados globales.]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Opaque" x="25" y="156" width="3" height="3" backcolor="#000000"/>
+			</rectangle>
+			<staticText>
+				<reportElement x="34" y="151" width="501" height="36"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Que se ha realizado la auditoría/análisis de registros propuesta conforme a los criterios y metodología establecida por la FQS (Fundación Centro Regional de Calidad y Acreditación Sanitaria).
+]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="20" y="197" width="393" height="17" forecolor="#000000"/>
+				<textElement textAlignment="Left">
+					<font fontName="Times New Roman" size="11" isBold="true" isUnderline="false" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[INFORME DE ANÁLISIS Y AUDITORÍA]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="73" y="220" width="119" height="20"/>
+				<textElement/>
+				<text><![CDATA[Análisis - 2ª evaluación]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="196" y="221" width="13" height="13" backcolor="#FFFFFF"/>
+			</rectangle>
+			<textField isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="199" y="221" width="14" height="14"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getBAuditoriaAE()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="253" y="220" width="100" height="20"/>
+				<textElement/>
+				<text><![CDATA[Análisis + auditoría]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement mode="Transparent" x="353" y="220" width="13" height="13" backcolor="#FFFFFF"/>
+			</rectangle>
+			<textField isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="355" y="221" width="14" height="14"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getBAuditoriaAA()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="34" y="243" width="482" height="20"/>
+				<textElement markup="styled"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["<style pdfFontName=\"Helvetica-Bold\" size=\"12\">·</style>  Motivo de la auditoría específica elegida:"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="46" y="263" width="489" height="17"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getAMotivoAuditoria()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="34" y="282" width="482" height="20"/>
+				<textElement markup="styled"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["<style pdfFontName=\"Helvetica-Bold\" size=\"12\">·</style>  Descripción del desarrollo de auditoría:"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="56" y="303" width="479" height="20"/>
+				<textElement textAlignment="Justified" markup="styled">
+					<font isBold="false"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["<style pdfFontName=\"Helvetica-Oblique\">Lugar de realización: </style>"+$P{datosDocu}.getALugarRealizacion()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="56" y="326" width="479" height="20"/>
+				<textElement textAlignment="Justified" markup="styled"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["<style pdfFontName=\"Helvetica-Oblique\">Fecha: </style>"+$P{datosDocu}.getFAuditoriaPDF()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="56" y="346" width="479" height="20"/>
+				<textElement textAlignment="Justified" markup="styled"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["<style pdfFontName=\"Helvetica-Oblique\">Responsable / superior implicado: </style>"+$P{datosDocu}.getASuperior()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="56" y="370" width="194" height="17"/>
+				<textElement>
+					<font pdfFontName="Helvetica-Oblique"/>
+				</textElement>
+				<text><![CDATA[Anotación de los hallazgos de auditoría:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="73" y="387" width="462" height="20"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getAHallazgos()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="34" y="409" width="482" height="20"/>
+				<textElement markup="styled"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["<style pdfFontName=\"Helvetica-Bold\" size=\"12\">·</style>  Por todo ello: "]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="58" y="430" width="477" height="30"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Existe cumplimiento con respecto a lo establecido en los criterios establecidos en el itinerario de evaluación.]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="42" y="432" width="13" height="13" backcolor="#FFFFFF"/>
+			</rectangle>
+			<textField isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="44" y="433" width="14" height="14"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getBCumplimientoY()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="58" y="460" width="477" height="30"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[Existe incumplimiento con respecto a lo establecido en los criterios establecidos en el itinerario de evaluación.]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="42" y="462" width="13" height="13" backcolor="#FFFFFF"/>
+			</rectangle>
+			<textField isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="45" y="462" width="14" height="14"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getBCumplimientoN()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="49" y="490" width="78" height="20"/>
+				<textElement/>
+				<text><![CDATA[Categorización:]]></text>
+			</staticText>
+			<staticText>
+				<reportElement positionType="Float" x="78" y="510" width="89" height="20"/>
+				<textElement/>
+				<text><![CDATA[No conformidad]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="58" y="511" width="13" height="13" backcolor="#FFFFFF"/>
+			</rectangle>
+			<textField isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="60" y="511" width="14" height="14"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getBCategorizacionN()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="214" y="510" width="64" height="20"/>
+				<textElement/>
+				<text><![CDATA[Desviación]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="195" y="511" width="13" height="13" backcolor="#FFFFFF"/>
+			</rectangle>
+			<textField isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="197" y="511" width="14" height="14"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getBCategorizacionD()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="333" y="510" width="67" height="20"/>
+				<textElement/>
+				<text><![CDATA[Observación]]></text>
+			</staticText>
+			<rectangle>
+				<reportElement positionType="Float" mode="Transparent" x="314" y="511" width="13" height="13" backcolor="#FFFFFF"/>
+			</rectangle>
+			<textField isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="316" y="511" width="14" height="14"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getBCategorizacionO()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true">
+				<reportElement positionType="Float" x="34" y="533" width="482" height="20"/>
+				<textElement markup="styled"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["<style pdfFontName=\"Helvetica-Bold\" size=\"12\">·</style>  Recomendaciones: "]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="46" y="553" width="489" height="20"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getARecomendaciones()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="20" y="580" width="393" height="17" forecolor="#000000"/>
+				<textElement textAlignment="Left">
+					<font fontName="Times New Roman" size="11" isBold="true" isUnderline="false" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[CONCLUSIONES DE LA AUDITORÍA]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="34" y="597" width="501" height="19"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getAConclusiones()]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="20" y="641" width="515" height="16"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["Informe realizado el "+$P{datosDocu}.getFInformePDF()]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band/>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

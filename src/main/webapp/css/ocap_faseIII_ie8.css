@@ -1,0 +1,22 @@
+.contenidoFaseIII .contenidoTextoAutoevaluacion .iconoCalendario {
+	vertical-align: middle;
+}
+
+.contenidoFaseIII .modificacionEvaluadores .modEvalEmailIE8 {
+	margin-left: 0;
+}
+
+.contenidoFaseIII .formulario .todo select.cuadroTodoM {
+	width: 78.7%;
+}
+
+/*	Itinerarios	*/
+
+/*	sttextarea	*/
+.contenidoFaseIII .contenidoTextoProcedimiento .sttextarea .tablaRespuestas
+	{
+	margin-top: 0;
+}
+/*	Fin sttextarea*/
+
+/*	Fin itinerarios	*/

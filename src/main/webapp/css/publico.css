@@ -1,0 +1,327 @@
+/* Hoja de estilos para la Solicitud de acceso a grado de carrera profesional	*/
+.contenidoAccesible {
+	width: 100%;
+}
+
+.formularioPublico .colocaApellidos1 {
+	margin-left: 129px;
+	width: 240px;
+	_width: 247px;
+	margin-right: 77px;
+}
+
+.formularioPublico .colocaNombre {
+	margin-left: 69px;
+	width: 200px;
+	_width: 207px;
+}
+
+.formularioPublico .colocaDNI {
+	margin-left: 140px;
+	width: 65px;
+	margin-right: 252px;
+	_margin-right: 259px;
+}
+
+.formularioPublico .colocaSexo {
+	margin-left: 85px;
+	width: 120px;
+}
+
+.formularioPublico .colocaTelefono1 {
+	margin-left: 131px;
+	width: 65px;
+	margin-right: 252px;
+	_margin-right: 259px;
+}
+
+.formularioPublico .colocaTelefono1Asterisco {
+	margin-left: 128px;
+	width: 65px;
+	margin-right: 252px;
+	_margin-right: 259px;
+}
+
+.formularioPublico .colocaTelefono2 {
+	margin-left: 63px;
+	width: 65px;
+}
+
+.formularioPublico .colocaCorreo {
+	margin-left: 87px;
+	width: 310px;
+}
+
+.formularioPublico .colocaCorreoAsterisco {
+	margin-left: 82px;
+	width: 310px;
+}
+
+.formularioPublico .colocaDireccion {
+	margin-left: 30px;
+	width: 663px;
+	_width: 670px;
+}
+
+.formularioPublico .colocaProv {
+	margin-left: 130px;
+	width: 207px;
+}
+
+.formularioPublico .colocaLoc {
+	margin-left: 128px;
+	width: 207px;
+	margin-right: 117px;
+}
+
+.formularioPublico .colocaCP {
+	margin-left: 36px;
+	width: 40px;
+}
+
+.formularioPublico .colocaGrado {
+	margin-left: 84px;
+	width: 207px;
+	margin-right: 57px; #
+	margin-right: 52px;
+}
+
+.formularioPublico .informacionSituacion {
+	margin-left: 30px !important;
+}
+
+.formularioPublico .mostrarCampoOculto { #
+	height: 25px;
+	_height: 20px;
+	overflow: hidden;
+}
+
+.formularioPublico .colocaGradoPosee {
+	margin-left: 78px; #
+	margin-left: 77px;
+	width: 207px; #
+	width: 208px;
+}
+
+.formularioPublico .colocaProcedimientoAlta {
+	margin-left: 12px;
+	width: 598px;
+}
+
+.formularioPublico .labelReg { #
+	vertical-align: top;
+}
+
+.formularioPublico .colocaRegJuric {
+	margin-left: 87px;
+	width: 207px;
+	margin-right: 50px; #
+	height: 22px;
+}
+
+.formularioPublico .regJuricCual {
+	margin-left: 10px;
+	width: 342px;
+	_width: 345px;
+}
+
+.formularioPublico .regJuridic {
+	margin-left: 10px;
+	_margin-left: 12px;
+	margin-right: 0;
+	width: 348px;
+	_width: 353px !important;
+}
+
+.formularioPublico .cuadroOculto {
+	border: 1px solid #004B98;
+	vertical-align: top;
+}
+
+.formularioPublico .situAdmin {
+	margin-left: 47px;
+	width: 318px;
+	margin-right: 0;
+}
+
+.formularioPublico .regSituAdmCual {
+	margin-left: 10px;
+	_margin-left: 12px;
+	width: 280px;
+	_width: 283px;
+}
+
+.formularioPublico .colocaPersonal {
+	margin-left: 132px;
+	width: 670px;
+}
+
+.formularioPublico .colocaCategoria {
+	margin-left: 127px;
+	width: 670px;
+	height: 18px;
+}
+
+.formularioPublico .colocaCategoria2 {
+	margin-left: 128px; #
+	margin-left: 125px;
+	width: 670px;
+	height: 18px;
+}
+
+.formularioPublico .colocaEspecialidad {
+	margin-left: 110px;
+	width: 670px;
+	height: 18px;
+}
+
+.formularioPublico .colocaEspecialidad2 {
+	margin-left: 113px; #
+	margin-left: 110px;
+	width: 670px;
+	height: 18px;
+}
+
+.formularioPublico .colocaProvinciaCarrera {
+	margin-left: 129px;
+	width: 207px;
+}
+
+.formularioPublico .colocaGerencia {
+	margin-left: 131px;
+	width: 670px;
+}
+
+.formularioPublico .colocaCentro {
+	margin-left: 83px;
+	width: 670px;
+}
+
+.formularioPublico .colocaServicios {
+	margin-left: 143px;
+	width: 663px;
+	_width: 670px;
+}
+
+.formularioPublico .colocaAreaUnidad {
+	margin-left: 68px;
+	width: 663px;
+	_width: 670px;
+}
+
+.formularioPublico .tiempoEjercicio .recuadroM {
+	width: 25px;
+	margin-left: 5px;
+	margin-right: 50px;
+}
+
+.formularioPublico .tiempoEjercicio .fechaPrimera {
+	margin-left: 210px;
+}
+
+.formularioPublico .colocaAniosAlta {
+	margin-left: 75px;
+	width: 70px;
+	margin-right: 20px;
+}
+
+.formularioPublico .colocaMesesAlta {
+	margin-left: 75px;
+	width: 70px;
+	margin-right: 20px;
+}
+
+.formularioPublico .colocaDiasAlta {
+	margin-left: 75px;
+	width: 70px;
+}
+
+.formularioPublico .colocaCentroTrabajo {
+	margin-left: 83px;
+	width: 665px;
+}
+
+.formularioPublico .colocaCategoriaEspecialidad {
+	margin-left: 8px;
+	width: 665px;
+}
+
+.formularioPublico .colocaServiciosPuestoTrabajo {
+	margin-left: 137px;
+	width: 670px;
+}
+
+.formularioPublico .colocaCentroTrabajoServicios {
+	margin-left: 89px;
+	width: 662px;
+}
+
+.formularioPublico .colocaProvinciaServiciosPrestados {
+	margin-left: 136px;
+	width: 210px;
+	margin-right: 185px;
+}
+
+.formularioPublico .colocaVinculo {
+	margin-left: 10px;
+	width: 210px;
+}
+
+.formularioPublico .colocaFechaInicioSP {
+	margin-left: 46px;
+	margin-right: 0 !important;
+	width: 80px;
+}
+
+.formularioPublico .fechaFinSP {
+	margin-left: 200px;
+}
+
+.formularioPublico .colocaFechaFinSP {
+	margin-left: 10px;
+	margin-right: 0 !important;
+	width: 80px;
+}
+
+.formularioPublico .textoTituloGrisSol {
+	margin-left: 10px;
+	width: 864px;
+}
+
+.formularioPublico .colocaBotonesAlta {
+	margin-left: 98px;
+}
+
+.formularioPublico .colocaIE {
+	margin-top: -20px; #
+	padding-left: 125px; #
+	margin-top: 25px;
+	padding-bottom: 1px; #
+	padding-bottom: 20px;
+}
+
+.formularioPublico .botonesCertif2 {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.formularioPublico .botonesCertif2Docencia {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.formularioPublico .colocaBotonesAlta {
+	margin-top: 0;
+	padding-top: 0;
+}
+
+.formularioPublico .campoCaptcha {
+	margin-left: 15px;
+	width: 40px;
+}
+
+.formularioPublico .imagenCaptcha {
+	position: relative;
+	top: 8px;
+	margin-left: 15px;
+}

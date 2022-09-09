@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<parameter name="datosDocu" class="es.jcyl.fqs.ocap.ot.solicitudes.OCAPSolicitudesOT" isForPrompting="false"/>
+	<parameter name="sexo" class="java.lang.String"/>
+	<parameter name="ruta" class="java.lang.String"/>
+	<parameter name="fechaConvocatoria" class="java.lang.String"/>
+	<parameter name="fecha" class="java.lang.String"/>
+	<parameter name="estadoMC" class="java.lang.String"/>
+	<parameter name="SUB_REPORT" class="net.sf.jasperreports.engine.JasperReport" isForPrompting="false"/>
+	<parameter name="datosReport" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="56">
+			<image hyperlinkType="None">
+				<reportElement x="21" y="0" width="83" height="53"/>
+				<imageExpression class="java.lang.String"><![CDATA[$P{ruta}+"/imagenes/imagenes_ocap/logo-junta.gif"]]></imageExpression>
+			</image>
+			<image hyperlinkType="None">
+				<reportElement x="442" y="0" width="94" height="50"/>
+				<imageExpression class="java.lang.String"><![CDATA[$P{ruta}+"/imagenes/imagenes_ocap/SACYL-LOGO.gif"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band/>
+	</pageHeader>
+	<columnHeader>
+		<band/>
+	</columnHeader>
+	<detail>
+		<band height="542">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="21" y="109" width="515" height="15"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="10"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getDGerente()+", Gerente de "+$P{datosDocu}.getDGerencia_nombre()+"."]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="21" y="141" width="74" height="18"/>
+				<textElement>
+					<font isBold="false" isStrikeThrough="false" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[INFORMA]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="21" y="159" width="515" height="18" isPrintWhenDetailOverflows="true"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["Que "+$P{sexo}+" "+$P{datosDocu}.getDNombre()+" "+$P{datosDocu}.getDApellido1()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="21" y="177" width="515" height="18" isPrintWhenDetailOverflows="true"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["De NIF: "+$P{datosDocu}.getCDniReal()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="21" y="195" width="515" height="18" isPrintWhenDetailOverflows="true"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["Y Categoría: "+$P{datosDocu}.getDProfesional_nombre()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="21" y="213" width="515" height="18" isPrintWhenDetailOverflows="true"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["Y en Situación Administrativa: "+$P{datosDocu}.getDSitAdministrativaAux_nombre()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="21" y="231" width="515" height="18" isPrintWhenDetailOverflows="true"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["Para la convocatoria con fecha: "+$P{fechaConvocatoria}]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="21" y="299" width="515" height="20"/>
+				<textElement/>
+				<text><![CDATA[Valorados los méritos curriculares, referidos a los últimos diez años, de:]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="21" y="346" width="515" height="72" isPrintWhenDetailOverflows="true"/>
+				<textElement textAlignment="Justified" markup="styled"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["<style pdfFontName=\"Helvetica-Bold\">Sí</style> alcanza los créditos mínimos previstos en el Decreto 43/2009, de 2 de julio, para la modalidad de "+$P{datosDocu}.getDProfesional_nombre()+", conforme al baremo establecido en los Anexos III de la ORDEN SAN/1443/2009, de 7 de julio, por lo cual remitimos Informe <style pdfFontName=\"Helvetica-Bold\">FAVORABLE</style> en la evaluación de méritos curriculares a la Comisión Central, pasando a la siguiente fase de Autoevaluación de Méritos Asistenciales del puesto de trabajo y del perfil profesional."]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement x="22" y="320" width="171" height="16" isPrintInFirstWholeBand="true"/>
+				<dataSourceExpression><![CDATA[$P{datosReport}]]></dataSourceExpression>
+				<subreportExpression class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{SUB_REPORT}]]></subreportExpression>
+			</subreport>
+			<textField hyperlinkType="None">
+				<reportElement x="21" y="31" width="515" height="77"/>
+				<textElement textAlignment="Justified">
+					<font isStrikeThrough="false" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["INFORME MOTIVADO DE ACCESO AL "+$P{datosDocu}.getDGrado_des().toUpperCase()+" DE LA CARRERA PROFESIONAL A TRAVÉS DEL PROCEDIMIENTO ORDINARIO PREVISTO EN EL DECRETO 43/2009, DE 2 DE JULIO, DE LA JUNTA DE CASTILLA Y LEÓN, POR EL QUE SE REGULA LA CARRERA PROFESIONAL DEL PERSONAL ESTATUTARIO DE LOS CENTROS E INSTITUCIONES SANITARIAS DEL SERVICIO DE SALUD DE CASTILLA Y LEÓN."]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="22" y="265" width="514" height="28"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["Ha presentado solicitud de acceso a "+$P{datosDocu}.getDGrado_des()+" de Carrera Profesional a través del procedimiento ordinario previsto en el Decreto 43/2009, de 2 de julio, de la Junta de Castilla y León."]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="67" y="427" width="429" height="108"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["En "+$P{datosDocu}.getDProvincia()+", a "+$P{fecha}+".\n"+
+"\n "+
+"VºBº\n"+
+"PRESIDENTE	                                  																					SECRETARIO "+
+"\n"+
+"\n\n\n"+
+"Fdo.:	                                      			      																							Fdo.: "]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band/>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

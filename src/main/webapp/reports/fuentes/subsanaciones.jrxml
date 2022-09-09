@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<property name="ireport.scriptlethandling" value="0"/>
+	<import value="es.jcyl.fqs.ocap.ot.solicitudes.OCAPSolicitudesOT"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<parameter name="datosDocu" class="es.jcyl.fqs.ocap.ot.solicitudes.OCAPSolicitudesOT" isForPrompting="false"/>
+	<parameter name="antig" class="java.lang.String"/>
+	<parameter name="plaza" class="java.lang.String"/>
+	<parameter name="centros" class="java.lang.String"/>
+	<parameter name="otros" class="java.lang.String"/>
+	<parameter name="sexo" class="java.lang.String"/>
+	<parameter name="ruta" class="java.lang.String"/>
+	<parameter name="fecha" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band height="200">
+			<image hAlign="Center" hyperlinkType="None">
+				<reportElement x="0" y="0" width="555" height="53"/>
+				<imageExpression class="java.lang.String"><![CDATA[$P{ruta}+"/imagenes/imagenes_ocap/degradadoCabPDF.gif"]]></imageExpression>
+			</image>
+			<textField isStretchWithOverflow="true" hyperlinkType="None">
+				<reportElement positionType="FixRelativeToBottom" x="305" y="95" width="237" height="92"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{sexo}+" "+$P{datosDocu}.getDNombre()+" "+$P{datosDocu}.getDApellido1()+"\n"+$P{datosDocu}.getDDomicilio()+"\n"+$P{datosDocu}.getCPostalUsu()+"   "+$P{datosDocu}.getDLocalidad()+"\n"+$P{datosDocu}.getDProvinciaUsu().toUpperCase()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<detail>
+		<band height="326">
+			<textField isStretchWithOverflow="true" hyperlinkType="None">
+				<reportElement x="56" y="11" width="469" height="63"/>
+				<textElement textAlignment="Justified" lineSpacing="1_1_2">
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["A la vista de la solicitud presentada por "+$P{sexo}+" "+$P{datosDocu}.getDNombre()+" "+$P{datosDocu}.getDApellido1()+" de fecha "+$P{datosDocu}.getFRegistro_oficial()+" y de acuerdo con lo establecido en el Decreto 43/2009, de 2 de julio, de la Junta de Castilla y León, por el que se regula la Carrera Profesional del Personal Estatutario de los Centros e Instituciones Sanitarias del Servicio de Salud de Castilla y León, se le requiere para que en el plazo de diez días subsane la misma, en el siguiente sentido:"]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="70" y="80" width="455" height="47"/>
+				<textElement textAlignment="Justified" lineSpacing="1_1_2">
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getDObserv_neg_solic()]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="56" y="219" width="468" height="20"/>
+				<textElement textAlignment="Center">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["En "+$P{datosDocu}.getDProvincia()+", a "+$P{fecha}+"."]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="56" y="246" width="468" height="19"/>
+				<textElement textAlignment="Center">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{datosDocu}.getDGerencia_nombre()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="56" y="309" width="469" height="15"/>
+				<textElement textAlignment="Center">
+					<font fontName="Arial" size="11"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["Fdo:   "+$P{datosDocu}.getDDirector()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="56" y="140" width="469" height="54"/>
+				<textElement textAlignment="Justified" lineSpacing="1_1_2" markup="styled">
+					<font size="11"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["En caso de no presentar dentro del plazo señalado la documentación requerida, total o parcialmente, se le tendrá por <style pdfFontName=\"Helvetica-Bold\">desistido</style> de su petición de acuerdo con lo establecido en el artículo 71 de la Ley 30/1992, de 26 de noviembre, de Régimen Jurídico de las Administraciones Públicas y del Procedimiento Administrativo Común."]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<lastPageFooter>
+		<band/>
+	</lastPageFooter>
+</jasperReport>

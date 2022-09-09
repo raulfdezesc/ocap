@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20">
+	<parameter name="datosDocu" class="es.jcyl.fqs.ocap.ot.solicitudes.OCAPSolicitudesOT" isForPrompting="false"/>
+	<parameter name="sexo" class="java.lang.String"/>
+	<parameter name="ruta" class="java.lang.String"/>
+	<parameter name="fechaConvocatoria" class="java.lang.String"/>
+	<parameter name="fecha" class="java.lang.String"/>
+	<parameter name="estadoMC" class="java.lang.String"/>
+	<parameter name="SUB_REPORT" class="net.sf.jasperreports.engine.JasperReport" isForPrompting="false"/>
+	<parameter name="datosReport" class="net.sf.jasperreports.engine.JRDataSource"/>
+	<background>
+		<band/>
+	</background>
+	<title>
+		<band/>
+	</title>
+	<pageHeader>
+		<band height="133">
+			<image hyperlinkType="None">
+				<reportElement x="21" y="0" width="83" height="53" isPrintInFirstWholeBand="true"/>
+				<imageExpression class="java.lang.String"><![CDATA[$P{ruta}+"/imagenes/imagenes_ocap/logo-junta.gif"]]></imageExpression>
+			</image>
+			<image hyperlinkType="None">
+				<reportElement x="442" y="0" width="94" height="50" isPrintInFirstWholeBand="true"/>
+				<imageExpression class="java.lang.String"><![CDATA[$P{ruta}+"/imagenes/imagenes_ocap/SACYL-LOGO.gif"]]></imageExpression>
+			</image>
+			<staticText>
+				<reportElement x="21" y="80" width="514" height="33" isPrintInFirstWholeBand="true"/>
+				<textElement textAlignment="Center">
+					<font size="11" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<text><![CDATA[SOLICITUD DE ACLARACIONES A MERITOS CURRICULARES
+CONVOCATORIA ORDINARIA CARRERA PROFESIONAL
+]]></text>
+			</staticText>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band/>
+	</columnHeader>
+	<detail>
+		<band height="316">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="37" y="229" width="478" height="52"/>
+				<textElement textAlignment="Justified">
+					<font fontName="Arial" size="10"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA["EL PRESIDENTE DEL C.E.I.S. DE LA "+$P{datosDocu}.getDGerencia_nombre().toUpperCase()+".\n\n\n\n"+
+"Fdo.: "]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement positionType="Float" x="51" y="195" width="464" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA["En "+$P{datosDocu}.getDProvincia()+", a "+$P{fecha}+"."]]></textFieldExpression>
+			</textField>
+			<subreport>
+				<reportElement x="21" y="111" width="515" height="22"  isPrintInFirstWholeBand="true" />
+				<dataSourceExpression><![CDATA[$P{datosReport}]]></dataSourceExpression>
+				<subreportExpression class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{SUB_REPORT}]]></subreportExpression>
+			</subreport>
+			<textField isStretchWithOverflow="true" hyperlinkType="None">
+				<reportElement x="21" y="6" width="515" height="105"/>
+				<textElement textAlignment="Justified"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["A la vista de la autoevaluación de Méritos Curriculares para acceso ordinario a "+$P{datosDocu}.getDGrado_des()+" de Carrera Profesional, presentada por "+$P{sexo}+" "+$P{datosDocu}.getDNombre()+" "+$P{datosDocu}.getDApellido1()+" de fecha de convocatoria "+$P{fechaConvocatoria}+" de acuerdo con lo establecido en el Decreto 43/2009, de 2 de julio de 2009, de la Junta de Castilla y León, por el que se regula la Carrera Profesional del Personal Estatutario de los Centros e Instituciones Sanitarias del Servicio de Salud de Castilla y León, y la ORDEN SAN/1443/2009 de 7 de julio por la que se regula el procedimiento ordinario para el reconocimiento individual de grado de Carrera Profesional en el ámbito del Servicio de Salud de Castilla y León, se le requiere para que en el plazo máximo de tres días presente los documentos que acrediten los siguientes extremos:"]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement positionType="Float" x="21" y="145" width="515" height="35"/>
+				<textElement textAlignment="Justified"/>
+				<text><![CDATA[En caso de no presentar dentro del plazo señalado la documentación requerida, total o parcialmente, se tendrá por realizado el trámite no pudiéndose valorar los créditos aportados fuera del plazo concedido.]]></text>
+			</staticText>
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band/>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

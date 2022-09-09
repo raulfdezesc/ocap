@@ -1,0 +1,2411 @@
+/* Hoja de estilo para la Fase III	*/
+
+/* Reseteo de los estilos	*/
+.contenidoFaseIII div, .contenidoFaseIII span, .contenidoFaseIII applet,
+	.contenidoFaseIII object, .contenidoFaseIII iframe, .contenidoFaseIII h1,
+	.contenidoFaseIII h2, .contenidoFaseIII h3, .contenidoFaseIII h4,
+	.contenidoFaseIII h5, .contenidoFaseIII h6, .contenidoFaseIII p,
+	.contenidoFaseIII blockquote, .contenidoFaseIII pre, .contenidoFaseIII a,
+	.contenidoFaseIII abbr, .contenidoFaseIII acronym, .contenidoFaseIII address,
+	.contenidoFaseIII big, .contenidoFaseIII cite, .contenidoFaseIII code,
+	.contenidoFaseIII del, .contenidoFaseIII dfn, .contenidoFaseIII em,
+	.contenidoFaseIII font, .contenidoFaseIII img, .contenidoFaseIII ins,
+	.contenidoFaseIII kbd, .contenidoFaseIII q, .contenidoFaseIII s,
+	.contenidoFaseIII samp, .contenidoFaseIII small, .contenidoFaseIII strike,
+	.contenidoFaseIII strong, .contenidoFaseIII sub, .contenidoFaseIII sup,
+	.contenidoFaseIII tt, .contenidoFaseIII var, .contenidoFaseIII b,
+	.contenidoFaseIII u, .contenidoFaseIII i, .contenidoFaseIII center,
+	.contenidoFaseIII dl, .contenidoFaseIII dt, .contenidoFaseIII dd,
+	.contenidoFaseIII ol, .contenidoFaseIII ul, .contenidoFaseIII li,
+	.contenidoFaseIII fieldset, .contenidoFaseIII form, .contenidoFaseIII label,
+	.contenidoFaseIII legend, .contenidoFaseIII table, .contenidoFaseIII caption,
+	.contenidoFaseIII tbody, .contenidoFaseIII tfoot, .contenidoFaseIII thead,
+	.contenidoFaseIII tr, .contenidoFaseIII th, .contenidoFaseIII td {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	outline: 0;
+	font-size: 100%;
+	vertical-align: baseline;
+	background: transparent;
+}
+
+.contenidoFaseIII {
+	line-height: 1;
+	font-size: 1.2em;
+	margin-bottom: 0 !important;
+	margin-top: 0 !important;
+}
+
+.contenidoFaseIII * {
+	color: #000000;
+	font-family: Trebuchet Ms;
+}
+
+.contenidoFaseIII ol, .contenidoFaseIII ul {
+	list-style: none;
+}
+
+.contenidoFaseIII blockquote, .contenidoFaseIII q {
+	quotes: none;
+}
+
+.contenidoFaseIII blockquote:before, .contenidoFaseIII blockquote:after,
+	.contenidoFaseIII q:before, q:after {
+	content: '';
+	content: none;
+}
+
+.contenidoFaseIII table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+/*	/Reseteo de los estilos	*/
+
+/*	Estilos genericos	*/
+h2.tituloContenido {
+	text-align: center;
+	font-size: 1.4em;
+	font-weight: bold;
+	color: #3C5E81;
+	padding: 10px 0px 10px 0px;
+	margin-bottom: 15px;
+	border-style: solid;
+	border-color: #004B98;
+	border-width: 1px;
+	border-left: none;
+	border-right: none;
+}
+
+h3.subTituloContenido {
+	text-align: right;
+	font-size: 1.3em;
+	font-weight: bold;
+	margin-bottom: 0px !important;
+	color: #004B98;
+}
+
+.contenidoFaseIII fieldset {
+	border-style: solid;
+	border-width: 1px;
+	padding-left: 10px;
+	color: #004B98;
+	margin-top: 0px !important;
+	margin-bottom: 5px;
+	text-align: left;
+	clear: both;
+	padding: 0 0.5em 0 1.5em;
+}
+
+.contenidoFaseIII .tituloLegend {
+	font-weight: bold;
+	font-size: 1.1em;
+	padding-left: 5px;
+	padding-right: 5px;
+	line-height: 1.2em;
+	color: #004B98;
+}
+
+.contenidoFaseIII .espaciador {
+	clear: both;
+	height: 10px;
+}
+
+.contenidoFaseIII .textoNegrita {
+	font-weight: bold;
+	color: #000000 !important;
+	margin-left: 0;
+	padding-left: 0;
+}
+
+.contenidoFaseIII .Textonormal {
+	font-weight: normal;
+	color: #000000;
+}
+
+.contenidoFaseIII .textoSubrayado {
+	text-decoration: underline;
+	margin-left: 0 !important;
+	padding-left: 0 !important;
+	color: #000000;
+}
+
+.contenidoFaseIII .colorMarron {
+	color: #004B98;
+}
+
+.contenidoFaseIII .textoNoResultados {
+	font-weight: normal;
+	margin: 1.5em 0 1em 0;
+}
+
+/*	Estilos genericos	*/
+
+/*	Estilos para los Formularios	*/
+.contenidoFaseIII .formulario span.colorError {
+	font-weight: normal;
+}
+
+.contenidoFaseIII .cuadroFieldset {
+	width: 98.5%;
+}
+
+.contenidoFaseIII .formulario input {
+	height: 1.3em;
+}
+
+.contenidoFaseIII .formulario select {
+	height: 1.4em;
+}
+
+.contenidoFaseIII .formulario label {
+	display: inline-block;
+	width: 5.8em;
+	color: #000000;
+	padding-left: 1em;
+}
+
+.contenidoFaseIII .formulario label.nombreLargo {
+	width: 15.65em;
+}
+
+.contenidoFaseIII .formulario label.nombreMediano {
+	width: 8em;
+}
+
+.contenidoFaseIII .formulario label.nombreLineaCompleta {
+	width: 100%;
+	margin-bottom: 1em;
+}
+
+.contenidoFaseIII .formulario label.nombreLinea {
+	width: 100%;
+}
+
+.contenidoFaseIII .formulario label.nombreLargoCSV {
+	width: 13em;
+}
+
+.contenidoFaseIII .formulario span.nombreLargo {
+	padding-left: 1em;
+}
+
+.contenidoFaseIII .formulario .unTercio {
+	display: inline-block;
+	width: 32.6%;
+	padding: 5px 0 5px 0;
+}
+
+.contenidoFaseIII .formulario .dosTercios {
+	display: inline-block;
+	width: 65.75%;
+	padding: 5px 0 5px 0;
+}
+
+.contenidoFaseIII .formulario .unMedio {
+	display: inline-block;
+	width: 49.2%;
+	padding: 5px 0 5px 0;
+}
+
+.contenidoFaseIII .formulario .todo {
+	display: inline-block;
+	width: 99.4%;
+	padding: 5px 0 5px 0;
+	clear: both;
+}
+
+.contenidoFaseIII .formulario select {
+	clear: both;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #004B98;
+	padding: 0 0 0 5px;
+	vertical-align: middle;
+	margin-left: 0.3em;
+}
+
+.contenidoFaseIII .formulario input {
+	clear: both;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #004B98;
+	padding: 0 0 0 5px;
+	vertical-align: middle;
+	margin-left: 0.3em;
+}
+
+.contenidoFaseIII .formulario .unTercio input {
+	width: 49.2%;
+}
+
+.contenidoFaseIII .formulario .unTercio select {
+	width: 53%;
+}
+
+.contenidoFaseIII .formulario .unTercio .completo {
+	width: 94.19%;
+}
+
+.contenidoFaseIII .formulario .unMedio .completo {
+	width: 93.2%;
+}
+
+.contenidoFaseIII .formulario .unMedio input.cuadroDNI {
+	width: 30%;
+}
+
+.contenidoFaseIII .formulario .dosTercios input {
+	width: 75.2%;
+}
+
+.contenidoFaseIII .formulario .dosTercios input.corto {
+	width: 25%;
+}
+
+.contenidoFaseIII .formulario .dosTercios .completo {
+	width: 93.2%;
+}
+
+.contenidoFaseIII .formulario .unMedio input {
+	width: 66.7%;
+}
+
+.contenidoFaseIII .formulario .todo input.cuadroTodoG {
+	width: 82.9%;
+}
+
+.contenidoFaseIII .formulario .todo input.cuadroTodoP {
+	width: 63.7%;
+}
+
+.contenidoFaseIII .formulario .todo input.cuadroTodoM {
+	width: 78.6%;
+}
+
+.contenidoFaseIII .formulario .todo input.cuadroTodoActiva {
+	width: 81.6%;
+}
+
+.contenidoFaseIII .formulario .todo select.cuadroTodoM {
+	width: 78.6%;
+}
+
+.contenidoFaseIII .formulario .todo select.cuadroTodoG {
+	width: 83%;
+}
+
+.contenidoFaseIII .formulario .todo select.cuadroTodoP {
+	width: 63.8%;
+}
+
+.contenidoFaseIII .formulario .todo textarea {
+	border: 1px solid #004B98;
+	height: 7em;
+	width: 94%;
+	padding: 0.5em;
+	line-height: 1.3em;
+	overflow-y: scroll;
+	margin-left: 2%;
+}
+
+.contenidoFaseIII .formulario .todo .completo {
+	width: 100%;
+}
+
+.contenidoFaseIII .formulario .unTercio span.resultado {
+	border: 1px solid #004B98;
+	font-weight: normal;
+	color: #000000;
+	width: 50.5%;
+	display: inline-block;
+	padding: 1px 3px 1px 3px;
+}
+
+.contenidoFaseIII .formulario .unMedio select.buscador {
+	width: 68.7%;
+}
+
+.contenidoFaseIII .formulario .todo input.resultadoP {
+	border: 1px solid #004B98;
+	font-weight: normal;
+	color: #000000;
+	display: inline-block;
+	width: 62.2%;
+	padding: 1px 3px 1px 3px;
+}
+
+.contenidoFaseIII .formulario .todo span.resultadoP {
+	border: 1px solid #004B98;
+	font-weight: normal;
+	color: #000000;
+	display: inline-block;
+	width: 64.2%;
+	padding: 1px 3px 1px 3px;
+}
+
+.contenidoFaseIII .formulario .todo span.resultadoN {
+	border: 1px solid #004B98;
+	font-weight: normal;
+	color: #000000;
+	padding: 1px 3px 1px 3px;
+	display: inline-block;
+	width: 64.2%;
+}
+
+/* Sin revisar	*/
+.contenidoFaseIII .formulario .dosTercios span.resultado {
+	border: 1px solid #004B98;
+	font-weight: normal;
+	color: #000000;
+	width: 75%;
+	display: inline-block;
+	padding: 1px 3px 1px 3px;
+}
+
+.contenidoFaseIII .formulario select option {
+	margin-left: 0.5em;
+}
+
+.contenidoFaseIII .formulario input.radio {
+	border: none;
+	width: 2em !important;
+}
+
+.contenidoFaseIII .formulario .unMedio select {
+	width: 68.2%;
+}
+
+.contenidoFaseIII .formulario .unMedio input.corto {
+	width: 24.6%;
+}
+
+.contenidoFaseIII .formulario .unMedio select.corto {
+	width: 26.5%;
+}
+
+.contenidoFaseIII .formulario .unMedio span.resultado {
+	border: 1px solid #004B98;
+	font-weight: normal;
+	color: #000000;
+	display: inline-block;
+	width: 66.3%;
+	padding: 1px 3px 1px 3px;
+}
+
+.contenidoFaseIII .formulario .unMedio span.resultadoCorto {
+	border: 1px solid #004B98;
+	font-weight: normal;
+	color: #000000;
+	display: inline-block;
+	width: 23%;
+	padding: 1px 3px 1px 3px;
+}
+
+.contenidoFaseIII .formulario .dosTercios select {
+	width: 75.6%;
+}
+
+.contenidoFaseIII .formulario .dosTercios select.corto {
+	width: 26.5%;
+}
+
+.contenidoFaseIII .formulario .todoFecha {
+	display: inline-block;
+	width: 99.4%;
+	padding: 5px 0 5px 0;
+	clear: both;
+}
+
+.contenidoFaseIII .formulario .todoFecha .nombreFecha {
+	width: 13em;
+}
+
+.contenidoFaseIII .formulario .todoFecha .nombreFechaActiva {
+	width: 18em;
+}
+
+.contenidoFaseIII .formulario .todoFecha .claseY {
+	width: 2em;
+	margin-left: 1em;
+}
+
+.contenidoFaseIII .formulario .todoFecha input {
+	width: 10em;
+}
+
+.contenidoFaseIII .formulario .formatoFecha {
+	text-align: left;
+	margin-left: 1em;
+	margin-top: 1em;
+	font-size: 85%;
+	color: #000000;
+	display: inline-block;
+}
+
+.contenidoFaseIII .formulario .todo span.resultadoG {
+	border: 1px solid #004B98;
+	font-weight: normal;
+	color: #000000;
+	display: block;
+	width: 99%;
+	padding: 1px 3px 1px 3px;
+	line-height: 1.3em;
+	min-height: 5em;
+}
+
+.contenidoFaseIII .botonesPagina .botonAccion {
+	margin: 10px 30px 10px 0;
+}
+/* Fin de sin revisar*/
+.contenidoFaseIII .formulario .saltoL {
+	display: block !important;
+	float: none !important;
+	clear: both !important;
+}
+
+.contenidoFaseIII .cuadroListadoResultadosFormulario .subTituloListado {
+	color: #000000;
+	font-size: 100%;
+}
+
+.contenidoFaseIII .cuadroListadoResultadosFormulario .lineaBajaM {
+	border-bottom: 1px solid #004B98;
+}
+
+.contenidoFaseIII .cuadroListadoResultadosFormulario .resultadosFaseIII
+	{
+	width: 100%;
+	margin: 0.5em 0 1em 0;
+}
+
+.contenidoFaseIII .cuadroListadoResultadosFormulario .resultadosFaseIII th
+	{
+	font-weight: bold;
+	text-align: left;
+	height: 1.3em;
+	padding-left: 0.3em;
+}
+
+.contenidoFaseIII .cuadroListadoResultadosFormulario .listadoResultadosParticulares .colApellidos
+	{
+	width: 45%;
+}
+
+.contenidoFaseIII .cuadroListadoResultadosFormulario .listadoResultadosParticulares .colNombre
+	{
+	width: 35%;
+}
+
+.contenidoFaseIII .cuadroListadoResultadosFormulario .listadoResultadosParticulares .colCodigo
+	{
+	width: 12%;
+}
+
+.contenidoFaseIII .cuadroListadoResultadosFormulario .listadoResultadosParticulares .icono
+	{
+	width: 8%;
+}
+
+.contenidoFaseIII .resultadoFormularioTutoresGuia .cabeceraListadoTutores th a
+	{
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+.contenidoFaseIII .resultadoFormularioTutoresGuia .cabeceraListadoTutores th
+	{
+	text-align: center;
+	vertical-align: middle;
+	height: 1.8em;
+	background-color: #A25A23;
+}
+
+.contenidoFaseIII .resultadoFormularioTutoresGuia .cabeceraListadoTutores th span
+	{
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+.contenidoFaseIII .buscadorEvaluados .separaIzqTit {
+	color: #000000;
+}
+
+.contenidoFaseIII .buscadorEvaluados .separaIzq {
+	margin-left: 3em !important;
+}
+
+.contenidoFaseIII table.resultadosFaseIII th.tiempoRespuesta {
+	width: 7.5em;
+}
+
+.contenidoFaseIII table.resultadosFaseIII th a {
+	text-decoration: none;
+	font-weight: bold;
+	color: #004B98;
+}
+
+.contenidoFaseIII table.resultadosFaseIII td {
+	line-height: 1.3em;
+	padding-left: 0.3em;
+	padding-right: 0.3em;
+}
+
+.contenidoFaseIII table.resultadosFaseIII .separador {
+	border-right: 1px solid #F18B03;
+}
+
+.contenidoFaseIII table.resultadosFaseIII tr.fondoRojo td {
+	background-color: #ffefc6
+}
+
+.contenidoFaseIII table.resultadosFaseIII tr.fondoNaranja td {
+	background-color: #ffddaa
+}
+
+.contenidoFaseIII table.resultadosFaseIII tr.fondoGris td {
+	background-color: #EEEEEE;
+}
+
+.contenidoFaseIII table.resultadosFaseIII .derecha {
+	text-align: right;
+}
+
+.contenidoFaseIII .cuadroListadoResultadosFormulario .resultadosFaseIII .tituloCodigo
+	{
+	width: 15%;
+}
+
+.contenidoFaseIII .cuadroListadoResultadosFormulario .resultadosFaseIII .tituloNIF
+	{
+	width: 15%;
+}
+
+.contenidoFaseIII .cuadroListadoResultadosFormulario .resultadosFaseIII .tituloApellido
+	{
+	width: 40%;
+}
+
+.contenidoFaseIII .cuadroListadoResultadosFormulario .resultadosFaseIII .tituloNombre
+	{
+	width: 25%;
+}
+
+.contenidoFaseIII .cuadroListadoResultadosFormulario .resultadosFaseIII .tituloIcono
+	{
+	width: 5%;
+}
+
+/*	/Estilos para los formularios	*/
+
+/* Formulario de Modificacion de Evaluadores	*/
+.contenidoFaseIII .modificacionEvaluadores .corto {
+	width: 10em !important;
+}
+
+.contenidoFaseIII .modificacionEvaluadores .modEvalTelf {
+	margin-left: 0;
+}
+
+.contenidoFaseIII .modificacionEvaluadores .modEvalEmail {
+	margin-left: 0;
+}
+
+/*	Fin de Formulario de Modificacion de Evaluadores	*/
+
+/*	Formulario de dudas		*/
+.contenidoFaseIII .formularioDudas .dudaCodigoEPR {
+	margin-left: 0.3em;
+	background-color: #FAF5EB;
+}
+
+.contenidoFaseIII .formularioDudas .corto {
+	width: 10em !important;
+}
+
+.contenidoFaseIII .formularioDudas .tiposDudas {
+	margin-left: 2em;
+	list-style-image: url(../imagenes/imagenes_ocap/iconoLista.gif)
+}
+
+.contenidoFaseIII .formularioDudas .tiposDudas li {
+	margin-bottom: 0.5em;
+}
+
+.contenidoFaseIII .formularioDudas .lineaDivision {
+	height: 1em;
+	border-bottom: 1px solid #F18B03;
+	margin: 0.5em 0 1.25em 0;
+	width: 99%;
+}
+
+.contenidoFaseIII .tablaDudas {
+	margin-top: 1em;
+	width: 100%;
+}
+
+.contenidoFaseIII .tablaDudas tr td.separador {
+	border-right: 1px solid #004B98;
+}
+
+.contenidoFaseIII .tablaDudas th {
+	text-align: center;
+	vertical-align: middle;
+	height: 1.8em;
+	background-color: #A25A23;
+}
+
+.contenidoFaseIII .tablaDudas tr th a {
+	color: #FFFFFF;
+}
+/*.contenidoFaseIII .tablaDudas tr.fondo1 td { background-color: #EEEEEE; border-bottom: 1px solid #FFFFFF; }
+.contenidoFaseIII .tablaDudas tr.fondo2 td { background-color:#FAF5EB; border-bottom: 1px solid #FFFFFF;}*/
+.contenidoFaseIII .tablaDudas tr td {
+	border-bottom: 1px solid #EBEBEC;
+	background-color: #FAFAFA;
+}
+
+.contenidoFaseIII .tablaDudas tr td a {
+	display: block;
+}
+
+.contenidoFaseIII .tablaDudas tr td a:hover {
+	text-decoration: none;
+	background-color: #FAF5EB;
+}
+
+.contenidoFaseIII .tablaDudas .imagenSobre {
+	position: relative;
+	top: 3px;
+	left: 12px;
+}
+
+.contenidoFaseIII .formularioDudas .todo .consultaDudas {
+	width: 95.1% !important;
+	margin-left: 1em;
+}
+
+.contenidoFaseIII .formularioDudas .todo textarea.consultaDudas {
+	width: 94% !important;
+	margin-left: 1em;
+}
+
+.contenidoFaseIII .formularioDudas a.enlaceDudaFrec {
+	font-weight: normal;
+	text-decoration: none;
+	color: #004B98;
+}
+
+.contenidoFaseIII .formularioDudas a.enlaceDudaFrec:hover {
+	text-decoration: underline;
+}
+
+.contenidoFaseIII .formularioDudas a.enlaceDudaFrec:hover span {
+	text-decoration: underline;
+}
+
+.contenidoFaseIII .formularioDudas .todo a.enlaceTipoDuda {
+	margin-left: 17em;
+}
+
+.contenidoFaseIII .formularioDudas .todo a.enlaceTipoDuda span {
+	font-weight: normal;
+	text-decoration: none;
+}
+
+.contenidoFaseIII .formularioDudas .todo a.enlaceTipoDuda:hover span {
+	text-decoration: underline;
+}
+
+.contenidoFaseIII .formularioDudasTutor .colorError {
+	font-size: 0.8em;
+	display: block;
+	margin-left: 2em;
+}
+
+.contenidoFaseIII .formularioDudasUsuario .colorError {
+	font-size: 0.8em;
+	display: block;
+	margin-left: 2em;
+}
+/*	Fin del Formulario de dudas		*/
+
+/*	Preguntas Frecuentes		*/
+.contenidoFaseIII .listadoPregFrec {
+	padding: 0.5em 3em 1.5em 3em;
+}
+
+.contenidoFaseIII .listadoPregFrec ul {
+	list-style: outside;
+	list-style-image: url(../imagenes/imagenes_ocap/iconoLista.gif);
+}
+
+.contenidoFaseIII .listadoPregFrec .pregunta {
+	margin-bottom: 1em;
+	margin-top: 1em;
+}
+
+.contenidoFaseIII .listadoPregFrec .respuesta p {
+	font-weight: normal;
+}
+
+/*	Fin de Preguntas Frecuentes		*/
+
+/*	Estadisticas de encuestas de Evaluados	*/
+.contenidoFaseIII .tituloEstadisticas {
+	margin-top: 1em;
+	font-weight: bold;
+	color: #000000;
+}
+
+.contenidoFaseIII .respuestasEncuesta {
+	margin: 0.5em 0 0.5em 1.5em;
+	text-align: justify;
+}
+
+.contenidoFaseIII .posibleRespuesta {
+	font-weight: bold;
+	width: 3em;
+	margin-left: 3em;
+	display: inline-block;
+}
+
+/*	Listado de componentes de CTEs	*/
+.contenidoFaseIII .tituloComponentes {
+	margin-top: 15px;
+	font-weight: bold;
+	color: #004B98;
+}
+
+.contenidoFaseIII .porcentajesRespuesta {
+	clear: both;
+	margin: 0 0 2em 3em;
+}
+
+.contenidoFaseIII .porcentajesRespuesta .lineaRespPorcent {
+	clear: both;
+	width: 30%;
+	line-height: 1.5em;
+}
+/*	Fin de Estadisticas de encuestas de Evaluados	*/
+
+/*	Listado de Componentes de CTE	*/
+.contenidoFaseIII .tablaListadoCTE {
+	width: 100%;
+	margin: 1em 0 1em 0;
+}
+
+.contenidoFaseIII .tablaListadoCTE .separador {
+	border-right: 1px solid #F18B03;
+}
+
+.contenidoFaseIII .tablaListadoCTE tr th {
+	font-weight: bold;
+	color: #004B98;
+	border-bottom: 1px solid #004B98;
+	height: 1.5em;
+	padding: 0 5px 0 0;
+}
+
+.contenidoFaseIII .tablaListadoCTE tr th.ffechaAlta {
+	width: 8em;
+}
+
+.contenidoFaseIII .tablaListadoCTE tr th.ffechaBaja {
+	width: 8em;
+}
+
+.contenidoFaseIII .tablaListadoCTE tr td.campoIcono {
+	width: 2em;
+}
+
+.contenidoFaseIII .tablaListadoCTE tr td {
+	padding: 0 3px 10px 2px;
+	height: 1.5em;
+}
+
+.contenidoFaseIII .tablaListadoCTE tr td.campoIcono img {
+	vertical-align: middle;
+}
+
+.tablaListadoCTE .colConvo, .tablaListadoCTE .colManual,
+	.tablaListadoCTE .colCte {
+	width: 19%;
+}
+/*	Fin del Listado de COmponentes de CTE	*/
+
+/*	Listado de tutores - guia	*/
+.contenidoFaseIII .resultadoFormularioTutoresGuia {
+	width: 100%;
+	margin-top: 1em;
+}
+
+.contenidoFaseIII .resultadoFormularioTutoresGuia th {
+	text-align: center;
+	vertical-align: middle;
+	height: 1.8em;
+	background-color: #A25A23;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+.contenidoFaseIII .resultadoFormularioTutoresGuia th a {
+	font-weight: bold;
+	color: #FFFFFF;
+}
+
+.contenidoFaseIII .resultadoFormularioTutoresGuia th a:hover {
+	text-decoration: none;
+}
+
+.contenidoFaseIII .resultadoFormularioTutoresGuia th.tipoTutor {
+	width: 6.5em;
+}
+
+.contenidoFaseIII .resultadoFormularioTutoresGuia th.tipoDuda {
+	width: 7.5em;
+}
+
+.contenidoFaseIII .resultadoFormularioTutoresGuia th.estado {
+	width: 7em;
+}
+
+.contenidoFaseIII .resultadoFormularioTutoresGuia .separador {
+	border-right: 1px solid #A25A23;
+}
+/*.contenidoFaseIII .resultadoFormularioTutoresGuia tr.fondo1 td { background-color: #EEEEEE; border-bottom: 1px solid #FFFFFF; }
+.contenidoFaseIII .resultadoFormularioTutoresGuia tr.fondo2 td { background-color:#FAF5EB; border-bottom: 1px solid #FFFFFF;}*/
+.contenidoFaseIII .resultadoFormularioTutoresGuia tr td {
+	border-bottom: 1px solid #EBEBEC;
+	background-color: #FAFAFA;
+	padding: 0.3em 0.3em 0 0.3em;
+	vertical-align: top;
+}
+
+.contenidoFaseIII .resultadoFormularioTutoresGuia tr td.datos a {
+	display: block;
+}
+
+.contenidoFaseIII .resultadoFormularioTutoresGuia tr td.datos a:hover {
+	text-decoration: none;
+	background-color: #FAF5EB;
+	height: 1.3em;
+}
+
+.contenidoFaseIII .resultadoFormularioTutoresGuia tr td.icono {
+	width: 1em;
+}
+
+/*	Fin de Listado de tutores - guia	*/
+
+/*	Listado de Dudas de los Tutores	*/
+.contenidoFaseIII .cuadroListadoResultadosFormulario .listadoDudasTutor
+	{
+	margin-top: 1em;
+}
+
+.contenidoFaseIII .listadoDudasTutor tr.cabeceraListadoDudas th {
+	text-align: center;
+	vertical-align: middle;
+	height: 2em;
+	background-color: #A25A23;
+}
+
+.contenidoFaseIII .listadoDudasTutor tr th a {
+	color: #FFFFFF;
+}
+
+.contenidoFaseIII .listadoDudasTutor tr th.fechaRecepcion {
+	width: 10.3em;
+}
+
+.contenidoFaseIII .listadoDudasTutor .separador2 {
+	border-left: 1px solid #A25A23;
+}
+
+.contenidoFaseIII .listadoDudasTutor tr td.separador {
+	border-right: 1px solid #A25A23;
+}
+
+.contenidoFaseIII .cuadroListadoResultadosFormulario .listadoDudasTutor tr td
+	{
+	border-bottom: 1px solid #EBEBEC;
+	background-color: #FAFAFA;
+}
+
+.contenidoFaseIII .cuadroListadoResultadosFormulario .listadoDudasTutor tr td a
+	{
+	display: block;
+}
+
+.contenidoFaseIII .cuadroListadoResultadosFormulario .listadoDudasTutor tr td.tema a:hover
+	{
+	text-decoration: none;
+	background-color: #FAF5EB;
+}
+/*	Fin del Listado de Dudas de los Tutores	*/
+.contenidoFaseIII .cuadroListadoResultadosFormulario .buscadorDudas {
+	margin-top: 1em;
+}
+
+.contenidoFaseIII .buscadorDudas tr th {
+	text-align: center;
+	vertical-align: middle;
+	height: 2em !important;
+	background-color: #A25A23;
+}
+
+.contenidoFaseIII .buscadorDudas tr th a {
+	color: #FFFFFF;
+}
+
+.contenidoFaseIII .buscadorDudas tr th.tiempoRespuesta {
+	width: 7.5em;
+}
+
+.contenidoFaseIII .buscadorDudas tr td {
+	border-bottom: 1px solid #EBEBEC;
+	background-color: #FAFAFA;
+}
+
+.contenidoFaseIII .buscadorDudas tr td a {
+	display: block;
+}
+
+.contenidoFaseIII .buscadorDudas tr td a:hover {
+	text-decoration: none;
+	background-color: #FAF5EB;
+}
+
+.contenidoFaseIII .buscadorDudas tr td.separador {
+	border-right: 1px solid #A25A23;
+}
+/*	Buscador de Dudas	*/
+
+/*	Fin del Buscador de dudas	*/
+
+/*  Contenido TextoECP  TEXTO DE LA INTRODUCCION A LOS ITINERARIOS */
+.contenidoFaseIII .recuadroM {
+	clear: both;
+	padding: 0.5em;
+	line-height: 1.2em;
+	background-color: #EEEEEE;
+	width: 90%;
+	min-height: 0.9em;
+	margin: 0 auto 1em auto;
+}
+
+.contenidoFaseIII h3.categoria1 {
+	float: left;
+	font-size: 1.3em;
+	font-weight: bold;
+	color: #004B98;
+	display: block;
+	width: 75%;
+	text-align: left;
+	margin-bottom: 0.5em;
+}
+
+.contenidoFaseIII h3.categoria2 {
+	display: block;
+	font-size: 1.3em;
+	font-weight: bold;
+	color: #004B98;
+	width: 100%;
+	text-align: left;
+	margin-bottom: 0.5em;
+}
+
+.contenidoFaseIII .codigoEPR {
+	text-align: right;
+	margin-bottom: 10px;
+	font-size: 1.3em;
+	font-weight: bold;
+	color: #004B98;
+}
+
+.contenidoFaseIII .cuadroFieldset p {
+	font-weight: normal;
+	line-height: 1.2em;
+	margin-bottom: 0.75em;
+}
+
+.contenidoFaseIII .cuadroFieldset {
+	padding: 1em 0 1em 0;
+}
+
+.contenidoFaseIII .contenidoTextoECP .cuadroFieldset .textoSubrayado {
+	text-decoration: underline;
+	margin-left: 0;
+	padding-left: 0;
+	color: #000000;
+}
+
+.contenidoFaseIII .contenidoTextoECP .cuadroFieldset .textoNegrita {
+	font-weight: bold;
+	margin-left: 0;
+	padding-left: 0;
+	color: #000000 !important;
+}
+
+.contenidoFaseIII .contenidoTextoECP .cuadroFieldset h4 {
+	color: #004B98;
+	font-weight: bold;
+	border-bottom: 2px solid #F28F01;
+	margin-bottom: 0.5em;
+	width: 100%;
+	line-height: 1.2em;
+}
+
+.contenidoFaseIII .contenidoTextoECP .cuadroFieldset h5 {
+	color: #004B98;
+	font-weight: bold;
+	border-bottom: 2px solid #F28F01;
+	margin-bottom: 0.5em;
+	width: 97.8%;
+	margin-left: 1.25em;
+	line-height: 1.2em;
+}
+
+.contenidoFaseIII .contenidoTextoECP .cuadroFieldset .textoNivel2 {
+	margin-left: 1.25em;
+}
+
+.contenidoFaseIII .contenidoTextoECP .cuadroFieldset .textoNivel3 {
+	margin-left: 2.5em;
+}
+
+.contenidoFaseIII .contenidoTextoECP .cuadroFieldset .recuadroM {
+	clear: both;
+	padding: 0.5em;
+	line-height: 1.2em;
+	background-color: #EEEEEE;
+	width: 90%;
+	margin: 0 auto 1em auto;
+}
+
+.contenidoFaseIII .contenidoTextoECP .cuadroFieldset ul.listadoAreas {
+	margin-bottom: 1em;
+	line-height: 1.5em;
+	margin-left: 4em;
+	margin-right: 2em;
+}
+
+.contenidoFaseIII .contenidoTextoECP .cuadroFieldset ul.listadoAreas li
+	{
+	list-style: outside none;
+	margin-bottom: 0.5em;
+	list-style-image: url(../imagenes/imagenes_ocap/iconoLista.gif);
+}
+
+.contenidoFaseIII .contenidoTextoECP .cuadroFieldset .tablaGrado {
+	margin: 0.5em auto 1em auto;
+	width: 30%;
+}
+
+.contenidoFaseIII .contenidoTextoECP .cuadroFieldset .tablaGrado tr td {
+	border: 1px #000000 solid;
+	padding: 3px;
+	font-weight: bold;
+	color: #004B98;
+	text-align: center;
+}
+
+.contenidoFaseIII .contenidoTextoECP .cuadroFieldset .tablaGrado th {
+	background-color: #004B98;
+	text-align: center;
+	padding: 3px;
+	font-weight: bold;
+	border: 1px #000000 solid;
+}
+
+.contenidoFaseIII .contenidoTextoECP .cuadroFieldset .tablaGrado th span
+	{
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+.contenidoFaseIII .contenidoTextoECP .cuadroFieldset .tablaECP {
+	margin: 20px 20px 20px 25px;
+	width: 93%;
+}
+
+.contenidoFaseIII .contenidoTextoECP .cuadroFieldset .tablaECP tr td {
+	border: 1px #000000 solid;
+	padding: 3px;
+	font-weight: bold;
+	color: #004B98;
+}
+
+.contenidoFaseIII .contenidoTextoECP .tablaECP .parteCentro {
+	padding-left: 15px;
+}
+
+.contenidoFaseIII .contenidoTextoECP .tablaECP .numeracion {
+	display: inline-block;
+	width: 12%;
+	vertical-align: top;
+}
+
+.contenidoFaseIII .contenidoTextoECP .tablaECP .indice {
+	display: inline-block;
+	width: 88%;
+}
+
+.contenidoFaseIII .contenidoTextoECP .tablaECP .titulosTablaECP td,
+	.contenidoFaseIII .contenidoTextoECP .tablaECP .titulosTablaECP td a,
+	.contenidoFaseIII .contenidoTextoECP .tablaECP .titulosTablaECP td div,
+	.contenidoFaseIII .contenidoTextoECP .tablaECP .titulosTablaECP td span
+	{
+	text-align: center;
+	font-weight: bold;
+	color: #FFFFFF;
+	background-color: #004B98;
+}
+
+.contenidoFaseIII .contenidoTextoECP .tablaECP .datosTablaECP td {
+	vertical-align: middle;
+}
+
+.contenidoFaseIII .contenidoTextoECP .tablaECP .datosTablaECP td {
+	vertical-align: middle;
+	line-height: 1.2em;
+}
+
+.contenidoFaseIII .contenidoTextoECP .tablaECP .datosTablaECP td.fondoGris
+	{
+	background-color: #EEEEEE;
+}
+
+.contenidoFaseIII .contenidoTextoECP .tablaECP .datosTablaECP td.creditos
+	{
+	text-align: right;
+}
+/* FIN Contenido TextoECP  TEXTO DE LA INTRODUCCION A LOS ITINERARIOS */
+
+/*	Areas de Evaluacion	*/
+.contenidoFaseIII .contenidoTextoAutoevaluacion .areasAuto {
+	width: 99.5%;
+	height: auto;
+	border: 1px #004B98 solid;
+	font-weight: bold;
+	color: #FFFFFF;
+	float: left;
+	margin: 2px;
+}
+
+.contenidoFaseIII .areasAuto .tituloAreasAuto {
+	text-align: center;
+	font-weight: bold;
+	background-color: #004B98;
+	padding: 3px 0 3px 0;
+}
+
+.contenidoFaseIII .areasAuto .tituloAreasAuto span {
+	display: inline-block;
+	width: 90%;
+	text-align: center;
+	vertical-align: top;
+	color: #FFFFFF;
+	font-weight: bold;
+	line-height: 1.2em;
+}
+
+.contenidoFaseIII .areasAuto .datosAreasAuto table {
+	font-weight: normal;
+	margin: 0.5em;
+}
+
+.contenidoFaseIII .areasAuto .datosAreasAuto table td {
+	padding: 0.2em 0 0.2em 0;
+}
+
+.contenidoFaseIII .areasAuto .datosAreasAuto table th {
+	text-align: center;
+	font-weight: bold;
+	color: #004B98;
+	vertical-align: middle;
+}
+
+.contenidoFaseIII .areasAuto .datosAreasAuto table th.titulo {
+	border-bottom: 1px solid #E2BF90;
+}
+
+.contenidoFaseIII .areasAuto .datosAreasAuto table td.enlace {
+	padding-left: 0.2em;
+}
+
+.contenidoFaseIII .areasAuto .datosAreasAuto table td.centrar {
+	text-align: center;
+}
+
+.contenidoFaseIII .areasAuto .datosAreasAuto table td .derecha {
+	text-align: right;
+}
+
+.contenidoFaseIII .areasAuto .datosAreasAuto table td .textoNegrita {
+	color: #000000 !important;
+}
+
+.contenidoFaseIII .areasAuto .datosAreasAuto table td.imagen {
+	vertical-align: center;
+}
+
+.contenidoFaseIII .areasAuto .datosAreasAuto table td.fondoGris {
+	background-color: #EEEEEE;
+}
+
+.contenidoFaseIII .areasAuto .datosAreasAuto table td .numeracion {
+	display: inline-block;
+	width: 13%;
+	vertical-align: top;
+	text-align: left;
+}
+
+.contenidoFaseIII .areasAuto .datosAreasAuto table td .enunciado {
+	display: inline-block;
+	width: 75%;
+	text-align: left;
+}
+/*	Fin de Areas de Evaluacion	*/
+
+/*	Encuesta de calidad	*/
+.contenidoFaseIII .encuestaCalidad {
+	margin-top: 1em;
+}
+
+.contenidoFaseIII .encuestaCalidad p {
+	font-weight: normal;
+	line-height: 1.2em;
+	margin-bottom: 0.75em;
+}
+
+.contenidoFaseIII .encuestaCalidad ul.listadoEncuestaCalidad {
+	margin: 0 0 0 2em;
+	text-align: justify;
+	list-style: disc outside;
+}
+
+.contenidoFaseIII .encuestaCalidad ul.listadoEncuestaCalidad li {
+	line-height: 1.2em;
+	margin-bottom: 0.4em;
+}
+
+.contenidoFaseIII .tablaEncuestaCalidad td, .contenidoFaseIII .tablaEncuestaCalidad th
+	{
+	border: 1px solid #000000;
+}
+
+.contenidoFaseIII .tablaEncuestaCalidad th {
+	vertical-align: middle;
+	background-color: #004B98;
+	padding: 0.2em;
+}
+
+.contenidoFaseIII .tablaEncuestaCalidad th span {
+	color: #FFFFFF;
+	font-weight: bold;
+	line-height: 1.1em;
+}
+
+.contenidoFaseIII .tablaEncuestaCalidad td {
+	text-align: center;
+	vertical-align: middle;
+	padding: 0.2em 0.2em 0.2em 0.2em;
+}
+
+.contenidoFaseIII .tablaEncuestaCalidad td.tituloApartado {
+	font-weight: bold;
+	color: #004B98;
+}
+
+.contenidoFaseIII .tablaEncuestaCalidad td.enunciado {
+	text-align: left;
+}
+
+.contenidoFaseIII .tablaEncuestaCalidad textarea {
+	border: 1px solid #000000;
+	margin-bottom: 1em;
+}
+
+.tablaEncuestaCalidad .centrarCaja1 {
+	margin-left: 4px;
+}
+
+.tablaEncuestaCalidad .cajaRellena {
+	border: 1px #004B98 solid;
+	width: 55em;
+	height: auto;
+	min-height: 15em;
+	margin-left: 4px;
+}
+
+.buscadorEvaluados .colocaItinerarioEncuesta {
+	margin-left: 32px;
+	width: 572px;
+	font-weight: normal;
+}
+
+.buscadorEvaluados .colocaCategoriaEncuesta {
+	margin-left: 29px;
+	width: 572px;
+	font-weight: normal;
+}
+
+.buscadorEvaluados .colocaEspecialidadEncuesta {
+	margin-left: 14px;
+	width: 572px;
+	font-weight: normal;
+}
+/*	Fin Encuesta de calidad	*/
+
+/*	Botones de fin de pagina	*/
+.contenidoFaseIII .botonesPagina .botonAccion a span {
+	font-size: 0.85em;
+}
+/*	Fin Botones de fin de pagina	*/
+
+/* Pantalla de Sugerencias 	*/
+.contenidoFaseIII .cabeceraTexto {
+	margin: 1em 0 1em 0;
+}
+
+.contenidoFaseIII .cabeceraTexto p {
+	font-weight: normal;
+	line-height: 1.2em;
+}
+
+.contenidoFaseIII .cuadroContenedorConsultas .cajaformulario {
+	margin-bottom: 1em;
+	width: 100%;
+}
+
+/*	Listado de Evaluadores de CTE	*/
+.contenidoFaseIII .tablaListadoEvaluadoresCTE {
+	margin: 1em 0 1em 0;
+	width: 33%;
+}
+
+.contenidoFaseIII .tablaListadoEvaluadoresCTE tr th {
+	font-weight: bold;
+}
+
+.contenidoFaseIII .tablaListadoEvaluadoresCTE tr td {
+	line-height: 1.5em;
+}
+
+.contenidoFaseIII .tablaListadoEvaluadoresCTE tr td.campoIcono img {
+	vertical-align: bottom;
+}
+/*	Fin de Listado de Evaluadores de CTE	*/
+
+/*  Informe de Conformidad CTE  */
+.contenidoFaseIII .tablaCTES {
+	margin: 1em 0 1em 0;
+	width: 100%;
+}
+
+.contenidoFaseIII .tablaCTES tr td, .contenidoFaseIII .tablaCTES tr td a
+	{
+	padding: 1px 0 1px 0;
+	overflow: hidden;
+}
+
+.tablaCTES th {
+	border-bottom: 1px #004B98 solid;
+	padding: 3px;
+	color: #004B98;
+	font-weight: bold;
+}
+/*	Estilos de OCAPGestionCtesLs no los veo de momento
+.tablaCTES .campoIcono {
+  width: 3em;
+}
+.tablaCTES td a {
+   display: block;
+   margin: 0;
+   padding: 0;
+}   
+.tablaCTES .col1 a,
+.tablaCTES .col1 { 
+  width: 50em;
+}
+*/
+.contenidoFaseIII .tablaCTES .colocaAnadir {
+	color: #333399;
+	margin-left: 275px;
+}
+/*
+.tablaCTES .nombre { font-weight: bold; }
+.tablaCTES a.colocaAnadir:hover { text-decoration: none }
+*/
+/*  /Informe de Conformidad CTE */
+
+/*	Informe de Evauador		*/
+.contenidoFaseIII .contenidoTextoAutoevaluacion span {
+	color: #000000;
+}
+/*	Fin del Informe de Evaluador	*/
+
+/* Pantallas de Indicadores del Perfl Direccion	*/
+.contenidoFaseIII .indicadores fieldset {
+	padding-bottom: 1em;
+	color: #000000;
+}
+
+.contenidoFaseIII .indicadores fieldset .espacioLabel {
+	margin-top: 1em;
+	display: block;
+}
+
+.contenidoFaseIII .indicadores fieldset .subCategoria {
+	margin-left: 2em;
+}
+
+.contenidoFaseIII .indicadores fieldset .subCategoria label {
+	line-height: 1.2em;
+}
+
+.contenidoFaseIII .indicadores fieldset .espacioSuperior {
+	margin-top: 0.5em;
+}
+
+/* Fin de Pantallas de Indicadores del Perfl Direccion	*/
+
+/**********************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************/
+/**********************************************************************************************************************************************************/
+
+/*	Itinerarios	*/
+.contenidoFaseIII .contenidoTextoProcedimiento {
+	width: 100%;
+}
+
+.contenidoFaseIII .subTituloContenidoItinerario {
+	text-align: left;
+	font-size: 1.2em;
+	font-weight: bold;
+	margin-bottom: 2px;
+	color: #004B98;
+	clear: left
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento fieldset {
+	padding: 0.5em 1em 0.5em 1em;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .stComentario {
+	display: block;
+	text-align: justify;
+	line-height: 1.2em;
+	margin-top: 0.5em;
+}
+
+/*	stTitulo	*/
+.contenidoFaseIII .contenidoTextoProcedimiento .stTitulo .nivel0 {
+	display: inline-block;
+	width: 99.5%;
+	color: #FFFFFF;
+	font-size: 1.2em;
+	font-weight: bold;
+	background-color: #004B98;
+	padding: 2px 0 3px 5px;
+	margin-top: 1em;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .stTitulo .nivel1 {
+	display: block;
+	width: 96%;
+	text-align: justify;
+	color: #004B98;
+	font-size: 1em;
+	font-weight: bold;
+	margin: 0.5em 0 0 1.5em;
+	padding: 2px 0 2px 5px;
+	border-bottom: 2px #004B98 solid;
+}
+/*	Fin de stTitulo	*/
+
+/*	Preguntas	*/
+.contenidoFaseIII .contenidoTextoProcedimiento .stPregunta {
+	text-align: justify;
+	display: block;
+	margin-top: 1em;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .stPreguntaNivel0 {
+	
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .stPreguntaNivel1 {
+	margin-left: 1.5em;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .stPregunta label.nivel0
+	{
+	font-weight: bold;
+	border-bottom: 2px solid #F25F01;
+	width: 100%;
+	display: block;
+	color: #004B98;
+	margin: 0 0 0.2em 0;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .stPregunta label.nivel1
+	{
+	display: block;
+	margin-top: 0;
+	font-weight: bold;
+	text-decoration: underline;
+	margin: 0 0 0.4em 0;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .stPregunta .nivel2 {
+	font-weight: bold;
+	width: 90%;
+	margin: 0 0 0 2em;
+	display: block;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .observacionesPregunta {
+	display: block;
+	margin-top: 0.5em;
+	width: 100%;
+	line-height: 1.2em;
+}
+/*	Fin preguntas	*/
+
+/*	TextAreas	*/
+.contenidoFaseIII .contenidoTextoProcedimiento .sttextarea {
+	display: block;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttextarea textarea {
+	border: 1px #004B98 solid;
+	margin-top: 0.6em;
+	padding: 0.5em;
+	height: 8em;
+	margin-bottom: 0.5em;
+	verflow-y: scroll;
+	line-height: 1.2em;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttextarea .tablaRespuestas
+	{
+	width: 98%;
+	margin-top: 1.2em;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttextarea .tablaRespuestas .cabTablaRespuestas
+	{
+	font-weight: bold;
+	vertical-align: middle;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttextarea .tablaRespuestas .contenedorNumero
+	{
+	vertical-align: top;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttextarea .tablaRespuestas .contenedorTexto
+	{
+	width: 100%;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttextarea .tablaRespuestas .tamNumListado
+	{
+	vertical-align: middle;
+	margin: 1em 0.5em 0 0.5em;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttextarea .cuadroTACuestionario
+	{
+	width: 98%;
+	overflow-y: scroll;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttextarea .tablaRespuestas .cuadroTACuestionario
+	{
+	width: 98%;
+	overflow-y: scroll;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttextarea .tablaRespuestas .cuadroTACuestionario1
+	{
+	width: 100%;
+	overflow-y: scroll;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttextarea .tablaRespuestas .cuadroTANCuestionario1
+	{
+	width: 97.7%;
+	overflow-y: scroll;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttextarea .tablaRespuestas .cuadroTACuestionario2
+	{
+	margin-right: 1em;
+	overflow-y: scroll;
+	width: 20em;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttextarea .tablaRespuestas .cuadroTANCuestionario2
+	{
+	margin-right: 1em;
+	overflow-y: scroll;
+	width: 20em;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttextarea .tablaRespuestas .cuadroFinCuestionario1
+	{
+	padding: 0 5px 0 5px;
+	background-color: #FAF5EB;
+	line-height: 1.3em;
+	margin-top: 0.5em;
+	width: 97.7%;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttextarea .tablaRespuestas .cuadroFinCuestionario2
+	{
+	padding: 0 5px 0 5px;
+	background-color: #FAF5EB;
+	line-height: 1.3em;
+	margin-top: 0.5em;
+	width: 95%;
+}
+/*	Fin TextAreas	*/
+
+/*	Text	*/
+.contenidoFaseIII .contenidoTextoProcedimiento .sttext {
+	overflow: hidden;
+	margin-top: 1em;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttext .tablaRespuestas
+	{
+	width: 100%;
+	overflow: hidden;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttext .tablaRespuestas th
+	{
+	font-weight: bold;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttext .tablaRespuestas .contenedorNumero
+	{
+	vertical-align: middle;
+	width: 1%;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttext .tamNumListado {
+	display: block;
+	margin-right: 1em;
+	width: auto;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttext .tablaRespuestas td.contenedorDato input
+	{
+	width: 99%;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttext .inputTextoCuestionarioC
+	{
+	display: inline-block;
+	padding: 2px 0 2px 3px;
+	margin: 0 0 3px 0;
+	background-color: #FAF5EB;
+	width: 99.3%;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttext .tablaRespuestas .cuadroListadoCuestionario1
+	{
+	display: inline-block;
+	padding: 0 0 0 3px;
+	border: 1px #004B98 solid;
+	margin-bottom: 2px;
+	width: 99.3%;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttext .tablaRespuestas .cuadroListadoNCuestionario1
+	{
+	display: inline-block;
+	padding: 0 0 0 3px;
+	border: 1px #004B98 solid;
+	margin-bottom: 2px;
+	width: 99.3%;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttext .tablaRespuestas .cuadroListadoNCuestionarioC1
+	{
+	display: inline-block;
+	padding: 2px 0 2px 3px;
+	margin-bottom: 2px;
+	width: 99.3%;
+	background-color: #FAF5EB;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttext .tablaRespuestas .cuadroListadoCuestionarioC1
+	{
+	display: inline-block;
+	padding: 2px 0 2px 3px;
+	margin: 0 0 2px 0;
+	width: 99.3%;
+	background-color: #FAF5EB;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttext .tablaRespuestas .cuadroListadoNCuestionario2
+	{
+	display: inline-block;
+	padding: 0 0 0 3px;
+	border: 1px #004B98 solid;
+	margin: 0 0 2px 0;
+	width: 95% !important;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttext .tablaRespuestas .cuadroListadoNCuestionarioC2
+	{
+	display: inline-block;
+	padding: 2px 0 2px 3px;
+	margin: 0 0 3px 0;
+	width: 23em;
+	background-color: #FAF5EB;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttext .tablaRespuestas .cuadroListadoNCuestionario3
+	{
+	display: inline-block;
+	padding: 0 0 0 3px;
+	margin: 0 1em 0 0;
+	border: 1px #004B98 solid;
+	margin-bottom: 2px;
+	width: 13.5em !important;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttext .tablaRespuestas .cuadroListadoNCuestionarioC3
+	{
+	display: inline-block;
+	padding: 2px 0 2px 3px;
+	margin: 0 1em 0 0;
+	margin-bottom: 2px;
+	width: 13.5em !important;
+	background-color: #FAF5EB;
+	vertical-align: top;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttext .tablaRespuestas .cuadroListadoCuestionario3
+	{
+	display: inline-block;
+	padding: 0 0 0 3px;
+	border: 1px #004B98 solid;
+	margin-bottom: 2px;
+	width: 95% !important;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttext .tablaRespuestas .cuadroListadoCuestionarioC3
+	{
+	display: inline-block;
+	padding: 2px 0 2px 3px;
+	margin-bottom: 2px;
+	width: 95% !important;
+	background-color: #FAF5EB;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttext .tablaRespuestas .cuadroListadoCuestionario4
+	{
+	display: inline-block;
+	width: 10.8em !important;
+	padding: 0 0 0 3px;
+	margin: 0 1em 3px 0;
+	border: 1px #004B98 solid;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttext .tablaRespuestas .cuadroListadoCuestionarioC4
+	{
+	display: inline-block;
+	width: 10.8em !important;
+	padding: 2px 0 2px 3px;
+	margin: 0 1em 3px 0;
+	background-color: #FAF5EB;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttext .tablaRespuestas .cuadroListadoCuestionario6
+	{
+	display: inline-block;
+	padding: 0 0 0 3px;
+	border: 1px #004B98 solid;
+	margin-bottom: 2px;
+	width: 94%;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttext .tablaRespuestas .cuadroListadoCuestionario6
+	{
+	display: inline-block;
+	padding: 2px 0 2px 3px;
+	margin-bottom: 2px;
+	width: 94%;
+	background-color: #FAF5EB;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttext .inputTextoCuestionario
+	{
+	margin: 0;
+	padding: 0 0 0 3px;
+	display: inline-block;
+	border: 1px #004B98 solid;
+	width: 99%;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttext .corto {
+	width: 10em;
+}
+
+.contenidoTextoProcedimiento .subtituloListadoCuestionarioIndicadoresCorto
+	{
+	font-weight: bold;
+	text-decoration: underline;
+	text-align: left;
+	padding-bottom: 5px;
+	width: 12%;
+}
+
+.contenidoTextoProcedimiento .subtituloListadoCuestionarioIndicadoresLargo
+	{
+	font-weight: bold;
+	text-decoration: underline;
+	text-align: left;
+	padding-bottom: 5px;
+	width: 64%;
+}
+
+/*	Fin Text	*/
+
+/*	Radio_Text	*/
+.contenidoFaseIII .contenidoTextoProcedimiento .stradioText input {
+	float: left;
+	clear: left;
+	margin: 0.5em 1em 0.5em 2em;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .stradioText .textoRadioLinea
+	{
+	float: left;
+	margin-top: 0.5em;
+	margin-bottom: 0.5em;
+	display: block;
+	width: 92%;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .stradioText .cuadroTACuestionario
+	{
+	width: 100%;
+	overflow-y: scroll;
+	border: 1px solid #004B98;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .stradioText .cuadroTADetalle
+	{
+	display: inline-block;
+	width: 97%;
+	height: 5em;
+	min-height: 5em;
+	padding: 5px 10px 10px 10px;
+	margin: 10px 0 0 0;
+	background-color: #FAF5EB;
+}
+/*	Fin de Radio_Text	*/
+
+/*	stradio	*/
+.contenidoFaseIII .contenidoTextoProcedimiento .stradio {
+	display: inline-block;
+	margin-left: 1.5em;
+	margin-top: 0.25em;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .stradio .tamNumListado {
+	vertical-align: middle;
+	line-height: 1.2em;
+	display: block;
+	margin-right: 1em;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .stradio  input {
+	margin-left: 0.5em;
+	vertical-align: middle;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .stradio .textoRadioCuestionarioCorto
+	{
+	display: inline-block;
+	width: 9.5em;
+	font-weight: normal;
+	line-height: 1.5em;
+	vertical-align: middle;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .stradio .textoRadioCuestionarioLargo
+	{
+	display: inline-block;
+	width: 46em;
+	font-weight: normal;
+	line-height: 1.5em;
+	vertical-align: top;
+	vertical-align: middle;
+	margin-left: 0;
+}
+/* Fin	stradio	*/
+
+/* stfecha	*/
+.contenidoFaseIII .contenidoTextoProcedimiento .stfecha {
+	margin-top: 1em;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .stfecha  .inputCalendarioCuestionario
+	{
+	display: inline-block;
+	width: 10em;
+	border: 1px #004B98 solid;
+	vertical-align: top;
+	padding-left: 3px;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .stfecha  .inputCalendarioCuestionarioC
+	{
+	display: inline-block;
+	width: 10em;
+	vertical-align: top;
+	padding-left: 3px;
+	background-color: #FAF5EB;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .stfecha  a {
+	vertical-align: middle;
+	padding-top: 0.7em;
+}
+/*	Fin stfecha	*/
+
+/*	sttextnumero	*/
+.contenidoFaseIII .contenidoTextoProcedimiento .sttextNumero .tablaRespuestas
+	{
+	margin-top: 0.5em;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttextNumero .tablaRespuestas .tamNumListado span
+	{
+	padding-right: 1em;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttextNumero .tablaRespuestas .subtituloListadoCuestionarioCorto
+	{
+	font-weight: bold;
+	text-align: left;
+	padding-bottom: 2px;
+	width: 15%;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttextNumero .tablaRespuestas .subtituloListadoCuestionarioMediano
+	{
+	font-weight: bold;
+	text-align: left;
+	padding-bottom: 2px;
+	width: 30%;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttextNumero .tablaRespuestas .subtituloListadoCuestionarioLargo
+	{
+	font-weight: bold;
+	text-align: left;
+	padding-bottom: 2px;
+	width: 55%;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttextNumero .tablaRespuestas .cuadroListadoLargo
+	{
+	display: inline-block;
+	width: 28em;
+	padding: 0 0 0 3px;
+	margin: 0 10px 0 0;
+	border: 1px #004B98 solid;
+	margin-bottom: 2px;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttextNumero .tablaRespuestas div.cuadroListadoLargo
+	{
+	display: inline-block;
+	width: 28em;
+	padding: 2px 0 2px 3px;
+	margin: 0 10px 0 0;
+	margin-bottom: 2px;
+	background-color: #FAF5EB;
+	border: none;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttextNumero .tablaRespuestas .cuadroListadoCorto
+	{
+	display: inline-block;
+	width: 5em;
+	padding: 0 0 0 3px;
+	margin: 0 10px 0 20px;
+	border: 1px #004B98 solid;
+	margin-bottom: 2px;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .sttextNumero .tablaRespuestas div.cuadroListadoCorto
+	{
+	display: inline-block;
+	width: 5em;
+	padding: 2px 0 2px 3px;
+	margin: 0 10px 0 20px;
+	border: none;
+	margin-bottom: 2px;
+	background-color: #FAF5EB
+}
+/*	Fin de sttextnumero	*/
+
+/*	Numero y Numerodecimal	*/
+.contenidoFaseIII .contenidoTextoProcedimiento .stnumero .tablaRespuestas th,
+	.contenidoFaseIII .contenidoTextoProcedimiento .stnumeroDecimal .tablaRespuestas th
+	{
+	font-weight: bold;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .stnumero .tablaRespuestas .tamNumListado,
+	.contenidoFaseIII .contenidoTextoProcedimiento .stnumeroDecimal .tablaRespuestas .tamNumListado
+	{
+	padding-right: 1em;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .stnumero .tablaRespuestas input,
+.contenidoFaseIII .contenidoTextoProcedimiento .stnumeroDecimal input,
+	.contenidoFaseIII .contenidoTextoProcedimiento .stnumeroDecimal .tablaRespuestas input
+	{
+	border: 1px solid #004B98;
+	margin-right: 2em;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .stnumero .cuadroListadoCuestionario1
+	{
+	display: inline-block;
+	padding: 0 0 0 3px;
+	border: 1px #004B98 solid;
+	margin: 0.8em 0 0 0;
+	width: 99.3%;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .stnumero .cuadroListadoCuestionarioC1
+	{
+	display: inline-block;
+	padding: 2px 0 2px 3px;
+	margin: 0.8em 0 0 0;
+	width: 99.3%;
+	background-color: #FAF5EB;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .cuadroListadoCuestionarioC2
+	{
+	display: inline-block;
+	padding: 2px 0 2px 3px;
+	margin: 0 3em 2px 0;
+	background-color: #FAF5EB;
+}
+
+/*	fin numero y numeroDecimal	*/
+
+/* Checks en linea	*/
+.contenidoFaseIII .contenidoTextoProcedimiento .stcheckLinea li {
+	line-height: 1.3em;
+	display: block;
+	clear: both;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .stcheckLinea .stPreguntaCheckLinea input
+	{
+	float: left;
+	vertical-align: bottom;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .stcheckLinea .stPreguntaCheckLinea label
+	{
+	vertical-align: bottom;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .stcheckLinea .stPreguntaCheckLinea div
+	{
+	width: 91.5%;
+	float: left;
+	margin-left: 3em;
+}
+/*	Fin de Checks en linea	*/
+.contenidoFaseIII .contenidoTextoProcedimiento .botonesPagina  .botonAccion
+	{
+	margin-bottom: 1em;
+	margin-right: 3em;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .margenBackTexto {
+	margin-bottom: 1em;
+	text-align: left;
+	line-height: 1.2em;
+	width: 100%;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .listadoSangrado {
+	margin: 0 0 0 1.5em;
+	display: inline-block;
+	text-align: justify;
+}
+
+.contenidoFaseIII .contenidoTextoAutoevaluacion .listadoEvaluacion {
+	margin: 1em 0 0.5em 1.5em;
+}
+
+.contenidoFaseIII .contenidoTextoAutoevaluacion .listadoEvaluacion img {
+	vertical-align: top;
+}
+
+.contenidoFaseIII .contenidoTextoAutoevaluacion .listadoEvaluacion div {
+	margin-bottom: 0.5em;
+}
+
+.contenidoFaseIII .contenidoTextoAutoevaluacion .lineaListado {
+	display: inline-block;
+	font-weight: bold;
+	line-height: 1.1em;
+	color: #000000;
+	text-decoration: underline;
+	text-align: justify;
+	padding: 0 0 0 0.5em;
+	width: 95%;
+}
+
+.contenidoFaseIII table.tablaItinerarios {
+	width: 85%;
+	margin: 0 auto 0 auto;
+}
+
+.contenidoFaseIII table.tablaItinerarios td {
+	border: 1px solid #004B98;
+	color: #000000;
+}
+
+.contenidoFaseIII table.tablaItinerarios td span {
+	font-weight: normal;
+	color: #000000;
+}
+
+.contenidoFaseIII table.tablaItinerarios th {
+	background-color: #004B98;
+	color: #FFFFFF;
+	font-weight: bold;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .cuadroProcedimiento {
+	margin-bottom: 1em;
+	padding: 0 1em 0 1em;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .cuadroProcedimiento p {
+	line-height: 1.2em;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .cuadroFinCuestionario {
+	padding: 0 5px 0 5px;
+	background-color: #FAF5EB;
+	line-height: 1.3em;
+	margin-top: 0.5em;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .subtituloListadoCuestionario
+	{
+	color: #004B98;
+	font-weight: bold;
+	text-align: left;
+	padding-bottom: 2px;
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .numero {
+	width: 10em !important
+}
+
+.contenidoFaseIII .contenidoTextoProcedimiento .corto {
+	width: 10.5em !important;
+}
+
+/*	Pantalla de Pnderaciones	*/
+.contenidoFaseIII .ponderaciones .stComentario .puntosTotales {
+	margin: 1em 0 1em 0;
+}
+
+/*	Fin de pantalla de Ponderaciones	*/
+.contenidoFaseIII .contenidoTextoAutoevaluacion .italic {
+	font-style: italic;
+}
+
+.contenidoFaseIII .contenidoTextoAutoevaluacion .analisisAuditoria {
+	margin-top: 1em;
+	margin-bottom: 2em;
+}
+
+.contenidoFaseIII .contenidoTextoAutoevaluacion .bordeCuadro {
+	border: 1px solid #004B98;
+	width: 100%;
+	margin-top: 0.5em;
+	min-height: 1em
+}
+
+.contenidoFaseIII .contenidoTextoAutoevaluacion .bordeCuadroFecha {
+	border: 1px solid #004B98;
+}
+
+/*	Evaluacion IEC	*/
+.evaluacionIEC ul.listadoResumen {
+	margin-bottom: 2em;
+	list-style: disc;
+	list-style-position: inside;
+}
+
+.evaluacionIEC ul.listadoResumen li {
+	line-height: 2.3em;
+}
+
+.evaluacionIEC ul.listadoResumen li span {
+	font-weight: bold;
+}
+
+.evaluacionIEC ul.listadoResumen li ul {
+	margin-left: 2em;
+	list-style: square;
+}
+
+.evaluacionIEC ul.listadoResumen li ul li ul {
+	margin-left: 3em;
+	list-style: circle;
+}
+
+.evaluacionIEC ul.listadoResumen .ponderacionMaxima {
+	margin-left: 218px;
+	border: 1px solid #004B98;
+	padding: 3px;
+	font-weight: normal;
+}
+
+.evaluacionIEC ul.listadoResumen .ponderacionObtenida {
+	margin-left: 123px;
+	border: 1px solid #004B98;
+	padding: 3px;
+	font-weight: normal;
+}
+
+.evaluacionIEC ul.listadoResumen a {
+	color: #004B98;
+}
+
+.evaluacionIEC ul.listadoResumen .acuerdo {
+	margin-left: 68px;
+}
+
+.evaluacionIEC ul.listadoResumen .desacuerdo {
+	margin-left: 47px;
+}
+
+.evaluacionIEC ul.listadoResumen .realizarAuditoria {
+	margin-left: 148px;
+}
+
+.evaluacionIEC ul.listadoResumen .modificarPonderacion {
+	margin-left: 13px;
+}
+
+.evaluacionIEC ul.listadoResumen .cajaTexto {
+	border: 1px solid #004B98;
+	width: 96%;
+	height: 10em;
+}
+
+.evaluacionIEC ul.listadoResumen .cajaTextoAuto {
+	border: 1px solid #004B98;
+	width: 96%;
+	margin-left: 1em;
+	padding: 3px;
+}
+
+.evaluacionIEC h4 {
+	margin-bottom: 0;
+	margin-top: 15px;
+	text-align: left;
+}
+
+.evaluacionIEC .propuestaAuditoria {
+	margin-left: 15px;
+}
+
+.evaluacionIEC .propuestaAuditoria .tipoRegistro {
+	width: 538px;
+	margin-left: 25px;
+}
+
+.evaluacionIEC .propuestaAuditoria .historialClinic1 {
+	width: 130px;
+	margin-left: 6px;
+	margin-right: 8px;
+}
+
+.evaluacionIEC .propuestaAuditoria .historialClinic {
+	width: 130px;
+	margin-left: 8px;
+	margin-right: 8px;
+}
+
+.contenidoFaseIII .nota {
+	border: 1px solid #004B98;
+	padding: 2px;
+	margin: 0;
+	width: 35px;
+	text-align: center;
+	valign: middle
+}
+
+.contenidoFaseIII .informesConformidad p {
+	line-height: 1.6em;
+}
+
+.contenidoFaseIII p span.nota {
+	border: 1px solid #004B98;
+	text-align: center;
+	valign: middle;
+}
+
+.contenidoFaseIII .notaCredito {
+	border: 1px solid #004B98;
+	padding: 2px;
+	margin: 0;
+	width: 35px;
+	text-align: center;
+	valign: middle
+}
+
+.contenidoFaseIII p span.notaCredito {
+	border: 1px solid #004B98;
+	text-align: center;
+	valign: middle;
+	padding-top: 3px;
+	padding-bottom: 3px;
+}
+
+.contenidoFaseIII .tablaEvaluadores th {
+	border-bottom: 1px #004B98 solid;
+	padding: 3px 3px 3px 0;
+	color: #004B98;
+	font-weight: bold;
+}
+
+.recuadroAudito {
+	clear: both;
+	border-style: solid;
+	border-width: 1px;
+	border-color: #004B98;
+	padding: 0 0 0 5px;
+	line-height: 1.2em;
+}

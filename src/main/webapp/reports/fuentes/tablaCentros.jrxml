@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="535" pageHeight="842" columnWidth="535" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0">
+	<property name="ireport.scriptlethandling" value="2"/>
+	<import value="java.util.ArrayList"/>
+	<import value="net.sf.jasperreports.engine.*"/>
+	<import value="net.sf.jasperreports.engine.data.*"/>
+	<field name="centro" class="java.lang.String"/>
+	<field name="provincia" class="java.lang.String"/>
+	<field name="categoria" class="java.lang.String"/>
+	<field name="situacion" class="java.lang.String"/>
+	<field name="vinculo" class="java.lang.String"/>
+	<field name="fechaIni" class="java.lang.String"/>
+	<field name="fechaFin" class="java.lang.String"/>
+	<background>
+		<band/>
+	</background>
+	<detail>
+		<band height="18">
+			<rectangle>
+				<reportElement stretchType="RelativeToTallestObject" mode="Transparent" x="0" y="0" width="144" height="18"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="4" y="2" width="140" height="16"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{centro}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement stretchType="RelativeToTallestObject" mode="Transparent" x="337" y="0" width="61" height="18"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="341" y="2" width="57" height="16"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{provincia}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement stretchType="RelativeToTallestObject" mode="Transparent" x="144" y="0" width="193" height="18"/>
+			</rectangle>
+			<textField isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="148" y="2" width="189" height="16"/>
+				<textElement>
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{categoria}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement stretchType="RelativeToTallestObject" mode="Transparent" x="398" y="0" width="35" height="18"/>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="398" y="2" width="35" height="16"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{vinculo}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement stretchType="RelativeToTallestObject" mode="Transparent" x="433" y="0" width="51" height="18"/>
+			</rectangle>
+			<textField isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="434" y="2" width="50" height="16"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{fechaIni}]]></textFieldExpression>
+			</textField>
+			<rectangle>
+				<reportElement stretchType="RelativeToTallestObject" mode="Transparent" x="484" y="0" width="51" height="18"/>
+			</rectangle>
+			<textField isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="485" y="2" width="50" height="16"/>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font fontName="Arial" size="8"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{fechaFin}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

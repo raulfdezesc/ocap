@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ItinerariosEtiquetas" columnCount="2" pageWidth="595" pageHeight="842" columnWidth="277" leftMargin="20" rightMargin="20" topMargin="1" bottomMargin="1">
+	<import value="es.jcyl.fqs.ocap.ot.expedientes.OCAPReportExpedientesOT"/>
+	<import value="net.sourceforge.barbecue.Barcode"/>
+	<style name="normal" isDefault="true" fontName="Helvetica" fontSize="9" isBold="false" isItalic="false" isUnderline="false" isStrikeThrough="false" pdfFontName="Helvetica-Oblique" pdfEncoding="Cp1252" isPdfEmbedded="false"/>
+	<parameter name="SubExpEtiqDatosItinerarios" class="net.sf.jasperreports.engine.JasperReport" isForPrompting="false"/>
+	<parameter name="rutaImagen" class="java.lang.String" isForPrompting="false"/>
+	<field name="datosItinerarios" class="es.jcyl.fqs.ocap.ot.expedientes.OCAPReportExpedientesOT"/>
+	<field name="codBarras" class="net.sourceforge.barbecue.Barcode"/>
+	<detail>
+		<band height="105">
+			<subreport>
+				<reportElement key="subreport-1" style="normal" x="0" y="0" width="272" height="105" isRemoveLineWhenBlank="true" backcolor="#CCCCCC"/>
+				<subreportParameter name="datosItinerarios">
+					<subreportParameterExpression><![CDATA[$F{datosItinerarios}]]></subreportParameterExpression>
+				</subreportParameter>
+				<subreportParameter name="codBarras">
+					<subreportParameterExpression><![CDATA[$F{codBarras}]]></subreportParameterExpression>
+				</subreportParameter>
+				<dataSourceExpression><![CDATA[new JREmptyDataSource()]]></dataSourceExpression>
+				<subreportExpression class="net.sf.jasperreports.engine.JasperReport"><![CDATA[$P{SubExpEtiqDatosItinerarios}]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+</jasperReport>

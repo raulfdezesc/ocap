@@ -1,0 +1,353 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="report name" pageWidth="595" pageHeight="842" columnWidth="535" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" isTitleNewPage="true">
+	<import value="es.jcyl.fqs.ocap.util.Utilidades"/>
+	<import value="net.sourceforge.barbecue.BarcodeFactory"/>
+	<style name="preguntaTitulo" isDefault="false">
+		<conditionalStyle>
+			<conditionExpression><![CDATA[new Boolean(es.jcyl.fqs.ocap.util.Constantes.VACIO.equals($F{datosPregunta}.getCTipoPregunta())
+&& $F{datosPregunta}.getNNivel()==0)]]></conditionExpression>
+			<style isDefault="false" style="preguntaTitulo" forecolor="#663300" vAlign="Bottom" markup="styled" fontSize="10" isBold="false" isItalic="false" isUnderline="true" isStrikeThrough="false" pdfFontName="Helvetica-Bold"/>
+		</conditionalStyle>
+	</style>
+	<parameter name="codBarras" class="java.lang.String"/>
+	<parameter name="rutaImagen" class="java.lang.String"/>
+	<parameter name="nEvidencia" class="java.lang.String"/>
+	<parameter name="nRepeticion" class="java.lang.String"/>
+	<parameter name="repeticionesTotales" class="java.lang.String"/>
+	<field name="cabeceraPregunta" class="java.lang.String"/>
+   <field name="datosPregunta" class="es.jcyl.fqs.ocap.ot.cuestionarios.OCAPCuestionariosOT"/>
+   <field name="datosRespuesta_0" class="es.jcyl.fqs.ocap.ot.respuestas.OCAPRespuestasOT"/>
+	<field name="datosRespuesta_1" class="es.jcyl.fqs.ocap.ot.respuestas.OCAPRespuestasOT"/>
+	<field name="datosRespuesta_2" class="es.jcyl.fqs.ocap.ot.respuestas.OCAPRespuestasOT"/>
+	<field name="datosRespuesta_3" class="es.jcyl.fqs.ocap.ot.respuestas.OCAPRespuestasOT"/>
+	<field name="datosRespuesta_4" class="es.jcyl.fqs.ocap.ot.respuestas.OCAPRespuestasOT"/>
+   <field name="respuesta" class="java.lang.String"/>
+	<field name="respuesta_0" class="java.lang.String"/>
+   <field name="respuesta_1" class="java.lang.String"/>
+	<field name="respuesta_2" class="java.lang.String"/>
+	<field name="respuesta_3" class="java.lang.String"/>
+	<field name="respuesta_4" class="java.lang.String"/>
+	<group name="pregunta">
+		<groupExpression><![CDATA[$F{datosPregunta}]]></groupExpression>
+		<groupHeader>
+			<band isSplitAllowed="false"/>
+		</groupHeader>
+		<groupFooter>
+			<band/>
+		</groupFooter>
+	</group>
+	<background>
+		<band height="802">
+			<printWhenExpression><![CDATA[new Boolean($V{PAGE_NUMBER}.intValue()!=1 || $F{datosPregunta}.getDMensaje()==null || "".equals($F{datosPregunta}.getDMensaje()))]]></printWhenExpression>
+			<frame>
+				<reportElement positionType="Float" stretchType="RelativeToBandHeight" x="0" y="80" width="556" height="695"/>
+				<box>
+					<pen lineWidth="1.0" lineColor="#000000"/>
+					<topPen lineWidth="1.0" lineColor="#000000"/>
+					<leftPen lineWidth="1.0" lineColor="#000000"/>
+					<bottomPen lineWidth="1.0" lineColor="#000000"/>
+					<rightPen lineWidth="1.0" lineColor="#000000"/>
+				</box>
+			</frame>
+		</band>
+	</background>
+	<title>
+		<band height="238">
+			<printWhenExpression><![CDATA[new Boolean($F{datosPregunta}.getDMensaje() != null)]]></printWhenExpression>
+         <image scaleImage="FillFrame" hAlign="Center" isUsingCache="true" hyperlinkType="None">
+				<reportElement x="0" y="0" width="57" height="48"/>
+				<imageExpression class="java.lang.String"><![CDATA[$P{rutaImagen}+"/imagenes/imagenes_ocap/logo-FQS.gif"]]></imageExpression>
+			</image>
+			<image scaleImage="RetainShape" hAlign="Center" vAlign="Top" hyperlinkType="None">
+				<reportElement x="395" y="0" width="160" height="40">
+					<printWhenExpression><![CDATA[new Boolean(!"".equals($P{codBarras}))]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="0.0" lineColor="#000000"/>
+					<topPen lineWidth="0.0" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineColor="#000000"/>
+				</box>
+				<imageExpression class="net.sf.jasperreports.engine.JRRenderable"><![CDATA[new net.sf.jasperreports.components.barbecue.BarbecueRenderer(es.jcyl.fqs.ocap.util.Utilidades.obtenerCodigoBarras($P{codBarras}+"-"+$V{PAGE_NUMBER}.toString()))]]></imageExpression>
+			</image>
+         <textField hyperlinkType="None">
+				<reportElement x="395" y="42" width="160" height="12">
+               <printWhenExpression><![CDATA[new Boolean(!"".equals($P{codBarras}))]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{codBarras}+"-"+$V{PAGE_NUMBER}.toString()]]></textFieldExpression>
+			</textField>
+         <textField isStretchWithOverflow="true" hyperlinkType="None">
+				<reportElement x="0" y="55" width="555" height="20"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom" lineSpacing="Single">
+					<font size="10" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{datosPregunta}.getDArea()+$F{datosPregunta}.getDNombre()+" - "+$F{datosPregunta}.getDNombreLargo()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="0" y="140" width="555" height="88" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{datosPregunta}.getDMensaje()]]></textFieldExpression>
+			</textField>
+			<textField isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement x="0" y="103" width="555" height="31"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{datosPregunta}.getDNombreItinerario()]]></textFieldExpression>
+			</textField>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="80">
+         <image scaleImage="FillFrame" hAlign="Center" isUsingCache="true" hyperlinkType="None">
+				<reportElement x="0" y="0" width="57" height="48"/>
+				<imageExpression class="java.lang.String"><![CDATA[$P{rutaImagen}+"/imagenes/imagenes_ocap/logo-FQS.gif"]]></imageExpression>
+			</image>
+			<image scaleImage="RetainShape" hAlign="Center" vAlign="Top" hyperlinkType="None">
+				<reportElement x="395" y="0" width="160" height="40">
+					<printWhenExpression><![CDATA[new Boolean(!"".equals($P{codBarras}))]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="0" leftPadding="0" bottomPadding="0" rightPadding="0">
+					<pen lineWidth="0.0" lineColor="#000000"/>
+					<topPen lineWidth="0.0" lineColor="#000000"/>
+					<leftPen lineWidth="0.0" lineColor="#000000"/>
+					<bottomPen lineWidth="0.0" lineColor="#000000"/>
+					<rightPen lineWidth="0.0" lineColor="#000000"/>
+				</box>
+				<imageExpression class="net.sf.jasperreports.engine.JRRenderable"><![CDATA[new net.sf.jasperreports.components.barbecue.BarbecueRenderer(es.jcyl.fqs.ocap.util.Utilidades.obtenerCodigoBarras($P{codBarras}+"-"+$V{PAGE_NUMBER}.toString()))]]></imageExpression>
+			</image>
+         <textField hyperlinkType="None">
+				<reportElement x="395" y="42" width="160" height="12">
+               <printWhenExpression><![CDATA[new Boolean(!"".equals($P{codBarras}))]]></printWhenExpression>
+				</reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Top">
+					<font size="8" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$P{codBarras}+"-"+$V{PAGE_NUMBER}.toString()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" hyperlinkType="None">
+				<reportElement x="0" y="55" width="555" height="20"/>
+				<textElement textAlignment="Justified" verticalAlignment="Bottom" lineSpacing="Single">
+					<font size="10" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{datosPregunta}.getDArea()+$F{datosPregunta}.getDNombre()+" - "+$F{datosPregunta}.getDNombreLargo()]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band/>
+	</columnHeader>
+	<detail>
+		<band height="56" isSplitAllowed="false">
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement style="preguntaTitulo" positionType="Float" isPrintRepeatedValues="false" x="27" y="8" width="501" height="16" isRemoveLineWhenBlank="true"/>
+				<textElement textAlignment="Justified" verticalAlignment="Top" lineSpacing="Single" markup="html">
+					<font pdfFontName="Helvetica"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{datosPregunta}.getDPregunta()]]></textFieldExpression>
+			</textField>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" isPrintRepeatedValues="false" x="27" y="24" width="501" height="15" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean($F{cabeceraPregunta}!=null && !"".equals($F{cabeceraPregunta}))]]></printWhenExpression>
+				</reportElement>
+				<box>
+					<pen lineWidth="0.0"/>
+					<topPen lineWidth="0.0"/>
+					<leftPen lineWidth="0.0"/>
+					<bottomPen lineWidth="0.0"/>
+					<rightPen lineWidth="0.0"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{cabeceraPregunta}]]></textFieldExpression>
+			</textField>
+         <!-- Inicio Bloque Respuesta 0 de tipos RADIO o RADIO_TEXT -->
+			<rectangle>
+				<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="37" y="41" width="11" height="11" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean( $F{datosRespuesta_0} != null && "".equals($P{codBarras}) )]]></printWhenExpression>
+				</reportElement>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="38" y="42" width="10" height="10" isRemoveLineWhenBlank="true">
+               <printWhenExpression><![CDATA[new Boolean( $F{respuesta_0} != null && "".equals($P{codBarras}) )]]></printWhenExpression>
+            </reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{respuesta_0}]]></textFieldExpression>
+			</textField>
+         <staticText>
+				<reportElement positionType="Float" x="37" y="41" width="16" height="14" isRemoveLineWhenBlank="true">
+               <printWhenExpression><![CDATA[new Boolean( $F{datosRespuesta_0} != null && !"".equals($P{codBarras}) )]]></printWhenExpression>
+            </reportElement>
+				<textElement/>
+				<text><![CDATA[A -]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="54" y="41" width="73" height="11" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{datosRespuesta_0}.getDNombre()]]></textFieldExpression>
+			</textField>
+         <!-- Fin Bloque Respuesta 0 de tipos RADIO o RADIO_TEXT -->
+         <!-- Inicio Bloque Respuesta 1 de tipos RADIO o RADIO_TEXT -->
+			<rectangle>
+				<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="144" y="41" width="11" height="11" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean( $F{datosRespuesta_1} != null && "".equals($P{codBarras}) )]]></printWhenExpression>
+				</reportElement>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="145" y="42" width="10" height="10" isRemoveLineWhenBlank="true">
+               <printWhenExpression><![CDATA[new Boolean( $F{respuesta_1} != null && "".equals($P{codBarras}) )]]></printWhenExpression>
+            </reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{respuesta_1}]]></textFieldExpression>
+			</textField>
+         <staticText>
+				<reportElement positionType="Float" x="144" y="41" width="16" height="14" isRemoveLineWhenBlank="true">
+               <printWhenExpression><![CDATA[new Boolean( $F{datosRespuesta_1} != null && !"".equals($P{codBarras}) )]]></printWhenExpression>
+            </reportElement>
+				<textElement/>
+				<text><![CDATA[B -]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="161" y="41" width="73" height="11" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{datosRespuesta_1}.getDNombre()]]></textFieldExpression>
+			</textField>
+         <!-- Fin Bloque Respuesta 1 de tipos RADIO o RADIO_TEXT -->
+         <!-- Inicio Bloque Respuesta 2 de tipos RADIO o RADIO_TEXT -->
+			<rectangle>
+				<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="251" y="41" width="11" height="11" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean( $F{datosRespuesta_2} != null && "".equals($P{codBarras}) )]]></printWhenExpression>
+				</reportElement>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="252" y="42" width="10" height="10" isRemoveLineWhenBlank="true">
+               <printWhenExpression><![CDATA[new Boolean( $F{respuesta_2} != null && "".equals($P{codBarras}) )]]></printWhenExpression>
+            </reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{respuesta_2}]]></textFieldExpression>
+			</textField>
+         <staticText>
+				<reportElement positionType="Float" x="251" y="41" width="16" height="14" isRemoveLineWhenBlank="true">
+               <printWhenExpression><![CDATA[new Boolean( $F{datosRespuesta_2} != null && !"".equals($P{codBarras}) )]]></printWhenExpression>
+            </reportElement>
+				<textElement/>
+				<text><![CDATA[C -]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="268" y="41" width="73" height="11" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{datosRespuesta_2}.getDNombre()]]></textFieldExpression>
+			</textField>
+         <!-- Fin Bloque Respuesta 2 de tipos RADIO o RADIO_TEXT -->
+         <!-- Inicio Bloque Respuesta 3 de tipos RADIO o RADIO_TEXT -->
+			<rectangle>
+				<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="360" y="41" width="11" height="11" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean( $F{datosRespuesta_3} != null && "".equals($P{codBarras}) )]]></printWhenExpression>
+				</reportElement>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="361" y="42" width="10" height="10" isRemoveLineWhenBlank="true">
+               <printWhenExpression><![CDATA[new Boolean( $F{respuesta_3} != null && "".equals($P{codBarras}) )]]></printWhenExpression>
+            </reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{respuesta_3}]]></textFieldExpression>
+			</textField>
+         <staticText>
+				<reportElement positionType="Float" x="360" y="41" width="16" height="14" isRemoveLineWhenBlank="true">
+               <printWhenExpression><![CDATA[new Boolean( $F{datosRespuesta_3} != null && !"".equals($P{codBarras}) )]]></printWhenExpression>
+            </reportElement>
+				<textElement/>
+				<text><![CDATA[D -]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="377" y="41" width="73" height="11" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{datosRespuesta_3}.getDNombre()]]></textFieldExpression>
+			</textField>
+         <!-- Fin Bloque Respuesta 3 de tipos RADIO o RADIO_TEXT -->
+         <!-- Inicio Bloque Respuesta 4 de tipos RADIO o RADIO_TEXT -->
+			<rectangle>
+				<reportElement positionType="Float" isPrintRepeatedValues="false" mode="Transparent" x="468" y="41" width="11" height="11" isRemoveLineWhenBlank="true">
+					<printWhenExpression><![CDATA[new Boolean( $F{datosRespuesta_4} != null && "".equals($P{codBarras}) )]]></printWhenExpression>
+				</reportElement>
+			</rectangle>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="469" y="42" width="10" height="10" isRemoveLineWhenBlank="true">
+               <printWhenExpression><![CDATA[new Boolean( $F{respuesta_4} != null && "".equals($P{codBarras}) )]]></printWhenExpression>
+            </reportElement>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="8" pdfFontName="Helvetica-Bold"/>
+				</textElement>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{respuesta_4}]]></textFieldExpression>
+			</textField>
+         <staticText>
+				<reportElement positionType="Float" x="468" y="41" width="16" height="14" isRemoveLineWhenBlank="true">
+               <printWhenExpression><![CDATA[new Boolean( $F{datosRespuesta_4} != null && !"".equals($P{codBarras}) )]]></printWhenExpression>
+            </reportElement>
+				<textElement/>
+				<text><![CDATA[E -]]></text>
+			</staticText>
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" x="486" y="41" width="52" height="11" isRemoveLineWhenBlank="true"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{datosRespuesta_4}.getDNombre()]]></textFieldExpression>
+			</textField>
+         <!-- Fin Bloque Respuesta 4 de tipos RADIO o RADIO_TEXT -->
+         <!-- Inicio Bloque Respuestas tipo TEXT, TEXTAREA y FECHAS -->
+			<textField isStretchWithOverflow="true" isBlankWhenNull="true" hyperlinkType="None">
+				<reportElement positionType="Float" isPrintRepeatedValues="false" x="28" y="41" width="500" height="11">
+					<printWhenExpression><![CDATA[new Boolean($F{respuesta}!=null && !"".equals($F{respuesta}))]]></printWhenExpression>
+				</reportElement>
+				<box topPadding="1" leftPadding="1" bottomPadding="1" rightPadding="1">
+					<pen lineWidth="0.75"/>
+					<topPen lineWidth="0.75"/>
+					<leftPen lineWidth="0.75"/>
+					<bottomPen lineWidth="0.75"/>
+					<rightPen lineWidth="0.75"/>
+				</box>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[$F{respuesta}]]></textFieldExpression>
+			</textField>
+         <!-- Fin Bloque Respuestas tipo TEXT, TEXTAREA y FECHAS -->
+		</band>
+	</detail>
+	<columnFooter>
+		<band/>
+	</columnFooter>
+	<pageFooter>
+		<band height="28">
+			<textField hyperlinkType="None">
+				<reportElement x="416" y="9" width="55" height="18"/>
+				<textElement textAlignment="Right"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["Hoja "+$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField evaluationTime="Report" hyperlinkType="None">
+				<reportElement x="473" y="9" width="54" height="18"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA[" de "+$V{PAGE_NUMBER}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="26" y="7" width="109" height="20"/>
+				<textElement/>
+				<textFieldExpression class="java.lang.String"><![CDATA["Evidencia: "+$P{nEvidencia}]]></textFieldExpression>
+			</textField>
+			<textField hyperlinkType="None">
+				<reportElement x="178" y="7" width="202" height="20"/>
+				<textElement textAlignment="Center"/>
+				<textFieldExpression class="java.lang.String"><![CDATA["Repetición "+$P{nRepeticion}+" de "+$P{repeticionesTotales}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageFooter>
+	<summary>
+		<band/>
+	</summary>
+</jasperReport>

@@ -1,0 +1,39 @@
+.titulocajaformulario, .cajaformulario {
+	width: 90%;
+}
+
+.ajustarCajaLogin {
+	margin-left: 0;
+}
+
+fieldset.normalesLogin {
+	margin-left: 255px;
+}
+
+fieldset.normalesLoginPerfil {
+	margin-left: 220px;
+}
+
+fieldset.normalesLoginPerfil p {
+	padding-top: 2em;
+}
+
+.normalesLoginPerfil div {
+	line-height: 1em;
+}
+
+.miCabecera h1 {
+	padding-top: 0;
+}
+
+.menuAccesible .menuNivel_1 a {
+	padding: 2px 3px 2px 15px;
+}
+
+.menuAccesible .menuNivel_1 a:hover {
+	width: 90.5%;
+}
+
+.normalesLoginPerfil div.contenedorPerfiles .perfil {
+	padding-top: 0.4em;
+}

@@ -1,0 +1,98 @@
+<%@ taglib uri="html.tld" prefix="html"%> <%@ taglib uri="bean.tld"
+prefix="bean"%>
+
+<div class="ocultarCampo">
+
+	<jsp:include page="/top.jsp" flush="true" />
+	<div class="contenidoDCP1A espQuirurgicas">
+		<form name="OCAPEspQuirurgicas" method="post" action="">
+			<h3 class="subTituloContenido">Dossier Personal de Carrera
+				Profesional: Relación de documentos</h3>
+			<div class="lineaBajaM"></div>
+			<div class="espaciador"></div>
+			<span>
+				<p>Muy señor mío:</p>
+				<p>De acuerdo a sus instrucciones adjunto las evidencias
+					documentales que han de incluirse en mi evaluación de competencias
+					profesionales para la obtención/reconocimiento del grado de Carrera
+					Profesional solicitado.</p>
+				<p>La relación de documentos es (marque con una “X” las
+					evidencias documentales que aporta):</p>
+				<ul class="especialidades">
+					<li><span>Evidencia Documental nº 1</span> <input
+						class="tipo1" type="checkbox" id="evidencia1" /></li>
+					<li><span>Evidencia Documental nº 2</span> <input
+						class="tipo1" type="checkbox" id="evidencia2" /></li>
+					<li><span>Evidencia Documental nº 3</span> <input
+						class="tipo1" type="checkbox" id="evidencia3" /></li>
+					<li><span>Evidencia Documental nº 4</span> <input
+						class="tipo1" type="checkbox" id="evidencia4" /></li>
+					<li><span>Evidencia Documental nº 5</span> <input
+						class="tipo1" type="checkbox" id="evidencia5" /></li>
+					<li><span>Evidencia Documental nº 6</span> <input
+						class="tipo1" type="checkbox" id="evidencia6" /></li>
+					<li><span>Evidencia Documental nº 7</span> <input
+						class="tipo1" type="checkbox" id="evidencia7" /></li>
+					<li><span>Evidencia Documental nº 8</span> <input
+						class="tipo1" type="checkbox" id="evidencia8" /></li>
+					<li><span>Evidencia Documental nº 9</span> <input
+						class="tipo1" type="checkbox" id="evidencia9" /></li>
+					<li><span>Evidencia Documental nº 10</span> <input
+						class="tipo2" type="checkbox" id="evidencia10" /></li>
+					<li><span>Evidencia Documental nº 11</span> <input
+						class="tipo2" type="checkbox" id="evidencia11" /></li>
+					<li><span>Evidencia Documental nº 12</span> <input
+						class="tipo2" type="checkbox" id="evidencia12" /></li>
+					<li><span>Evidencia Documental nº 13</span> <input
+						class="tipo2" type="checkbox" id="evidencia13" /></li>
+					<li><span>Evidencia Documental nº 14</span> <input
+						class="tipo2" type="checkbox" id="evidencia14" /></li>
+				</ul>
+
+			</span>
+			<fieldset>
+
+				<legend class="tituloLegend"> Mis datos de identificación
+					son: </legend>
+				<div class="cuadroFieldset">
+
+
+					<label for="idVApell1"> Apellido1: <input type="text"
+						name="DApellido1" maxlength="60" tabindex="1" value=""
+						class="recuadroM colocaApellidosEvaluadores">
+					</label> <label for="idVNombre"> Nombre: <input type="text"
+						name="DNombre" maxlength="30" tabindex="2" value=""
+						class="recuadroM colocaNombreEvaluadores">
+					</label> <br />
+					<br /> <label for="idVApell1"> Apellido2: <input
+						type="text" name="DApellido2" maxlength="60" tabindex="1" value=""
+						class="recuadroM colocaApellidosEvaluadores">
+					</label> <br />
+					<br /> <label for="idVDNI"> NIF/NIE: <input type="text"
+						name="CDni" maxlength="10" tabindex="3" value=""
+						class="recuadroM colocaDNIEvaluadores">
+					</label> <br />
+					<br /> <label for="idVApell1"> Categoria: <input
+						type="text" name="DCategoria" maxlength="60" tabindex="1" value=""
+						class="recuadroM colocaApellidosEvaluadores">
+					</label> <label for="idVNombre"> Centro: <input type="text"
+						name="DCentro" maxlength="30" tabindex="2" value=""
+						class="recuadroM colocaNombreEvaluadores">
+					</label> <br />
+					<br /> <label for="idVDNI"> Fecha:&nbsp; <input
+						type="text" name="CFecha" maxlength="10" tabindex="3" value=""
+						class="recuadroM colocaDNIEvaluadores">
+					</label> <br />
+					<br />
+
+
+
+				</div>
+			</fieldset>
+		</form>
+	</div>
+	<!-- contenidoDCP1A -->
+
+	<jsp:include page="/bottom.jsp" flush="true" />
+</div>
+<!-- /Fin de ocultarCampo -->
